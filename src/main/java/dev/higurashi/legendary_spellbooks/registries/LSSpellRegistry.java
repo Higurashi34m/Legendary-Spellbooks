@@ -2,6 +2,7 @@ package dev.higurashi.legendary_spellbooks.registries;
 
 import dev.higurashi.legendary_spellbooks.LegendarySpellbooks;
 import dev.higurashi.legendary_spellbooks.common.spells.lightning.CloudRailSpell;
+import dev.higurashi.legendary_spellbooks.common.spells.lightning.CloudRingSpell;
 import io.redspace.ironsspellbooks.api.registry.SpellRegistry;
 import io.redspace.ironsspellbooks.api.spells.AbstractSpell;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -13,5 +14,7 @@ public class LSSpellRegistry {
     public static void register(IEventBus bus) { SPELLS.register(bus); }
     private static RegistryObject<AbstractSpell> register(AbstractSpell spell) { return SPELLS.register(spell.getSpellName(), () -> spell); }
 
+    // Lightning
     public static final RegistryObject<AbstractSpell> CLOUD_RAIL_SPELL = register(new CloudRailSpell());
+    public static final RegistryObject<AbstractSpell> CLOUD_RING_SPELL = register(new CloudRingSpell());
 }

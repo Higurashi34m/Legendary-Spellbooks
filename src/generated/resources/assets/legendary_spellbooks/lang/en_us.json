@@ -1,5 +1,7 @@
 {
   "death.attack.legendary_spellbooks.cloud_rail": "%1$s was engulfed and crushed by %2$s's clouds",
   "spell.legendary_spellbooks.cloud_rail": "Cloud Rail",
-  "spell.legendary_spellbooks.cloud_rail.guide": "Conjure a cascading line of magical clouds in front of you. These clouds fall freely from the sky, exploding and dealing area damage upon impact with the ground."
+  "spell.legendary_spellbooks.cloud_rail.guide": "Conjure a cascading line of magical clouds in front of you. These clouds fall freely from the sky, exploding and dealing area damage upon impact with the ground.",
+  "spell.legendary_spellbooks.cloud_ring": "Cloud Ring",
+  "spell.legendary_spellbooks.cloud_ring.guide": "Conjure multiple expanding rings of magical clouds centered on your position. These clouds descend from the sky in a rhythmic cascade, dealing heavy area damage upon impacting the ground."
 }

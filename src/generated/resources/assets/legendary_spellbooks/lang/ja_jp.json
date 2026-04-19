@@ -1,5 +1,7 @@
 {
   "death.attack.legendary_spellbooks.cloud_rail": "%1$sは %2$sの雲に巻き込まれて押しつぶされた",
   "spell.legendary_spellbooks.cloud_rail": "クラウドレール",
-  "spell.legendary_spellbooks.cloud_rail.guide": "自分の見ている方向に直線状に魔法の雲を召喚する。この雲は落下し、当たった位置から範囲ダメージを与える。"
+  "spell.legendary_spellbooks.cloud_rail.guide": "自分の見ている方向に直線状に魔法の雲を召喚する。この雲は落下し、当たった位置から範囲ダメージを与える。",
+  "spell.legendary_spellbooks.cloud_ring": "クラウドリング",
+  "spell.legendary_spellbooks.cloud_ring.guide": "自分を中心に複数のリング状に魔法の雲を召喚する。この雲は落下し、当たった位置から範囲ダメージを与える。"
 }
