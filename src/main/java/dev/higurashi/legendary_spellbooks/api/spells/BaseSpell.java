@@ -19,13 +19,13 @@ public abstract class BaseSpell extends AbstractSpell {
     protected SoundEvent castStartSound = null;
     protected SoundEvent castFinishSound = null;
 
-    protected BaseSpell(ResourceLocation spellResource, DefaultConfig spellConfig, CastType castType) {
+    public BaseSpell(ResourceLocation spellResource, DefaultConfig spellConfig, CastType castType) {
         this.spellResource = spellResource;
         this.spellConfig = spellConfig;
         this.castType = castType;
     }
 
-    protected BaseSpell(ResourceLocation spellResource, DefaultConfig spellConfig) {
+    public BaseSpell(ResourceLocation spellResource, DefaultConfig spellConfig) {
         this.spellResource = spellResource;
         this.spellConfig = spellConfig;
         this.castType = CastType.INSTANT;
