@@ -12,4 +12,22 @@ public class ComponentUtils {
     public static MutableComponent getUIComponent(String componentName, Object... args) {
         return getUIComponent(LegendarySpellbooks.MOD_ID, componentName, args);
     }
+
+    // Time
+    public static float ticksToSeconds(int ticks) {
+        return (float) ticks / 20;
+    }
+
+    public static int secondsToTicks(float seconds) {
+        return (int) (seconds * 20);
+    }
+
+    public static String ticksToSecondsString(int ticks) {
+        String seconds = Float.toString(ticksToSeconds(ticks));
+
+        seconds = seconds.replaceAll("0+$", "");
+        seconds = seconds.replaceAll("\\.$", "");
+
+        return seconds + "s";
+    }
 }
