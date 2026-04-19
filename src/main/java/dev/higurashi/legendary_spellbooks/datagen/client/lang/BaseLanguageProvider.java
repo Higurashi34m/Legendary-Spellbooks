@@ -24,4 +24,8 @@ public abstract class BaseLanguageProvider extends LanguageProvider {
     protected void addUi(String key, String name) {
         add("ui." + modId + "." + key, name);
     }
+
+    protected void addDamageSource(String key, String name) {
+        add("death.attack." + key, name);
+    }
 }
