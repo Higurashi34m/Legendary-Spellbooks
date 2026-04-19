@@ -1,0 +1,27 @@
+package dev.higurashi.legendary_spellbooks.datagen.client.lang;
+
+import dev.higurashi.legendary_spellbooks.LegendarySpellbooks;
+import io.redspace.ironsspellbooks.api.spells.AbstractSpell;
+import net.minecraft.data.PackOutput;
+import net.minecraftforge.common.data.LanguageProvider;
+
+import java.util.function.Supplier;
+
+public abstract class BaseLanguageProvider extends LanguageProvider {
+    private static String modId = LegendarySpellbooks.MOD_ID;
+
+    public BaseLanguageProvider(PackOutput output, String locale) {
+        super(output, modId, locale);
+    }
+
+    @Override protected abstract void addTranslations();
+
+    protected void addSpell(Supplier<? extends AbstractSpell> spellKey, String name, String descriptionName) {
+        add(spellKey.get().getComponentId(), name);
+        add(spellKey.get().getComponentId() + ".guide", descriptionName);
+    }
+
+    protected void addUi(String key, String name) {
+        add("ui." + modId + "." + key, name);
+    }
+}
