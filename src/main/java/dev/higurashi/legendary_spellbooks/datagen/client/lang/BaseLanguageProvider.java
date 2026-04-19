@@ -28,4 +28,7 @@ public abstract class BaseLanguageProvider extends LanguageProvider {
     protected void addDamageSource(String key, String name) {
         add("death.attack." + key, name);
     }
+    protected void addSpellDamageSource(Supplier<? extends AbstractSpell> spellKey, String name) {
+        addDamageSource(modId + "." + spellKey.get().getSpellName(), name);
+    }
 }
