@@ -69,5 +69,7 @@ public class CloudRingSpell extends BaseSpell {
         super.onCast(level, spellLevel, caster, source, magicData);
     }
 
-    private int getRingCount(int spellLevel) { return spellLevel; }
+    private int getRingCount(int spellLevel) {
+        return Math.min(spellLevel, 10);
+    }
 }
