@@ -48,13 +48,11 @@ public class CloudRailSpell extends BaseSpell {
         int damage = (int) getSpellPower(spellLevel, caster);
         int cloudCount = getCloudCount(spellLevel);
 
-        List<Vec3> spawnPoints = GeometryUtils.getLinePoints(caster.position(), caster.getYRot(), cloudCount, 1.5, 1.75);
+        List<Vec3> spawnPoints = GeometryUtils.getLinePoints(caster.position().add(0, 6, 0), caster.getYRot(), cloudCount, 1.5, 1.75);
         for (int i = 0; i < spawnPoints.size(); i++) {
-            Vec3 spawnPos = spawnPoints.get(i).add(0, 6, 0);
-
             SpellCloudEntity cloud = new SpellCloudEntity(level, caster);
             cloud.setDamage(damage);
-            cloud.setPos(spawnPos);
+            cloud.setPos(spawnPoints.get(i));
             cloud.setWarmup(i + 1);
             cloud.setInvisible(true);
 
