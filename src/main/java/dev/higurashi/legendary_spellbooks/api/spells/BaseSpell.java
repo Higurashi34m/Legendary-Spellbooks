@@ -37,12 +37,12 @@ public abstract class BaseSpell extends AbstractSpell {
     @Override public CastType getCastType() { return castType; }
 
     @Override public Optional<SoundEvent> getCastStartSound() {
-        if (this.castStartSound == null) super.getCastStartSound();
+        if (this.castStartSound == null) return super.getCastStartSound();
         return Optional.of(castStartSound);
     }
 
     @Override public Optional<SoundEvent> getCastFinishSound() {
-        if (this.castFinishSound == null) super.getCastFinishSound();
+        if (this.castFinishSound == null) return super.getCastFinishSound();
         return Optional.of(castFinishSound);
     }
 
