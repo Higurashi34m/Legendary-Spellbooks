@@ -13,14 +13,15 @@ import net.minecraft.world.entity.player.Player;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Optional;
+import java.util.function.Supplier;
 
 public abstract class BaseSpell extends AbstractSpell {
     private final ResourceLocation spellResource;
     private final DefaultConfig spellConfig;
     private final CastType castType;
 
-    protected SoundEvent castStartSound = null;
-    protected SoundEvent castFinishSound = null;
+    protected Supplier<SoundEvent> castStartSound = null;
+    protected Supplier<SoundEvent> castFinishSound = null;
 
     protected AnimationHolder castStartAnimation = null;
     protected AnimationHolder castFinishAnimation = null;
@@ -55,12 +56,12 @@ public abstract class BaseSpell extends AbstractSpell {
 
     @Override public Optional<SoundEvent> getCastStartSound() {
         if (this.castStartSound == null) return super.getCastStartSound();
-        return Optional.of(castStartSound);
+        return Optional.of(castStartSound.get());
     }
 
     @Override public Optional<SoundEvent> getCastFinishSound() {
         if (this.castFinishSound == null) return super.getCastFinishSound();
-        return Optional.of(castFinishSound);
+        return Optional.of(castFinishSound.get());
     }
 
     @Override

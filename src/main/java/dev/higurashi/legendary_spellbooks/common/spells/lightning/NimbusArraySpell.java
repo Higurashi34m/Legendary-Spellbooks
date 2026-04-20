@@ -42,7 +42,7 @@ public class NimbusArraySpell extends BaseSpell {
         this.castStartAnimation = SpellAnimations.OVERHEAD_MELEE_SWING_ANIMATION;
         this.castFinishAnimation = AnimationHolder.pass();
 
-        this.castFinishSound = SoundEvents.LIGHTNING_BOLT_THUNDER;
+        this.castFinishSound = () -> SoundEvents.LIGHTNING_BOLT_THUNDER;
 
         this.interrupted = false;
     }
