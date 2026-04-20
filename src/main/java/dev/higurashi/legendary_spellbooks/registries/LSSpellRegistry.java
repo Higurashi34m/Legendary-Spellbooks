@@ -4,6 +4,7 @@ import dev.higurashi.legendary_spellbooks.LegendarySpellbooks;
 import dev.higurashi.legendary_spellbooks.common.spells.lightning.CloudRailSpell;
 import dev.higurashi.legendary_spellbooks.common.spells.lightning.CloudRingSpell;
 import dev.higurashi.legendary_spellbooks.common.spells.lightning.NimbusArraySpell;
+import dev.higurashi.legendary_spellbooks.common.spells.lightning.TripleNimbusArraySpell;
 import io.redspace.ironsspellbooks.api.registry.SpellRegistry;
 import io.redspace.ironsspellbooks.api.spells.AbstractSpell;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -19,4 +20,5 @@ public class LSSpellRegistry {
     public static final RegistryObject<AbstractSpell> CLOUD_RAIL_SPELL = register(new CloudRailSpell());
     public static final RegistryObject<AbstractSpell> CLOUD_RING_SPELL = register(new CloudRingSpell());
     public static final RegistryObject<AbstractSpell> NIMBUS_ARRAY_SPELL = register(new NimbusArraySpell());
+    public static final RegistryObject<AbstractSpell> TRIPLE_NIMBUS_ARRAY_SPELL = register(new TripleNimbusArraySpell());
 }
