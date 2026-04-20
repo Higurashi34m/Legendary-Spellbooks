@@ -10,11 +10,8 @@ import org.spongepowered.asm.mixin.injection.ModifyArg;
 
 @Mixin(value = AnnihilationPortalEntity.class, remap = false)
 public abstract class AnnihilationPortalEntityMixin implements ISpellSourceFlag {
-    @Shadow
-    public abstract float getDamage();
-
-    @Unique
-    private boolean legendarySpellbooks$isFromSpell = false;
+    @Shadow public abstract float getDamage();
+    @Unique private boolean legendarySpellbooks$isFromSpell = false;
 
     @ModifyArg(method = "tick", remap = true, at = @At(value = "INVOKE", target = "Lnet/miauczel/legendary_monsters/entity/AnimatedMonster/Projectile/AnnihilationPortalEntity;flameRadagonShockwave(FIFIFFFZ)V"), index = 6)
     private float changeDamageShockwave(float value) {
@@ -22,15 +19,8 @@ public abstract class AnnihilationPortalEntityMixin implements ISpellSourceFlag 
         else return value;
     }
 
-    @Override
-    public void legendarySpellbooks$markSpell() {
-        this.legendarySpellbooks$isFromSpell = true;
-    }
-
-    @Override
-    public boolean legendarySpellbooks$isFromSpell() {
-        return legendarySpellbooks$isFromSpell;
-    }
+    @Override public void legendarySpellbooks$markSpell() { this.legendarySpellbooks$isFromSpell = true; }
+    @Override public boolean legendarySpellbooks$isFromSpell() { return legendarySpellbooks$isFromSpell; }
 
     @Override public void legendarySpellbooks$setDamage(float value) {}
     @Override public void legendarySpellbooks$getDamage() {}
