@@ -44,8 +44,6 @@ public class SpellFireColumnEntity extends FireColumnEntity implements IWarmupEn
         if (getWarmup() >= 0) return;
 
         if (this.getAttackState() == 0) this.setAttackState(1);
-        if (this.getAttackState() > 0) this.attackTicks++;
-        if (this.attackCooldown > 0) this.attackCooldown--;
 
         if (this.level().isClientSide()) spawnParticles();
         else for (LivingEntity target : this.level().getEntitiesOfClass(LivingEntity.class, this.getBoundingBox().inflate(1.0, 2.0, 1.0))) applyDamage(target, damage);

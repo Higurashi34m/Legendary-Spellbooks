@@ -70,12 +70,12 @@ public class FlameEaterSpell extends BaseSpell {
 
 
     @Override
-    public void onCast(Level level, int spellLevel, LivingEntity caster, CastSource castSource, MagicData playerMagicData) {
-        if (playerMagicData.getAdditionalCastData() instanceof TargetEntityCastData targetEntityCastData) {
-            PlayerRecasts recasts = playerMagicData.getPlayerRecasts();
+    public void onCast(Level level, int spellLevel, LivingEntity caster, CastSource castSource, MagicData magicData) {
+        if (magicData.getAdditionalCastData() instanceof TargetEntityCastData targetEntityCastData) {
+            PlayerRecasts recasts = magicData.getPlayerRecasts();
 
             if (!recasts.hasRecastForSpell(getSpellId())) {
-                recasts.addRecast(new RecastInstance(getSpellId(), spellLevel, getRecastCount(spellLevel, caster), 40, castSource, new MultiTargetEntityCastData(targetEntityCastData.getTarget((ServerLevel) level))), playerMagicData);
+                recasts.addRecast(new RecastInstance(getSpellId(), spellLevel, getRecastCount(spellLevel, caster), 40, castSource, new MultiTargetEntityCastData(targetEntityCastData.getTarget((ServerLevel) level))), magicData);
             } else {
                 RecastInstance recast = recasts.getRecastInstance(this.getSpellId());
 
@@ -85,7 +85,7 @@ public class FlameEaterSpell extends BaseSpell {
             }
         }
 
-        super.onCast(level, spellLevel, caster, castSource, playerMagicData);
+        super.onCast(level, spellLevel, caster, castSource, magicData);
     }
 
     @Override
