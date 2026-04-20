@@ -3,6 +3,7 @@ package dev.higurashi.legendary_spellbooks.registries;
 import dev.higurashi.legendary_spellbooks.LegendarySpellbooks;
 import dev.higurashi.legendary_spellbooks.common.spells.fire.FlameEaterSpell;
 import dev.higurashi.legendary_spellbooks.common.spells.lightning.*;
+import dev.higurashi.legendary_spellbooks.common.spells.nature.OvergrownShockwaveSpell;
 import io.redspace.ironsspellbooks.api.registry.SpellRegistry;
 import io.redspace.ironsspellbooks.api.spells.AbstractSpell;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -23,4 +24,7 @@ public class LSSpellRegistry {
     public static final RegistryObject<AbstractSpell> NIMBUS_ARRAY_SPELL = register(new NimbusArraySpell());
     public static final RegistryObject<AbstractSpell> TRIPLE_NIMBUS_ARRAY_SPELL = register(new TripleNimbusArraySpell());
     public static final RegistryObject<AbstractSpell> THUNDER_FANBURST_SPELL = register(new ThunderFanburstSpell());
+
+    // Nature
+    public static final RegistryObject<AbstractSpell> OVERGROWN_SHOCKWAVE_SPELL = register(new OvergrownShockwaveSpell());
 }

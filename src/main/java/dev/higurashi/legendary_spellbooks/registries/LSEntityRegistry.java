@@ -3,6 +3,7 @@ package dev.higurashi.legendary_spellbooks.registries;
 import dev.higurashi.legendary_spellbooks.LegendarySpellbooks;
 import dev.higurashi.legendary_spellbooks.common.entities.spell.projectile.SpellCloudEntity;
 import dev.higurashi.legendary_spellbooks.common.entities.spell.projectile.SpellFireColumnEntity;
+import dev.higurashi.legendary_spellbooks.common.entities.spell.projectile.SpellPoisonousShockwaveEntity;
 import net.miauczel.legendary_monsters.entity.AnimatedMonster.Projectile.CloudEntity;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EntityType;
@@ -28,4 +29,10 @@ public class LSEntityRegistry {
             .updateInterval(2)
             .clientTrackingRange(6)
             .build(ResourceLocation.fromNamespaceAndPath(LegendarySpellbooks.MOD_ID, "spell_fire_column").toString()));
+
+    public static final RegistryObject<EntityType<SpellPoisonousShockwaveEntity>> SPELL_POISONOUS_SHOCKWAVE_ENTITY = ENTITIES.register("spell_poisonous_shockwave", () -> EntityType.Builder.<SpellPoisonousShockwaveEntity>of(SpellPoisonousShockwaveEntity::new, MobCategory.MISC)
+            .sized(1.0f, 1.0f)
+            .updateInterval(2)
+            .clientTrackingRange(6)
+            .build(ResourceLocation.fromNamespaceAndPath(LegendarySpellbooks.MOD_ID, "spell_poisonous_shockwave").toString()));
 }

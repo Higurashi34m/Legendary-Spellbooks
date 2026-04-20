@@ -26,6 +26,9 @@ public class LSEnUsLanguageProvider extends BaseLanguageProvider {
         addSpell(LSSpellRegistry.TRIPLE_NIMBUS_ARRAY_SPELL, "Triple Nimbus Array", "Manifest three rows of thunderclouds in a fanned formation. These clouds continuously strike lightning upon anything beneath them for the duration of the spell.");
         addSpell(LSSpellRegistry.THUNDER_FANBURST_SPELL, "Thunder Fanburst", "Unleash a fanned burst of lightning bolts that travel outwards in multiple directions. These bolts pierce through all creatures in their path.");
 
+        // Nature
+        addSpell(LSSpellRegistry.OVERGROWN_SHOCKWAVE_SPELL, "Overgrown Shockwave", "Slam the ground to unleash a burst of toxic nature magic in a large radius around you, poisoning all creatures caught in the tremor.");
+
         // Death Attack
         addSpellDamageSource(LSSpellRegistry.CLOUD_RAIL_SPELL, "%1$s was engulfed and crushed by %2$s's clouds");
 
