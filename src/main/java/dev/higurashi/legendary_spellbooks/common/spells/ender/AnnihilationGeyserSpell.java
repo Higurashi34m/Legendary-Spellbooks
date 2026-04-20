@@ -143,7 +143,7 @@ public class AnnihilationGeyserSpell extends BaseSpell {
 
         for (Vec3 position : positions) {
             Vec3 spawnPos = RaycastUtils.findGround(caster.level(), position, 5, 5);
-            if (spawnPos == null) return;
+            if (spawnPos == null) continue;
 
             AnnihilationPortalEntity portal = new AnnihilationPortalEntity(caster.level(), spawnPos.x, spawnPos.y, spawnPos.z, 0.0f, -15, caster, life, damage, true, 2.0f);
             ((ISpellSourceFlag) portal).legendarySpellbooks$markSpell();
