@@ -28,7 +28,7 @@ public class NimbusArraySpell extends BaseSpell {
     private static final DefaultConfig spellConfig = new DefaultConfig()
             .setSchoolResource(SchoolRegistry.LIGHTNING_RESOURCE)
             .setMinRarity(SpellRarity.RARE)
-            .setCooldownSeconds(15)
+            .setCooldownSeconds(10)
             .setMaxLevel(7).build();
 
     public NimbusArraySpell() {
