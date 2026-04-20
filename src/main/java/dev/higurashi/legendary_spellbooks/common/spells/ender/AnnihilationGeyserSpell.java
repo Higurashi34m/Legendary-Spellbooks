@@ -12,6 +12,7 @@ import io.redspace.ironsspellbooks.api.magic.MagicData;
 import io.redspace.ironsspellbooks.api.registry.SchoolRegistry;
 import io.redspace.ironsspellbooks.api.spells.CastResult;
 import io.redspace.ironsspellbooks.api.spells.CastSource;
+import io.redspace.ironsspellbooks.api.spells.CastType;
 import io.redspace.ironsspellbooks.api.spells.SpellRarity;
 import net.miauczel.legendary_monsters.Particle.custom.Circle;
 import net.miauczel.legendary_monsters.Particle.custom.MovingTrailParticle;
@@ -44,7 +45,7 @@ public class AnnihilationGeyserSpell extends BaseSpell {
             .setMaxLevel(1).build();
 
     public AnnihilationGeyserSpell() {
-        super(spellResource, spellConfig, false);
+        super(spellResource, spellConfig, CastType.LONG);
         this.castTime = 120;
         this.baseManaCost = 500;
         this.baseSpellPower = 30;
@@ -65,6 +66,12 @@ public class AnnihilationGeyserSpell extends BaseSpell {
     public CastResult canBeCastedBy(int spellLevel, CastSource castSource, MagicData magicData, Player player) {
         if (castSource != CastSource.SPELLBOOK) return new CastResult(CastResult.Type.FAILURE, Component.translatable("ui.irons_spellbooks.cast_error_scroll", getDisplayName(player)).withStyle(ChatFormatting.RED));
         return super.canBeCastedBy(spellLevel, castSource, magicData, player);
+    }
+
+    @Override
+    public int getEffectiveCastTime(int spellLevel, @Nullable LivingEntity caster) {
+        int effectiveCastTime = super.getEffectiveCastTime(spellLevel, caster);
+        return Math.max(effectiveCastTime, 60);
     }
 
     @Override
