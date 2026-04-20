@@ -30,4 +30,13 @@ public class ComponentUtils {
 
         return seconds + "s";
     }
+
+    // Format
+    public static String format1f(float value) {
+        return String.format("%.1f", value);
+    }
+
+    public static String format2f(float value) {
+        return String.format("%.2f", value);
+    }
 }
