@@ -40,7 +40,7 @@ public class CloudRingSpell extends BaseSpell {
     @Override
     public List<MutableComponent> getUniqueInfo(int spellLevel, LivingEntity caster) {
         return List.of(
-                ComponentUtils.getUIComponent(IronsSpellbooks.MODID, "aoe_damage", getSpellPower(spellLevel, caster)),
+                ComponentUtils.getUIComponent(IronsSpellbooks.MODID, "aoe_damage", (int) getSpellPower(spellLevel, caster)),
                 ComponentUtils.getUIComponent(IronsSpellbooks.MODID, "ring_count", getRingCount(spellLevel))
         );
     }

@@ -48,7 +48,7 @@ public class NimbusArraySpell extends BaseSpell {
     @Override
     public List<MutableComponent> getUniqueInfo(int spellLevel, LivingEntity caster) {
         return List.of(
-                ComponentUtils.getUIComponent(IronsSpellbooks.MODID, "damage", getSpellPower(spellLevel, caster)),
+                ComponentUtils.getUIComponent(IronsSpellbooks.MODID, "damage", (int) getSpellPower(spellLevel, caster)),
                 ComponentUtils.getUIComponent("nimbus_count", getNimbusCount(spellLevel)),
                 ComponentUtils.getUIComponent(IronsSpellbooks.MODID, "duration", ComponentUtils.ticksToSecondsString(getLifeTick(spellLevel)))
         );
