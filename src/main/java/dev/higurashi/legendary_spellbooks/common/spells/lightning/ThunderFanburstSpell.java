@@ -33,7 +33,7 @@ public class ThunderFanburstSpell extends BaseSpell {
             .setMaxLevel(10).build();
 
     public ThunderFanburstSpell() {
-        super(spellResource, spellConfig, true);
+        super(spellResource, spellConfig, false);
         this.castTime = 18;
         this.baseManaCost = 55;
         this.baseSpellPower = 2;

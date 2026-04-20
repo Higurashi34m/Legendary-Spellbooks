@@ -32,7 +32,7 @@ public class NimbusArraySpell extends BaseSpell {
             .setMaxLevel(7).build();
 
     public NimbusArraySpell() {
-        super(spellResource, spellConfig, true);
+        super(spellResource, spellConfig, false);
         this.castTime = 18;
         this.baseManaCost = 80;
         this.baseSpellPower = 2;

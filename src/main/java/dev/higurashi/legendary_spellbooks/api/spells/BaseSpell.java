@@ -27,8 +27,8 @@ public abstract class BaseSpell extends AbstractSpell {
     protected AnimationHolder castStartAnimation = null;
     protected AnimationHolder castFinishAnimation = null;
 
-    protected boolean interrupted = false;
-    protected boolean reduceCast = false;
+    protected boolean interrupted = true;
+    protected boolean reduceCastTime = true;
 
     public BaseSpell(ResourceLocation spellResource, DefaultConfig spellConfig, CastType castType) {
         this.spellResource = spellResource;
@@ -42,11 +42,11 @@ public abstract class BaseSpell extends AbstractSpell {
         this.castType = CastType.INSTANT;
     }
 
-    public BaseSpell(ResourceLocation spellResource, DefaultConfig spellConfig, boolean reduceCast) {
+    public BaseSpell(ResourceLocation spellResource, DefaultConfig spellConfig, boolean reduceCastTime) {
         this.spellResource = spellResource;
         this.spellConfig = spellConfig;
         this.castType = CastType.LONG;
-        this.reduceCast = reduceCast;
+        this.reduceCastTime = reduceCastTime;
     }
 
     @Override public ResourceLocation getSpellResource() { return spellResource; }
@@ -79,7 +79,7 @@ public abstract class BaseSpell extends AbstractSpell {
 
     @Override
     public int getEffectiveCastTime(int spellLevel, @Nullable LivingEntity caster) {
-        if (!reduceCast) return super.getEffectiveCastTime(spellLevel, caster);
+        if (reduceCastTime) return super.getEffectiveCastTime(spellLevel, caster);
         return getCastTime(spellLevel);
     }
 

@@ -10,7 +10,6 @@ import io.redspace.ironsspellbooks.api.config.DefaultConfig;
 import io.redspace.ironsspellbooks.api.magic.MagicData;
 import io.redspace.ironsspellbooks.api.registry.SchoolRegistry;
 import io.redspace.ironsspellbooks.api.spells.CastSource;
-import io.redspace.ironsspellbooks.api.spells.CastType;
 import io.redspace.ironsspellbooks.api.spells.SpellRarity;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.resources.ResourceLocation;
@@ -30,7 +29,7 @@ public class CloudRingSpell extends BaseSpell {
             .setMaxLevel(5).build();
 
     public CloudRingSpell() {
-        super(spellResource, spellConfig, CastType.LONG);
+        super(spellResource, spellConfig, true);
         this.castTime = 40;
         this.baseManaCost = 100;
         this.baseSpellPower = 2;

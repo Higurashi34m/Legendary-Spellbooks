@@ -32,7 +32,7 @@ public class TripleNimbusArraySpell extends BaseSpell {
             .setMaxLevel(5).build();
 
     public TripleNimbusArraySpell() {
-        super(spellResource, spellConfig, true);
+        super(spellResource, spellConfig, false);
         this.castTime = 18;
         this.baseManaCost = 140;
         this.baseSpellPower = 3;
