@@ -2,6 +2,7 @@ package dev.higurashi.legendary_spellbooks.registries;
 
 import dev.higurashi.legendary_spellbooks.LegendarySpellbooks;
 import dev.higurashi.legendary_spellbooks.common.entities.spell.projectile.SpellCloudEntity;
+import dev.higurashi.legendary_spellbooks.common.entities.spell.projectile.SpellFireColumnEntity;
 import net.miauczel.legendary_monsters.entity.AnimatedMonster.Projectile.CloudEntity;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EntityType;
@@ -20,4 +21,11 @@ public class LSEntityRegistry {
             .updateInterval(20)
             .clientTrackingRange(4)
             .build(ResourceLocation.fromNamespaceAndPath(LegendarySpellbooks.MOD_ID, "spell_cloud").toString()));
+
+    public static final RegistryObject<EntityType<SpellFireColumnEntity>> SPELL_FIRE_COLUMN_ENTITY = ENTITIES.register("spell_fire_column", () -> EntityType.Builder.<SpellFireColumnEntity>of(SpellFireColumnEntity::new, MobCategory.MISC)
+            .fireImmune()
+            .sized(0.75f, 0.5f)
+            .updateInterval(2)
+            .clientTrackingRange(6)
+            .build(ResourceLocation.fromNamespaceAndPath(LegendarySpellbooks.MOD_ID, "spell_fire_column").toString()));
 }

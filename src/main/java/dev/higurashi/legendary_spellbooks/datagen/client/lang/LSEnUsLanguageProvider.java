@@ -16,6 +16,9 @@ public class LSEnUsLanguageProvider extends BaseLanguageProvider {
         // SPELL
         // --------------------
 
+        // Fire
+        addSpell(LSSpellRegistry.FLAME_EATER_SPELL, "Flame Eater", "Target multiple creatures to erupt a burst of fire at their feet. This spell fails to reach targets positioned too high above the ground.");
+
         // Lightning
         addSpell(LSSpellRegistry.CLOUD_RAIL_SPELL, "Cloud Rail", "Conjure a cascading line of magical clouds in front of you. These clouds fall freely from the sky, exploding and dealing area damage upon impact with the ground.");
         addSpell(LSSpellRegistry.CLOUD_RING_SPELL, "Cloud Ring", "Conjure multiple expanding rings of magical clouds centered on your position. These clouds descend from the sky in a rhythmic cascade, dealing heavy area damage upon impacting the ground.");

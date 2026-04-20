@@ -16,6 +16,9 @@ public class LSJaJpLanguageProvider extends BaseLanguageProvider {
         // SPELL
         // --------------------
 
+        // Fire
+        addSpell(LSSpellRegistry.FLAME_EATER_SPELL, "火炎喰らい", "複数の相手をターゲットにし、相手の足元に炎を噴出させる。相手の位置が高すぎると、炎を噴出させることができない。");
+
         // Lightning
         addSpell(LSSpellRegistry.CLOUD_RAIL_SPELL, "クラウドレール", "自分の見ている方向に直線状に魔法の雲を召喚する。この雲は落下し、当たった位置から範囲ダメージを与える。");
         addSpell(LSSpellRegistry.CLOUD_RING_SPELL, "クラウドリング", "自分を中心に複数のリング状に魔法の雲を召喚する。この雲は落下し、当たった位置から範囲ダメージを与える。");

@@ -4,6 +4,8 @@
   "spell.legendary_spellbooks.cloud_rail.guide": "自分の見ている方向に直線状に魔法の雲を召喚する。この雲は落下し、当たった位置から範囲ダメージを与える。",
   "spell.legendary_spellbooks.cloud_ring": "クラウドリング",
   "spell.legendary_spellbooks.cloud_ring.guide": "自分を中心に複数のリング状に魔法の雲を召喚する。この雲は落下し、当たった位置から範囲ダメージを与える。",
+  "spell.legendary_spellbooks.flame_eater": "火炎喰らい",
+  "spell.legendary_spellbooks.flame_eater.guide": "複数の相手をターゲットにし、相手の足元に炎を噴出させる。相手の位置が高すぎると、炎を噴出させることができない。",
   "spell.legendary_spellbooks.nimbus_array": "ニンバスアレー",
   "spell.legendary_spellbooks.nimbus_array.guide": "自分の見ている方向に直線状の雷を召喚する。この雷からは一定時間雷が落ち、当たった相手にダメージを与える。",
   "spell.legendary_spellbooks.thunder_fanburst": "サンダー・ファンバースト",
