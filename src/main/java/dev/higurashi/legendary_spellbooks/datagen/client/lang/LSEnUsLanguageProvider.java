@@ -16,6 +16,9 @@ public class LSEnUsLanguageProvider extends BaseLanguageProvider {
         // SPELL
         // --------------------
 
+        // Ender
+        addSpell(LSSpellRegistry.ANNIHILATION_GEYSER_SPELL, "Annihilation Geyser", "Create a massive gravitational well that pulls in nearby creatures. Upon completing the cast, a colossal geyser of destructive energy erupts, finishing with a devastating explosion.");
+
         // Fire
         addSpell(LSSpellRegistry.FLAME_EATER_SPELL, "Flame Eater", "Target multiple creatures to erupt a burst of fire at their feet. This spell fails to reach targets positioned too high above the ground.");
 

@@ -1,6 +1,7 @@
 package dev.higurashi.legendary_spellbooks.registries;
 
 import dev.higurashi.legendary_spellbooks.LegendarySpellbooks;
+import dev.higurashi.legendary_spellbooks.common.spells.ender.AnnihilationGeyserSpell;
 import dev.higurashi.legendary_spellbooks.common.spells.fire.FlameEaterSpell;
 import dev.higurashi.legendary_spellbooks.common.spells.lightning.*;
 import dev.higurashi.legendary_spellbooks.common.spells.nature.OvergrownShockwaveSpell;
@@ -14,6 +15,9 @@ public class LSSpellRegistry {
     private static final DeferredRegister<AbstractSpell> SPELLS = DeferredRegister.create(SpellRegistry.SPELL_REGISTRY_KEY, LegendarySpellbooks.MOD_ID);
     public static void register(IEventBus bus) { SPELLS.register(bus); }
     private static RegistryObject<AbstractSpell> register(AbstractSpell spell) { return SPELLS.register(spell.getSpellName(), () -> spell); }
+
+    // Ender
+    public static final RegistryObject<AbstractSpell> ANNIHILATION_GEYSER_SPELL = register(new AnnihilationGeyserSpell());
 
     // Fire
     public static final RegistryObject<AbstractSpell> FLAME_EATER_SPELL = register(new FlameEaterSpell());

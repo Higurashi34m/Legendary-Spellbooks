@@ -16,6 +16,9 @@ public class LSJaJpLanguageProvider extends BaseLanguageProvider {
         // SPELL
         // --------------------
 
+        // Ender
+        addSpell(LSSpellRegistry.ANNIHILATION_GEYSER_SPELL, "終焉の噴火", "近くの敵を吸い込む巨大な重力場を周囲に発生させる。詠唱が完了すると、終焉のエネルギーの巨大な間欠泉が噴出し、壊滅的な爆発が起こる。(地形破壊は無い)");
+
         // Fire
         addSpell(LSSpellRegistry.FLAME_EATER_SPELL, "火炎喰らい", "複数の相手をターゲットにし、相手の足元に炎を噴出させる。相手の位置が高すぎると、炎を噴出させることができない。");
 

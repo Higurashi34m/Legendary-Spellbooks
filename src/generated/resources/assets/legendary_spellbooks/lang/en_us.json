@@ -1,5 +1,7 @@
 {
   "death.attack.legendary_spellbooks.cloud_rail": "%1$s was engulfed and crushed by %2$s's clouds",
+  "spell.legendary_spellbooks.annihilation_geyser": "Annihilation Geyser",
+  "spell.legendary_spellbooks.annihilation_geyser.guide": "Create a massive gravitational well that pulls in nearby creatures. Upon completing the cast, a colossal geyser of destructive energy erupts, finishing with a devastating explosion.",
   "spell.legendary_spellbooks.cloud_rail": "Cloud Rail",
   "spell.legendary_spellbooks.cloud_rail.guide": "Conjure a cascading line of magical clouds in front of you. These clouds fall freely from the sky, exploding and dealing area damage upon impact with the ground.",
   "spell.legendary_spellbooks.cloud_ring": "Cloud Ring",
