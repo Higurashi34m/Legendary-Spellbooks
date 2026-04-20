@@ -23,7 +23,7 @@ import org.jetbrains.annotations.Nullable;
 import java.util.List;
 
 public class OvergrownShockwaveSpell extends BaseOverheadMeleeSwingSpell {
-    private static final ResourceLocation spellResource = ResourceLocation.fromNamespaceAndPath(LegendarySpellbooks.MOD_ID, "overglown_shockwave");
+    private static final ResourceLocation spellResource = ResourceLocation.fromNamespaceAndPath(LegendarySpellbooks.MOD_ID, "overgrown_shockwave");
     private static final DefaultConfig spellConfig = new DefaultConfig()
             .setSchoolResource(SchoolRegistry.NATURE_RESOURCE)
             .setMinRarity(SpellRarity.EPIC)
