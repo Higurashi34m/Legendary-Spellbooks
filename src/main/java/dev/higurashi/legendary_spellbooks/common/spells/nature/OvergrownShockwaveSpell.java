@@ -1,7 +1,7 @@
 package dev.higurashi.legendary_spellbooks.common.spells.nature;
 
 import dev.higurashi.legendary_spellbooks.LegendarySpellbooks;
-import dev.higurashi.legendary_spellbooks.api.spells.BaseSpell;
+import dev.higurashi.legendary_spellbooks.api.spells.BaseOverheadMeleeSwingSpell;
 import dev.higurashi.legendary_spellbooks.api.utils.ComponentUtils;
 import dev.higurashi.legendary_spellbooks.api.utils.GeometryUtils;
 import dev.higurashi.legendary_spellbooks.api.utils.RaycastUtils;
@@ -11,9 +11,7 @@ import io.redspace.ironsspellbooks.api.config.DefaultConfig;
 import io.redspace.ironsspellbooks.api.magic.MagicData;
 import io.redspace.ironsspellbooks.api.registry.SchoolRegistry;
 import io.redspace.ironsspellbooks.api.spells.CastSource;
-import io.redspace.ironsspellbooks.api.spells.SpellAnimations;
 import io.redspace.ironsspellbooks.api.spells.SpellRarity;
-import io.redspace.ironsspellbooks.api.util.AnimationHolder;
 import io.redspace.ironsspellbooks.capabilities.magic.RecastInstance;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.resources.ResourceLocation;
@@ -24,7 +22,7 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-public class OvergrownShockwaveSpell extends BaseSpell {
+public class OvergrownShockwaveSpell extends BaseOverheadMeleeSwingSpell {
     private static final ResourceLocation spellResource = ResourceLocation.fromNamespaceAndPath(LegendarySpellbooks.MOD_ID, "overglown_shockwave");
     private static final DefaultConfig spellConfig = new DefaultConfig()
             .setSchoolResource(SchoolRegistry.NATURE_RESOURCE)
@@ -33,17 +31,11 @@ public class OvergrownShockwaveSpell extends BaseSpell {
             .setMaxLevel(4).build();
 
     public OvergrownShockwaveSpell() {
-        super(spellResource, spellConfig, true);
-        this.castTime = 18;
+        super(spellResource, spellConfig);
         this.baseManaCost = 150;
         this.baseSpellPower = 4;
         this.manaCostPerLevel = 15;
         this.spellPowerPerLevel = 4;
-
-        this.castStartAnimation = SpellAnimations.OVERHEAD_MELEE_SWING_ANIMATION;
-        this.castFinishAnimation = AnimationHolder.pass();
-
-        this.interrupted = false;
     }
 
     @Override

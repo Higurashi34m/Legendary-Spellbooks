@@ -1,7 +1,7 @@
 package dev.higurashi.legendary_spellbooks.common.spells.lightning;
 
 import dev.higurashi.legendary_spellbooks.LegendarySpellbooks;
-import dev.higurashi.legendary_spellbooks.api.spells.BaseSpell;
+import dev.higurashi.legendary_spellbooks.api.spells.BaseOverheadMeleeSwingSpell;
 import dev.higurashi.legendary_spellbooks.api.utils.ComponentUtils;
 import dev.higurashi.legendary_spellbooks.api.utils.GeometryUtils;
 import dev.higurashi.legendary_spellbooks.api.utils.RaycastUtils;
@@ -10,9 +10,7 @@ import io.redspace.ironsspellbooks.api.config.DefaultConfig;
 import io.redspace.ironsspellbooks.api.magic.MagicData;
 import io.redspace.ironsspellbooks.api.registry.SchoolRegistry;
 import io.redspace.ironsspellbooks.api.spells.CastSource;
-import io.redspace.ironsspellbooks.api.spells.SpellAnimations;
 import io.redspace.ironsspellbooks.api.spells.SpellRarity;
-import io.redspace.ironsspellbooks.api.util.AnimationHolder;
 import net.miauczel.legendary_monsters.entity.AnimatedMonster.Projectile.LightningBoltEntity;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.resources.ResourceLocation;
@@ -23,7 +21,7 @@ import net.minecraft.world.phys.Vec3;
 
 import java.util.List;
 
-public class NimbusArraySpell extends BaseSpell {
+public class NimbusArraySpell extends BaseOverheadMeleeSwingSpell {
     private static final ResourceLocation spellResource = ResourceLocation.fromNamespaceAndPath(LegendarySpellbooks.MOD_ID, "nimbus_array");
     private static final DefaultConfig spellConfig = new DefaultConfig()
             .setSchoolResource(SchoolRegistry.LIGHTNING_RESOURCE)
@@ -32,19 +30,13 @@ public class NimbusArraySpell extends BaseSpell {
             .setMaxLevel(7).build();
 
     public NimbusArraySpell() {
-        super(spellResource, spellConfig, false);
-        this.castTime = 18;
+        super(spellResource, spellConfig);
         this.baseManaCost = 80;
         this.baseSpellPower = 2;
         this.manaCostPerLevel = 10;
         this.spellPowerPerLevel = 1;
 
-        this.castStartAnimation = SpellAnimations.OVERHEAD_MELEE_SWING_ANIMATION;
-        this.castFinishAnimation = AnimationHolder.pass();
-
         this.castFinishSound = () -> SoundEvents.LIGHTNING_BOLT_THUNDER;
-
-        this.interrupted = false;
     }
 
     @Override
