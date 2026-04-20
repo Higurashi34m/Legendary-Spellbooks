@@ -14,6 +14,7 @@ import io.redspace.ironsspellbooks.api.spells.CastType;
 import io.redspace.ironsspellbooks.api.spells.SpellRarity;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
@@ -35,6 +36,8 @@ public class CloudRingSpell extends BaseSpell {
         this.baseSpellPower = 2;
         this.manaCostPerLevel = 10;
         this.spellPowerPerLevel = 3;
+
+        this.castFinishSound = () -> SoundEvents.ENCHANTMENT_TABLE_USE;
     }
 
     @Override
