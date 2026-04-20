@@ -43,7 +43,7 @@ public class ThunderFanburstSpell extends BaseSpell {
         this.castStartAnimation = SpellAnimations.OVERHEAD_MELEE_SWING_ANIMATION;
         this.castFinishAnimation = AnimationHolder.pass();
 
-        this.castStartSound = () -> SoundRegistry.LIGHTNING_LANCE_CAST.get();
+        this.castStartSound = SoundRegistry.LIGHTNING_LANCE_CAST;
         this.castFinishSound = () -> SoundEvents.WITHER_SHOOT;
 
         this.interrupted = false;
