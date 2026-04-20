@@ -43,6 +43,8 @@ public class NimbusArraySpell extends BaseSpell {
         this.castFinishAnimation = AnimationHolder.pass();
 
         this.castFinishSound = SoundEvents.LIGHTNING_BOLT_THUNDER;
+
+        this.interrupted = false;
     }
 
     @Override
