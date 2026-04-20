@@ -76,15 +76,8 @@ public class SpellFireColumnEntity extends FireColumnEntity implements IWarmupEn
     }
 
     // Warmup
-    @Override
-    public void onWarmupTick() {
-        this.setActivate(false);
-    }
-
-    @Override
-    public void onWarmupFinished() {
-        this.setActivate(true);
-    }
+    @Override public void onWarmupTick() {}
+    @Override public void onWarmupFinished() {}
 
     @Override
     public void addAdditionalSaveData(CompoundTag tag) {
