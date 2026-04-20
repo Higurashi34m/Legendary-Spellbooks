@@ -8,17 +8,16 @@ public interface IWarmupEntity {
     int getWarmup();
 
     default void warmupTick() {
-        if (getWarmup() <= 0) return;
+        if (getWarmup() < 0) return;
 
         if (getWarmup() > 0) {
             onWarmupTick();
+            setWarmup(getWarmup() - 1);
+            return;
         }
 
-        if (getWarmup() == 1) {
-            onWarmupFinished();
-        }
-
-        setWarmup(getWarmup() - 1);
+        onWarmupFinished();
+        setWarmup(-1);
     }
 
     default void saveWarmupData(CompoundTag tag) {
