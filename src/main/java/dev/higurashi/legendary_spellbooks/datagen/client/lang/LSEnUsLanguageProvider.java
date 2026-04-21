@@ -21,6 +21,7 @@ public class LSEnUsLanguageProvider extends BaseLanguageProvider {
 
         // Fire
         addSpell(LSSpellRegistry.FLAME_EATER_SPELL, "Flame Eater", "Target multiple creatures to erupt a burst of fire at their feet. This spell fails to reach targets positioned too high above the ground.");
+        addSpell(LSSpellRegistry.FLAME_SECTOR_SPELL, "Flame Sector", "Emit a radial burst of fire in equally spaced directions around you. These flames travel along the ground, erupting at the feet of creatures in their path. This spell fails to manifest if the caster are too high above the ground.");
 
         // Lightning
         addSpell(LSSpellRegistry.CLOUD_RAIL_SPELL, "Cloud Rail", "Conjure a cascading line of magical clouds in front of you. These clouds fall freely from the sky, exploding and dealing area damage upon impact with the ground.");

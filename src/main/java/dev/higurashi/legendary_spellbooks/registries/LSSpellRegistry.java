@@ -3,6 +3,7 @@ package dev.higurashi.legendary_spellbooks.registries;
 import dev.higurashi.legendary_spellbooks.LegendarySpellbooks;
 import dev.higurashi.legendary_spellbooks.common.spells.ender.AnnihilationGeyserSpell;
 import dev.higurashi.legendary_spellbooks.common.spells.fire.FlameEaterSpell;
+import dev.higurashi.legendary_spellbooks.common.spells.fire.FlameSectorSpell;
 import dev.higurashi.legendary_spellbooks.common.spells.lightning.*;
 import dev.higurashi.legendary_spellbooks.common.spells.nature.OvergrownShockwaveSpell;
 import io.redspace.ironsspellbooks.api.registry.SpellRegistry;
@@ -21,6 +22,7 @@ public class LSSpellRegistry {
 
     // Fire
     public static final RegistryObject<AbstractSpell> FLAME_EATER_SPELL = register(new FlameEaterSpell());
+    public static final RegistryObject<AbstractSpell> FLAME_SECTOR_SPELL = register(new FlameSectorSpell());
 
     // Lightning
     public static final RegistryObject<AbstractSpell> CLOUD_RAIL_SPELL = register(new CloudRailSpell());
