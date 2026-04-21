@@ -48,7 +48,7 @@ public class OvergrownShockwaveSpell extends BaseOverheadMeleeSwingSpell {
     }
 
     @Override
-    public int getRecastCount(int spellLevel, @Nullable LivingEntity entity) {
+    public int getRecastCount(int spellLevel, @Nullable LivingEntity caster) {
         return spellLevel;
     }
 
