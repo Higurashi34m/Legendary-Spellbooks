@@ -3,6 +3,8 @@
   "death.attack.legendary_spellbooks.flame_eater": "%1$s was consumed by the subterranean flames summoned by %2$s",
   "spell.legendary_spellbooks.annihilation_geyser": "Annihilation Geyser",
   "spell.legendary_spellbooks.annihilation_geyser.guide": "Create a massive gravitational well that pulls in nearby creatures. Upon completing the cast, a colossal geyser of destructive energy erupts, finishing with a devastating explosion.",
+  "spell.legendary_spellbooks.annihilation_shockwave": "Annihilation Shockwave",
+  "spell.legendary_spellbooks.annihilation_shockwave.guide": "Stomp the ground to release a fan-shaped shockwave of green annihilation fire. The flames erupt in successive waves, consuming the life force of all creatures caught in the tremor. Damage increases based on the target's maximum health.",
   "spell.legendary_spellbooks.cloud_rail": "Cloud Rail",
   "spell.legendary_spellbooks.cloud_rail.guide": "Conjure a cascading line of magical clouds in front of you. These clouds fall freely from the sky, exploding and dealing area damage upon impact with the ground.",
   "spell.legendary_spellbooks.cloud_ring": "Cloud Ring",
@@ -19,5 +21,6 @@
   "spell.legendary_spellbooks.thunder_fanburst.guide": "Unleash a fanned burst of lightning bolts that travel outwards in multiple directions. These bolts pierce through all creatures in their path.",
   "spell.legendary_spellbooks.triple_nimbus_array": "Triple Nimbus Array",
   "spell.legendary_spellbooks.triple_nimbus_array.guide": "Manifest three rows of thunderclouds in a fanned formation. These clouds continuously strike lightning upon anything beneath them for the duration of the spell.",
+  "ui.legendary_spellbooks.health_damage": "%s damage + %s%% of target's max HP",
   "ui.legendary_spellbooks.nimbus_count": "%d Nimbus"
 }

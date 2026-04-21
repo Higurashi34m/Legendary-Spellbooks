@@ -17,6 +17,7 @@ public class LSEnUsLanguageProvider extends BaseLanguageProvider {
         // --------------------
 
         // Ender
+        addSpell(LSSpellRegistry.ANNIHILATION_SHOCKWAVE_SPELL, "Annihilation Shockwave", "Stomp the ground to release a fan-shaped shockwave of green annihilation fire. The flames erupt in successive waves, consuming the life force of all creatures caught in the tremor. Damage increases based on the target's maximum health.");
         addSpell(LSSpellRegistry.ANNIHILATION_GEYSER_SPELL, "Annihilation Geyser", "Create a massive gravitational well that pulls in nearby creatures. Upon completing the cast, a colossal geyser of destructive energy erupts, finishing with a devastating explosion.");
 
         // Fire
@@ -39,5 +40,6 @@ public class LSEnUsLanguageProvider extends BaseLanguageProvider {
 
         // UI
         addUi("nimbus_count", "%d Nimbus");
+        addUi("health_damage", "%s damage + %s%% of target's max HP");
     }
 }

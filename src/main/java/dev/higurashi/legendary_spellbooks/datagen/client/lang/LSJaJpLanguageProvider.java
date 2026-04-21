@@ -17,6 +17,7 @@ public class LSJaJpLanguageProvider extends BaseLanguageProvider {
         // --------------------
 
         // Ender
+        addSpell(LSSpellRegistry.ANNIHILATION_SHOCKWAVE_SPELL, "アナイアレイション・ショックウェーブ", "地面を踏みつけて、扇状に緑色の火の衝撃波を発生させる。炎は波のように噴出し、巻き込まれたすべての敵の生命力を焼き尽くす。当たった相手の最大体力に応じてダメージが増加する。");
         addSpell(LSSpellRegistry.ANNIHILATION_GEYSER_SPELL, "終焉の噴火", "近くの敵を吸い込む巨大な重力場を周囲に発生させる。詠唱が完了すると、終焉のエネルギーの巨大な間欠泉が噴出し、壊滅的な爆発が起こる。(地形破壊は無い)");
 
         // Fire
@@ -39,5 +40,6 @@ public class LSJaJpLanguageProvider extends BaseLanguageProvider {
 
         // UI
         addUi("nimbus_count", "雷雲の数: %d");
+        addUi("health_damage", "ダメージ: %s + 相手の最大体力の%s%%");
     }
 }

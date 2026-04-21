@@ -2,6 +2,7 @@ package dev.higurashi.legendary_spellbooks.registries;
 
 import dev.higurashi.legendary_spellbooks.LegendarySpellbooks;
 import dev.higurashi.legendary_spellbooks.common.spells.ender.AnnihilationGeyserSpell;
+import dev.higurashi.legendary_spellbooks.common.spells.ender.AnnihilationShockwaveSpell;
 import dev.higurashi.legendary_spellbooks.common.spells.fire.FlameEaterSpell;
 import dev.higurashi.legendary_spellbooks.common.spells.fire.FlameSectorSpell;
 import dev.higurashi.legendary_spellbooks.common.spells.lightning.*;
@@ -18,6 +19,7 @@ public class LSSpellRegistry {
     private static RegistryObject<AbstractSpell> register(AbstractSpell spell) { return SPELLS.register(spell.getSpellName(), () -> spell); }
 
     // Ender
+    public static final RegistryObject<AbstractSpell> ANNIHILATION_SHOCKWAVE_SPELL = register(new AnnihilationShockwaveSpell());
     public static final RegistryObject<AbstractSpell> ANNIHILATION_GEYSER_SPELL = register(new AnnihilationGeyserSpell());
 
     // Fire
