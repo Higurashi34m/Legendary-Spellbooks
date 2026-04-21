@@ -23,5 +23,5 @@ public abstract class AnnihilationPortalEntityMixin implements ISpellSourceFlag 
     @Override public boolean legendarySpellbooks$isFromSpell() { return legendarySpellbooks$isFromSpell; }
 
     @Override public void legendarySpellbooks$setDamage(float value) {}
-    @Override public void legendarySpellbooks$getDamage() {}
+    @Override public float legendarySpellbooks$getDamage() { return 0; }
 }

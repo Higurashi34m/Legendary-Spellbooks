@@ -5,5 +5,5 @@ public interface ISpellSourceFlag {
     boolean legendarySpellbooks$isFromSpell();
 
     void legendarySpellbooks$setDamage(float value);
-    void legendarySpellbooks$getDamage();
+    float legendarySpellbooks$getDamage();
 }
