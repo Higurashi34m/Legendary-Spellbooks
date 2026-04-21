@@ -1,5 +1,6 @@
 {
   "death.attack.legendary_spellbooks.cloud_rail": "%1$sは %2$sの雲に巻き込まれて押しつぶされた",
+  "death.attack.legendary_spellbooks.flame_eater": "%1$sは %2$s が地から呼び出した業火に喰らわれた",
   "spell.legendary_spellbooks.annihilation_geyser": "終焉の噴火",
   "spell.legendary_spellbooks.annihilation_geyser.guide": "近くの敵を吸い込む巨大な重力場を周囲に発生させる。詠唱が完了すると、終焉のエネルギーの巨大な間欠泉が噴出し、壊滅的な爆発が起こる。(地形破壊は無い)",
   "spell.legendary_spellbooks.cloud_rail": "クラウドレール",

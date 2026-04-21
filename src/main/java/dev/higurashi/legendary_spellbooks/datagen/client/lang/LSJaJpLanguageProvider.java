@@ -35,6 +35,7 @@ public class LSJaJpLanguageProvider extends BaseLanguageProvider {
 
         // Death Attack
         addSpellDamageSource(LSSpellRegistry.CLOUD_RAIL_SPELL, "%1$sは %2$sの雲に巻き込まれて押しつぶされた");
+        addSpellDamageSource(LSSpellRegistry.FLAME_EATER_SPELL, "%1$sは %2$s が地から呼び出した業火に喰らわれた");
 
         // UI
         addUi("nimbus_count", "雷雲の数: %d");

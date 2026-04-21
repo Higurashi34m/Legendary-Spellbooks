@@ -35,6 +35,7 @@ public class LSEnUsLanguageProvider extends BaseLanguageProvider {
 
         // Death Attack
         addSpellDamageSource(LSSpellRegistry.CLOUD_RAIL_SPELL, "%1$s was engulfed and crushed by %2$s's clouds");
+        addSpellDamageSource(LSSpellRegistry.FLAME_EATER_SPELL, "%1$s was consumed by the subterranean flames summoned by %2$s");
 
         // UI
         addUi("nimbus_count", "%d Nimbus");
