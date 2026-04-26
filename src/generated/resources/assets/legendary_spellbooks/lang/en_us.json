@@ -1,6 +1,8 @@
 {
   "death.attack.legendary_spellbooks.cloud_rail": "%1$s was engulfed and crushed by %2$s's clouds",
   "death.attack.legendary_spellbooks.flame_eater": "%1$s was consumed by the subterranean flames summoned by %2$s",
+  "spell.legendary_spellbooks.annihilation_beam": "Annihilation Beam",
+  "spell.legendary_spellbooks.annihilation_beam.guide": "Channel a devastating beam of pure annihilation. While firing, you are locked in place. When aimed horizontally near the ground, the beam's overwhelming power causes it to scatter unstable energy orbs across the terrain.",
   "spell.legendary_spellbooks.annihilation_geyser": "Annihilation Geyser",
   "spell.legendary_spellbooks.annihilation_geyser.guide": "Create a massive gravitational well that pulls in nearby creatures. Upon completing the cast, a colossal geyser of destructive energy erupts, finishing with a devastating explosion.",
   "spell.legendary_spellbooks.annihilation_shockwave": "Annihilation Shockwave",

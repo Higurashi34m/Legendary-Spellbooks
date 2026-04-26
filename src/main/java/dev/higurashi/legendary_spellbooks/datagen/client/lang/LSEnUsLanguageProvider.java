@@ -17,6 +17,7 @@ public class LSEnUsLanguageProvider extends BaseLanguageProvider {
         // --------------------
 
         // Ender
+        addSpell(LSSpellRegistry.ANNIHILATION_BEAM_SPELL, "Annihilation Beam", "Channel a devastating beam of pure annihilation. While firing, you are locked in place. When aimed horizontally near the ground, the beam's overwhelming power causes it to scatter unstable energy orbs across the terrain.");
         addSpell(LSSpellRegistry.ANNIHILATION_SHOCKWAVE_SPELL, "Annihilation Shockwave", "Stomp the ground to release a fan-shaped shockwave of green annihilation fire. The flames erupt in successive waves, consuming the life force of all creatures caught in the tremor. Damage increases based on the target's maximum health.");
         addSpell(LSSpellRegistry.ANNIHILATION_GEYSER_SPELL, "Annihilation Geyser", "Create a massive gravitational well that pulls in nearby creatures. Upon completing the cast, a colossal geyser of destructive energy erupts, finishing with a devastating explosion.");
 
