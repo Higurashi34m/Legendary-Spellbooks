@@ -1,5 +1,7 @@
 package dev.higurashi.legendary_spellbooks.setups;
 
+import dev.higurashi.legendary_spellbooks.common.entities.spell.summoned.SummonedAnnihilationPursuerEntity;
+import dev.higurashi.legendary_spellbooks.registries.LSEntityRegistry;
 import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -14,6 +16,6 @@ public class CommonSetup {
 
     @SubscribeEvent
     public static void onAttributeCreate(EntityAttributeCreationEvent event) {
-
+        event.put(LSEntityRegistry.SUMMONED_ANNIHILATION_PURSUER_ENTITY.get(), SummonedAnnihilationPursuerEntity.createAttributes().build());
     }
 }
