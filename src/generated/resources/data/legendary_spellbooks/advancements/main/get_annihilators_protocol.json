@@ -1,0 +1,39 @@
+{
+  "parent": "legendary_spellbooks:main/root",
+  "criteria": {
+    "has_item": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "legendary_spellbooks:annihilators_protocol"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancement.legendary_spellbooks.annihilator_protocol.description"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "legendary_spellbooks:annihilators_protocol",
+      "nbt": "{\"irons_spellbooks:spell_container\":{data:[{id:\"legendary_spellbooks:annihilation_geyser\",index:0,level:1,locked:1b},{id:\"legendary_spellbooks:annihilation_beam\",index:1,level:3,locked:1b}],maxSpells:12,mustEquip:1b,spellWheel:1b}}"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancement.legendary_spellbooks.annihilator_protocol.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_item"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

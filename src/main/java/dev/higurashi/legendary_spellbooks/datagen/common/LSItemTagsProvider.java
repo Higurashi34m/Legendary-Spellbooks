@@ -24,9 +24,13 @@ public class LSItemTagsProvider extends ItemTagsProvider {
 
     @Override
     protected void addTags(@NotNull HolderLookup.Provider provider) {
-        TagKey<Item> CURIOS = ItemTags.create(ResourceLocation.fromNamespaceAndPath(CuriosApi.MODID, Curios.SPELLBOOK_SLOT));
+        TagKey<Item> CURIOS_SPELLBOOK = ItemTags.create(ResourceLocation.fromNamespaceAndPath(CuriosApi.MODID, Curios.SPELLBOOK_SLOT));
+        TagKey<Item> CURIOS_HED = ItemTags.create(ResourceLocation.fromNamespaceAndPath(CuriosApi.MODID, "head"));
 
-        this.tag(CURIOS).add(LSItemRegistry.ANNIHILATORS_PROTOCOL_SPELLBOOK_ITEM.get());
-        this.tag(CURIOS).add(LSItemRegistry.STORMBOUND_GRIMOIRE_SPELLBOOK_ITEM.get());
+        this.tag(CURIOS_SPELLBOOK).add(LSItemRegistry.ANNIHILATORS_PROTOCOL_SPELLBOOK_ITEM.get());
+        this.tag(CURIOS_SPELLBOOK).add(LSItemRegistry.STORMBOUND_GRIMOIRE_SPELLBOOK_ITEM.get());
+
+        this.tag(CURIOS_HED).add(LSItemRegistry.PP_LUMIERE_HALO.get());
+        this.tag(CURIOS_HED).add(LSItemRegistry.PP_FALLEN_HALO.get());
     }
 }

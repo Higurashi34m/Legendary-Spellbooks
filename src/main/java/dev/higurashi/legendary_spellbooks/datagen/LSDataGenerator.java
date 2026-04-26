@@ -3,7 +3,9 @@ package dev.higurashi.legendary_spellbooks.datagen;
 import dev.higurashi.legendary_spellbooks.datagen.client.LSItemModelProvider;
 import dev.higurashi.legendary_spellbooks.datagen.client.lang.LSEnUsLanguageProvider;
 import dev.higurashi.legendary_spellbooks.datagen.client.lang.LSJaJpLanguageProvider;
+import dev.higurashi.legendary_spellbooks.datagen.common.LSAdvancementProvider;
 import dev.higurashi.legendary_spellbooks.datagen.common.LSBlockTagsProvider;
+import dev.higurashi.legendary_spellbooks.datagen.common.LSCuriosDataProvider;
 import dev.higurashi.legendary_spellbooks.datagen.common.LSItemTagsProvider;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
@@ -33,5 +35,7 @@ public class LSDataGenerator {
         LSBlockTagsProvider blockTagsProvider = new LSBlockTagsProvider(output, provider, helper);
         generator.addProvider(event.includeServer(), blockTagsProvider);
         generator.addProvider(event.includeServer(), new LSItemTagsProvider(output, provider, blockTagsProvider.contentsGetter(), helper));
+        generator.addProvider(event.includeServer(), new LSCuriosDataProvider(output, helper, provider));
+        generator.addProvider(event.includeServer(), new LSAdvancementProvider(output, provider, helper));
     }
 }

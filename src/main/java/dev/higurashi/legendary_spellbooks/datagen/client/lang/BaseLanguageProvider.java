@@ -44,4 +44,9 @@ public abstract class BaseLanguageProvider extends LanguageProvider {
     public void addCreativeTab(String key, String name) {
         add("tab." + LegendarySpellbooks.MOD_ID + "." + key, name);
     }
+
+    public void addAdvancement(String key, String TitleName, String DescriptionName) {
+        add("advancement." + LegendarySpellbooks.MOD_ID + "." + key + ".title", TitleName);
+        add("advancement." + LegendarySpellbooks.MOD_ID + "." + key + ".description", DescriptionName);
+    }
 }

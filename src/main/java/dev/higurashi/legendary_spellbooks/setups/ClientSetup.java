@@ -1,6 +1,7 @@
 package dev.higurashi.legendary_spellbooks.setups;
 
 import dev.higurashi.legendary_spellbooks.client.renderer.entities.spell.projectile.SpellCloudRender;
+import dev.higurashi.legendary_spellbooks.client.renderer.items.PPHaloRenderer;
 import dev.higurashi.legendary_spellbooks.registries.LSEntityRegistry;
 import dev.higurashi.legendary_spellbooks.registries.LSItemRegistry;
 import io.redspace.ironsspellbooks.render.SpellBookCurioRenderer;
@@ -19,6 +20,9 @@ public class ClientSetup {
     public static void onClientSetup(final FMLClientSetupEvent event) {
         CuriosRendererRegistry.register(LSItemRegistry.ANNIHILATORS_PROTOCOL_SPELLBOOK_ITEM.get(), SpellBookCurioRenderer::new);
         CuriosRendererRegistry.register(LSItemRegistry.STORMBOUND_GRIMOIRE_SPELLBOOK_ITEM.get(), SpellBookCurioRenderer::new);
+
+        CuriosRendererRegistry.register(LSItemRegistry.PP_FALLEN_HALO.get(), PPHaloRenderer::new);
+        CuriosRendererRegistry.register(LSItemRegistry.PP_LUMIERE_HALO.get(), PPHaloRenderer::new);
     }
 
     @SubscribeEvent
