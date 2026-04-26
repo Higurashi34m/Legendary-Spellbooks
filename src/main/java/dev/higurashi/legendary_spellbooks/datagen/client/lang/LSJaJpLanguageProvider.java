@@ -25,9 +25,6 @@ public class LSJaJpLanguageProvider extends BaseLanguageProvider {
         addItem(LSItemRegistry.ANNIHILATORS_PROTOCOL_SPELLBOOK_ITEM, "アナイアレイター・プロトコル");
         addItem(LSItemRegistry.STORMBOUND_GRIMOIRE_SPELLBOOK_ITEM, "嵐に結ばれし魔導書");
 
-        addItem(LSItemRegistry.PP_LUMIERE_HALO, "彼方のへいロー:PPモデル");
-        addItem(LSItemRegistry.PP_FALLEN_HALO, "堕天使のへいロー:PPモデル");
-
         // --------------------
         // SPELL
         // --------------------
@@ -73,17 +70,12 @@ public class LSJaJpLanguageProvider extends BaseLanguageProvider {
         addTooltip("on_sunny", "晴れの時:");
         addTooltip("on_thunder", "雷雨の時:");
 
-        addTooltip(LSItemRegistry.PP_LUMIERE_HALO.get(), "人間界に舞い降りた片羽の天使のへいロー。 \n数多の涙と苦労と幸せと夢が詰まっている。");
-        addTooltip(LSItemRegistry.PP_FALLEN_HALO.get(), "堕天した片羽の天使のへいロー。 \n果たして反逆を果たすことはできたのか。");
-
         addTooltip(LSItemRegistry.ANNIHILATORS_PROTOCOL_SPELLBOOK_ITEM.get(), "§6特殊能力: §7ダメージを受けた際、10%の確率でテレポートを実行し攻撃を回避する。");
         addTooltip(LSItemRegistry.STORMBOUND_GRIMOIRE_SPELLBOOK_ITEM.get(), "この魔導書は雷を呼び、降りしきる雨を嵐へと育て上げる");
 
         // --------------------
         // Advancement
         // --------------------
-        addAdvancement("pp_lumiere_halo", "ハッピーなエンドになる彼方へ飛ぶよ", "彼方のへいロー:PPモデルを手に入れる");
-        addAdvancement("pp_fallen_halo", "狙イヲ定メテ 革命ヲ", "堕天使のへいロー:PPモデルを手に入れる");
         addAdvancement("stormbound_grimoire", "嵐の本", "嵐に結ばれし魔導書を手に入れる");
         addAdvancement("annihilator_protocol", "覗き覗かれ...", "アナイアレイター・プロトコルを手に入れる");
     }

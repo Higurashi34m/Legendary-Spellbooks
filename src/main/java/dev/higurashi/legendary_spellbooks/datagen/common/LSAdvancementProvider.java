@@ -35,18 +35,6 @@ public class LSAdvancementProvider extends ForgeAdvancementProvider {
                     .addCriterion("has_anything", InventoryChangeTrigger.TriggerInstance.hasItems(LSItemRegistry.STORMBOUND_GRIMOIRE_SPELLBOOK_ITEM.get()))
                     .save(saver, ResourceLocation.fromNamespaceAndPath(LegendarySpellbooks.MOD_ID, "main/root"), helper);
 
-            Advancement PpLumiereHaloAdvancement = Advancement.Builder.advancement()
-                    .parent(root)
-                    .display(LSItemRegistry.PP_LUMIERE_HALO.get(), Component.translatable("advancement.legendary_spellbooks.pp_lumiere_halo.title"), Component.translatable("advancement.legendary_spellbooks.pp_lumiere_halo.description"), null, FrameType.TASK, true, true, false)
-                    .addCriterion("has_item", InventoryChangeTrigger.TriggerInstance.hasItems(LSItemRegistry.PP_LUMIERE_HALO.get()))
-                    .save(saver, ResourceLocation.fromNamespaceAndPath(LegendarySpellbooks.MOD_ID, "main/get_pp_lumiere_halo"), helper);
-
-            Advancement PpFallenHaloAdvancement = Advancement.Builder.advancement()
-                    .parent(PpLumiereHaloAdvancement)
-                    .display(LSItemRegistry.PP_FALLEN_HALO.get(), Component.translatable("advancement.legendary_spellbooks.pp_fallen_halo.title"), Component.translatable("advancement.legendary_spellbooks.pp_fallen_halo.description"), null, FrameType.TASK, true, true, false)
-                    .addCriterion("has_item", InventoryChangeTrigger.TriggerInstance.hasItems(LSItemRegistry.PP_FALLEN_HALO.get()))
-                    .save(saver, ResourceLocation.fromNamespaceAndPath(LegendarySpellbooks.MOD_ID, "main/get_pp_fallen_halo"), helper);
-
             Advancement stormboundGrimoireAdvancement = Advancement.Builder.advancement()
                     .parent(root)
                     .display(LSItemRegistry.STORMBOUND_GRIMOIRE_SPELLBOOK_ITEM.get(), Component.translatable("advancement.legendary_spellbooks.stormbound_grimoire.title"), Component.translatable("advancement.legendary_spellbooks.stormbound_grimoire.description"), null, FrameType.TASK, true, true, false)

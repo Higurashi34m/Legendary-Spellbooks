@@ -25,9 +25,6 @@ public class LSEnUsLanguageProvider extends BaseLanguageProvider {
         addItem(LSItemRegistry.ANNIHILATORS_PROTOCOL_SPELLBOOK_ITEM, "Annihilator's Protocol");
         addItem(LSItemRegistry.STORMBOUND_GRIMOIRE_SPELLBOOK_ITEM, "Stormbound Grimoire");
 
-        addItem(LSItemRegistry.PP_LUMIERE_HALO, "Lumière Halo - PP Model");
-        addItem(LSItemRegistry.PP_FALLEN_HALO, "Fallen Halo - PP Model");
-
         // --------------------
         // SPELL
         // --------------------
@@ -71,9 +68,6 @@ public class LSEnUsLanguageProvider extends BaseLanguageProvider {
         // --------------------
         // Tooltip
         // --------------------
-        addTooltip(LSItemRegistry.PP_LUMIERE_HALO.get(), "The halo of a Fallen Wing angel who descended to the human world.\nWithin its light, every tear and every silent prayer still lingers.");
-        addTooltip(LSItemRegistry.PP_FALLEN_HALO.get(), "The halo of a fallen Fallen Wing angel.\nBearing her struggles alone, she still dreams a dream no one has seen.");
-
         addTooltip("on_sunny", "In sunny weather:");
         addTooltip("on_thunder", "During thunderstorms:");
 
@@ -83,8 +77,6 @@ public class LSEnUsLanguageProvider extends BaseLanguageProvider {
         // --------------------
         // Advancement
         // --------------------
-        addAdvancement("pp_lumiere_halo", "From me to you, I send lumière", "Get Lumière Halo - PP Model");
-        addAdvancement("pp_fallen_halo", "Dream a dream no one has seen", "Get Fallen Halo - PP Model");
         addAdvancement("stormbound_grimoire", "Storm book", "Get Stormbound Grimoire");
         addAdvancement("annihilator_protocol", "Peeping and being peeped at...", "Get Annihilator Protocol");
 
