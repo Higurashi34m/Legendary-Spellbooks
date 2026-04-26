@@ -87,7 +87,7 @@ public class SpellPoisonousShockwaveEntity extends PoisonousShockwave implements
     }
 
     @Override public void onWarmupTick() {}
-    @Override public void onWarmupFinished() { this.playSound(SoundEvents.FIRE_EXTINGUISH, 1.0f, 1.0f); }
+    @Override public void onWarmupFinished() { this.playSound(SoundEvents.FIRE_EXTINGUISH, 0.25f, 1.0f); }
 
     @Override
     public void addAdditionalSaveData(CompoundTag tag) {
