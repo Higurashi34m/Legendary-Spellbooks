@@ -1,5 +1,6 @@
 package dev.higurashi.legendary_spellbooks.datagen.client.lang;
 
+import dev.higurashi.legendary_spellbooks.registries.LSItemRegistry;
 import dev.higurashi.legendary_spellbooks.registries.LSSpellRegistry;
 import net.minecraft.data.PackOutput;
 
@@ -12,6 +13,11 @@ public class LSEnUsLanguageProvider extends BaseLanguageProvider {
 
     @Override
     protected void addTranslations() {
+        // --------------------
+        // ITEM
+        // --------------------
+        addItem(LSItemRegistry.ANNIHILATORS_PROTOCOL_SPELLBOOK_ITEM, "Annihilator's Protocol");
+
         // --------------------
         // SPELL
         // --------------------
@@ -43,5 +49,10 @@ public class LSEnUsLanguageProvider extends BaseLanguageProvider {
         // UI
         addUi("nimbus_count", "%d Nimbus");
         addUi("health_damage", "%s damage + %s%% of target's max HP");
+
+        // --------------------
+        // Tooltip
+        // --------------------
+        addTooltip(LSItemRegistry.ANNIHILATORS_PROTOCOL_SPELLBOOK_ITEM.get(), "Grants a 10% chance to teleport away upon taking damage, effectively neutralizing the threat.");
     }
 }

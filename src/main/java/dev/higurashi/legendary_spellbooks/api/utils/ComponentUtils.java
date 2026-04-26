@@ -3,6 +3,7 @@ package dev.higurashi.legendary_spellbooks.api.utils;
 import dev.higurashi.legendary_spellbooks.LegendarySpellbooks;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
+import net.minecraft.world.item.Item;
 
 public class ComponentUtils {
     public static MutableComponent getUIComponent(String modId, String componentName, Object... args) {
@@ -38,5 +39,10 @@ public class ComponentUtils {
 
     public static String format2f(float value) {
         return String.format("%.2f", value);
+    }
+
+    //
+    public static String itemTooltip(Item item) {
+        return item.getDescriptionId().replace("item.", "tooltip.");
     }
 }

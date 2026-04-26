@@ -3,6 +3,7 @@ package dev.higurashi.legendary_spellbooks;
 import com.mojang.logging.LogUtils;
 import dev.higurashi.legendary_spellbooks.registries.LSEffectRegistry;
 import dev.higurashi.legendary_spellbooks.registries.LSEntityRegistry;
+import dev.higurashi.legendary_spellbooks.registries.LSItemRegistry;
 import dev.higurashi.legendary_spellbooks.registries.LSSpellRegistry;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -20,6 +21,7 @@ public class LegendarySpellbooks {
 
         LSEffectRegistry.register(modEventBus);
         LSEntityRegistry.register(modEventBus);
+        LSItemRegistry.register(modEventBus);
         LSSpellRegistry.register(modEventBus);
 
         MinecraftForge.EVENT_BUS.register(this);

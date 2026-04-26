@@ -1,5 +1,6 @@
 package dev.higurashi.legendary_spellbooks.datagen.client.lang;
 
+import dev.higurashi.legendary_spellbooks.registries.LSItemRegistry;
 import dev.higurashi.legendary_spellbooks.registries.LSSpellRegistry;
 import net.minecraft.data.PackOutput;
 
@@ -12,6 +13,11 @@ public class LSJaJpLanguageProvider extends BaseLanguageProvider {
 
     @Override
     protected void addTranslations() {
+        // --------------------
+        // ITEM
+        // --------------------
+        addItem(LSItemRegistry.ANNIHILATORS_PROTOCOL_SPELLBOOK_ITEM, "アナイアレイター・プロトコル");
+
         // --------------------
         // SPELL
         // --------------------
@@ -43,5 +49,10 @@ public class LSJaJpLanguageProvider extends BaseLanguageProvider {
         // UI
         addUi("nimbus_count", "雷雲の数: %d");
         addUi("health_damage", "ダメージ: %s + 相手の最大体力の%s%%");
+
+        // --------------------
+        // Tooltip
+        // --------------------
+        addTooltip(LSItemRegistry.ANNIHILATORS_PROTOCOL_SPELLBOOK_ITEM.get(), "§6特殊能力: §7ダメージを受けた際、10%の確率でテレポートを実行し攻撃を回避する。");
     }
 }

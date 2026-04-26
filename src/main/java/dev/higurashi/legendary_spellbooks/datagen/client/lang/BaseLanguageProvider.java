@@ -1,8 +1,10 @@
 package dev.higurashi.legendary_spellbooks.datagen.client.lang;
 
 import dev.higurashi.legendary_spellbooks.LegendarySpellbooks;
+import dev.higurashi.legendary_spellbooks.api.utils.ComponentUtils;
 import io.redspace.ironsspellbooks.api.spells.AbstractSpell;
 import net.minecraft.data.PackOutput;
+import net.minecraft.world.item.Item;
 import net.minecraftforge.common.data.LanguageProvider;
 
 import java.util.function.Supplier;
@@ -23,6 +25,10 @@ public abstract class BaseLanguageProvider extends LanguageProvider {
 
     protected void addUi(String key, String name) {
         add("ui." + modId + "." + key, name);
+    }
+
+    protected void addTooltip(Item key, String name) {
+        add(ComponentUtils.itemTooltip(key), name);
     }
 
     protected void addDamageSource(String key, String name) {
