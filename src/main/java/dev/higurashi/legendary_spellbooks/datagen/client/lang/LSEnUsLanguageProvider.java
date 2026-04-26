@@ -26,6 +26,7 @@ public class LSEnUsLanguageProvider extends BaseLanguageProvider {
         addSpell(LSSpellRegistry.ANNIHILATION_BEAM_SPELL, "Annihilation Beam", "Channel a devastating beam of pure annihilation. While firing, you are locked in place. When aimed horizontally near the ground, the beam's overwhelming power causes it to scatter unstable energy orbs across the terrain.");
         addSpell(LSSpellRegistry.ANNIHILATION_BOMB_SPELL, "Annihilation Bomb", "Launch a concentrated orb of annihilation that detonates upon impact with a creature or the ground. The resulting explosion deals heavy damage and scatters a multitude of unstable energy orbs across the surrounding area.");
         addSpell(LSSpellRegistry.ANNIHILATION_SHOCKWAVE_SPELL, "Annihilation Shockwave", "Stomp the ground to release a fan-shaped shockwave of green annihilation fire. The flames erupt in successive waves, consuming the life force of all creatures caught in the tremor. Damage increases based on the target's maximum health.");
+        addSpell(LSSpellRegistry.ANNIHILATION_RESONANCE_SPELL, "Annihilation Resonance", "Enhance your weaponry with an unstable frequency. For the duration of the spell, landing a critical hit triggers a powerful annihilation explosion at the point of impact.");
         addSpell(LSSpellRegistry.ANNIHILATION_GEYSER_SPELL, "Annihilation Geyser", "Create a massive gravitational well that pulls in nearby creatures. Upon completing the cast, a colossal geyser of destructive energy erupts, finishing with a devastating explosion.");
 
         // Fire
@@ -45,6 +46,7 @@ public class LSEnUsLanguageProvider extends BaseLanguageProvider {
         // Death Attack
         addSpellDamageSource(LSSpellRegistry.CLOUD_RAIL_SPELL, "%1$s was engulfed and crushed by %2$s's clouds");
         addSpellDamageSource(LSSpellRegistry.FLAME_EATER_SPELL, "%1$s was consumed by the subterranean flames summoned by %2$s");
+        addSpellDamageSource(LSSpellRegistry.ANNIHILATION_RESONANCE_SPELL, "%1$s was obliterated by a resonant annihilation blast from %2$s");
 
         // UI
         addUi("nimbus_count", "%d Nimbus");

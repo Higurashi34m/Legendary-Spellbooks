@@ -1,10 +1,7 @@
 package dev.higurashi.legendary_spellbooks.registries;
 
 import dev.higurashi.legendary_spellbooks.LegendarySpellbooks;
-import dev.higurashi.legendary_spellbooks.common.spells.ender.AnnihilationBeamSpell;
-import dev.higurashi.legendary_spellbooks.common.spells.ender.AnnihilationBombSpell;
-import dev.higurashi.legendary_spellbooks.common.spells.ender.AnnihilationGeyserSpell;
-import dev.higurashi.legendary_spellbooks.common.spells.ender.AnnihilationShockwaveSpell;
+import dev.higurashi.legendary_spellbooks.common.spells.ender.*;
 import dev.higurashi.legendary_spellbooks.common.spells.fire.FlameEaterSpell;
 import dev.higurashi.legendary_spellbooks.common.spells.fire.FlameSectorSpell;
 import dev.higurashi.legendary_spellbooks.common.spells.lightning.*;
@@ -24,6 +21,7 @@ public class LSSpellRegistry {
     public static final RegistryObject<AbstractSpell> ANNIHILATION_BEAM_SPELL = register(new AnnihilationBeamSpell());
     public static final RegistryObject<AbstractSpell> ANNIHILATION_BOMB_SPELL = register(new AnnihilationBombSpell());
     public static final RegistryObject<AbstractSpell> ANNIHILATION_SHOCKWAVE_SPELL = register(new AnnihilationShockwaveSpell());
+    public static final RegistryObject<AbstractSpell> ANNIHILATION_RESONANCE_SPELL = register(new AnnihilationResonanceSpell());
     public static final RegistryObject<AbstractSpell> ANNIHILATION_GEYSER_SPELL = register(new AnnihilationGeyserSpell());
 
     // Fire
