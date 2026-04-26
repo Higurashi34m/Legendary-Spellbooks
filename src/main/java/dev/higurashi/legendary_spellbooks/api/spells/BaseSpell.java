@@ -29,6 +29,7 @@ public abstract class BaseSpell extends AbstractSpell {
 
     protected boolean interrupted = true;
     protected boolean reduceCastTime = true;
+    protected boolean stopSound = false;
 
     public BaseSpell(ResourceLocation spellResource, DefaultConfig spellConfig, CastType castType) {
         this.spellResource = spellResource;
@@ -81,6 +82,11 @@ public abstract class BaseSpell extends AbstractSpell {
     public int getEffectiveCastTime(int spellLevel, @Nullable LivingEntity caster) {
         if (reduceCastTime) return super.getEffectiveCastTime(spellLevel, caster);
         return getCastTime(spellLevel);
+    }
+
+    @Override
+    public boolean stopSoundOnCancel() {
+        return this.stopSound;
     }
 
     @Override public abstract List<MutableComponent> getUniqueInfo(int spellLevel, LivingEntity caster);
