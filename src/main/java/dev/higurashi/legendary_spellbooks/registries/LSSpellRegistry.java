@@ -2,6 +2,7 @@ package dev.higurashi.legendary_spellbooks.registries;
 
 import dev.higurashi.legendary_spellbooks.LegendarySpellbooks;
 import dev.higurashi.legendary_spellbooks.common.spells.ender.*;
+import dev.higurashi.legendary_spellbooks.common.spells.evocation.SummonHauntedKnightsSpell;
 import dev.higurashi.legendary_spellbooks.common.spells.fire.FlameEaterSpell;
 import dev.higurashi.legendary_spellbooks.common.spells.fire.FlameSectorSpell;
 import dev.higurashi.legendary_spellbooks.common.spells.lightning.*;
@@ -25,6 +26,9 @@ public class LSSpellRegistry {
     public static final RegistryObject<AbstractSpell> ANNIHILATION_RESONANCE_SPELL = register(new AnnihilationResonanceSpell());
     public static final RegistryObject<AbstractSpell> ANNIHILATION_GEYSER_SPELL = register(new AnnihilationGeyserSpell());
     public static final RegistryObject<AbstractSpell> RELEASE_RIFTWALKER_PREDATOR_SPELL = register(new ReleaseRiftwalkerPredatorSpell());
+
+    // Evocation
+    public static final RegistryObject<AbstractSpell> SUMMON_HAUNTED_KNIGHTS = register(new SummonHauntedKnightsSpell());
 
     // Fire
     public static final RegistryObject<AbstractSpell> FLAME_EATER_SPELL = register(new FlameEaterSpell());
