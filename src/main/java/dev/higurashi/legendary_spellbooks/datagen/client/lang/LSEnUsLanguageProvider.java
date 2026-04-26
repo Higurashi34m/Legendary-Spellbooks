@@ -45,6 +45,7 @@ public class LSEnUsLanguageProvider extends BaseLanguageProvider {
         addSpell(LSSpellRegistry.ENERGY_BEAM_SPELL, "Energy Beam", "Ascend into the air and remain suspended to unleash an ultra-high output laser. The overwhelming energy consumption leaves the caster stunned for a short duration after the beam concludes.");
 
         // Nature
+        addSpell(LSSpellRegistry.AMBUSH_THORNS_SPELL, "Ambush Thorns", "");
         addSpell(LSSpellRegistry.OVERGROWN_SHOCKWAVE_SPELL, "Overgrown Shockwave", "Slam the ground to unleash a burst of toxic nature magic in a large radius around you, poisoning all creatures caught in the tremor.");
 
         // Death Attack
@@ -55,6 +56,7 @@ public class LSEnUsLanguageProvider extends BaseLanguageProvider {
         // UI
         addUi("nimbus_count", "%d Nimbus");
         addUi("health_damage", "%s damage + %s%% of target's max HP");
+        addUi("thorn_damage", "%d thorn damage + 20%% of damage received");
 
         // --------------------
         // Tooltip

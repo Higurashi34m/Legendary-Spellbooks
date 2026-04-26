@@ -44,6 +44,7 @@ public class LSJaJpLanguageProvider extends BaseLanguageProvider {
         addSpell(LSSpellRegistry.ENERGY_BEAM_SPELL, "エナジービーム", "空中へと浮上・静止し、超高出力のレーザーを放つ。その圧倒的なエネルギー出力により、放ち終えた後、一定時間スタンし、行動不可となる。");
 
         // Nature
+        addSpell(LSSpellRegistry.AMBUSH_THORNS_SPELL, "アンバッシュ・ソーン", "");
         addSpell(LSSpellRegistry.OVERGROWN_SHOCKWAVE_SPELL, "生い茂るショックウェーブ", "地面を叩きつけて、周囲の広い範囲に有毒なエリアを発生させ、巻き込まれたすべての敵にダメージと共に猛毒を与える。");
 
         // Death Attack
@@ -54,6 +55,7 @@ public class LSJaJpLanguageProvider extends BaseLanguageProvider {
         // UI
         addUi("nimbus_count", "雷雲の数: %d");
         addUi("health_damage", "ダメージ: %s + 相手の最大体力の%s%%");
+        addUi("thorn_damage", "棘のダメージ: %d + 20%% の被ダメージ");
 
         // --------------------
         // Tooltip

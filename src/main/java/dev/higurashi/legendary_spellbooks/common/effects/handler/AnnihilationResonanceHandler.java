@@ -68,8 +68,8 @@ public class AnnihilationResonanceHandler {
     public static float getDamage(int amplifier, @Nullable LivingEntity caster) {
         float multiplier = (caster == null) ? 1.0f : LSSpellRegistry.ANNIHILATION_RESONANCE_SPELL.get().getEntityPowerMultiplier(caster);
 
-        float base = 2.0f;
-        float levelScale = 1.0f + (amplifier * 0.5f);
+        float base = 4.0f;
+        float levelScale = 1.0f + (amplifier * 0.75f);
 
         return base * levelScale * multiplier;
     }

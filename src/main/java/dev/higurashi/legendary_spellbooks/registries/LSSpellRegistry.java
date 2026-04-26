@@ -5,6 +5,7 @@ import dev.higurashi.legendary_spellbooks.common.spells.ender.*;
 import dev.higurashi.legendary_spellbooks.common.spells.fire.FlameEaterSpell;
 import dev.higurashi.legendary_spellbooks.common.spells.fire.FlameSectorSpell;
 import dev.higurashi.legendary_spellbooks.common.spells.lightning.*;
+import dev.higurashi.legendary_spellbooks.common.spells.nature.AmbushThornsSpell;
 import dev.higurashi.legendary_spellbooks.common.spells.nature.OvergrownShockwaveSpell;
 import io.redspace.ironsspellbooks.api.registry.SpellRegistry;
 import io.redspace.ironsspellbooks.api.spells.AbstractSpell;
@@ -40,5 +41,6 @@ public class LSSpellRegistry {
     public static final RegistryObject<AbstractSpell> ENERGY_BEAM_SPELL = register(new EnergyBeamSpell());
 
     // Nature
+    public static final RegistryObject<AbstractSpell> AMBUSH_THORNS_SPELL = register(new AmbushThornsSpell());
     public static final RegistryObject<AbstractSpell> OVERGROWN_SHOCKWAVE_SPELL = register(new OvergrownShockwaveSpell());
 }

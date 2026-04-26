@@ -1,6 +1,7 @@
 package dev.higurashi.legendary_spellbooks.registries;
 
 import dev.higurashi.legendary_spellbooks.LegendarySpellbooks;
+import dev.higurashi.legendary_spellbooks.common.effects.AmbushThornsEffect;
 import dev.higurashi.legendary_spellbooks.common.effects.AnnihilationResonanceEffect;
 import dev.higurashi.legendary_spellbooks.common.effects.BeamEffect;
 import net.minecraft.world.effect.MobEffect;
@@ -15,4 +16,5 @@ public class LSEffectRegistry {
 
     public static final RegistryObject<MobEffect> BEAM_EFFECT = EFFECTS.register("beam", BeamEffect::new);
     public static final RegistryObject<MobEffect> ANNIHILATION_RESONANCE_EFFECT = EFFECTS.register("annihilation_resonance", AnnihilationResonanceEffect::new);
+    public static final RegistryObject<MobEffect> AMBUSH_THORNS_EFFECT = EFFECTS.register("ambush_thorns", AmbushThornsEffect::new);
 }

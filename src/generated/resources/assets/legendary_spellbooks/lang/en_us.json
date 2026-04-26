@@ -3,6 +3,8 @@
   "death.attack.legendary_spellbooks.cloud_rail": "%1$s was engulfed and crushed by %2$s's clouds",
   "death.attack.legendary_spellbooks.flame_eater": "%1$s was consumed by the subterranean flames summoned by %2$s",
   "item.legendary_spellbooks.annihilators_protocol": "Annihilator's Protocol",
+  "spell.legendary_spellbooks.ambush_thorns": "Ambush Thorns",
+  "spell.legendary_spellbooks.ambush_thorns.guide": "",
   "spell.legendary_spellbooks.annihilation_beam": "Annihilation Beam",
   "spell.legendary_spellbooks.annihilation_beam.guide": "Channel a devastating beam of pure annihilation. While firing, you are locked in place. When aimed horizontally near the ground, the beam's overwhelming power causes it to scatter unstable energy orbs across the terrain.",
   "spell.legendary_spellbooks.annihilation_bomb": "Annihilation Bomb",
@@ -39,5 +41,6 @@
   "spell.legendary_spellbooks.triple_nimbus_array.guide": "Manifest three rows of thunderclouds in a fanned formation. These clouds continuously strike lightning upon anything beneath them for the duration of the spell.",
   "tooltip.legendary_spellbooks.annihilators_protocol": "Grants a 10% chance to teleport away upon taking damage, effectively neutralizing the threat.",
   "ui.legendary_spellbooks.health_damage": "%s damage + %s%% of target's max HP",
-  "ui.legendary_spellbooks.nimbus_count": "%d Nimbus"
+  "ui.legendary_spellbooks.nimbus_count": "%d Nimbus",
+  "ui.legendary_spellbooks.thorn_damage": "%d thorn damage + 20%% of damage received"
 }
