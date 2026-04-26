@@ -38,6 +38,8 @@
   "spell.legendary_spellbooks.tornado.guide": "周囲の生物を強制的に吸い寄せる竜巻を召喚する。この竜巻に捕らわれた者は移動の自由を奪われ、嵐の中心で身動きが取れなくなる。",
   "spell.legendary_spellbooks.triple_nimbus_array": "トリプルニンバスアレー",
   "spell.legendary_spellbooks.triple_nimbus_array.guide": "自分の見ている方向、及びそこから左右に30度の方向に直線状の雷を召喚する。この雷からは一定時間雷が落ち、当たった相手にダメージを与える。",
+  "tab.legendary_spellbooks.equipments": "Legendary Spellbooksの装備品",
+  "tab.legendary_spellbooks.scrolls": "Legendary Spellbooksのスクロール",
   "tooltip.legendary_spellbooks.annihilators_protocol": "§6特殊能力: §7ダメージを受けた際、10%の確率でテレポートを実行し攻撃を回避する。",
   "tooltip.legendary_spellbooks.on_sunny": "晴れの時:",
   "tooltip.legendary_spellbooks.on_thunder": "雷雨の時:",

@@ -40,4 +40,8 @@ public abstract class BaseLanguageProvider extends LanguageProvider {
     protected void addSpellDamageSource(Supplier<? extends AbstractSpell> spellKey, String name) {
         addDamageSource(modId + "." + spellKey.get().getSpellName(), name);
     }
+
+    public void addCreativeTab(String key, String name) {
+        add("tab." + LegendarySpellbooks.MOD_ID + "." + key, name);
+    }
 }

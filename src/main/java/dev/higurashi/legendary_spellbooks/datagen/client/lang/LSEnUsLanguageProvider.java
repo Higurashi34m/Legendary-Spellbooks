@@ -14,6 +14,12 @@ public class LSEnUsLanguageProvider extends BaseLanguageProvider {
     @Override
     protected void addTranslations() {
         // --------------------
+        // CREATIVE TAB
+        // --------------------
+        addCreativeTab("equipments", "Legendary Spellbooks Equipments");
+        addCreativeTab("scrolls", "Legendary Spellbooks Scrolls");
+
+        // --------------------
         // ITEM
         // --------------------
         addItem(LSItemRegistry.ANNIHILATORS_PROTOCOL_SPELLBOOK_ITEM, "Annihilator's Protocol");

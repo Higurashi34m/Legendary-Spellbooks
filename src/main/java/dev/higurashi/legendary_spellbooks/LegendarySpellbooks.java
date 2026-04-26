@@ -1,10 +1,7 @@
 package dev.higurashi.legendary_spellbooks;
 
 import com.mojang.logging.LogUtils;
-import dev.higurashi.legendary_spellbooks.registries.LSEffectRegistry;
-import dev.higurashi.legendary_spellbooks.registries.LSEntityRegistry;
-import dev.higurashi.legendary_spellbooks.registries.LSItemRegistry;
-import dev.higurashi.legendary_spellbooks.registries.LSSpellRegistry;
+import dev.higurashi.legendary_spellbooks.registries.*;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
@@ -19,6 +16,7 @@ public class LegendarySpellbooks {
     public LegendarySpellbooks() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        LSCreativeTabRegistry.register(modEventBus);
         LSEffectRegistry.register(modEventBus);
         LSEntityRegistry.register(modEventBus);
         LSItemRegistry.register(modEventBus);

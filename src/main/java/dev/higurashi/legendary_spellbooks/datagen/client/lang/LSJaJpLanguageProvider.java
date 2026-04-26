@@ -14,6 +14,12 @@ public class LSJaJpLanguageProvider extends BaseLanguageProvider {
     @Override
     protected void addTranslations() {
         // --------------------
+        // CREATIVE TAB
+        // --------------------
+        addCreativeTab("equipments", "Legendary Spellbooksの装備品");
+        addCreativeTab("scrolls", "Legendary Spellbooksのスクロール");
+
+        // --------------------
         // ITEM
         // --------------------
         addItem(LSItemRegistry.ANNIHILATORS_PROTOCOL_SPELLBOOK_ITEM, "アナイアレイター・プロトコル");

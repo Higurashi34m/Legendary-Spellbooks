@@ -40,6 +40,8 @@
   "spell.legendary_spellbooks.tornado.guide": "Summon a violent vortex that pulls in all nearby creatures. Those caught in its grasp are rendered immobile, trapped within the eye of the raging storm.",
   "spell.legendary_spellbooks.triple_nimbus_array": "Triple Nimbus Array",
   "spell.legendary_spellbooks.triple_nimbus_array.guide": "Manifest three rows of thunderclouds in a fanned formation. These clouds continuously strike lightning upon anything beneath them for the duration of the spell.",
+  "tab.legendary_spellbooks.equipments": "Legendary Spellbooks Equipments",
+  "tab.legendary_spellbooks.scrolls": "Legendary Spellbooks Scrolls",
   "tooltip.legendary_spellbooks.annihilators_protocol": "Grants a 10% chance to teleport away upon taking damage, effectively neutralizing the threat.",
   "tooltip.legendary_spellbooks.on_sunny": "In sunny weather:",
   "tooltip.legendary_spellbooks.on_thunder": "During thunderstorms:",
