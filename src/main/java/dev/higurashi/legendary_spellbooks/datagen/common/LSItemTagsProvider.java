@@ -27,5 +27,6 @@ public class LSItemTagsProvider extends ItemTagsProvider {
         TagKey<Item> CURIOS = ItemTags.create(ResourceLocation.fromNamespaceAndPath(CuriosApi.MODID, Curios.SPELLBOOK_SLOT));
 
         this.tag(CURIOS).add(LSItemRegistry.ANNIHILATORS_PROTOCOL_SPELLBOOK_ITEM.get());
+        this.tag(CURIOS).add(LSItemRegistry.STORMBOUND_GRIMOIRE_SPELLBOOK_ITEM.get());
     }
 }

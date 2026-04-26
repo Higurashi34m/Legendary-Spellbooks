@@ -17,6 +17,7 @@ public class LSJaJpLanguageProvider extends BaseLanguageProvider {
         // ITEM
         // --------------------
         addItem(LSItemRegistry.ANNIHILATORS_PROTOCOL_SPELLBOOK_ITEM, "アナイアレイター・プロトコル");
+        addItem(LSItemRegistry.STORMBOUND_GRIMOIRE_SPELLBOOK_ITEM, "嵐に結ばれし魔導書");
 
         // --------------------
         // SPELL
@@ -60,6 +61,10 @@ public class LSJaJpLanguageProvider extends BaseLanguageProvider {
         // --------------------
         // Tooltip
         // --------------------
+        addTooltip("on_sunny", "晴れの時:");
+        addTooltip("on_thunder", "雷雨の時:");
+
         addTooltip(LSItemRegistry.ANNIHILATORS_PROTOCOL_SPELLBOOK_ITEM.get(), "§6特殊能力: §7ダメージを受けた際、10%の確率でテレポートを実行し攻撃を回避する。");
+        addTooltip(LSItemRegistry.STORMBOUND_GRIMOIRE_SPELLBOOK_ITEM.get(), "この魔導書は雷を呼び、降りしきる雨を嵐へと育て上げる");
     }
 }

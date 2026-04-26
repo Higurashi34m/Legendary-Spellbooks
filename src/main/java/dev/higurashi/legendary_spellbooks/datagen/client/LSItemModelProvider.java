@@ -22,6 +22,7 @@ public class LSItemModelProvider extends ItemModelProvider {
     @Override
     protected void registerModels() {
         spellBook(LSItemRegistry.ANNIHILATORS_PROTOCOL_SPELLBOOK_ITEM.get());
+        spellBook(LSItemRegistry.STORMBOUND_GRIMOIRE_SPELLBOOK_ITEM.get());
     }
 
     public void spellBook(Item item) {

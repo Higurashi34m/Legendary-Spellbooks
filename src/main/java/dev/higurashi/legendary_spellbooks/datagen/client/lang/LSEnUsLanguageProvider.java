@@ -17,6 +17,7 @@ public class LSEnUsLanguageProvider extends BaseLanguageProvider {
         // ITEM
         // --------------------
         addItem(LSItemRegistry.ANNIHILATORS_PROTOCOL_SPELLBOOK_ITEM, "Annihilator's Protocol");
+        addItem(LSItemRegistry.STORMBOUND_GRIMOIRE_SPELLBOOK_ITEM, "Stormbound Grimoire");
 
         // --------------------
         // SPELL
@@ -61,6 +62,10 @@ public class LSEnUsLanguageProvider extends BaseLanguageProvider {
         // --------------------
         // Tooltip
         // --------------------
+        addTooltip("on_sunny", "In sunny weather:");
+        addTooltip("on_thunder", "During thunderstorms:");
+
         addTooltip(LSItemRegistry.ANNIHILATORS_PROTOCOL_SPELLBOOK_ITEM.get(), "Grants a 10% chance to teleport away upon taking damage, effectively neutralizing the threat.");
+        addTooltip(LSItemRegistry.STORMBOUND_GRIMOIRE_SPELLBOOK_ITEM.get(), "This spellbook calls forth thunder, causing rain to swell into storms.");
     }
 }

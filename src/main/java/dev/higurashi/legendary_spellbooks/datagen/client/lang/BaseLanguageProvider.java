@@ -30,6 +30,9 @@ public abstract class BaseLanguageProvider extends LanguageProvider {
     protected void addTooltip(Item key, String name) {
         add(ComponentUtils.itemTooltip(key), name);
     }
+    protected void addTooltip(String key, String name) {
+        add("tooltip.legendary_spellbooks." + key, name);
+    }
 
     protected void addDamageSource(String key, String name) {
         add("death.attack." + key, name);
