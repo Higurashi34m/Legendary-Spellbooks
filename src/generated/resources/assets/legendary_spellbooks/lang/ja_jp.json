@@ -3,6 +3,8 @@
   "death.attack.legendary_spellbooks.flame_eater": "%1$sは %2$s が地から呼び出した業火に喰らわれた",
   "spell.legendary_spellbooks.annihilation_beam": "アナイアレイション・ビーム",
   "spell.legendary_spellbooks.annihilation_beam.guide": "破壊的なエネルギーを持つビームを放つ。撃っている間は動くことができない。地面の近く、かつ、地面と水平に近い角度で放つと小さい球をばら撒く。",
+  "spell.legendary_spellbooks.annihilation_bomb": "アナイアレイション・ボム",
+  "spell.legendary_spellbooks.annihilation_bomb.guide": "凝縮された破壊的な爆弾を、自分の見ている方向に向けて放つ。この爆弾は、エンティティやブロックに当たると爆発し、当たった相手にダメージを与え、周囲に大量の小さい球をばら撒く。",
   "spell.legendary_spellbooks.annihilation_geyser": "終焉の噴火",
   "spell.legendary_spellbooks.annihilation_geyser.guide": "近くの敵を吸い込む巨大な重力場を周囲に発生させる。詠唱が完了すると、終焉のエネルギーの巨大な間欠泉が噴出し、壊滅的な爆発が起こる。(地形破壊は無い)",
   "spell.legendary_spellbooks.annihilation_shockwave": "アナイアレイション・ショックウェーブ",
