@@ -49,8 +49,8 @@ public class StormboundSpellbookItem extends UniqueSpellBook {
             if (THUNDER == null) THUNDER = new AffinityData(Map.of(
                     LSSpellRegistry.NIMBUS_ARRAY_SPELL.get().getSpellResource(), 1,
                     LSSpellRegistry.TRIPLE_NIMBUS_ARRAY_SPELL.get().getSpellResource(), 2,
-                    LSSpellRegistry.ENERGY_BEAM_SPELL.get().getSpellResource(), 1
-//                    LSSpellRegistry.CUMULO_CHARGE_SPELl.get().getSpellResource(), 2
+                    LSSpellRegistry.ENERGY_BEAM_SPELL.get().getSpellResource(), 1,
+                    LSSpellRegistry.CUMULO_CHARGE_SPELL.get().getSpellResource(), 2
             ));
             return THUNDER;
         } else {
@@ -58,8 +58,8 @@ public class StormboundSpellbookItem extends UniqueSpellBook {
                     LSSpellRegistry.CLOUD_RAIL_SPELL.get().getSpellResource(), 1,
                     LSSpellRegistry.CLOUD_RING_SPELL.get().getSpellResource(), 2,
                     LSSpellRegistry.TORNADO_SPELL.get().getSpellResource(), 1,
-                    LSSpellRegistry.THUNDER_FANBURST_SPELL.get().getSpellResource(), 1
-//                    LSSpellRegistry.CUMULO_CHARGE_SPELl.get().getSpellResource(), 2
+                    LSSpellRegistry.THUNDER_FANBURST_SPELL.get().getSpellResource(), 1,
+                    LSSpellRegistry.CUMULO_CHARGE_SPELL.get().getSpellResource(), 2
             ));
             return SUNNY;
         }
@@ -120,13 +120,13 @@ public class StormboundSpellbookItem extends UniqueSpellBook {
         lines.add(pos++, makeBonusLine(2, !isThundering, LSSpellRegistry.CLOUD_RING_SPELL.get()));
         lines.add(pos++, makeBonusLine(1, !isThundering, LSSpellRegistry.TORNADO_SPELL.get()));
         lines.add(pos++, makeBonusLine(2, !isThundering, LSSpellRegistry.THUNDER_FANBURST_SPELL.get()));
-//        lines.add(pos++, makeBonusLine(2, !isThundering, LSSpellRegistry.CUMULO_CHARGE_SPELl.get()));
+        lines.add(pos++, makeBonusLine(2, !isThundering, LSSpellRegistry.CUMULO_CHARGE_SPELL.get()));
 
         lines.add(pos++, buildHeader("on_thunder", isThundering, ChatFormatting.AQUA));
         lines.add(pos++, makeBonusLine(1, isThundering, LSSpellRegistry.NIMBUS_ARRAY_SPELL.get()));
         lines.add(pos++, makeBonusLine(2, isThundering, LSSpellRegistry.TRIPLE_NIMBUS_ARRAY_SPELL.get()));
         lines.add(pos++, makeBonusLine(1, isThundering, LSSpellRegistry.ENERGY_BEAM_SPELL.get()));
-//        lines.add(pos++, makeBonusLine(2, isThundering, LSSpellRegistry.CUMULO_CHARGE_SPELl.get()));
+        lines.add(pos++, makeBonusLine(2, isThundering, LSSpellRegistry.CUMULO_CHARGE_SPELL.get()));
     }
 
     private Component buildHeader(String key, boolean active, ChatFormatting color) {

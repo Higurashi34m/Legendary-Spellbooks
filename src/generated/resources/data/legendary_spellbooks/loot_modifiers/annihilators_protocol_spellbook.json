@@ -1,0 +1,38 @@
+{
+  "type": "legendary_spellbooks:item_drop",
+  "chance": 1.0,
+  "conditions": [
+    {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "type": "legendary_monsters:the_obliterator"
+      }
+    }
+  ],
+  "item": {
+    "Count": 1,
+    "id": "legendary_spellbooks:annihilators_protocol",
+    "tag": {
+      "irons_spellbooks:spell_container": {
+        "data": [
+          {
+            "id": "legendary_spellbooks:annihilation_geyser",
+            "index": 0,
+            "level": 1,
+            "locked": 1
+          },
+          {
+            "id": "legendary_spellbooks:annihilation_beam",
+            "index": 1,
+            "level": 3,
+            "locked": 1
+          }
+        ],
+        "maxSpells": 12,
+        "mustEquip": 1,
+        "spellWheel": 1
+      }
+    }
+  }
+}

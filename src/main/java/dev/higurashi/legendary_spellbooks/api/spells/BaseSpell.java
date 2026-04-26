@@ -27,6 +27,7 @@ public abstract class BaseSpell extends AbstractSpell {
     protected AnimationHolder castStartAnimation = null;
     protected AnimationHolder castFinishAnimation = null;
 
+    protected boolean allowLooting = true;
     protected boolean interrupted = true;
     protected boolean reduceCastTime = true;
     protected boolean stopSound = false;
@@ -82,6 +83,12 @@ public abstract class BaseSpell extends AbstractSpell {
     public int getEffectiveCastTime(int spellLevel, @Nullable LivingEntity caster) {
         if (reduceCastTime) return super.getEffectiveCastTime(spellLevel, caster);
         return getCastTime(spellLevel);
+    }
+
+    @Override
+    public boolean allowLooting() {
+        if (allowLooting) return super.allowLooting();
+        return false;
     }
 
     @Override

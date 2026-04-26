@@ -25,6 +25,7 @@ public class QuadTornadoSpell extends BaseSpell {
             .setSchoolResource(SchoolRegistry.LIGHTNING_RESOURCE)
             .setMinRarity(SpellRarity.EPIC)
             .setCooldownSeconds(12)
+            .setAllowCrafting(false)
             .setMaxLevel(5).build();
 
     public QuadTornadoSpell() {
@@ -32,6 +33,8 @@ public class QuadTornadoSpell extends BaseSpell {
         this.castTime = 40;
         this.baseManaCost = 120;
         this.manaCostPerLevel = 10;
+
+        this.allowLooting = false;
     }
 
     @Override

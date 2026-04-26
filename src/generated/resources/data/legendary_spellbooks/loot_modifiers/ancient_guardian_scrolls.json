@@ -1,0 +1,29 @@
+{
+  "type": "legendary_spellbooks:spell_scroll",
+  "conditions": [
+    {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "type": "legendary_monsters:ancient_guardian"
+      }
+    }
+  ],
+  "count_max": 1,
+  "count_min": 1,
+  "difficulty_weight_multiplier": {
+    "easy": 0.75,
+    "hard": 1.25,
+    "hardcore": 1.25,
+    "normal": 1.0
+  },
+  "drop_chance": 0.5,
+  "spells": [
+    {
+      "max_level": 10,
+      "min_level": 3,
+      "spell": "legendary_spellbooks:ambush_thorns",
+      "weight": 10
+    }
+  ]
+}

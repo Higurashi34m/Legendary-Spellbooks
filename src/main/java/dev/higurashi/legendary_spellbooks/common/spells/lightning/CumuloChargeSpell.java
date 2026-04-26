@@ -39,6 +39,8 @@ public class CumuloChargeSpell extends BaseSpell {
         this.baseSpellPower = 10;
         this.manaCostPerLevel = 50;
         this.spellPowerPerLevel = 8;
+
+        this.allowLooting = false;
     }
 
     @Override

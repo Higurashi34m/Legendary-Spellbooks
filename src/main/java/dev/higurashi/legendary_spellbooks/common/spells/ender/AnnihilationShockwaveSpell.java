@@ -29,7 +29,8 @@ public class AnnihilationShockwaveSpell extends BaseSpell {
             .setSchoolResource(SchoolRegistry.ENDER_RESOURCE)
             .setMinRarity(SpellRarity.RARE)
             .setCooldownSeconds(16)
-            .setMaxLevel(6);
+            .setAllowCrafting(false)
+            .setMaxLevel(6).build();
 
     public AnnihilationShockwaveSpell() {
         super(spellResource, spellConfig, false);
@@ -38,6 +39,8 @@ public class AnnihilationShockwaveSpell extends BaseSpell {
         this.baseSpellPower = 6;
         this.manaCostPerLevel = 10;
         this.spellPowerPerLevel = 2;
+
+        this.allowLooting = false;
 
         this.castStartAnimation = SpellAnimations.STOMP;
         this.castFinishAnimation = AnimationHolder.pass();

@@ -1,4 +1,4 @@
-package dev.higurashi.legendary_spellbooks.datagen.common;
+package dev.higurashi.legendary_spellbooks.datagen.server;
 
 import dev.higurashi.legendary_spellbooks.LegendarySpellbooks;
 import net.minecraft.core.HolderLookup;

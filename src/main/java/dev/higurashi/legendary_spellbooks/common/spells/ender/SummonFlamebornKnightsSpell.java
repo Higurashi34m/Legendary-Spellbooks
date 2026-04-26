@@ -28,6 +28,7 @@ public class SummonFlamebornKnightsSpell extends BaseSummonSpell {
             .setMinRarity(SpellRarity.LEGENDARY)
             .setAllowCrafting(false)
             .setCooldownSeconds(180)
+            .setAllowCrafting(false)
             .setMaxLevel(5).build();
 
     public SummonFlamebornKnightsSpell() {
@@ -37,6 +38,8 @@ public class SummonFlamebornKnightsSpell extends BaseSummonSpell {
         this.baseSpellPower = 8;
         this.manaCostPerLevel = 50;
         this.spellPowerPerLevel = 3;
+
+        this.allowLooting = false;
     }
 
     // === SPELL SETTINGS ===

@@ -28,6 +28,7 @@ public class OvergrownShockwaveSpell extends BaseOverheadMeleeSwingSpell {
             .setSchoolResource(SchoolRegistry.NATURE_RESOURCE)
             .setMinRarity(SpellRarity.EPIC)
             .setCooldownSeconds(30)
+            .setAllowCrafting(false)
             .setMaxLevel(4).build();
 
     public OvergrownShockwaveSpell() {
@@ -36,6 +37,7 @@ public class OvergrownShockwaveSpell extends BaseOverheadMeleeSwingSpell {
         this.baseSpellPower = 4;
         this.manaCostPerLevel = 15;
         this.spellPowerPerLevel = 4;
+        this.allowLooting = false;
     }
 
     @Override

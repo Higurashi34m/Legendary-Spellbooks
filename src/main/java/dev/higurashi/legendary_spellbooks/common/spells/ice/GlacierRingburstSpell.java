@@ -36,6 +36,8 @@ public class GlacierRingburstSpell extends BaseSpell {
         this.baseSpellPower = 3;
         this.manaCostPerLevel = 10;
         this.spellPowerPerLevel = 2;
+
+        this.allowLooting = false;
     }
 
     @Override

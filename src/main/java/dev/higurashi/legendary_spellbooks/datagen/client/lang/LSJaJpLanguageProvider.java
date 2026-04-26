@@ -45,10 +45,10 @@ public class LSJaJpLanguageProvider extends BaseLanguageProvider {
         addSpell(LSSpellRegistry.ANNIHILATION_SHOCKWAVE_SPELL, "アナイアレイション・ショックウェーブ", "地面を踏みつけて、扇状に緑色の火の衝撃波を発生させる。炎は波のように噴出し、巻き込まれたすべての敵の生命力を焼き尽くす。当たった相手の最大体力に応じてダメージが増加する。");
         addSpell(LSSpellRegistry.ANNIHILATION_RESONANCE_SPELL, "アナイアレイション・レゾナンス", "自身に不安定な周波数を付与する。効果時間中、クリティカルヒットを与えると与えた相手の位置から強力な消滅の爆発を発生させ、周囲の敵にダメージを与える。。");
         addSpell(LSSpellRegistry.ANNIHILATION_GEYSER_SPELL, "終焉の噴火", "近くの敵を吸い込む巨大な重力場を周囲に発生させる。詠唱が完了すると、終焉のエネルギーの巨大な間欠泉が噴出し、壊滅的な爆発が起こる。(地形破壊は無い)");
-        addSpell(LSSpellRegistry.SUMMON_FLAMEBORN_KNIGHTS, "召喚 フレイムボーン騎士", "");
+        addSpell(LSSpellRegistry.SUMMON_FLAMEBORN_KNIGHTS_SPELL, "召喚 フレイムボーン騎士", "");
 
         // Evocation
-        addSpell(LSSpellRegistry.SUMMON_HAUNTED_KNIGHTS, "召喚 ホーンテッド騎士", "");
+        addSpell(LSSpellRegistry.SUMMON_HAUNTED_KNIGHTS_SPELL, "召喚 ホーンテッド騎士", "");
 
         // Fire
         addSpell(LSSpellRegistry.FLAME_EATER_SPELL, "火炎喰らい", "複数の相手をターゲットにし、相手の足元に炎を噴出させる。相手の位置が高すぎると、炎を噴出させることができない。");

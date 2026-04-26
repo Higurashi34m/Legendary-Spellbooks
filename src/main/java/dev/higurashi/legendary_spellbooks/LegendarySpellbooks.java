@@ -21,6 +21,7 @@ public class LegendarySpellbooks {
         LSEntityRegistry.register(modEventBus);
         LSItemRegistry.register(modEventBus);
         LSSpellRegistry.register(modEventBus);
+        LSLootModifierRegistry.register(modEventBus);
 
         MinecraftForge.EVENT_BUS.register(this);
     }

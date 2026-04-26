@@ -31,6 +31,7 @@ public class AnnihilationBeamSpell extends BaseSpell {
             .setSchoolResource(SchoolRegistry.ENDER_RESOURCE)
             .setMinRarity(SpellRarity.EPIC)
             .setCooldownSeconds(50)
+            .setAllowCrafting(false)
             .setMaxLevel(3).build();
 
     public AnnihilationBeamSpell() {
@@ -42,6 +43,7 @@ public class AnnihilationBeamSpell extends BaseSpell {
         this.spellPowerPerLevel = 5;
 
         this.stopSound = true;
+        this.allowLooting = false;
 
         this.castStartSound = ModSounds.ANNIHILATION_LASER_CHARGE;
         this.castFinishSound = ModSounds.ANNIHILATION_LASER_SINGLE_SHOOT;

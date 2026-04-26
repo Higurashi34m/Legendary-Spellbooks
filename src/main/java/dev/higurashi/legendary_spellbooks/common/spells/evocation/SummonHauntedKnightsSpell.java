@@ -33,6 +33,8 @@ public class SummonHauntedKnightsSpell extends BaseSummonSpell {
         this.baseSpellPower = 6;
         this.manaCostPerLevel = 40;
         this.spellPowerPerLevel = 3;
+
+        this.allowLooting = false;
     }
 
     @Override public List<MutableComponent> getUniqueInfo(int spellLevel, LivingEntity caster) {

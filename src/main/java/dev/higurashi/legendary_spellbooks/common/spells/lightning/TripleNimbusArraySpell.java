@@ -27,6 +27,7 @@ public class TripleNimbusArraySpell extends BaseOverheadMeleeSwingSpell {
             .setSchoolResource(SchoolRegistry.LIGHTNING_RESOURCE)
             .setMinRarity(SpellRarity.RARE)
             .setCooldownSeconds(15)
+            .setAllowCrafting(false)
             .setMaxLevel(5).build();
 
     public TripleNimbusArraySpell() {
@@ -37,6 +38,8 @@ public class TripleNimbusArraySpell extends BaseOverheadMeleeSwingSpell {
         this.spellPowerPerLevel = 2;
 
         this.castFinishSound = () -> SoundEvents.LIGHTNING_BOLT_THUNDER;
+
+        this.allowLooting = false;
     }
 
     @Override

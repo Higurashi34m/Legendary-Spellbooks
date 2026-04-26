@@ -33,6 +33,7 @@ public class EnergyBeamSpell extends BaseSpell {
             .setSchoolResource(SchoolRegistry.LIGHTNING_RESOURCE)
             .setMinRarity(SpellRarity.LEGENDARY)
             .setCooldownSeconds(45)
+            .setAllowCrafting(false)
             .setMaxLevel(3).build();
 
     public EnergyBeamSpell() {
@@ -43,6 +44,7 @@ public class EnergyBeamSpell extends BaseSpell {
         this.manaCostPerLevel = 50;
         this.spellPowerPerLevel = 5;
 
+        this.allowLooting = false;
         this.stopSound = true;
 
         this.castStartSound = ModSounds.BEAM_CHARGE;

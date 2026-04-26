@@ -25,6 +25,7 @@ public class AnnihilationResonanceSpell extends BaseSpell {
             .setSchoolResource(SchoolRegistry.ENDER_RESOURCE)
             .setMinRarity(SpellRarity.RARE)
             .setCooldownSeconds(180)
+            .setAllowCrafting(false)
             .setMaxLevel(6).build();
 
     public AnnihilationResonanceSpell() {
@@ -32,6 +33,8 @@ public class AnnihilationResonanceSpell extends BaseSpell {
         this.castTime = 35;
         this.baseManaCost = 120;
         this.manaCostPerLevel = 20;
+
+        this.allowLooting = false;
     }
 
     @Override

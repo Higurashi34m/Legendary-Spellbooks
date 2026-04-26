@@ -27,6 +27,7 @@ public class FlameSectorSpell extends BaseOverheadMeleeSwingSpell {
             .setSchoolResource(SchoolRegistry.FIRE_RESOURCE)
             .setMinRarity(SpellRarity.EPIC)
             .setCooldownSeconds(15)
+            .setAllowCrafting(false)
             .setMaxLevel(4).build();
 
     public FlameSectorSpell() {
@@ -35,6 +36,8 @@ public class FlameSectorSpell extends BaseOverheadMeleeSwingSpell {
         this.baseSpellPower = 3;
         this.manaCostPerLevel = 20;
         this.spellPowerPerLevel = 3;
+
+        this.allowLooting = false;
 
         this.castFinishSound = () -> SoundEvents.DRAGON_FIREBALL_EXPLODE;
     }

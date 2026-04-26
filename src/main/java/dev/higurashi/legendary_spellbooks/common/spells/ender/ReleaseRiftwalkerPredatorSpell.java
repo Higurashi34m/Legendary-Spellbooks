@@ -23,6 +23,7 @@ public class ReleaseRiftwalkerPredatorSpell extends BaseSummonSpell {
             .setSchoolResource(SchoolRegistry.ENDER_RESOURCE)
             .setMinRarity(SpellRarity.LEGENDARY)
             .setCooldownSeconds(500)
+            .setAllowCrafting(false)
             .setMaxLevel(3).build();
 
     public ReleaseRiftwalkerPredatorSpell() {
@@ -33,6 +34,8 @@ public class ReleaseRiftwalkerPredatorSpell extends BaseSummonSpell {
         this.baseSpellPower = 15;
         this.manaCostPerLevel = 50;
         this.spellPowerPerLevel = 3;
+
+        this.allowLooting = false;
     }
 
     @Override public List<MutableComponent> getUniqueInfo(int spellLevel, LivingEntity caster) {

@@ -27,11 +27,11 @@ public class LSSpellRegistry {
     public static final RegistryObject<AbstractSpell> ANNIHILATION_SHOCKWAVE_SPELL = register(new AnnihilationShockwaveSpell());
     public static final RegistryObject<AbstractSpell> ANNIHILATION_RESONANCE_SPELL = register(new AnnihilationResonanceSpell());
     public static final RegistryObject<AbstractSpell> ANNIHILATION_GEYSER_SPELL = register(new AnnihilationGeyserSpell());
-    public static final RegistryObject<AbstractSpell> SUMMON_FLAMEBORN_KNIGHTS = register(new SummonFlamebornKnightsSpell());
+    public static final RegistryObject<AbstractSpell> SUMMON_FLAMEBORN_KNIGHTS_SPELL = register(new SummonFlamebornKnightsSpell());
     public static final RegistryObject<AbstractSpell> RELEASE_RIFTWALKER_PREDATOR_SPELL = register(new ReleaseRiftwalkerPredatorSpell());
 
     // Evocation
-    public static final RegistryObject<AbstractSpell> SUMMON_HAUNTED_KNIGHTS = register(new SummonHauntedKnightsSpell());
+    public static final RegistryObject<AbstractSpell> SUMMON_HAUNTED_KNIGHTS_SPELL = register(new SummonHauntedKnightsSpell());
 
     // Fire
     public static final RegistryObject<AbstractSpell> FLAME_EATER_SPELL = register(new FlameEaterSpell());

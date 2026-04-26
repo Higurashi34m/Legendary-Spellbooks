@@ -42,6 +42,7 @@ public class AnnihilationGeyserSpell extends BaseSpell {
             .setSchoolResource(SchoolRegistry.ENDER_RESOURCE)
             .setMinRarity(SpellRarity.LEGENDARY)
             .setCooldownSeconds(60)
+            .setAllowCrafting(false)
             .setMaxLevel(1).build();
 
     public AnnihilationGeyserSpell() {
@@ -49,6 +50,8 @@ public class AnnihilationGeyserSpell extends BaseSpell {
         this.castTime = 120;
         this.baseManaCost = 500;
         this.baseSpellPower = 30;
+
+        this.allowLooting = false;
 
         this.castFinishSound = ModSounds.FLAME_BURST;
     }

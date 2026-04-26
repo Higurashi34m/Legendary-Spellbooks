@@ -35,7 +35,7 @@ public class ThunderFanburstSpell extends BaseOverheadMeleeSwingSpell {
         this.baseManaCost = 55;
         this.baseSpellPower = 2;
         this.manaCostPerLevel = 5;
-        this.spellPowerPerLevel = 2;
+        this.spellPowerPerLevel = 1;
 
         this.castStartSound = SoundRegistry.LIGHTNING_LANCE_CAST;
         this.castFinishSound = () -> SoundEvents.WITHER_SHOOT;

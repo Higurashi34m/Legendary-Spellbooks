@@ -1,0 +1,25 @@
+{
+  "type": "legendary_spellbooks:item_drop",
+  "chance": 1.0,
+  "conditions": [
+    {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "type": "legendary_monsters:cloud_golem"
+      }
+    }
+  ],
+  "item": {
+    "Count": 1,
+    "id": "legendary_spellbooks:stormbound_grimoire",
+    "tag": {
+      "irons_spellbooks:spell_container": {
+        "data": [],
+        "maxSpells": 12,
+        "mustEquip": 1,
+        "spellWheel": 1
+      }
+    }
+  }
+}
