@@ -29,6 +29,8 @@
   "spell.legendary_spellbooks.overgrown_shockwave.guide": "Slam the ground to unleash a burst of toxic nature magic in a large radius around you, poisoning all creatures caught in the tremor.",
   "spell.legendary_spellbooks.thunder_fanburst": "Thunder Fanburst",
   "spell.legendary_spellbooks.thunder_fanburst.guide": "Unleash a fanned burst of lightning bolts that travel outwards in multiple directions. These bolts pierce through all creatures in their path.",
+  "spell.legendary_spellbooks.tornado": "Tornado",
+  "spell.legendary_spellbooks.tornado.guide": "Summon a violent vortex that pulls in all nearby creatures. Those caught in its grasp are rendered immobile, trapped within the eye of the raging storm.",
   "spell.legendary_spellbooks.triple_nimbus_array": "Triple Nimbus Array",
   "spell.legendary_spellbooks.triple_nimbus_array.guide": "Manifest three rows of thunderclouds in a fanned formation. These clouds continuously strike lightning upon anything beneath them for the duration of the spell.",
   "tooltip.legendary_spellbooks.annihilators_protocol": "Grants a 10% chance to teleport away upon taking damage, effectively neutralizing the threat.",
