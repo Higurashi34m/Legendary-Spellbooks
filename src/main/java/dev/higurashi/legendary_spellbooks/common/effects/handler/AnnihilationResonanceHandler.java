@@ -51,7 +51,7 @@ public class AnnihilationResonanceHandler {
             DamageSources.applyDamage(enemy, damage, spell.getDamageSource(attacker));
         });
 
-        level.playSound(attacker, target.blockPosition(), ModSounds.ENERGY_EXPLOSION.get(), SoundSource.PLAYERS, 1.0f, 1.0f);
+        level.playSound(null, target.blockPosition(), ModSounds.ENERGY_EXPLOSION.get(), SoundSource.PLAYERS, 1.0f, 1.0f);
         spawnVisualParticles(level, target);
     }
 
