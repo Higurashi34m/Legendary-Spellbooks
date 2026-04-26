@@ -34,6 +34,7 @@ public class LSSpellRegistry {
     public static final RegistryObject<AbstractSpell> NIMBUS_ARRAY_SPELL = register(new NimbusArraySpell());
     public static final RegistryObject<AbstractSpell> TRIPLE_NIMBUS_ARRAY_SPELL = register(new TripleNimbusArraySpell());
     public static final RegistryObject<AbstractSpell> THUNDER_FANBURST_SPELL = register(new ThunderFanburstSpell());
+    public static final RegistryObject<AbstractSpell> ENERGY_BEAM_SPELL = register(new EnergyBeamSpell());
 
     // Nature
     public static final RegistryObject<AbstractSpell> OVERGROWN_SHOCKWAVE_SPELL = register(new OvergrownShockwaveSpell());

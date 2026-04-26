@@ -39,6 +39,7 @@ public class LSJaJpLanguageProvider extends BaseLanguageProvider {
         addSpell(LSSpellRegistry.NIMBUS_ARRAY_SPELL, "ニンバスアレー", "自分の見ている方向に直線状の雷を召喚する。この雷からは一定時間雷が落ち、当たった相手にダメージを与える。");
         addSpell(LSSpellRegistry.TRIPLE_NIMBUS_ARRAY_SPELL, "トリプルニンバスアレー", "自分の見ている方向、及びそこから左右に30度の方向に直線状の雷を召喚する。この雷からは一定時間雷が落ち、当たった相手にダメージを与える。");
         addSpell(LSSpellRegistry.THUNDER_FANBURST_SPELL, "サンダー・ファンバースト", "扇状に雷を召喚する。この雷はそれぞれの方向に向かって進み、この雷に当たった相手にダメージを与える。この雷は持続時間の間、無限貫通である。");
+        addSpell(LSSpellRegistry.ENERGY_BEAM_SPELL, "エナジービーム", "空中へと浮上・静止し、超高出力のレーザーを放つ。その圧倒的なエネルギー出力により、放ち終えた後、一定時間スタンし、行動不可となる。");
 
         // Nature
         addSpell(LSSpellRegistry.OVERGROWN_SHOCKWAVE_SPELL, "生い茂るショックウェーブ", "地面を叩きつけて、周囲の広い範囲に有毒なエリアを発生させ、巻き込まれたすべての敵にダメージと共に猛毒を与える。");
