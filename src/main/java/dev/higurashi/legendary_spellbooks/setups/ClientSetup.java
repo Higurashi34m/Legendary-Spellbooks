@@ -4,10 +4,7 @@ import dev.higurashi.legendary_spellbooks.client.renderer.entities.spell.project
 import dev.higurashi.legendary_spellbooks.registries.LSEntityRegistry;
 import dev.higurashi.legendary_spellbooks.registries.LSItemRegistry;
 import io.redspace.ironsspellbooks.render.SpellBookCurioRenderer;
-import net.miauczel.legendary_monsters.entity.client.Render.AnnihilationPursuerRenderer;
-import net.miauczel.legendary_monsters.entity.client.Render.HauntedGuardRenderer;
-import net.miauczel.legendary_monsters.entity.client.Render.LivingArmorRenderer;
-import net.miauczel.legendary_monsters.entity.client.Render.NoRendererEntityRenderer;
+import net.miauczel.legendary_monsters.entity.client.Render.*;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -27,6 +24,8 @@ public class ClientSetup {
     public static void onRegisterRenderers(EntityRenderersEvent.RegisterRenderers event) {
         // Summoned
         event.registerEntityRenderer(LSEntityRegistry.SUMMONED_ANNIHILATION_PURSUER_ENTITY.get(), AnnihilationPursuerRenderer::new);
+        event.registerEntityRenderer(LSEntityRegistry.SUMMONED_FLAMEBORN_GUARD_ENTITY.get(), FlamebornGuardRenderer::new);
+        event.registerEntityRenderer(LSEntityRegistry.SUMMONED_FLAMEBORN_WARRIOR_ENTITY.get(), FlamebornWarriorRenderer::new);
         event.registerEntityRenderer(LSEntityRegistry.SUMMONED_HAUNTED_KNIGHT_ENTITY.get(), LivingArmorRenderer::new);
         event.registerEntityRenderer(LSEntityRegistry.SUMMONED_HAUNTED_GUARD_ENTITY.get(), HauntedGuardRenderer::new);
 

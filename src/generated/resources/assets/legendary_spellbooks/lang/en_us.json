@@ -8,6 +8,11 @@
   "death.attack.legendary_spellbooks.annihilation_resonance": "%1$s was obliterated by a resonant annihilation blast from %2$s",
   "death.attack.legendary_spellbooks.cloud_rail": "%1$s was engulfed and crushed by %2$s's clouds",
   "death.attack.legendary_spellbooks.flame_eater": "%1$s was consumed by the subterranean flames summoned by %2$s",
+  "entity.legendary_spellbooks.summoned_annihilation_pursuer": "Summoned Annihilation Pursuer",
+  "entity.legendary_spellbooks.summoned_flameborn_guard": "Summoned FlameBorn Guard",
+  "entity.legendary_spellbooks.summoned_flameborn_warrior": "Summoned FlameBorn Warrior",
+  "entity.legendary_spellbooks.summoned_haunted_guard": "Summoned Haunted Guard",
+  "entity.legendary_spellbooks.summoned_haunted_knight": "Summoned Haunted Knight",
   "item.legendary_spellbooks.annihilators_protocol": "Annihilator's Protocol",
   "item.legendary_spellbooks.stormbound_grimoire": "Stormbound Grimoire",
   "spell.legendary_spellbooks.ambush_thorns": "Ambush Thorns",
@@ -40,6 +45,8 @@
   "spell.legendary_spellbooks.quad_tornado.guide": "Unleash multiple violent vortexes in a radial burst around you. These tornadoes travel outwards in equally spaced directions, pulling in and immobilizing any creatures caught in their path.",
   "spell.legendary_spellbooks.release_riftwalker_predator": "Release Riftwalker Predator",
   "spell.legendary_spellbooks.release_riftwalker_predator.guide": "",
+  "spell.legendary_spellbooks.summon_flameborn_knights": "Summoned Flameborn Knights",
+  "spell.legendary_spellbooks.summon_flameborn_knights.guide": "",
   "spell.legendary_spellbooks.summon_haunted_knights": "Summon Haunted Knights",
   "spell.legendary_spellbooks.summon_haunted_knights.guide": "",
   "spell.legendary_spellbooks.thunder_fanburst": "Thunder Fanburst",
@@ -55,6 +62,7 @@
   "tooltip.legendary_spellbooks.on_thunder": "During thunderstorms:",
   "tooltip.legendary_spellbooks.stormbound_grimoire": "This spellbook calls forth thunder, causing rain to swell into storms.",
   "ui.legendary_spellbooks.health_damage": "%s damage + %s%% of target's max HP",
+  "ui.legendary_spellbooks.hp": "%d %s's HP",
   "ui.legendary_spellbooks.nimbus_count": "%d Nimbus",
   "ui.legendary_spellbooks.thorn_damage": "%d thorn damage + 20%% of damage received"
 }

@@ -7,6 +7,8 @@
   "death.attack.legendary_spellbooks.cloud_rail": "%1$sは %2$sの雲に巻き込まれて押しつぶされた",
   "death.attack.legendary_spellbooks.flame_eater": "%1$sは %2$s が地から呼び出した業火に喰らわれた",
   "entity.legendary_spellbooks.summoned_annihilation_pursuer": "召喚されたアナイアレイション・パーサー",
+  "entity.legendary_spellbooks.summoned_flameborn_guard": "召喚されたフレイムボーン・ガード",
+  "entity.legendary_spellbooks.summoned_flameborn_warrior": "召喚されたフレイムボーン・ウォーリアー",
   "entity.legendary_spellbooks.summoned_haunted_guard": "召喚された衛兵の亡霊",
   "entity.legendary_spellbooks.summoned_haunted_knight": "召喚された騎士の亡霊",
   "item.legendary_spellbooks.annihilators_protocol": "アナイアレイター・プロトコル",
@@ -39,6 +41,8 @@
   "spell.legendary_spellbooks.overgrown_shockwave.guide": "地面を叩きつけて、周囲の広い範囲に有毒なエリアを発生させ、巻き込まれたすべての敵にダメージと共に猛毒を与える。",
   "spell.legendary_spellbooks.quad_tornado": "クアッド・トルネード",
   "spell.legendary_spellbooks.quad_tornado.guide": "自分を中心に複数の激しい竜巻を等間隔に全方位へ放つ。それぞれの竜巻は周囲の生物を強制的に吸い寄せ、進路上のすべての敵の動きを封じながら移動する。",
+  "spell.legendary_spellbooks.summon_flameborn_knights": "召喚 フレイムボーン騎士",
+  "spell.legendary_spellbooks.summon_flameborn_knights.guide": "",
   "spell.legendary_spellbooks.summon_haunted_knights": "召喚 ホーンテッド騎士",
   "spell.legendary_spellbooks.summon_haunted_knights.guide": "",
   "spell.legendary_spellbooks.thunder_fanburst": "サンダー・ファンバースト",
@@ -54,6 +58,7 @@
   "tooltip.legendary_spellbooks.on_thunder": "雷雨の時:",
   "tooltip.legendary_spellbooks.stormbound_grimoire": "この魔導書は雷を呼び、降りしきる雨を嵐へと育て上げる",
   "ui.legendary_spellbooks.health_damage": "ダメージ: %s + 相手の最大体力の%s%%",
+  "ui.legendary_spellbooks.hp": "%dの%sのHP",
   "ui.legendary_spellbooks.nimbus_count": "雷雲の数: %d",
   "ui.legendary_spellbooks.thorn_damage": "棘のダメージ: %d + 20%% の被ダメージ"
 }

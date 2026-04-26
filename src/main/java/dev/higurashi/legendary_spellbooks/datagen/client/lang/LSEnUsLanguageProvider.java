@@ -1,5 +1,6 @@
 package dev.higurashi.legendary_spellbooks.datagen.client.lang;
 
+import dev.higurashi.legendary_spellbooks.registries.LSEntityRegistry;
 import dev.higurashi.legendary_spellbooks.registries.LSItemRegistry;
 import dev.higurashi.legendary_spellbooks.registries.LSSpellRegistry;
 import net.minecraft.data.PackOutput;
@@ -20,6 +21,15 @@ public class LSEnUsLanguageProvider extends BaseLanguageProvider {
         addCreativeTab("scrolls", "Legendary Spellbooks Scrolls");
 
         // --------------------
+        // ENTITY
+        // --------------------
+        addEntityType(LSEntityRegistry.SUMMONED_ANNIHILATION_PURSUER_ENTITY, "Summoned Annihilation Pursuer");
+        addEntityType(LSEntityRegistry.SUMMONED_FLAMEBORN_GUARD_ENTITY, "Summoned FlameBorn Guard");
+        addEntityType(LSEntityRegistry.SUMMONED_FLAMEBORN_WARRIOR_ENTITY, "Summoned FlameBorn Warrior");
+        addEntityType(LSEntityRegistry.SUMMONED_HAUNTED_KNIGHT_ENTITY, "Summoned Haunted Knight");
+        addEntityType(LSEntityRegistry.SUMMONED_HAUNTED_GUARD_ENTITY, "Summoned Haunted Guard");
+
+        // --------------------
         // ITEM
         // --------------------
         addItem(LSItemRegistry.ANNIHILATORS_PROTOCOL_SPELLBOOK_ITEM, "Annihilator's Protocol");
@@ -35,6 +45,7 @@ public class LSEnUsLanguageProvider extends BaseLanguageProvider {
         addSpell(LSSpellRegistry.ANNIHILATION_SHOCKWAVE_SPELL, "Annihilation Shockwave", "Stomp the ground to release a fan-shaped shockwave of green annihilation fire. The flames erupt in successive waves, consuming the life force of all creatures caught in the tremor. Damage increases based on the target's maximum health.");
         addSpell(LSSpellRegistry.ANNIHILATION_RESONANCE_SPELL, "Annihilation Resonance", "Enhance your weaponry with an unstable frequency. For the duration of the spell, landing a critical hit triggers a powerful annihilation explosion at the point of impact.");
         addSpell(LSSpellRegistry.ANNIHILATION_GEYSER_SPELL, "Annihilation Geyser", "Create a massive gravitational well that pulls in nearby creatures. Upon completing the cast, a colossal geyser of destructive energy erupts, finishing with a devastating explosion.");
+        addSpell(LSSpellRegistry.SUMMON_FLAMEBORN_KNIGHTS, "Summoned Flameborn Knights", "");
         addSpell(LSSpellRegistry.RELEASE_RIFTWALKER_PREDATOR_SPELL, "Release Riftwalker Predator", "");
 
         // Evocation
@@ -67,6 +78,7 @@ public class LSEnUsLanguageProvider extends BaseLanguageProvider {
         addUi("nimbus_count", "%d Nimbus");
         addUi("health_damage", "%s damage + %s%% of target's max HP");
         addUi("thorn_damage", "%d thorn damage + 20%% of damage received");
+        addUi("hp", "%d %s's HP");
 
         // --------------------
         // Tooltip

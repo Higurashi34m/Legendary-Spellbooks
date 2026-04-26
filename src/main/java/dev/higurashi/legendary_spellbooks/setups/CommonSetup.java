@@ -1,8 +1,6 @@
 package dev.higurashi.legendary_spellbooks.setups;
 
-import dev.higurashi.legendary_spellbooks.common.entities.spell.summoned.SummonedAnnihilationPursuerEntity;
-import dev.higurashi.legendary_spellbooks.common.entities.spell.summoned.SummonedHauntedGuardEntity;
-import dev.higurashi.legendary_spellbooks.common.entities.spell.summoned.SummonedHauntedKnightEntity;
+import dev.higurashi.legendary_spellbooks.common.entities.spell.summoned.*;
 import dev.higurashi.legendary_spellbooks.registries.LSEntityRegistry;
 import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -19,6 +17,8 @@ public class CommonSetup {
     @SubscribeEvent
     public static void onAttributeCreate(EntityAttributeCreationEvent event) {
         event.put(LSEntityRegistry.SUMMONED_ANNIHILATION_PURSUER_ENTITY.get(), SummonedAnnihilationPursuerEntity.createAttributes().build());
+        event.put(LSEntityRegistry.SUMMONED_FLAMEBORN_GUARD_ENTITY.get(), SummonedFlamebornGuardEntity.createAttributes().build());
+        event.put(LSEntityRegistry.SUMMONED_FLAMEBORN_WARRIOR_ENTITY.get(), SummonedFlamebornWarriorEntity.createAttributes().build());
         event.put(LSEntityRegistry.SUMMONED_HAUNTED_KNIGHT_ENTITY.get(), SummonedHauntedKnightEntity.createAttributes().build());
         event.put(LSEntityRegistry.SUMMONED_HAUNTED_GUARD_ENTITY.get(), SummonedHauntedGuardEntity.createAttributes().build());
     }

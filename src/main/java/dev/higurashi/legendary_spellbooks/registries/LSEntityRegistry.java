@@ -4,12 +4,12 @@ import dev.higurashi.legendary_spellbooks.LegendarySpellbooks;
 import dev.higurashi.legendary_spellbooks.common.entities.spell.projectile.SpellCloudEntity;
 import dev.higurashi.legendary_spellbooks.common.entities.spell.projectile.SpellFireColumnEntity;
 import dev.higurashi.legendary_spellbooks.common.entities.spell.projectile.SpellPoisonousShockwaveEntity;
-import dev.higurashi.legendary_spellbooks.common.entities.spell.summoned.SummonedAnnihilationPursuerEntity;
-import dev.higurashi.legendary_spellbooks.common.entities.spell.summoned.SummonedHauntedGuardEntity;
-import dev.higurashi.legendary_spellbooks.common.entities.spell.summoned.SummonedHauntedKnightEntity;
+import dev.higurashi.legendary_spellbooks.common.entities.spell.summoned.*;
 import net.miauczel.legendary_monsters.entity.AnimatedMonster.Mobs.AbandonedCrypt.HauntedGuardEntity;
 import net.miauczel.legendary_monsters.entity.AnimatedMonster.Mobs.AbandonedCrypt.HauntedKnightEntity;
 import net.miauczel.legendary_monsters.entity.AnimatedMonster.Mobs.SpaceStation.Flameborn.AnnihilationPursuer.AnnihilationPursuerEntity;
+import net.miauczel.legendary_monsters.entity.AnimatedMonster.Mobs.SpaceStation.Flameborn.FlamebornGuardEntity;
+import net.miauczel.legendary_monsters.entity.AnimatedMonster.Mobs.SpaceStation.Flameborn.FlamebornWarriorEntity;
 import net.miauczel.legendary_monsters.entity.AnimatedMonster.Projectile.CloudEntity;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EntityType;
@@ -27,6 +27,16 @@ public class LSEntityRegistry {
             .sized(1.5f, 5.0f)
             .fireImmune()
             .build(ResourceLocation.fromNamespaceAndPath(LegendarySpellbooks.MOD_ID, "summoned_annihilation_pursuer").toString()));
+
+    public static final RegistryObject<EntityType<FlamebornGuardEntity>> SUMMONED_FLAMEBORN_GUARD_ENTITY = ENTITIES.register("summoned_flameborn_guard", () -> EntityType.Builder.<FlamebornGuardEntity>of(SummonedFlamebornGuardEntity::new, MobCategory.CREATURE)
+            .sized(1.0f, 3.0f)
+            .fireImmune()
+            .build(ResourceLocation.fromNamespaceAndPath(LegendarySpellbooks.MOD_ID, "summoned_flameborn_guard").toString()));
+
+    public static final RegistryObject<EntityType<FlamebornWarriorEntity>> SUMMONED_FLAMEBORN_WARRIOR_ENTITY = ENTITIES.register("summoned_flameborn_warrior", () -> EntityType.Builder.<FlamebornWarriorEntity>of(SummonedFlamebornWarriorEntity::new, MobCategory.CREATURE)
+            .sized(1.0f, 3.0f)
+            .fireImmune()
+            .build(ResourceLocation.fromNamespaceAndPath(LegendarySpellbooks.MOD_ID, "summoned_flameborn_guard").toString()));
 
     public static final RegistryObject<EntityType<HauntedGuardEntity>> SUMMONED_HAUNTED_GUARD_ENTITY = ENTITIES.register("summoned_haunted_guard", () -> EntityType.Builder.<HauntedGuardEntity>of(SummonedHauntedGuardEntity::new, MobCategory.CREATURE)
             .sized(1.0f, 2.5f)
