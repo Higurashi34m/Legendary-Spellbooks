@@ -1,6 +1,7 @@
 package dev.higurashi.legendary_spellbooks.registries;
 
 import dev.higurashi.legendary_spellbooks.LegendarySpellbooks;
+import dev.higurashi.legendary_spellbooks.common.entities.spell.projectile.CumuloChargeEntity;
 import dev.higurashi.legendary_spellbooks.common.entities.spell.projectile.SpellCloudEntity;
 import dev.higurashi.legendary_spellbooks.common.entities.spell.projectile.SpellFireColumnEntity;
 import dev.higurashi.legendary_spellbooks.common.entities.spell.projectile.SpellPoisonousShockwaveEntity;
@@ -64,4 +65,8 @@ public class LSEntityRegistry {
             .updateInterval(2)
             .clientTrackingRange(6)
             .build(ResourceLocation.fromNamespaceAndPath(LegendarySpellbooks.MOD_ID, "spell_poisonous_shockwave").toString()));
+
+    public static final RegistryObject<EntityType<CumuloChargeEntity>> CUMULO_CHARGE_ENTITY = ENTITIES.register("cumulo_charge", () -> EntityType.Builder.of(CumuloChargeEntity::new, MobCategory.MISC)
+            .sized(1.5f, 2.5f)
+            .build(ResourceLocation.fromNamespaceAndPath(LegendarySpellbooks.MOD_ID, "cumulo_charge").toString()));
 }

@@ -64,6 +64,7 @@ public class LSEnUsLanguageProvider extends BaseLanguageProvider {
         addSpell(LSSpellRegistry.TORNADO_SPELL, "Tornado", "Summon a violent vortex that pulls in all nearby creatures. Those caught in its grasp are rendered immobile, trapped within the eye of the raging storm.");
         addSpell(LSSpellRegistry.QUAD_TORNADO_SPELL, "Quad Tornado", "Unleash multiple violent vortexes in a radial burst around you. These tornadoes travel outwards in equally spaced directions, pulling in and immobilizing any creatures caught in their path.");
         addSpell(LSSpellRegistry.ENERGY_BEAM_SPELL, "Energy Beam", "Ascend into the air and remain suspended to unleash an ultra-high output laser. The overwhelming energy consumption leaves the caster stunned for a short duration after the beam concludes.");
+        addSpell(LSSpellRegistry.CUMULO_CHARGE_SPELL, "Cumulo Charge", "");
 
         // Nature
         addSpell(LSSpellRegistry.AMBUSH_THORNS_SPELL, "Ambush Thorns", "");

@@ -44,6 +44,7 @@ public class LSSpellRegistry {
     public static final RegistryObject<AbstractSpell> TORNADO_SPELL = register(new TornadoSpell());
     public static final RegistryObject<AbstractSpell> QUAD_TORNADO_SPELL = register(new QuadTornadoSpell());
     public static final RegistryObject<AbstractSpell> ENERGY_BEAM_SPELL = register(new EnergyBeamSpell());
+    public static final RegistryObject<AbstractSpell> CUMULO_CHARGE_SPELL = register(new CumuloChargeSpell());
 
     // Nature
     public static final RegistryObject<AbstractSpell> AMBUSH_THORNS_SPELL = register(new AmbushThornsSpell());

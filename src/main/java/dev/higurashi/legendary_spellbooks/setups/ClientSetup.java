@@ -1,5 +1,6 @@
 package dev.higurashi.legendary_spellbooks.setups;
 
+import dev.higurashi.legendary_spellbooks.client.renderer.entities.spell.projectile.CumuloChargeRenderer;
 import dev.higurashi.legendary_spellbooks.client.renderer.entities.spell.projectile.SpellCloudRender;
 import dev.higurashi.legendary_spellbooks.registries.LSEntityRegistry;
 import dev.higurashi.legendary_spellbooks.registries.LSItemRegistry;
@@ -33,5 +34,6 @@ public class ClientSetup {
         event.registerEntityRenderer(LSEntityRegistry.SPELL_CLOUD_ENTITY.get(), SpellCloudRender::new);
         event.registerEntityRenderer(LSEntityRegistry.SPELL_FIRE_COLUMN_ENTITY.get(), NoRendererEntityRenderer::new);
         event.registerEntityRenderer(LSEntityRegistry.SPELL_POISONOUS_SHOCKWAVE_ENTITY.get(), NoRendererEntityRenderer::new);
+        event.registerEntityRenderer(LSEntityRegistry.CUMULO_CHARGE_ENTITY.get(), CumuloChargeRenderer::new);
     }
 }

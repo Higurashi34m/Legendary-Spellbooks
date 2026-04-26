@@ -63,6 +63,7 @@ public class LSJaJpLanguageProvider extends BaseLanguageProvider {
         addSpell(LSSpellRegistry.TORNADO_SPELL, "トルネード", "周囲の生物を強制的に吸い寄せる竜巻を召喚する。この竜巻に捕らわれた者は移動の自由を奪われ、嵐の中心で身動きが取れなくなる。");
         addSpell(LSSpellRegistry.QUAD_TORNADO_SPELL, "クアッド・トルネード", "自分を中心に複数の激しい竜巻を等間隔に全方位へ放つ。それぞれの竜巻は周囲の生物を強制的に吸い寄せ、進路上のすべての敵の動きを封じながら移動する。");
         addSpell(LSSpellRegistry.ENERGY_BEAM_SPELL, "エナジービーム", "空中へと浮上・静止し、超高出力のレーザーを放つ。その圧倒的なエネルギー出力により、放ち終えた後、一定時間スタンし、行動不可となる。");
+        addSpell(LSSpellRegistry.CUMULO_CHARGE_SPELL, "キュムロチャージ", "");
 
         // Nature
         addSpell(LSSpellRegistry.AMBUSH_THORNS_SPELL, "アンバッシュ・ソーン", "");
