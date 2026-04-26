@@ -1,10 +1,7 @@
 package dev.higurashi.legendary_spellbooks.registries;
 
 import dev.higurashi.legendary_spellbooks.LegendarySpellbooks;
-import dev.higurashi.legendary_spellbooks.common.entities.spell.projectile.CumuloChargeEntity;
-import dev.higurashi.legendary_spellbooks.common.entities.spell.projectile.SpellCloudEntity;
-import dev.higurashi.legendary_spellbooks.common.entities.spell.projectile.SpellFireColumnEntity;
-import dev.higurashi.legendary_spellbooks.common.entities.spell.projectile.SpellPoisonousShockwaveEntity;
+import dev.higurashi.legendary_spellbooks.common.entities.spell.projectile.*;
 import dev.higurashi.legendary_spellbooks.common.entities.spell.summoned.*;
 import net.miauczel.legendary_monsters.entity.AnimatedMonster.Mobs.AbandonedCrypt.HauntedGuardEntity;
 import net.miauczel.legendary_monsters.entity.AnimatedMonster.Mobs.AbandonedCrypt.HauntedKnightEntity;
@@ -65,6 +62,10 @@ public class LSEntityRegistry {
             .updateInterval(2)
             .clientTrackingRange(6)
             .build(ResourceLocation.fromNamespaceAndPath(LegendarySpellbooks.MOD_ID, "spell_poisonous_shockwave").toString()));
+
+    public static final RegistryObject<EntityType<SpellIceSpikeEntity>> SPELL_ICE_SPIKE_ENTITY = ENTITIES.register("spell_ice_spike", () -> EntityType.Builder.<SpellIceSpikeEntity>of(SpellIceSpikeEntity::new, MobCategory.MISC)
+            .sized(0.6f, 1.95f)
+            .build(ResourceLocation.fromNamespaceAndPath(LegendarySpellbooks.MOD_ID, "spell_ice_spike").toString()));
 
     public static final RegistryObject<EntityType<CumuloChargeEntity>> CUMULO_CHARGE_ENTITY = ENTITIES.register("cumulo_charge", () -> EntityType.Builder.of(CumuloChargeEntity::new, MobCategory.MISC)
             .sized(1.5f, 2.5f)

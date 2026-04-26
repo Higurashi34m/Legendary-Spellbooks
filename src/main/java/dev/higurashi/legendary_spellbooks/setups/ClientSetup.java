@@ -35,5 +35,6 @@ public class ClientSetup {
         event.registerEntityRenderer(LSEntityRegistry.SPELL_FIRE_COLUMN_ENTITY.get(), NoRendererEntityRenderer::new);
         event.registerEntityRenderer(LSEntityRegistry.SPELL_POISONOUS_SHOCKWAVE_ENTITY.get(), NoRendererEntityRenderer::new);
         event.registerEntityRenderer(LSEntityRegistry.CUMULO_CHARGE_ENTITY.get(), CumuloChargeRenderer::new);
+        event.registerEntityRenderer(LSEntityRegistry.SPELL_ICE_SPIKE_ENTITY.get(), IceSpikeRenderer::new);
     }
 }

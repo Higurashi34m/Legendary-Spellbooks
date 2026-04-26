@@ -5,6 +5,8 @@ import dev.higurashi.legendary_spellbooks.common.spells.ender.*;
 import dev.higurashi.legendary_spellbooks.common.spells.evocation.SummonHauntedKnightsSpell;
 import dev.higurashi.legendary_spellbooks.common.spells.fire.FlameEaterSpell;
 import dev.higurashi.legendary_spellbooks.common.spells.fire.FlameSectorSpell;
+import dev.higurashi.legendary_spellbooks.common.spells.ice.GlacierEruptionSpell;
+import dev.higurashi.legendary_spellbooks.common.spells.ice.GlacierRingburstSpell;
 import dev.higurashi.legendary_spellbooks.common.spells.lightning.*;
 import dev.higurashi.legendary_spellbooks.common.spells.nature.AmbushThornsSpell;
 import dev.higurashi.legendary_spellbooks.common.spells.nature.OvergrownShockwaveSpell;
@@ -34,6 +36,10 @@ public class LSSpellRegistry {
     // Fire
     public static final RegistryObject<AbstractSpell> FLAME_EATER_SPELL = register(new FlameEaterSpell());
     public static final RegistryObject<AbstractSpell> FLAME_SECTOR_SPELL = register(new FlameSectorSpell());
+
+    // Ice
+    public static final RegistryObject<AbstractSpell> GLACIER_ERUPTION_SPELL = register(new GlacierEruptionSpell());
+    public static final RegistryObject<AbstractSpell> GLACIER_RINGBURST_SPELL = register(new GlacierRingburstSpell());
 
     // Lightning
     public static final RegistryObject<AbstractSpell> CLOUD_RAIL_SPELL = register(new CloudRailSpell());
