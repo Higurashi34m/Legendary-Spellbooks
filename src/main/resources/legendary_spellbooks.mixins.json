@@ -5,6 +5,7 @@
   "compatibilityLevel": "JAVA_17",
   "refmap": "${mod_id}.refmap.json",
   "mixins": [
+    "entities.AnnihilationPursuerEntityMixin",
     "entities.spell.AnnihilationBeamEntityMixin",
     "entities.spell.AnnihilationBombEntityMixin",
     "entities.spell.AnnihilationExplosionEntityMixin",
