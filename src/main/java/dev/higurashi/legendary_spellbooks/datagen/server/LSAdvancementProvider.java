@@ -5,6 +5,7 @@ import dev.higurashi.legendary_spellbooks.registries.LSItemRegistry;
 import net.minecraft.advancements.Advancement;
 import net.minecraft.advancements.FrameType;
 import net.minecraft.advancements.critereon.InventoryChangeTrigger;
+import net.minecraft.advancements.critereon.PlayerTrigger;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.network.chat.Component;
@@ -32,7 +33,7 @@ public class LSAdvancementProvider extends ForgeAdvancementProvider {
                             Component.translatable("advancement.legendary_spellbooks.description"),
                             ResourceLocation.withDefaultNamespace("textures/block/obsidian.png"),
                             FrameType.TASK, false, false, false)
-                    .addCriterion("has_anything", InventoryChangeTrigger.TriggerInstance.hasItems(LSItemRegistry.STORMBOUND_GRIMOIRE_SPELLBOOK_ITEM.get()))
+                    .addCriterion("root", PlayerTrigger.TriggerInstance.tick())
                     .save(saver, ResourceLocation.fromNamespaceAndPath(LegendarySpellbooks.MOD_ID, "main/root"), helper);
 
             Advancement stormboundGrimoireAdvancement = Advancement.Builder.advancement()

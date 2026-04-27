@@ -1,16 +1,8 @@
 {
   "criteria": {
-    "has_anything": {
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "legendary_spellbooks:stormbound_grimoire"
-            ]
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
+    "root": {
+      "conditions": {},
+      "trigger": "minecraft:tick"
     }
   },
   "display": {
@@ -32,7 +24,7 @@
   },
   "requirements": [
     [
-      "has_anything"
+      "root"
     ]
   ],
   "sends_telemetry_event": true
