@@ -48,24 +48,24 @@ public class LSJaJpLanguageProvider extends BaseLanguageProvider {
         // --------------------
 
         // Ender
-        addSpell(LSSpellRegistry.ANNIHILATION_BEAM_SPELL, "アナイアレイション・ビーム", "破壊的なエネルギーを持つビームを放つ。撃っている間は動くことができない。地面の近く、かつ、地面と水平に近い角度で放つと小さい球をばら撒く。");
-        addSpell(LSSpellRegistry.ANNIHILATION_BOMB_SPELL, "アナイアレイション・ボム", "凝縮された破壊的な爆弾を、自分の見ている方向に向けて放つ。この爆弾は、エンティティやブロックに当たると爆発し、当たった相手にダメージを与え、周囲に大量の小さい球をばら撒く。");
-        addSpell(LSSpellRegistry.ANNIHILATION_SHOCKWAVE_SPELL, "アナイアレイション・ショックウェーブ", "地面を踏みつけて、扇状に緑色の火の衝撃波を発生させる。炎は波のように噴出し、巻き込まれたすべての敵の生命力を焼き尽くす。当たった相手の最大体力に応じてダメージが増加する。");
-        addSpell(LSSpellRegistry.ANNIHILATION_RESONANCE_SPELL, "アナイアレイション・レゾナンス", "自身に不安定な周波数を付与する。効果時間中、クリティカルヒットを与えると与えた相手の位置から強力な消滅の爆発を発生させ、周囲の敵にダメージを与える。。");
-        addSpell(LSSpellRegistry.ANNIHILATION_GEYSER_SPELL, "終焉の噴火", "近くの敵を吸い込む巨大な重力場を周囲に発生させる。詠唱が完了すると、終焉のエネルギーの巨大な間欠泉が噴出し、壊滅的な爆発が起こる。(地形破壊は無い)");
-        addSpell(LSSpellRegistry.SUMMON_FLAMEBORN_KNIGHTS_SPELL, "召喚 フレイムボーン騎士", "");
-        addSpell(LSSpellRegistry.RELEASE_RIFTWALKER_PREDATOR_SPELL, "リフトウォーカー・プロトコル", "");
+        addSpell(LSSpellRegistry.ANNIHILATION_BEAM_SPELL, "アナイアレイション・ビーム", "破壊的なエネルギーのビームを放つ。撃っている間は動くことができない。地面の近く、活水平に近い角度で放つと小さなエネルギー弾をばら撒く。");
+        addSpell(LSSpellRegistry.ANNIHILATION_BOMB_SPELL, "アナイアレイション・ボム", "凝縮されたエネルギー弾を前方に放つ。命中すると爆発してダメージを与え、周囲に多数の小さな球をまき散らす。");
+        addSpell(LSSpellRegistry.ANNIHILATION_SHOCKWAVE_SPELL, "アナイアレイション・ショックウェーブ", "地面を叩きつけ、扇状に緑色の炎の衝撃波を発生させる。ダメージは相手の最大体力に応じて増加する。");
+        addSpell(LSSpellRegistry.ANNIHILATION_RESONANCE_SPELL, "アナイアレイション・レゾナンス", "自身に不安定な周波数を付与する。効果中、防御力と攻撃力が25%下がる代わりに、クリティカルヒットを与えると、相手の位置で強力な爆発を引き起こす。");
+        addSpell(LSSpellRegistry.ANNIHILATION_GEYSER_SPELL, "終焉の噴火", "周囲の敵を吸い込む巨大な重力場を発生させる。詠唱が完了するとエネルギーの間欠泉が噴出し、致命的なダメージを与える。");
+        addSpell(LSSpellRegistry.SUMMON_FLAMEBORN_KNIGHTS_SPELL, "召喚 フレイムボーン騎士", "永遠に燃え続ける火炎から作られた騎士を召喚し、共に戦わせる。");
+        addSpell(LSSpellRegistry.RELEASE_RIFTWALKER_PREDATOR_SPELL, "リフトウォーカー・プロトコル", "アナイアレイション・パーサーを現界させる。このハンターはターゲットを破壊するまで、どこまでも執拗に追い続ける。");
 
         // Evocation
-        addSpell(LSSpellRegistry.SUMMON_HAUNTED_KNIGHTS_SPELL, "召喚 ホーンテッド騎士", "");
+        addSpell(LSSpellRegistry.SUMMON_HAUNTED_KNIGHTS_SPELL, "召喚 ホーンテッド騎士", "唱えると、自身について来て敵を切り裂く、騎士の亡霊を呼び出す。");
 
         // Fire
-        addSpell(LSSpellRegistry.FLAME_EATER_SPELL, "火炎喰らい", "複数の相手をターゲットにし、相手の足元に炎を噴出させる。相手の位置が高すぎると、炎を噴出させることができない。");
-        addSpell(LSSpellRegistry.FLAME_SECTOR_SPELL, "フレイムセクター", "自分を中心に等間隔に放射状の炎を噴出させる。これらの炎はブロックから噴出する。詠唱者が地面から離れすぎていると、これらの炎は現れない。");
+        addSpell(LSSpellRegistry.FLAME_EATER_SPELL, "火炎喰らい", "複数の相手の足元から炎を噴出させる。相手の位置が高すぎると、炎を届かせることができない。");
+        addSpell(LSSpellRegistry.FLAME_SECTOR_SPELL, "フレイムセクター", "自分を中心に、放射状に広がる炎を噴出させる。炎は地面を伝って進む。");
 
         // Ice
-        addSpell(LSSpellRegistry.GLACIER_ERUPTION_SPELL, "グレイシア・イラプション", "");
-        addSpell(LSSpellRegistry.GLACIER_RINGBURST_SPELL, "グレイシア・リングバースト", "");
+        addSpell(LSSpellRegistry.GLACIER_ERUPTION_SPELL, "グレイシア・イラプション", "前方の直線上に巨大な氷の楔を次々と突き出させ、触れたものを凍らせる。");
+        addSpell(LSSpellRegistry.GLACIER_RINGBURST_SPELL, "グレイシア・リングバースト", "自分を中心に、幾重もの氷の輪を広範囲に展開して周囲の敵を凍らせる。");
 
         // Lightning
         addSpell(LSSpellRegistry.CLOUD_RAIL_SPELL, "クラウドレール", "自分の見ている方向に直線状に魔法の雲を召喚する。この雲は落下し、当たった位置から範囲ダメージを与える。");
@@ -76,10 +76,10 @@ public class LSJaJpLanguageProvider extends BaseLanguageProvider {
         addSpell(LSSpellRegistry.TORNADO_SPELL, "トルネード", "周囲の生物を強制的に吸い寄せる竜巻を召喚する。この竜巻に捕らわれた者は移動の自由を奪われ、嵐の中心で身動きが取れなくなる。");
         addSpell(LSSpellRegistry.QUAD_TORNADO_SPELL, "クアッド・トルネード", "自分を中心に複数の激しい竜巻を等間隔に全方位へ放つ。それぞれの竜巻は周囲の生物を強制的に吸い寄せ、進路上のすべての敵の動きを封じながら移動する。");
         addSpell(LSSpellRegistry.ENERGY_BEAM_SPELL, "エナジービーム", "空中へと浮上・静止し、超高出力のレーザーを放つ。その圧倒的なエネルギー出力により、放ち終えた後、一定時間スタンし、行動不可となる。");
-        addSpell(LSSpellRegistry.CUMULO_CHARGE_SPELL, "キュムロチャージ", "");
+        addSpell(LSSpellRegistry.CUMULO_CHARGE_SPELL, "キュムロチャージ", "雷雲の幻影「キュムロニンバス」を召喚し、前方に突進させる。ロックオン時は標的に向かって執拗に追尾する。");
 
         // Nature
-        addSpell(LSSpellRegistry.AMBUSH_THORNS_SPELL, "アンバッシュ・ソーン", "");
+        addSpell(LSSpellRegistry.AMBUSH_THORNS_SPELL, "アンバッシュ・ソーン", "自身に棘を付与する。この棘は棘の鎧のエンチャントと同じ効果を発生させる。");
         addSpell(LSSpellRegistry.OVERGROWN_SHOCKWAVE_SPELL, "生い茂るショックウェーブ", "地面を叩きつけて、周囲の広い範囲に有毒なエリアを発生させ、巻き込まれたすべての敵にダメージと共に猛毒を与える。");
 
         // Death Attack
@@ -107,7 +107,7 @@ public class LSJaJpLanguageProvider extends BaseLanguageProvider {
         // --------------------
         // Advancement
         // --------------------
-        addAdvancement("stormbound_grimoire", "嵐の本", "嵐に結ばれし魔導書を手に入れる");
-        addAdvancement("annihilator_protocol", "覗き覗かれ...", "アナイアレイター・プロトコルを手に入れる");
+        addAdvancement("stormbound_grimoire", "双極の空", "嵐に結ばれし魔導書を手に入れる");
+        addAdvancement("annihilator_protocol", "深淵を覗くとき...", "アナイアレイター・プロトコルを手に入れる");
     }
 }

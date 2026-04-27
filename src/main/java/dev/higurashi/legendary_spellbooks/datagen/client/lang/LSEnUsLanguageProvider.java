@@ -48,39 +48,39 @@ public class LSEnUsLanguageProvider extends BaseLanguageProvider {
         // --------------------
 
         // Ender
-        addSpell(LSSpellRegistry.ANNIHILATION_BEAM_SPELL, "Annihilation Beam", "Channel a devastating beam of pure annihilation. While firing, you are locked in place. When aimed horizontally near the ground, the beam's overwhelming power causes it to scatter unstable energy orbs across the terrain.");
-        addSpell(LSSpellRegistry.ANNIHILATION_BOMB_SPELL, "Annihilation Bomb", "Launch a concentrated orb of annihilation that detonates upon impact with a creature or the ground. The resulting explosion deals heavy damage and scatters a multitude of unstable energy orbs across the surrounding area.");
-        addSpell(LSSpellRegistry.ANNIHILATION_SHOCKWAVE_SPELL, "Annihilation Shockwave", "Stomp the ground to release a fan-shaped shockwave of green annihilation fire. The flames erupt in successive waves, consuming the life force of all creatures caught in the tremor. Damage increases based on the target's maximum health.");
-        addSpell(LSSpellRegistry.ANNIHILATION_RESONANCE_SPELL, "Annihilation Resonance", "Enhance your weaponry with an unstable frequency. For the duration of the spell, landing a critical hit triggers a powerful annihilation explosion at the point of impact.");
-        addSpell(LSSpellRegistry.ANNIHILATION_GEYSER_SPELL, "Annihilation Geyser", "Create a massive gravitational well that pulls in nearby creatures. Upon completing the cast, a colossal geyser of destructive energy erupts, finishing with a devastating explosion.");
-        addSpell(LSSpellRegistry.SUMMON_FLAMEBORN_KNIGHTS_SPELL, "Summoned Flameborn Knights", "");
-        addSpell(LSSpellRegistry.RELEASE_RIFTWALKER_PREDATOR_SPELL, "Release Riftwalker Predator", "");
+        addSpell(LSSpellRegistry.ANNIHILATION_BEAM_SPELL, "Annihilation Beam", "Channel a devastating beam of energy. While firing, you are locked in place. If aimed near the ground, the beam scatters small energy orbs on impact.");
+        addSpell(LSSpellRegistry.ANNIHILATION_BOMB_SPELL, "Annihilation Bomb", "Launch a concentrated bomb of destructive energy that explodes on impact, dealing damage and scattering small energy orbs around the area.");
+        addSpell(LSSpellRegistry.ANNIHILATION_SHOCKWAVE_SPELL, "Annihilation Shockwave", "Stomp the ground to release a fan-shaped shockwave of green fire. The waves deal damage based on the target's maximum health.");
+        addSpell(LSSpellRegistry.ANNIHILATION_RESONANCE_SPELL, "Annihilation Resonance", "Imbue yourself with an unstable frequency, reducing your defense and attack by 25%. For the duration, landing a critical hit triggers a powerful explosion at the target's location.");
+        addSpell(LSSpellRegistry.ANNIHILATION_GEYSER_SPELL, "Annihilation Geyser", "Create a gravitational well that pulls in nearby creatures. Upon completion, a colossal geyser of energy erupts, dealing massive damage.");
+        addSpell(LSSpellRegistry.SUMMON_FLAMEBORN_KNIGHTS_SPELL, "Summon Flameborn Knights", "Summon knights made of eternal fire to fight for you.");
+        addSpell(LSSpellRegistry.RELEASE_RIFTWALKER_PREDATOR_SPELL, "Riftwalker Protocol", "Manifest an Annihilation Pursuer, a relentless hunter that tracks its target through dimensional rifts until they are destroyed.");
 
         // Evocation
-        addSpell(LSSpellRegistry.SUMMON_HAUNTED_KNIGHTS_SPELL, "Summon Haunted Knights", "");
+        addSpell(LSSpellRegistry.SUMMON_HAUNTED_KNIGHTS_SPELL, "Summon Haunted Knights", "Cast to summon spectral knights that will follow you and strike at your foes.");
 
         // Fire
-        addSpell(LSSpellRegistry.FLAME_EATER_SPELL, "Flame Eater", "Target multiple creatures to erupt a burst of fire at their feet. This spell fails to reach targets positioned too high above the ground.");
-        addSpell(LSSpellRegistry.FLAME_SECTOR_SPELL, "Flame Sector", "Emit a radial burst of fire in equally spaced directions around you. These flames travel along the ground, erupting at the feet of creatures in their path. This spell fails to manifest if the caster are too high above the ground.");
+        addSpell(LSSpellRegistry.FLAME_EATER_SPELL, "Flame Eater", "Target multiple creatures to erupt bursts of fire at their feet. This spell fails if targets are too high above the ground.");
+        addSpell(LSSpellRegistry.FLAME_SECTOR_SPELL, "Flame Sector", "Emit a radial burst of fire in equally spaced directions. The flames travel along the ground.");
 
         // Ice
-        addSpell(LSSpellRegistry.GLACIER_ERUPTION_SPELL, "Glacier Eruption", "");
-        addSpell(LSSpellRegistry.GLACIER_RINGBURST_SPELL, "Glacier Ringburst", "");
+        addSpell(LSSpellRegistry.GLACIER_ERUPTION_SPELL, "Glacier Eruption", "Conjure a line of ice wedges in front of you, freezing any creatures they strike.");
+        addSpell(LSSpellRegistry.GLACIER_RINGBURST_SPELL, "Glacier Ringburst", "Conjure multiple expanding rings of ice centered on your position, freezing nearby creatures.");
 
         // Lightning
-        addSpell(LSSpellRegistry.CLOUD_RAIL_SPELL, "Cloud Rail", "Conjure a cascading line of magical clouds in front of you. These clouds fall freely from the sky, exploding and dealing area damage upon impact with the ground.");
-        addSpell(LSSpellRegistry.CLOUD_RING_SPELL, "Cloud Ring", "Conjure multiple expanding rings of magical clouds centered on your position. These clouds descend from the sky in a rhythmic cascade, dealing heavy area damage upon impacting the ground.");
-        addSpell(LSSpellRegistry.NIMBUS_ARRAY_SPELL, "Nimbus Array", "Summon a row of thunderclouds in front of you that continuously strike lightning upon anything beneath them for the duration of the spell.");
-        addSpell(LSSpellRegistry.TRIPLE_NIMBUS_ARRAY_SPELL, "Triple Nimbus Array", "Manifest three rows of thunderclouds in a fanned formation. These clouds continuously strike lightning upon anything beneath them for the duration of the spell.");
-        addSpell(LSSpellRegistry.THUNDER_FANBURST_SPELL, "Thunder Fanburst", "Unleash a fanned burst of lightning bolts that travel outwards in multiple directions. These bolts pierce through all creatures in their path.");
-        addSpell(LSSpellRegistry.TORNADO_SPELL, "Tornado", "Summon a violent vortex that pulls in all nearby creatures. Those caught in its grasp are rendered immobile, trapped within the eye of the raging storm.");
-        addSpell(LSSpellRegistry.QUAD_TORNADO_SPELL, "Quad Tornado", "Unleash multiple violent vortexes in a radial burst around you. These tornadoes travel outwards in equally spaced directions, pulling in and immobilizing any creatures caught in their path.");
-        addSpell(LSSpellRegistry.ENERGY_BEAM_SPELL, "Energy Beam", "Ascend into the air and remain suspended to unleash an ultra-high output laser. The overwhelming energy consumption leaves the caster stunned for a short duration after the beam concludes.");
-        addSpell(LSSpellRegistry.CUMULO_CHARGE_SPELL, "Cumulo Charge", "");
+        addSpell(LSSpellRegistry.CLOUD_RAIL_SPELL, "Cloud Rail", "Conjure a line of magical clouds in the direction you are looking. These clouds fall and deal area damage upon impact.");
+        addSpell(LSSpellRegistry.CLOUD_RING_SPELL, "Cloud Ring", "Conjure multiple rings of magical clouds centered on your position. These clouds fall and deal area damage upon impact.");
+        addSpell(LSSpellRegistry.NIMBUS_ARRAY_SPELL, "Nimbus Array", "Summon a row of thunderclouds in front of you that continuously strike lightning beneath them.");
+        addSpell(LSSpellRegistry.TRIPLE_NIMBUS_ARRAY_SPELL, "Triple Nimbus Array", "Summon three rows of thunderclouds in a fan shape that continuously strike lightning beneath them.");
+        addSpell(LSSpellRegistry.THUNDER_FANBURST_SPELL, "Thunder Fanburst", "Unleash a burst of lightning bolts that travel outwards in a fan shape, piercing through creatures in their path.");
+        addSpell(LSSpellRegistry.TORNADO_SPELL, "Tornado", "Summon a violent vortex that pulls in nearby creatures and renders them immobile.");
+        addSpell(LSSpellRegistry.QUAD_TORNADO_SPELL, "Quad Tornado", "Unleash multiple tornadoes in a radial burst, pulling in and immobilizing creatures in their path.");
+        addSpell(LSSpellRegistry.ENERGY_BEAM_SPELL, "Energy Beam", "Ascend into the air to unleash a high-output laser. The energy consumption leaves the caster stunned for a short duration after the beam ends.");
+        addSpell(LSSpellRegistry.CUMULO_CHARGE_SPELL, "Cumulo Charge", "Summon a phantom of the 'Cumulonimbus' to charge forward. If locked on, the phantom will pursue its target.");
 
         // Nature
-        addSpell(LSSpellRegistry.AMBUSH_THORNS_SPELL, "Ambush Thorns", "");
-        addSpell(LSSpellRegistry.OVERGROWN_SHOCKWAVE_SPELL, "Overgrown Shockwave", "Slam the ground to unleash a burst of toxic nature magic in a large radius around you, poisoning all creatures caught in the tremor.");
+        addSpell(LSSpellRegistry.AMBUSH_THORNS_SPELL, "Ambush Thorns", "Imbue yourself with thorns, acting as the Thorns enchantment to damage attackers.");
+        addSpell(LSSpellRegistry.OVERGROWN_SHOCKWAVE_SPELL, "Overgrown Shockwave", "Slam the ground to unleash a burst of toxic spores, poisoning nearby creatures in a wide area.");
 
         // Death Attack
         addSpellDamageSource(LSSpellRegistry.CLOUD_RAIL_SPELL, "%1$s was engulfed and crushed by %2$s's clouds");
@@ -107,8 +107,8 @@ public class LSEnUsLanguageProvider extends BaseLanguageProvider {
         // --------------------
         // Advancement
         // --------------------
-        addAdvancement("stormbound_grimoire", "Storm book", "Get Stormbound Grimoire");
-        addAdvancement("annihilator_protocol", "Peeping and being peeped at...", "Get Annihilator Protocol");
+        addAdvancement("stormbound_grimoire", "Binary Skies", "Acquire the Stormbound Grimoire");
+        addAdvancement("annihilator_protocol", "If You Gaze Into the Abyss...", "Acquire the Annihilator's Protocol");
 
         add("advancement.legendary_spellbooks.title", "Legendary Spellbooks");
         add("advancement.legendary_spellbooks.description", "Legendary Spellbooks");
