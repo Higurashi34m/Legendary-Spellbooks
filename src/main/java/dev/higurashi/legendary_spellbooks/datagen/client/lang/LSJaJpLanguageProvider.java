@@ -1,5 +1,6 @@
 package dev.higurashi.legendary_spellbooks.datagen.client.lang;
 
+import dev.higurashi.legendary_spellbooks.registries.LSEffectRegistry;
 import dev.higurashi.legendary_spellbooks.registries.LSEntityRegistry;
 import dev.higurashi.legendary_spellbooks.registries.LSItemRegistry;
 import dev.higurashi.legendary_spellbooks.registries.LSSpellRegistry;
@@ -28,6 +29,13 @@ public class LSJaJpLanguageProvider extends BaseLanguageProvider {
         addEntityType(LSEntityRegistry.SUMMONED_FLAMEBORN_WARRIOR_ENTITY, "召喚されたフレイムボーン・ウォーリアー");
         addEntityType(LSEntityRegistry.SUMMONED_HAUNTED_KNIGHT_ENTITY, "召喚された騎士の亡霊");
         addEntityType(LSEntityRegistry.SUMMONED_HAUNTED_GUARD_ENTITY, "召喚された衛兵の亡霊");
+
+        // --------------------
+        // EFFECT
+        // --------------------
+        addEffect(LSEffectRegistry.ANNIHILATION_RESONANCE_EFFECT, "アナイアレイション・レゾナンス");
+        addEffect(LSEffectRegistry.BEAM_EFFECT, "ビーム");
+        addEffect(LSEffectRegistry.AMBUSH_THORNS_EFFECT, "アンバッシュ・ソーン");
 
         // --------------------
         // ITEM

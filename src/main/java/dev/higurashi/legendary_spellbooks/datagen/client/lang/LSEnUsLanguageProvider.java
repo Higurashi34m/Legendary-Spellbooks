@@ -1,5 +1,6 @@
 package dev.higurashi.legendary_spellbooks.datagen.client.lang;
 
+import dev.higurashi.legendary_spellbooks.registries.LSEffectRegistry;
 import dev.higurashi.legendary_spellbooks.registries.LSEntityRegistry;
 import dev.higurashi.legendary_spellbooks.registries.LSItemRegistry;
 import dev.higurashi.legendary_spellbooks.registries.LSSpellRegistry;
@@ -28,6 +29,13 @@ public class LSEnUsLanguageProvider extends BaseLanguageProvider {
         addEntityType(LSEntityRegistry.SUMMONED_FLAMEBORN_WARRIOR_ENTITY, "Summoned FlameBorn Warrior");
         addEntityType(LSEntityRegistry.SUMMONED_HAUNTED_KNIGHT_ENTITY, "Summoned Haunted Knight");
         addEntityType(LSEntityRegistry.SUMMONED_HAUNTED_GUARD_ENTITY, "Summoned Haunted Guard");
+
+        // --------------------
+        // EFFECT
+        // --------------------
+        addEffect(LSEffectRegistry.ANNIHILATION_RESONANCE_EFFECT, "Annihilation Resonance");
+        addEffect(LSEffectRegistry.BEAM_EFFECT, "Beam");
+        addEffect(LSEffectRegistry.AMBUSH_THORNS_EFFECT, "Ambush Thorns");
 
         // --------------------
         // ITEM
