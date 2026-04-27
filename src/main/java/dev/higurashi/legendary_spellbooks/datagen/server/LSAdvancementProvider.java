@@ -38,13 +38,13 @@ public class LSAdvancementProvider extends ForgeAdvancementProvider {
 
             Advancement stormboundGrimoireAdvancement = Advancement.Builder.advancement()
                     .parent(root)
-                    .display(LSItemRegistry.STORMBOUND_GRIMOIRE_SPELLBOOK_ITEM.get(), Component.translatable("advancement.legendary_spellbooks.stormbound_grimoire.title"), Component.translatable("advancement.legendary_spellbooks.stormbound_grimoire.description"), null, FrameType.TASK, true, true, false)
+                    .display(LSItemRegistry.STORMBOUND_GRIMOIRE_SPELLBOOK_ITEM.get(), Component.translatable("advancement.legendary_spellbooks.stormbound_grimoire.title"), Component.translatable("advancement.legendary_spellbooks.stormbound_grimoire.description"), null, FrameType.CHALLENGE, true, true, false)
                     .addCriterion("has_item", InventoryChangeTrigger.TriggerInstance.hasItems(LSItemRegistry.STORMBOUND_GRIMOIRE_SPELLBOOK_ITEM.get()))
                     .save(saver, ResourceLocation.fromNamespaceAndPath(LegendarySpellbooks.MOD_ID, "main/get_stormbound_grimoire"), helper);
 
             Advancement annihilatorsProtocolAdvancement = Advancement.Builder.advancement()
                     .parent(root)
-                    .display(LSItemRegistry.ANNIHILATORS_PROTOCOL_SPELLBOOK_ITEM.get(), Component.translatable("advancement.legendary_spellbooks.annihilator_protocol.title"), Component.translatable("advancement.legendary_spellbooks.annihilator_protocol.description"), null, FrameType.TASK, true, true, false)
+                    .display(LSItemRegistry.ANNIHILATORS_PROTOCOL_SPELLBOOK_ITEM.get(), Component.translatable("advancement.legendary_spellbooks.annihilator_protocol.title"), Component.translatable("advancement.legendary_spellbooks.annihilator_protocol.description"), null, FrameType.CHALLENGE, true, true, false)
                     .addCriterion("has_item", InventoryChangeTrigger.TriggerInstance.hasItems(LSItemRegistry.ANNIHILATORS_PROTOCOL_SPELLBOOK_ITEM.get()))
                     .save(saver, ResourceLocation.fromNamespaceAndPath(LegendarySpellbooks.MOD_ID, "main/get_annihilators_protocol"), helper);
         }

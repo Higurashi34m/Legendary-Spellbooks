@@ -19,7 +19,7 @@
     "description": {
       "translate": "advancement.legendary_spellbooks.stormbound_grimoire.description"
     },
-    "frame": "task",
+    "frame": "challenge",
     "hidden": false,
     "icon": {
       "item": "legendary_spellbooks:stormbound_grimoire",

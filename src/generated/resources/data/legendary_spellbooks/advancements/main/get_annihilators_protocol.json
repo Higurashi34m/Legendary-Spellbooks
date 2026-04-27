@@ -19,7 +19,7 @@
     "description": {
       "translate": "advancement.legendary_spellbooks.annihilator_protocol.description"
     },
-    "frame": "task",
+    "frame": "challenge",
     "hidden": false,
     "icon": {
       "item": "legendary_spellbooks:annihilators_protocol",
