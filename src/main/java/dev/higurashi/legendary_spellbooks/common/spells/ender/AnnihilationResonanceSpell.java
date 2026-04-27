@@ -40,7 +40,7 @@ public class AnnihilationResonanceSpell extends BaseSpell {
     @Override
     public List<MutableComponent> getUniqueInfo(int spellLevel, LivingEntity caster) {
         return List.of(
-                ComponentUtils.getUIComponent(IronsSpellbooks.MODID, "damage", ComponentUtils.format1f(AnnihilationResonanceHandler.getDamage(spellLevel, caster))),
+                ComponentUtils.getUIComponent(IronsSpellbooks.MODID, "aoe_damage", ComponentUtils.format1f(AnnihilationResonanceHandler.getDamage(spellLevel, caster))),
                 ComponentUtils.getUIComponent(IronsSpellbooks.MODID, "radius", 4),
                 ComponentUtils.getUIComponent(IronsSpellbooks.MODID, "effect_length", ComponentUtils.ticksToSecondsString(getDuration(spellLevel)))
         );
