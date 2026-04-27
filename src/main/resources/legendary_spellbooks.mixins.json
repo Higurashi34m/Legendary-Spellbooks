@@ -10,10 +10,12 @@
     "entities.spell.AnnihilationExplosionEntityMixin",
     "entities.spell.AnnihilationFlameStrikeMixin",
     "entities.spell.AnnihilationPortalEntityMixin",
+    "entities.spell.IceSpikeEntityMixin",
+    "entities.spell.SpellIceSpikeEntityMixin",
     "entities.spell.summoned.HauntedGuardEntityMixin",
     "entities.spell.summoned.HauntedKnightEntityMixin",
-    "entities.spell.SpellIceSpikeEntityMixin",
-    "entities.spell.IceSpikeEntityMixin"
+    "entities.spell.summoned.SkeloraptorEntityAccessor",
+    "entities.spell.summoned.SkeloraptorEntityMixin"
   ],
   "client": [],
   "injectors": {

@@ -5,6 +5,7 @@ import dev.higurashi.legendary_spellbooks.common.entities.spell.projectile.*;
 import dev.higurashi.legendary_spellbooks.common.entities.spell.summoned.*;
 import net.miauczel.legendary_monsters.entity.AnimatedMonster.Mobs.AbandonedCrypt.HauntedGuardEntity;
 import net.miauczel.legendary_monsters.entity.AnimatedMonster.Mobs.AbandonedCrypt.HauntedKnightEntity;
+import net.miauczel.legendary_monsters.entity.AnimatedMonster.Mobs.Pets.SkeloraptorEntity;
 import net.miauczel.legendary_monsters.entity.AnimatedMonster.Mobs.SpaceStation.Flameborn.AnnihilationPursuer.AnnihilationPursuerEntity;
 import net.miauczel.legendary_monsters.entity.AnimatedMonster.Mobs.SpaceStation.Flameborn.FlamebornGuardEntity;
 import net.miauczel.legendary_monsters.entity.AnimatedMonster.Mobs.SpaceStation.Flameborn.FlamebornWarriorEntity;
@@ -43,6 +44,10 @@ public class LSEntityRegistry {
     public static final RegistryObject<EntityType<HauntedKnightEntity>> SUMMONED_HAUNTED_KNIGHT_ENTITY = ENTITIES.register("summoned_haunted_knight", () -> EntityType.Builder.<HauntedKnightEntity>of(SummonedHauntedKnightEntity::new, MobCategory.CREATURE)
             .sized(1.0f, 2.5f)
             .build(ResourceLocation.fromNamespaceAndPath(LegendarySpellbooks.MOD_ID, "summoned_haunted_knight").toString()));
+
+    public static final RegistryObject<EntityType<SkeloraptorEntity>> SUMMONED_SKELORAPTOR_ENTITY = ENTITIES.register("summoned_skeloraptor", () -> EntityType.Builder.<SkeloraptorEntity>of(SummonedSkeloraptorEntity::new, MobCategory.CREATURE)
+            .sized(1.25f, 2.6f)
+            .build(ResourceLocation.fromNamespaceAndPath(LegendarySpellbooks.MOD_ID, "summoned_skeloraptor").toString()));
 
     public static final RegistryObject<EntityType<CloudEntity>> SPELL_CLOUD_ENTITY = ENTITIES.register("spell_cloud", () -> EntityType.Builder.<CloudEntity>of(SpellCloudEntity::new, MobCategory.MISC)
             .sized(1.0f, 1.0f)

@@ -29,6 +29,7 @@ public class LSJaJpLanguageProvider extends BaseLanguageProvider {
         addEntityType(LSEntityRegistry.SUMMONED_FLAMEBORN_WARRIOR_ENTITY, "召喚されたフレイムボーン・ウォーリアー");
         addEntityType(LSEntityRegistry.SUMMONED_HAUNTED_KNIGHT_ENTITY, "召喚された騎士の亡霊");
         addEntityType(LSEntityRegistry.SUMMONED_HAUNTED_GUARD_ENTITY, "召喚された衛兵の亡霊");
+        addEntityType(LSEntityRegistry.SUMMONED_SKELORAPTOR_ENTITY, "召喚されたスケロラプトル");
 
         // --------------------
         // EFFECT
@@ -81,6 +82,7 @@ public class LSJaJpLanguageProvider extends BaseLanguageProvider {
         // Nature
         addSpell(LSSpellRegistry.AMBUSH_THORNS_SPELL, "アンバッシュ・ソーン", "自身に棘を付与する。この棘は棘の鎧のエンチャントと同じ効果を発生させる。");
         addSpell(LSSpellRegistry.OVERGROWN_SHOCKWAVE_SPELL, "生い茂るショックウェーブ", "地面を叩きつけて、周囲の広い範囲に有毒なエリアを発生させ、巻き込まれたすべての敵にダメージと共に猛毒を与える。");
+        addSpell(LSSpellRegistry.FOSSILIZED_FURY_SPELL, "化石の逆鱗", "標的を追い詰め、切り刻む骨の恐竜の群れを呼び出す。レベルが上がるほど、召喚される個体数が増加する。");
 
         // Death Attack
         addSpellDamageSource(LSSpellRegistry.CLOUD_RAIL_SPELL, "%1$sは %2$sの雲に巻き込まれて押しつぶされた");

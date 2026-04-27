@@ -127,6 +127,17 @@ public class LSSpellScrollLootProvider extends GlobalLootModifierProvider {
                 new DifficultyWeights(0.75f, 1.0f, 1.25f, 1.25f)
         ));
 
+        add("skeletosaurus_scrolls", new SpellScrollLootModifier(
+                new LootItemCondition[]{ LootItemEntityPropertyCondition.hasProperties(LootContext.EntityTarget.THIS, EntityPredicate.Builder.entity().of(ModEntities.Skeletosaurus.get())).build() },
+                List.of(
+                        new SpellEntry(LSSpellRegistry.FOSSILIZED_FURY_SPELL.getId(), 1, 6, 10)
+                ),
+                1.0f,
+                1,
+                2,
+                new DifficultyWeights(0.75f, 1.0f, 1.25f, 1.25f)
+        ));
+
         // === ITEM ===
         add("cloud_golem_spellbook", new ItemLootModifier(
                 new LootItemCondition[]{ LootItemEntityPropertyCondition.hasProperties(LootContext.EntityTarget.THIS, EntityPredicate.Builder.entity().of(ModEntities.Cloud_golem.get())).build() },

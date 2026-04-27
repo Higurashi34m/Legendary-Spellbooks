@@ -29,6 +29,7 @@ public class LSEnUsLanguageProvider extends BaseLanguageProvider {
         addEntityType(LSEntityRegistry.SUMMONED_FLAMEBORN_WARRIOR_ENTITY, "Summoned FlameBorn Warrior");
         addEntityType(LSEntityRegistry.SUMMONED_HAUNTED_KNIGHT_ENTITY, "Summoned Haunted Knight");
         addEntityType(LSEntityRegistry.SUMMONED_HAUNTED_GUARD_ENTITY, "Summoned Haunted Guard");
+        addEntityType(LSEntityRegistry.SUMMONED_SKELORAPTOR_ENTITY, "Summoned Skeloraptor");
 
         // --------------------
         // EFFECT
@@ -81,6 +82,7 @@ public class LSEnUsLanguageProvider extends BaseLanguageProvider {
         // Nature
         addSpell(LSSpellRegistry.AMBUSH_THORNS_SPELL, "Ambush Thorns", "Imbue yourself with thorns, acting as the Thorns enchantment to damage attackers.");
         addSpell(LSSpellRegistry.OVERGROWN_SHOCKWAVE_SPELL, "Overgrown Shockwave", "Slam the ground to unleash a burst of toxic spores, poisoning nearby creatures in a wide area.");
+        addSpell(LSSpellRegistry.FOSSILIZED_FURY_SPELL, "Fossilized Fury", "Conjure a pack of skeletal raptors to hunt and shred your foes. Higher spell power increases the number of raptors summoned.");
 
         // Death Attack
         addSpellDamageSource(LSSpellRegistry.CLOUD_RAIL_SPELL, "%1$s was engulfed and crushed by %2$s's clouds");

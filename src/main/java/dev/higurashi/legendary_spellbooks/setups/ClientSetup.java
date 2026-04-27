@@ -2,6 +2,7 @@ package dev.higurashi.legendary_spellbooks.setups;
 
 import dev.higurashi.legendary_spellbooks.client.renderer.entities.spell.projectile.CumuloChargeRenderer;
 import dev.higurashi.legendary_spellbooks.client.renderer.entities.spell.projectile.SpellCloudRender;
+import dev.higurashi.legendary_spellbooks.client.renderer.entities.spell.summoned.SummonedSkeloraptorRenderer;
 import dev.higurashi.legendary_spellbooks.registries.LSEntityRegistry;
 import dev.higurashi.legendary_spellbooks.registries.LSItemRegistry;
 import io.redspace.ironsspellbooks.render.SpellBookCurioRenderer;
@@ -29,6 +30,7 @@ public class ClientSetup {
         event.registerEntityRenderer(LSEntityRegistry.SUMMONED_FLAMEBORN_WARRIOR_ENTITY.get(), FlamebornWarriorRenderer::new);
         event.registerEntityRenderer(LSEntityRegistry.SUMMONED_HAUNTED_KNIGHT_ENTITY.get(), LivingArmorRenderer::new);
         event.registerEntityRenderer(LSEntityRegistry.SUMMONED_HAUNTED_GUARD_ENTITY.get(), HauntedGuardRenderer::new);
+        event.registerEntityRenderer(LSEntityRegistry.SUMMONED_SKELORAPTOR_ENTITY.get(), SummonedSkeloraptorRenderer::new);
 
         // Projectile
         event.registerEntityRenderer(LSEntityRegistry.SPELL_CLOUD_ENTITY.get(), SpellCloudRender::new);

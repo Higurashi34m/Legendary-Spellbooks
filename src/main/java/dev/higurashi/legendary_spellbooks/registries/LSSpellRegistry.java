@@ -10,6 +10,7 @@ import dev.higurashi.legendary_spellbooks.common.spells.ice.GlacierRingburstSpel
 import dev.higurashi.legendary_spellbooks.common.spells.lightning.*;
 import dev.higurashi.legendary_spellbooks.common.spells.nature.AmbushThornsSpell;
 import dev.higurashi.legendary_spellbooks.common.spells.nature.OvergrownShockwaveSpell;
+import dev.higurashi.legendary_spellbooks.common.spells.nature.FossilizedFurySpell;
 import io.redspace.ironsspellbooks.api.registry.SpellRegistry;
 import io.redspace.ironsspellbooks.api.spells.AbstractSpell;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -55,4 +56,5 @@ public class LSSpellRegistry {
     // Nature
     public static final RegistryObject<AbstractSpell> AMBUSH_THORNS_SPELL = register(new AmbushThornsSpell());
     public static final RegistryObject<AbstractSpell> OVERGROWN_SHOCKWAVE_SPELL = register(new OvergrownShockwaveSpell());
+    public static final RegistryObject<AbstractSpell> FOSSILIZED_FURY_SPELL = register(new FossilizedFurySpell());
 }

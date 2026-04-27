@@ -22,6 +22,7 @@ public class CommonSetup {
         event.put(LSEntityRegistry.SUMMONED_FLAMEBORN_WARRIOR_ENTITY.get(), SummonedFlamebornWarriorEntity.createAttributes().build());
         event.put(LSEntityRegistry.SUMMONED_HAUNTED_KNIGHT_ENTITY.get(), SummonedHauntedKnightEntity.createAttributes().build());
         event.put(LSEntityRegistry.SUMMONED_HAUNTED_GUARD_ENTITY.get(), SummonedHauntedGuardEntity.createAttributes().build());
+        event.put(LSEntityRegistry.SUMMONED_SKELORAPTOR_ENTITY.get(), SummonedSkeloraptorEntity.createAttributes().build());
 
         event.put(LSEntityRegistry.CUMULO_CHARGE_ENTITY.get(), CumuloChargeEntity.createAttributes().build());
     }
