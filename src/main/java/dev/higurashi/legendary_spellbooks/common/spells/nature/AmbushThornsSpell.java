@@ -37,7 +37,7 @@ public class AmbushThornsSpell extends BaseSpell {
     @Override
     public List<MutableComponent> getUniqueInfo(int spellLevel, LivingEntity caster) {
         return List.of(
-                ComponentUtils.getUIComponent("thorn_damage", ComponentUtils.format1f(AmbushThornsEffectHandler.getDamage(spellLevel, caster))),
+                ComponentUtils.getUIComponent(LegendarySpellbooks.MOD_ID, "thorn_damage", ComponentUtils.format1f(AmbushThornsEffectHandler.getDamage(spellLevel, caster))),
                 ComponentUtils.getUIComponent(IronsSpellbooks.MODID, "effect_length", ComponentUtils.ticksToSecondsString(getEffectDuration(spellLevel)))
         );
     }
