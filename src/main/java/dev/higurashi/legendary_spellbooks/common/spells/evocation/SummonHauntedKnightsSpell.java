@@ -28,7 +28,7 @@ public class SummonHauntedKnightsSpell extends BaseSummonSpell {
 
     public SummonHauntedKnightsSpell() {
         super(spellResource, spellConfig);
-        this.castTime = 30;
+        this.castTime = 45;
         this.baseManaCost = 180;
         this.baseSpellPower = 6;
         this.manaCostPerLevel = 40;

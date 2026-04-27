@@ -26,14 +26,13 @@ public class SummonFlamebornKnightsSpell extends BaseSummonSpell {
     private static final DefaultConfig spellConfig = new DefaultConfig()
             .setSchoolResource(SchoolRegistry.ENDER_RESOURCE)
             .setMinRarity(SpellRarity.LEGENDARY)
-            .setAllowCrafting(false)
             .setCooldownSeconds(180)
             .setAllowCrafting(false)
             .setMaxLevel(5).build();
 
     public SummonFlamebornKnightsSpell() {
         super(spellResource, spellConfig);
-        this.castTime = 35;
+        this.castTime = 60;
         this.baseManaCost = 250;
         this.baseSpellPower = 8;
         this.manaCostPerLevel = 50;

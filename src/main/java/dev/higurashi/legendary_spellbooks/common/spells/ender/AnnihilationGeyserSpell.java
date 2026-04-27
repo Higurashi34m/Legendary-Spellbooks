@@ -6,6 +6,7 @@ import dev.higurashi.legendary_spellbooks.api.utils.ComponentUtils;
 import dev.higurashi.legendary_spellbooks.api.utils.GeometryUtils;
 import dev.higurashi.legendary_spellbooks.api.utils.RaycastUtils;
 import dev.higurashi.legendary_spellbooks.common.mixin.helper.ISpellSourceFlag;
+import dev.higurashi.legendary_spellbooks.registries.LSItemRegistry;
 import io.redspace.ironsspellbooks.IronsSpellbooks;
 import io.redspace.ironsspellbooks.api.config.DefaultConfig;
 import io.redspace.ironsspellbooks.api.magic.MagicData;
@@ -22,16 +23,17 @@ import net.miauczel.legendary_monsters.sound.ModSounds;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleOptions;
-import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.Vec3;
+import top.theillusivec4.curios.api.CuriosApi;
 
 import javax.annotation.Nullable;
 import java.util.List;
@@ -67,8 +69,12 @@ public class AnnihilationGeyserSpell extends BaseSpell {
 
     @Override
     public CastResult canBeCastedBy(int spellLevel, CastSource castSource, MagicData magicData, Player player) {
-        if (castSource != CastSource.SPELLBOOK) return new CastResult(CastResult.Type.FAILURE, Component.translatable("ui.irons_spellbooks.cast_error_scroll", getDisplayName(player)).withStyle(ChatFormatting.RED));
-        return super.canBeCastedBy(spellLevel, castSource, magicData, player);
+        Item annihilatorsProtocol = LSItemRegistry.ANNIHILATORS_PROTOCOL_SPELLBOOK_ITEM.get();
+        boolean isEquipped = CuriosApi.getCuriosInventory(player).map(handler -> handler.findFirstCurio(annihilatorsProtocol).isPresent()).orElse(false);
+
+        if (castSource != CastSource.SPELLBOOK) return new CastResult(CastResult.Type.FAILURE, ComponentUtils.getUIComponent(IronsSpellbooks.MODID, "cast_error_scroll", getDisplayName(player)).withStyle(ChatFormatting.RED));
+        else if (!isEquipped) return new CastResult(CastResult.Type.FAILURE, ComponentUtils.getUIComponent(LegendarySpellbooks.MOD_ID, "cast_error_exclusive_book", getDisplayName(player), annihilatorsProtocol.getDescription()).withStyle(ChatFormatting.RED));
+        else return super.canBeCastedBy(spellLevel, castSource, magicData, player);
     }
 
     @Override

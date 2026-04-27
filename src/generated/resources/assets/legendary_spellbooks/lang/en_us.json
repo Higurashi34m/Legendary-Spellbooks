@@ -67,6 +67,7 @@
   "tooltip.legendary_spellbooks.on_sunny": "In sunny weather:",
   "tooltip.legendary_spellbooks.on_thunder": "During thunderstorms:",
   "tooltip.legendary_spellbooks.stormbound_grimoire": "This spellbook calls forth thunder, causing rain to swell into storms.",
+  "ui.legendary_spellbooks.cast_error_exclusive_book": "%s can only be cast with %s!",
   "ui.legendary_spellbooks.health_damage": "%s damage + %s%% of target's max HP",
   "ui.legendary_spellbooks.hp": "%d %s's HP",
   "ui.legendary_spellbooks.nimbus_count": "%d Nimbus",

@@ -49,7 +49,7 @@ public class AnnihilationShockwaveSpell extends BaseSpell {
     @Override
     public List<MutableComponent> getUniqueInfo(int spellLevel, LivingEntity caster) {
         return List.of(
-                ComponentUtils.getUIComponent(LegendarySpellbooks.MOD_ID, "health_damage", ComponentUtils.format1f(getSpellPower(spellLevel, caster)), getHealthDamageMultiplier(spellLevel) * 100),
+                ComponentUtils.getUIComponent(LegendarySpellbooks.MOD_ID, "health_damage", ComponentUtils.format1f(getSpellPower(spellLevel, caster)), ComponentUtils.format1f(getHealthDamageMultiplier(spellLevel) * 100)),
                 ComponentUtils.getUIComponent(IronsSpellbooks.MODID, "distance", getBlockDistance(getWaveCount(spellLevel)))
         );
     }

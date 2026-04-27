@@ -85,6 +85,8 @@ public class LSEnUsLanguageProvider extends BaseLanguageProvider {
         addUi("thorn_damage", "%d thorn damage + 20%% of damage received");
         addUi("hp", "%d %s's HP");
 
+        addUi("cast_error_exclusive_book", "%s can only be cast with %s!");
+
         // --------------------
         // Tooltip
         // --------------------
