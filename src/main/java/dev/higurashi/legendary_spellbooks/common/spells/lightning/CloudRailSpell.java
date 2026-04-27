@@ -29,7 +29,7 @@ public class CloudRailSpell extends BaseSpell {
 
     public CloudRailSpell() {
         super(spellResource, spellConfig);
-        this.baseManaCost = 60;
+        this.baseManaCost = 20;
         this.baseSpellPower = 2;
         this.manaCostPerLevel = 5;
         this.spellPowerPerLevel = 1;

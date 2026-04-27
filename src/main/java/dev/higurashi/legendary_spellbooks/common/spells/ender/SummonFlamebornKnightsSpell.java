@@ -26,7 +26,7 @@ public class SummonFlamebornKnightsSpell extends BaseSummonSpell {
     private static final DefaultConfig spellConfig = new DefaultConfig()
             .setSchoolResource(SchoolRegistry.ENDER_RESOURCE)
             .setMinRarity(SpellRarity.LEGENDARY)
-            .setCooldownSeconds(180)
+            .setCooldownSeconds(240)
             .setAllowCrafting(false)
             .setMaxLevel(5).build();
 

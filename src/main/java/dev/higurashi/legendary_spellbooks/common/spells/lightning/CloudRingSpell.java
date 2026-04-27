@@ -31,7 +31,7 @@ public class CloudRingSpell extends BaseSpell {
     public CloudRingSpell() {
         super(spellResource, spellConfig, true);
         this.castTime = 40;
-        this.baseManaCost = 100;
+        this.baseManaCost = 60;
         this.baseSpellPower = 2;
         this.manaCostPerLevel = 10;
         this.spellPowerPerLevel = 3;
