@@ -1,6 +1,7 @@
 package dev.higurashi.legendary_spellbooks.api.spells;
 
 import dev.higurashi.legendary_spellbooks.api.entities.helper.ISummonedMob;
+import dev.higurashi.legendary_spellbooks.api.utils.GeometryUtils;
 import io.redspace.ironsspellbooks.api.config.DefaultConfig;
 import io.redspace.ironsspellbooks.api.magic.MagicData;
 import io.redspace.ironsspellbooks.api.spells.CastSource;
@@ -34,9 +35,7 @@ public abstract class BaseSummonSpell extends BaseSpell {
     protected abstract Entity[] getEntitiesToSummon(Level level, LivingEntity caster, int spellLevel);
 
     protected Vec3 getSpawnOffset(int index, int totalCount, float yaw, LivingEntity caster) {
-        float angleDeg = yaw + (index * (360f / totalCount));
-        double angleRad = Math.toRadians(angleDeg);
-        return new Vec3(Math.cos(angleRad) * 1.5, 0, Math.sin(angleRad) * 1.5);
+        return GeometryUtils.getPointInCircle(caster.position(), 1.5, totalCount, index, caster.getYRot());
     }
 
     protected int getSummonTime(int spellLevel, LivingEntity caster) {
