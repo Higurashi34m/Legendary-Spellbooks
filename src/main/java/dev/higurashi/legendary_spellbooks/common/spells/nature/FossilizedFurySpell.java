@@ -48,7 +48,7 @@ public class FossilizedFurySpell extends BaseSummonSpell {
 
     @Override
     protected Vec3 getSpawnOffset(int index, int totalCount, float yaw, LivingEntity caster) {
-        return GeometryUtils.getPointInCircle(caster.position(), 2.0, totalCount, index, caster.getYRot());
+        return GeometryUtils.getPointInCircle(Vec3.ZERO, 2.0, totalCount, index, caster.getYRot());
     }
 
     @Override
