@@ -35,9 +35,9 @@ public class AnnihilationBombSpell extends BaseSpell {
         super(spellResource, spellConfig, false);
         this.castTime = 45;
         this.baseManaCost = 150;
-        this.baseSpellPower = 8;
+        this.baseSpellPower = 6;
         this.manaCostPerLevel = 15;
-        this.spellPowerPerLevel = 4;
+        this.spellPowerPerLevel = 8;
 
         this.stopSound = true;
 
@@ -75,6 +75,6 @@ public class AnnihilationBombSpell extends BaseSpell {
     }
 
     private int getSmallBombCount(int spellLevel) {
-        return Math.min(20 + spellLevel * 10, 100);
+        return Math.min(20 + spellLevel * 5, 100);
     }
 }
