@@ -55,7 +55,7 @@ public class LSEnUsLanguageProvider extends BaseLanguageProvider {
         addSpell(LSSpellRegistry.ANNIHILATION_RESONANCE_SPELL, "Annihilation Resonance", "Imbue yourself with an unstable frequency, reducing your defense and attack by 25%. For the duration, landing a critical hit triggers a powerful explosion at the target's location.");
         addSpell(LSSpellRegistry.ANNIHILATION_GEYSER_SPELL, "Annihilation Geyser", "Create a gravitational well that pulls in nearby creatures. Upon completion, a colossal geyser of energy erupts, dealing massive damage.");
         addSpell(LSSpellRegistry.SUMMON_FLAMEBORN_KNIGHTS_SPELL, "Summon Flameborn Knights", "Summon knights made of eternal fire to fight for you.");
-        addSpell(LSSpellRegistry.RELEASE_RIFTWALKER_PREDATOR_SPELL, "Riftwalker Protocol", "Manifest an Annihilation Pursuer, a relentless hunter that tracks its target through dimensional rifts until they are destroyed.");
+        addSpell(LSSpellRegistry.RELEASE_RIFTWALKER_PREDATOR_SPELL, "Release Riftwalker Protocol", "Manifest an Annihilation Pursuer, a relentless hunter that tracks its target through dimensional rifts until they are destroyed.");
 
         // Evocation
         addSpell(LSSpellRegistry.SUMMON_HAUNTED_KNIGHTS_SPELL, "Summon Haunted Knights", "Cast to summon spectral knights that will follow you and strike at your foes.");
