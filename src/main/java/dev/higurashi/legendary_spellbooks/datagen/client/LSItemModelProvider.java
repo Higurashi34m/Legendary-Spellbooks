@@ -21,6 +21,8 @@ public class LSItemModelProvider extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
+        basicItem(ResourceLocation.fromNamespaceAndPath(LegendarySpellbooks.MOD_ID, "scroll_annihilation"));
+
         spellBook(LSItemRegistry.ANNIHILATORS_PROTOCOL_SPELLBOOK_ITEM.get());
         spellBook(LSItemRegistry.STORMBOUND_GRIMOIRE_SPELLBOOK_ITEM.get());
     }

@@ -3,6 +3,7 @@ package dev.higurashi.legendary_spellbooks.datagen.client.lang;
 import dev.higurashi.legendary_spellbooks.LegendarySpellbooks;
 import dev.higurashi.legendary_spellbooks.api.utils.ComponentUtils;
 import io.redspace.ironsspellbooks.api.spells.AbstractSpell;
+import io.redspace.ironsspellbooks.api.spells.SchoolType;
 import net.minecraft.data.PackOutput;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.common.data.LanguageProvider;
@@ -21,6 +22,10 @@ public abstract class BaseLanguageProvider extends LanguageProvider {
     protected void addSpell(Supplier<? extends AbstractSpell> spellKey, String name, String descriptionName) {
         add(spellKey.get().getComponentId(), name);
         add(spellKey.get().getComponentId() + ".guide", descriptionName);
+    }
+
+    protected void addSchool(Supplier<? extends SchoolType> spellKey, String name) {
+        add(spellKey.get().getDisplayName().getString(), name);
     }
 
     protected void addUi(String key, String name) {

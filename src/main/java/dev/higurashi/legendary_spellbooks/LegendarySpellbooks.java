@@ -16,10 +16,12 @@ public class LegendarySpellbooks {
     public LegendarySpellbooks() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        LSAttributeRegistry.register(modEventBus);
         LSCreativeTabRegistry.register(modEventBus);
         LSEffectRegistry.register(modEventBus);
         LSEntityRegistry.register(modEventBus);
         LSItemRegistry.register(modEventBus);
+        LSSchoolRegistry.register(modEventBus);
         LSSpellRegistry.register(modEventBus);
         LSLootModifierRegistry.register(modEventBus);
 

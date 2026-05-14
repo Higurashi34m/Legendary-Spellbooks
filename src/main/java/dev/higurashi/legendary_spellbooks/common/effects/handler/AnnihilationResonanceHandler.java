@@ -14,10 +14,12 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
+import net.minecraftforge.event.entity.player.CriticalHitEvent;
+import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
@@ -25,20 +27,32 @@ import javax.annotation.Nullable;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.FORGE)
 public class AnnihilationResonanceHandler {
+    private static final ThreadLocal<Boolean> IS_CRITICAL = ThreadLocal.withInitial(() -> false);
+
     @SubscribeEvent
-    public static void onLivingHurt(LivingHurtEvent event) {
-        DamageSource source = event.getSource();
-        LivingEntity target = event.getEntity();
+    public static void onCriticalHit(CriticalHitEvent event) {
+        boolean isCritical = event.getResult() == Event.Result.ALLOW || (event.getResult() == Event.Result.DEFAULT && event.isVanillaCritical());
 
-        if (target.level().isClientSide || !(source.getDirectEntity() instanceof Player attacker) || source instanceof SpellDamageSource) return;
-        if (!isCriticalLike(attacker)) return;
-
-        MobEffectInstance effect = attacker.getEffect(LSEffectRegistry.ANNIHILATION_RESONANCE_EFFECT.get());
-        if (effect != null) executeAnnihilationBlast(attacker, target, effect);
+        IS_CRITICAL.set(isCritical);
     }
 
-    private static boolean isCriticalLike(Player player) {
-        return player.fallDistance > 0.0F && !player.onGround() && !player.onClimbable() && !player.isInWater();
+    @SubscribeEvent
+    public static void onLivingHurt(LivingHurtEvent event) {
+        try {
+            if (!IS_CRITICAL.get()) return;
+
+            DamageSource source = event.getSource();
+            LivingEntity target = event.getEntity();
+            Entity attacker = source.getDirectEntity();
+
+            if (target == null || target.level().isClientSide || source instanceof SpellDamageSource || !(attacker instanceof LivingEntity livingAttacker)) return;
+            if (!livingAttacker.isAlive()) return;
+
+            MobEffectInstance effect = livingAttacker.getEffect(LSEffectRegistry.ANNIHILATION_RESONANCE_EFFECT.get());
+            if (effect != null) executeAnnihilationBlast(livingAttacker, target, effect);
+        } finally {
+            IS_CRITICAL.set(false);
+        }
     }
 
     private static void executeAnnihilationBlast(LivingEntity attacker, LivingEntity target, MobEffectInstance effect) {

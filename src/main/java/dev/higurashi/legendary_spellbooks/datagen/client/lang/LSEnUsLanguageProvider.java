@@ -1,9 +1,6 @@
 package dev.higurashi.legendary_spellbooks.datagen.client.lang;
 
-import dev.higurashi.legendary_spellbooks.registries.LSEffectRegistry;
-import dev.higurashi.legendary_spellbooks.registries.LSEntityRegistry;
-import dev.higurashi.legendary_spellbooks.registries.LSItemRegistry;
-import dev.higurashi.legendary_spellbooks.registries.LSSpellRegistry;
+import dev.higurashi.legendary_spellbooks.registries.*;
 import net.minecraft.data.PackOutput;
 
 import java.util.Locale;
@@ -114,5 +111,7 @@ public class LSEnUsLanguageProvider extends BaseLanguageProvider {
 
         add("advancement.legendary_spellbooks.title", "Legendary Spellbooks");
         add("advancement.legendary_spellbooks.description", "Legendary Spellbooks");
+
+        addSchool(LSSchoolRegistry.ANNIHILATION, "annihilation");
     }
 }
