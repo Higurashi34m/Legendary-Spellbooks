@@ -1,6 +1,6 @@
 {
   "type": "legendary_spellbooks:item_drop",
-  "chance": 0.5,
+  "chance": 1.0,
   "conditions": [
     {
       "condition": "minecraft:entity_properties",
@@ -12,14 +12,6 @@
   ],
   "item": {
     "Count": 1,
-    "id": "legendary_spellbooks:stormbound_grimoire",
-    "tag": {
-      "irons_spellbooks:spell_container": {
-        "data": [],
-        "maxSpells": 12,
-        "mustEquip": 1,
-        "spellWheel": 1
-      }
-    }
+    "id": "legendary_spellbooks:tempest_upgrade_template"
   }
 }

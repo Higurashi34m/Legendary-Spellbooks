@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "legendary_monsters:air_rune"
+  },
+  "base": {
+    "item": "irons_spellbooks:netherite_mage_chestplate"
+  },
+  "result": {
+    "item": "legendary_spellbooks:stormmancer_robe"
+  },
+  "template": {
+    "item": "legendary_spellbooks:tempest_upgrade_template"
+  }
+}

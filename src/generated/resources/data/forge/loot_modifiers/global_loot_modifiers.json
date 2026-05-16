@@ -1,16 +1,18 @@
 {
   "entries": [
+    "legendary_spellbooks:ancient_guardian_scrolls",
+    "legendary_spellbooks:cloud_golem_scrolls",
+    "legendary_spellbooks:cloud_golem_template",
+    "legendary_spellbooks:obliterator_scrolls",
     "legendary_spellbooks:annihilators_protocol_spellbook",
     "legendary_spellbooks:skeletosaurus_scrolls",
-    "legendary_spellbooks:ancient_guardian_scrolls",
     "legendary_spellbooks:frostbitten_golem_scrolls",
-    "legendary_spellbooks:cloud_golem_scrolls",
-    "legendary_spellbooks:obliterator_scrolls",
     "legendary_spellbooks:annihilation_pursuer_scrolls",
     "legendary_spellbooks:possessed_paladin_scrolls",
     "legendary_spellbooks:lava_eater_scrolls",
     "legendary_spellbooks:overglown_colosus_scrolls",
-    "legendary_spellbooks:cloud_golem_spellbook"
+    "legendary_spellbooks:cloud_golem_spellbook",
+    "legendary_spellbooks:cloud_golem_more_air_rune"
   ],
   "replace": false
 }

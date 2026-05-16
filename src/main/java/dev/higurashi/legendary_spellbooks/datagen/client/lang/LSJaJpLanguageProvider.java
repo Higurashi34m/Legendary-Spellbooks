@@ -12,6 +12,9 @@ public class LSJaJpLanguageProvider extends BaseLanguageProvider {
 
     @Override
     protected void addTranslations() {
+        addAttribute(LSAttributeRegistry.ANNIHILATION_SPELL_POWER, "殲滅魔法の威力");
+        addAttribute(LSAttributeRegistry.ANNIHILATION_MAGIC_RESIST, "殲滅魔法の耐性");
+
         // --------------------
         // CREATIVE TAB
         // --------------------
@@ -41,6 +44,16 @@ public class LSJaJpLanguageProvider extends BaseLanguageProvider {
         // --------------------
         addItem(LSItemRegistry.ANNIHILATORS_PROTOCOL_SPELLBOOK_ITEM, "アナイアレイター・プロトコル");
         addItem(LSItemRegistry.STORMBOUND_GRIMOIRE_SPELLBOOK_ITEM, "嵐に結ばれし魔導書");
+        addItem(LSItemRegistry.OBLIVIONMANCER_HAT, "無に帰す者の帽子");
+        addItem(LSItemRegistry.OBLIVIONMANCER_ROBE, "無に帰す者のローブ");
+        addItem(LSItemRegistry.OBLIVIONMANCER_LEGGINGS, "無に帰す者のレギンス");
+        addItem(LSItemRegistry.OBLIVIONMANCER_BOOTS, "無に帰す者のブーツ");
+        addItem(LSItemRegistry.ANNIHILATION_RUNE, "殲滅のルーン");
+        addItem(LSItemRegistry.ANNIHILATION_UPGRADE_ORB, "殲滅のアップグレードオーブ");
+        addItem(LSItemRegistry.STORMMANCER_HOOD, "嵐術師のフード");
+        addItem(LSItemRegistry.STORMMANCER_ROBE, "嵐術師のローブ");
+        addItem(LSItemRegistry.STORMMANCER_LEGGINGS, "嵐術師のレギンス");
+        addItem(LSItemRegistry.STORMMANCER_BOOTS, "嵐術師のブーツ");
 
         // --------------------
         // SPELL
@@ -112,5 +125,9 @@ public class LSJaJpLanguageProvider extends BaseLanguageProvider {
         addAdvancement("annihilator_protocol", "深淵を覗くとき...", "アナイアレイター・プロトコルを手に入れる");
 
         addSchool(LSSchoolRegistry.ANNIHILATION, "殲滅");
+
+        add("upgrade.legendary_spellbooks.stormmancer_upgrade", "テンペスト強化");
+        add("item.legendary_spellbooks.smithing_template.stormmancer_upgrade.applies_to", "ネザライトの戦魔術師装備");
+        add("item.legendary_spellbooks.smithing_template.stormmancer_upgrade.ingredients", "空気のルーン");
     }
 }

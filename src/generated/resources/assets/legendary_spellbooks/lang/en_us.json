@@ -26,7 +26,13 @@
   "item.legendary_spellbooks.oblivionmancer_hat": "Oblivionmancer Hat",
   "item.legendary_spellbooks.oblivionmancer_leggings": "Oblivionmancer Leggings",
   "item.legendary_spellbooks.oblivionmancer_robe": "Oblivionmancer Robe",
+  "item.legendary_spellbooks.smithing_template.stormmancer_upgrade.applies_to": "Netherite Mage Armor",
+  "item.legendary_spellbooks.smithing_template.stormmancer_upgrade.ingredients": "Air Rune",
   "item.legendary_spellbooks.stormbound_grimoire": "Stormbound Grimoire",
+  "item.legendary_spellbooks.stormmancer_boots": "Stormmancer Boots",
+  "item.legendary_spellbooks.stormmancer_hood": "Stormmancer Hood",
+  "item.legendary_spellbooks.stormmancer_leggings": "Stormmancer Leggings",
+  "item.legendary_spellbooks.stormmancer_robe": "Stormmancer Robe",
   "item.legendary_spellbooks.upgrade_orb_annihilation": "Annihilation Upgrade Orb",
   "school.legendary_spellbooks.annihilation": "Annihilation",
   "spell.legendary_spellbooks.ambush_thorns": "Ambush Thorns",
@@ -89,5 +95,6 @@
   "ui.legendary_spellbooks.health_damage": "%s damage + %s%% of target's max HP",
   "ui.legendary_spellbooks.hp": "%d %s's HP",
   "ui.legendary_spellbooks.nimbus_count": "%d Nimbus",
-  "ui.legendary_spellbooks.thorn_damage": "%d thorn damage + 20%% of damage received"
+  "ui.legendary_spellbooks.thorn_damage": "%d thorn damage + 20%% of damage received",
+  "upgrade.legendary_spellbooks.stormmancer_upgrade": "Tempest Upgrade"
 }

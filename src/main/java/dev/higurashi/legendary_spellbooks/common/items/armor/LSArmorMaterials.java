@@ -5,6 +5,7 @@ import dev.higurashi.legendary_spellbooks.registries.LSAttributeRegistry;
 import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
 import io.redspace.ironsspellbooks.item.armor.IronsExtendedArmorMaterial;
 import io.redspace.ironsspellbooks.registries.ItemRegistry;
+import net.miauczel.legendary_monsters.item.ModItems;
 import net.minecraft.Util;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
@@ -24,7 +25,16 @@ public enum LSArmorMaterials implements IronsExtendedArmorMaterial {
                     AttributeRegistry.MAX_MANA.get(), new AttributeModifier("Max Mana", 125, AttributeModifier.Operation.ADDITION),
                     LSAttributeRegistry.ANNIHILATION_SPELL_POWER.get(), new AttributeModifier("Annihilation Power", 0.10, AttributeModifier.Operation.MULTIPLY_BASE)
             )
+    ),
+    STORMMANCER("stormmancer", 80, schoolArmorMap(), 15, SoundEvents.ARMOR_EQUIP_LEATHER, 1.0f, 0.1f, () -> Ingredient.of(ModItems.CLOUD_ROD.get()),
+            Map.of(
+                    AttributeRegistry.MAX_MANA.get(), new AttributeModifier("Max Mana", 225, AttributeModifier.Operation.ADDITION),
+                    AttributeRegistry.LIGHTNING_SPELL_POWER.get(), new AttributeModifier("Lightning Power", 0.20, AttributeModifier.Operation.MULTIPLY_BASE),
+                    AttributeRegistry.LIGHTNING_MAGIC_RESIST.get(), new AttributeModifier("Lightning Resist", 0.10, AttributeModifier.Operation.MULTIPLY_BASE)
+            )
     );
+
+
 
     private static final EnumMap<ArmorItem.Type, Integer> HEALTH_FUNCTION_FOR_TYPE = makeArmorMap(11, 16, 15, 13);
 

@@ -8,6 +8,7 @@ import dev.higurashi.legendary_spellbooks.common.loots.modifier.SpellScrollLootM
 import dev.higurashi.legendary_spellbooks.registries.LSItemRegistry;
 import dev.higurashi.legendary_spellbooks.registries.LSSpellRegistry;
 import net.miauczel.legendary_monsters.entity.ModEntities;
+import net.miauczel.legendary_monsters.item.ModItems;
 import net.minecraft.advancements.critereon.EntityPredicate;
 import net.minecraft.data.PackOutput;
 import net.minecraft.world.item.ItemStack;
@@ -142,6 +143,18 @@ public class LSSpellScrollLootProvider extends GlobalLootModifierProvider {
         add("cloud_golem_spellbook", new ItemLootModifier(
                 new LootItemCondition[]{ LootItemEntityPropertyCondition.hasProperties(LootContext.EntityTarget.THIS, EntityPredicate.Builder.entity().of(ModEntities.Cloud_golem.get())).build() },
                 new ItemStack(LSItemRegistry.STORMBOUND_GRIMOIRE_SPELLBOOK_ITEM.get()),
+                0.5f
+        ));
+
+        add("cloud_golem_more_air_rune", new ItemLootModifier(
+                new LootItemCondition[]{ LootItemEntityPropertyCondition.hasProperties(LootContext.EntityTarget.THIS, EntityPredicate.Builder.entity().of(ModEntities.Cloud_golem.get())).build() },
+                new ItemStack(ModItems.AIR_RUNE.get()),
+                2.0f
+        ));
+
+        add("cloud_golem_template", new ItemLootModifier(
+                new LootItemCondition[]{ LootItemEntityPropertyCondition.hasProperties(LootContext.EntityTarget.THIS, EntityPredicate.Builder.entity().of(ModEntities.Cloud_golem.get())).build() },
+                new ItemStack(LSItemRegistry.TEMPEST_UPGRADE_SMITHING_TEMPLATE.get()),
                 1.0f
         ));
 

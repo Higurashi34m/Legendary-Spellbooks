@@ -31,6 +31,14 @@ public class LSItemModelProvider extends ItemModelProvider {
         basicItem(LSItemRegistry.OBLIVIONMANCER_LEGGINGS.get());
         basicItem(LSItemRegistry.OBLIVIONMANCER_BOOTS.get());
 
+        basicItem(LSItemRegistry.STORMMANCER_HOOD.get());
+        basicItem(LSItemRegistry.STORMMANCER_ROBE.get());
+        basicItem(LSItemRegistry.STORMMANCER_LEGGINGS.get());
+        basicItem(LSItemRegistry.STORMMANCER_BOOTS.get());
+
+        basicItem(LSItemRegistry.TEMPEST_UPGRADE_SMITHING_TEMPLATE.get());
+
+
         spellBook(LSItemRegistry.ANNIHILATORS_PROTOCOL_SPELLBOOK_ITEM.get());
         spellBook(LSItemRegistry.STORMBOUND_GRIMOIRE_SPELLBOOK_ITEM.get());
     }

@@ -53,6 +53,10 @@ public class LSEnUsLanguageProvider extends BaseLanguageProvider {
         addItem(LSItemRegistry.OBLIVIONMANCER_BOOTS, "Oblivionmancer Boots");
         addItem(LSItemRegistry.ANNIHILATION_RUNE, "Annihilation Rune");
         addItem(LSItemRegistry.ANNIHILATION_UPGRADE_ORB, "Annihilation Upgrade Orb");
+        addItem(LSItemRegistry.STORMMANCER_HOOD, "Stormmancer Hood");
+        addItem(LSItemRegistry.STORMMANCER_ROBE, "Stormmancer Robe");
+        addItem(LSItemRegistry.STORMMANCER_LEGGINGS, "Stormmancer Leggings");
+        addItem(LSItemRegistry.STORMMANCER_BOOTS, "Stormmancer Boots");
 
         // --------------------
         // SPELL
@@ -127,5 +131,9 @@ public class LSEnUsLanguageProvider extends BaseLanguageProvider {
         add("advancement.legendary_spellbooks.description", "Legendary Spellbooks");
 
         addSchool(LSSchoolRegistry.ANNIHILATION, "Annihilation");
+
+        add("upgrade.legendary_spellbooks.stormmancer_upgrade", "Tempest Upgrade");
+        add("item.legendary_spellbooks.smithing_template.stormmancer_upgrade.applies_to", "Netherite Mage Armor");
+        add("item.legendary_spellbooks.smithing_template.stormmancer_upgrade.ingredients", "Air Rune");
     }
 }
