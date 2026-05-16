@@ -22,7 +22,7 @@ public class LSSpellRegistry {
     public static void register(IEventBus bus) { SPELLS.register(bus); }
     private static RegistryObject<AbstractSpell> register(AbstractSpell spell) { return SPELLS.register(spell.getSpellName(), () -> spell); }
 
-    // Ender
+    // Annihilation
     public static final RegistryObject<AbstractSpell> ANNIHILATION_BEAM_SPELL = register(new AnnihilationBeamSpell());
     public static final RegistryObject<AbstractSpell> ANNIHILATION_BOMB_SPELL = register(new AnnihilationBombSpell());
     public static final RegistryObject<AbstractSpell> ANNIHILATION_SHOCKWAVE_SPELL = register(new AnnihilationShockwaveSpell());
@@ -30,6 +30,7 @@ public class LSSpellRegistry {
     public static final RegistryObject<AbstractSpell> ANNIHILATION_GEYSER_SPELL = register(new AnnihilationGeyserSpell());
     public static final RegistryObject<AbstractSpell> SUMMON_FLAMEBORN_KNIGHTS_SPELL = register(new SummonFlamebornKnightsSpell());
     public static final RegistryObject<AbstractSpell> RELEASE_RIFTWALKER_PREDATOR_SPELL = register(new ReleaseRiftwalkerPredatorSpell());
+    public static final RegistryObject<AbstractSpell> FLAMEBORN_DRIFT_SPELL = register(new FlamebornDriftSpell());
 
     // Evocation
     public static final RegistryObject<AbstractSpell> SUMMON_HAUNTED_KNIGHTS_SPELL = register(new SummonHauntedKnightsSpell());

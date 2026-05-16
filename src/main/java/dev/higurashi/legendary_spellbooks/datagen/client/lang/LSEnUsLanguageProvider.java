@@ -40,6 +40,7 @@ public class LSEnUsLanguageProvider extends BaseLanguageProvider {
         addEffect(LSEffectRegistry.ANNIHILATION_RESONANCE_EFFECT, "Annihilation Resonance");
         addEffect(LSEffectRegistry.BEAM_EFFECT, "Beam");
         addEffect(LSEffectRegistry.AMBUSH_THORNS_EFFECT, "Ambush Thorns");
+        addEffect(LSEffectRegistry.FLAMEBORN_DASH_EFFECT, "Flameborn Drift");
 
         // --------------------
         // ITEM
@@ -57,7 +58,7 @@ public class LSEnUsLanguageProvider extends BaseLanguageProvider {
         // SPELL
         // --------------------
 
-        // Ender
+        // Annihilation
         addSpell(LSSpellRegistry.ANNIHILATION_BEAM_SPELL, "Annihilation Beam", "Channel a devastating beam of energy. While firing, you are locked in place. If aimed near the ground, the beam scatters small energy orbs on impact.");
         addSpell(LSSpellRegistry.ANNIHILATION_BOMB_SPELL, "Annihilation Bomb", "Launch a concentrated bomb of destructive energy that explodes on impact, dealing damage and scattering small energy orbs around the area.");
         addSpell(LSSpellRegistry.ANNIHILATION_SHOCKWAVE_SPELL, "Annihilation Shockwave", "Stomp the ground to release a fan-shaped shockwave of green fire. The waves deal damage based on the target's maximum health.");
@@ -65,6 +66,7 @@ public class LSEnUsLanguageProvider extends BaseLanguageProvider {
         addSpell(LSSpellRegistry.ANNIHILATION_GEYSER_SPELL, "Annihilation Geyser", "Create a gravitational well that pulls in nearby creatures. Upon completion, a colossal geyser of energy erupts, dealing massive damage.");
         addSpell(LSSpellRegistry.SUMMON_FLAMEBORN_KNIGHTS_SPELL, "Summon Flameborn Knights", "Summon knights made of eternal fire to fight for you.");
         addSpell(LSSpellRegistry.RELEASE_RIFTWALKER_PREDATOR_SPELL, "Release Riftwalker Protocol", "Manifest an Annihilation Pursuer, a relentless hunter that tracks its target through dimensional rifts until they are destroyed.");
+        addSpell(LSSpellRegistry.FLAMEBORN_DRIFT_SPELL, "Flameborn Drift", "");
 
         // Evocation
         addSpell(LSSpellRegistry.SUMMON_HAUNTED_KNIGHTS_SPELL, "Summon Haunted Knights", "Cast to summon spectral knights that will follow you and strike at your foes.");

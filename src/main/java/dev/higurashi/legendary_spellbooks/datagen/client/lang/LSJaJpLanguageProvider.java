@@ -1,9 +1,6 @@
 package dev.higurashi.legendary_spellbooks.datagen.client.lang;
 
-import dev.higurashi.legendary_spellbooks.registries.LSEffectRegistry;
-import dev.higurashi.legendary_spellbooks.registries.LSEntityRegistry;
-import dev.higurashi.legendary_spellbooks.registries.LSItemRegistry;
-import dev.higurashi.legendary_spellbooks.registries.LSSpellRegistry;
+import dev.higurashi.legendary_spellbooks.registries.*;
 import net.minecraft.data.PackOutput;
 
 import java.util.Locale;
@@ -37,6 +34,7 @@ public class LSJaJpLanguageProvider extends BaseLanguageProvider {
         addEffect(LSEffectRegistry.ANNIHILATION_RESONANCE_EFFECT, "アナイアレイション・レゾナンス");
         addEffect(LSEffectRegistry.BEAM_EFFECT, "ビーム");
         addEffect(LSEffectRegistry.AMBUSH_THORNS_EFFECT, "アンバッシュ・ソーン");
+        addEffect(LSEffectRegistry.FLAMEBORN_DASH_EFFECT, "フレイムボーンドリフト");
 
         // --------------------
         // ITEM
@@ -48,7 +46,7 @@ public class LSJaJpLanguageProvider extends BaseLanguageProvider {
         // SPELL
         // --------------------
 
-        // Ender
+        // Annihilation
         addSpell(LSSpellRegistry.ANNIHILATION_BEAM_SPELL, "アナイアレイション・ビーム", "破壊的なエネルギーのビームを放つ。撃っている間は動くことができない。地面の近く、活水平に近い角度で放つと小さなエネルギー弾をばら撒く。");
         addSpell(LSSpellRegistry.ANNIHILATION_BOMB_SPELL, "アナイアレイション・ボム", "凝縮されたエネルギー弾を前方に放つ。命中すると爆発してダメージを与え、周囲に多数の小さな球をまき散らす。");
         addSpell(LSSpellRegistry.ANNIHILATION_SHOCKWAVE_SPELL, "アナイアレイション・ショックウェーブ", "地面を叩きつけ、扇状に緑色の炎の衝撃波を発生させる。ダメージは相手の最大体力に応じて増加する。");
@@ -56,6 +54,7 @@ public class LSJaJpLanguageProvider extends BaseLanguageProvider {
         addSpell(LSSpellRegistry.ANNIHILATION_GEYSER_SPELL, "終焉の噴火", "周囲の敵を吸い込む巨大な重力場を発生させる。詠唱が完了するとエネルギーの間欠泉が噴出し、致命的なダメージを与える。");
         addSpell(LSSpellRegistry.SUMMON_FLAMEBORN_KNIGHTS_SPELL, "召喚 フレイムボーン騎士", "永遠に燃え続ける火炎から作られた騎士を召喚し、共に戦わせる。");
         addSpell(LSSpellRegistry.RELEASE_RIFTWALKER_PREDATOR_SPELL, "リフトウォーカー・プロトコル", "アナイアレイション・パーサーを現界させる。このハンターはターゲットを破壊するまで、どこまでも執拗に追い続ける。");
+        addSpell(LSSpellRegistry.FLAMEBORN_DRIFT_SPELL, "フレイムボーンドリフト", "");
 
         // Evocation
         addSpell(LSSpellRegistry.SUMMON_HAUNTED_KNIGHTS_SPELL, "召喚 ホーンテッド騎士", "唱えると、自身について来て敵を切り裂く、騎士の亡霊を呼び出す。");
@@ -111,5 +110,7 @@ public class LSJaJpLanguageProvider extends BaseLanguageProvider {
         // --------------------
         addAdvancement("stormbound_grimoire", "双極の空", "嵐に結ばれし魔導書を手に入れる");
         addAdvancement("annihilator_protocol", "深淵を覗くとき...", "アナイアレイター・プロトコルを手に入れる");
+
+        addSchool(LSSchoolRegistry.ANNIHILATION, "殲滅");
     }
 }
