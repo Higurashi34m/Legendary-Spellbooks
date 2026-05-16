@@ -1,4 +1,4 @@
-package dev.higurashi.legendary_spellbooks.common.spells.ender;
+package dev.higurashi.legendary_spellbooks.common.spells.annihilation;
 
 import dev.higurashi.legendary_spellbooks.LegendarySpellbooks;
 import dev.higurashi.legendary_spellbooks.api.spells.BaseSpell;
@@ -6,10 +6,10 @@ import dev.higurashi.legendary_spellbooks.api.utils.ComponentUtils;
 import dev.higurashi.legendary_spellbooks.api.utils.GeometryUtils;
 import dev.higurashi.legendary_spellbooks.api.utils.RaycastUtils;
 import dev.higurashi.legendary_spellbooks.common.mixin.helper.ISpellSourceFlag;
+import dev.higurashi.legendary_spellbooks.registries.LSSchoolRegistry;
 import io.redspace.ironsspellbooks.IronsSpellbooks;
 import io.redspace.ironsspellbooks.api.config.DefaultConfig;
 import io.redspace.ironsspellbooks.api.magic.MagicData;
-import io.redspace.ironsspellbooks.api.registry.SchoolRegistry;
 import io.redspace.ironsspellbooks.api.spells.CastSource;
 import io.redspace.ironsspellbooks.api.spells.SpellAnimations;
 import io.redspace.ironsspellbooks.api.spells.SpellRarity;
@@ -26,10 +26,9 @@ import java.util.List;
 public class AnnihilationShockwaveSpell extends BaseSpell {
     private static final ResourceLocation spellResource = ResourceLocation.fromNamespaceAndPath(LegendarySpellbooks.MOD_ID, "annihilation_shockwave");
     private static final DefaultConfig spellConfig = new DefaultConfig()
-            .setSchoolResource(SchoolRegistry.ENDER_RESOURCE)
+            .setSchoolResource(LSSchoolRegistry.ANNIHILATION_RESOURCE)
             .setMinRarity(SpellRarity.RARE)
             .setCooldownSeconds(16)
-            .setAllowCrafting(false)
             .setMaxLevel(6).build();
 
     public AnnihilationShockwaveSpell() {

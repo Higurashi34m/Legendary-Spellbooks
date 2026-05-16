@@ -1,0 +1,33 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "legendary_spellbooks:oblivionmancer_leggings"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_wizard_leggings": {
+      "conditions": {
+        "items": [
+          {
+            "tag": "irons_spellbooks:wizard_base_leggings"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_wizard_leggings",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "legendary_spellbooks:oblivionmancer_leggings"
+    ]
+  },
+  "sends_telemetry_event": false
+}

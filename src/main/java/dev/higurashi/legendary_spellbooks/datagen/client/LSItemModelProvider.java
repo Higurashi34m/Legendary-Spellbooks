@@ -22,6 +22,14 @@ public class LSItemModelProvider extends ItemModelProvider {
     @Override
     protected void registerModels() {
         basicItem(ResourceLocation.fromNamespaceAndPath(LegendarySpellbooks.MOD_ID, "scroll_annihilation"));
+        basicItem(LSItemRegistry.ANNIHILATION_RUNE.get());
+        basicItem(ResourceLocation.fromNamespaceAndPath(LegendarySpellbooks.MOD_ID, "affinity_ring_annihilation"));
+        basicItem(LSItemRegistry.ANNIHILATION_UPGRADE_ORB.get());
+
+        basicItem(LSItemRegistry.OBLIVIONMANCER_HAT.get());
+        basicItem(LSItemRegistry.OBLIVIONMANCER_ROBE.get());
+        basicItem(LSItemRegistry.OBLIVIONMANCER_LEGGINGS.get());
+        basicItem(LSItemRegistry.OBLIVIONMANCER_BOOTS.get());
 
         spellBook(LSItemRegistry.ANNIHILATORS_PROTOCOL_SPELLBOOK_ITEM.get());
         spellBook(LSItemRegistry.STORMBOUND_GRIMOIRE_SPELLBOOK_ITEM.get());

@@ -13,6 +13,12 @@ public class LSEnUsLanguageProvider extends BaseLanguageProvider {
     @Override
     protected void addTranslations() {
         // --------------------
+        // ATTRIBUTE
+        // --------------------
+        addAttribute(LSAttributeRegistry.ANNIHILATION_SPELL_POWER, "Annihilation Spell Power");
+        addAttribute(LSAttributeRegistry.ANNIHILATION_MAGIC_RESIST, "Annihilation Magic Resistance");
+
+        // --------------------
         // CREATIVE TAB
         // --------------------
         addCreativeTab("equipments", "Legendary Spellbooks Equipments");
@@ -40,6 +46,12 @@ public class LSEnUsLanguageProvider extends BaseLanguageProvider {
         // --------------------
         addItem(LSItemRegistry.ANNIHILATORS_PROTOCOL_SPELLBOOK_ITEM, "Annihilator's Protocol");
         addItem(LSItemRegistry.STORMBOUND_GRIMOIRE_SPELLBOOK_ITEM, "Stormbound Grimoire");
+        addItem(LSItemRegistry.OBLIVIONMANCER_HAT, "Oblivionmancer Hat");
+        addItem(LSItemRegistry.OBLIVIONMANCER_ROBE, "Oblivionmancer Robe");
+        addItem(LSItemRegistry.OBLIVIONMANCER_LEGGINGS, "Oblivionmancer Leggings");
+        addItem(LSItemRegistry.OBLIVIONMANCER_BOOTS, "Oblivionmancer Boots");
+        addItem(LSItemRegistry.ANNIHILATION_RUNE, "Annihilation Rune");
+        addItem(LSItemRegistry.ANNIHILATION_UPGRADE_ORB, "Annihilation Upgrade Orb");
 
         // --------------------
         // SPELL
@@ -112,6 +124,6 @@ public class LSEnUsLanguageProvider extends BaseLanguageProvider {
         add("advancement.legendary_spellbooks.title", "Legendary Spellbooks");
         add("advancement.legendary_spellbooks.description", "Legendary Spellbooks");
 
-        addSchool(LSSchoolRegistry.ANNIHILATION, "annihilation");
+        addSchool(LSSchoolRegistry.ANNIHILATION, "Annihilation");
     }
 }

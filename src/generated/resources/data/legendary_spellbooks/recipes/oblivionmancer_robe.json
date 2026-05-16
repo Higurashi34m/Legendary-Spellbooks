@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "tag": "irons_spellbooks:wizard_base_chestplate"
+    },
+    {
+      "item": "irons_spellbooks:arcane_essence"
+    },
+    {
+      "item": "legendary_spellbooks:annihilation_rune"
+    }
+  ],
+  "result": {
+    "item": "legendary_spellbooks:oblivionmancer_robe"
+  }
+}

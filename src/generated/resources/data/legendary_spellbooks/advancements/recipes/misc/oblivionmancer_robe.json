@@ -1,0 +1,33 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "legendary_spellbooks:oblivionmancer_robe"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_wizard_chestplate": {
+      "conditions": {
+        "items": [
+          {
+            "tag": "irons_spellbooks:wizard_base_chestplate"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_wizard_chestplate",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "legendary_spellbooks:oblivionmancer_robe"
+    ]
+  },
+  "sends_telemetry_event": false
+}

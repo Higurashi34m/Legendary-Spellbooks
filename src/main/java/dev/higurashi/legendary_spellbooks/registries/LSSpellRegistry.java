@@ -1,9 +1,7 @@
 package dev.higurashi.legendary_spellbooks.registries;
 
 import dev.higurashi.legendary_spellbooks.LegendarySpellbooks;
-import dev.higurashi.legendary_spellbooks.common.spells.annihilation.AnnihilationBeamSpell;
-import dev.higurashi.legendary_spellbooks.common.spells.annihilation.AnnihilationBombSpell;
-import dev.higurashi.legendary_spellbooks.common.spells.ender.*;
+import dev.higurashi.legendary_spellbooks.common.spells.annihilation.*;
 import dev.higurashi.legendary_spellbooks.common.spells.evocation.SummonHauntedKnightsSpell;
 import dev.higurashi.legendary_spellbooks.common.spells.fire.FlameEaterSpell;
 import dev.higurashi.legendary_spellbooks.common.spells.fire.FlameSectorSpell;

@@ -1,4 +1,4 @@
-package dev.higurashi.legendary_spellbooks.common.spells.ender;
+package dev.higurashi.legendary_spellbooks.common.spells.annihilation;
 
 import dev.higurashi.legendary_spellbooks.LegendarySpellbooks;
 import dev.higurashi.legendary_spellbooks.api.spells.BaseSummonSpell;
@@ -6,9 +6,9 @@ import dev.higurashi.legendary_spellbooks.api.utils.ComponentUtils;
 import dev.higurashi.legendary_spellbooks.common.entities.spell.summoned.SummonedFlamebornGuardEntity;
 import dev.higurashi.legendary_spellbooks.common.entities.spell.summoned.SummonedFlamebornWarriorEntity;
 import dev.higurashi.legendary_spellbooks.registries.LSEntityRegistry;
+import dev.higurashi.legendary_spellbooks.registries.LSSchoolRegistry;
 import io.redspace.ironsspellbooks.IronsSpellbooks;
 import io.redspace.ironsspellbooks.api.config.DefaultConfig;
-import io.redspace.ironsspellbooks.api.registry.SchoolRegistry;
 import io.redspace.ironsspellbooks.api.spells.SpellRarity;
 import io.redspace.ironsspellbooks.player.ClientMagicData;
 import net.miauczel.legendary_monsters.Particle.custom.MovingTrailParticle;
@@ -24,10 +24,9 @@ import java.util.List;
 public class SummonFlamebornKnightsSpell extends BaseSummonSpell {
     private static final ResourceLocation spellResource = ResourceLocation.fromNamespaceAndPath(LegendarySpellbooks.MOD_ID, "summon_flameborn_knights");
     private static final DefaultConfig spellConfig = new DefaultConfig()
-            .setSchoolResource(SchoolRegistry.ENDER_RESOURCE)
+            .setSchoolResource(LSSchoolRegistry.ANNIHILATION_RESOURCE)
             .setMinRarity(SpellRarity.LEGENDARY)
             .setCooldownSeconds(240)
-            .setAllowCrafting(false)
             .setMaxLevel(5).build();
 
     public SummonFlamebornKnightsSpell() {

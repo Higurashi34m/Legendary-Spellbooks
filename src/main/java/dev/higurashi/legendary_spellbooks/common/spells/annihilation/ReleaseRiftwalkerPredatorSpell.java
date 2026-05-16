@@ -1,11 +1,11 @@
-package dev.higurashi.legendary_spellbooks.common.spells.ender;
+package dev.higurashi.legendary_spellbooks.common.spells.annihilation;
 
 import dev.higurashi.legendary_spellbooks.LegendarySpellbooks;
 import dev.higurashi.legendary_spellbooks.api.spells.BaseSummonSpell;
 import dev.higurashi.legendary_spellbooks.api.utils.ComponentUtils;
 import dev.higurashi.legendary_spellbooks.common.entities.spell.summoned.SummonedAnnihilationPursuerEntity;
+import dev.higurashi.legendary_spellbooks.registries.LSSchoolRegistry;
 import io.redspace.ironsspellbooks.api.config.DefaultConfig;
-import io.redspace.ironsspellbooks.api.registry.SchoolRegistry;
 import io.redspace.ironsspellbooks.api.spells.SpellRarity;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
@@ -20,7 +20,7 @@ import java.util.List;
 public class ReleaseRiftwalkerPredatorSpell extends BaseSummonSpell {
     private static final ResourceLocation spellResource = ResourceLocation.fromNamespaceAndPath(LegendarySpellbooks.MOD_ID, "release_riftwalker_predator");
     private static final DefaultConfig spellConfig = new DefaultConfig()
-            .setSchoolResource(SchoolRegistry.ENDER_RESOURCE)
+            .setSchoolResource(LSSchoolRegistry.ANNIHILATION_RESOURCE)
             .setMinRarity(SpellRarity.LEGENDARY)
             .setCooldownSeconds(500)
             .setAllowCrafting(false)

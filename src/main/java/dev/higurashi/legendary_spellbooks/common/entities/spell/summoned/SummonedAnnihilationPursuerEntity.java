@@ -3,7 +3,7 @@ package dev.higurashi.legendary_spellbooks.common.entities.spell.summoned;
 import dev.higurashi.legendary_spellbooks.api.entities.helper.ISummonedMob;
 import dev.higurashi.legendary_spellbooks.api.utils.RaycastUtils;
 import dev.higurashi.legendary_spellbooks.common.mixin.helper.ISpellSourceFlag;
-import dev.higurashi.legendary_spellbooks.common.spells.ender.ReleaseRiftwalkerPredatorSpell;
+import dev.higurashi.legendary_spellbooks.common.spells.annihilation.ReleaseRiftwalkerPredatorSpell;
 import dev.higurashi.legendary_spellbooks.registries.LSEntityRegistry;
 import io.redspace.ironsspellbooks.capabilities.magic.MagicManager;
 import io.redspace.ironsspellbooks.capabilities.magic.SummonManager;

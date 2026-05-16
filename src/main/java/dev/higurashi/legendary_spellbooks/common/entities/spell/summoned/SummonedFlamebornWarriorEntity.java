@@ -1,7 +1,7 @@
 package dev.higurashi.legendary_spellbooks.common.entities.spell.summoned;
 
 import dev.higurashi.legendary_spellbooks.api.entities.helper.ISummonedMob;
-import dev.higurashi.legendary_spellbooks.common.spells.ender.SummonFlamebornKnightsSpell;
+import dev.higurashi.legendary_spellbooks.common.spells.annihilation.SummonFlamebornKnightsSpell;
 import dev.higurashi.legendary_spellbooks.registries.LSEntityRegistry;
 import io.redspace.ironsspellbooks.capabilities.magic.MagicManager;
 import io.redspace.ironsspellbooks.capabilities.magic.SummonManager;

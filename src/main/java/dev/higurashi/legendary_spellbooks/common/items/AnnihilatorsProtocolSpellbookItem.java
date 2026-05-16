@@ -1,6 +1,7 @@
 package dev.higurashi.legendary_spellbooks.common.items;
 
 import dev.higurashi.legendary_spellbooks.api.utils.ComponentUtils;
+import dev.higurashi.legendary_spellbooks.registries.LSAttributeRegistry;
 import dev.higurashi.legendary_spellbooks.registries.LSItemRegistry;
 import dev.higurashi.legendary_spellbooks.registries.LSSpellRegistry;
 import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
@@ -26,7 +27,7 @@ public class AnnihilatorsProtocolSpellbookItem extends UniqueSpellBook {
         }, 10);
 
         withSpellbookAttributes(
-                new AttributeContainer(AttributeRegistry.ENDER_SPELL_POWER, 0.15, AttributeModifier.Operation.MULTIPLY_BASE),
+                new AttributeContainer(LSAttributeRegistry.ANNIHILATION_SPELL_POWER, 0.1, AttributeModifier.Operation.MULTIPLY_BASE),
                 new AttributeContainer(AttributeRegistry.MAX_MANA, 200, AttributeModifier.Operation.ADDITION)
         );
     }
