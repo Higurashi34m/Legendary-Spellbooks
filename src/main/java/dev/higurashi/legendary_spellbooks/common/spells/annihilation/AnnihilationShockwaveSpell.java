@@ -14,9 +14,14 @@ import io.redspace.ironsspellbooks.api.spells.CastSource;
 import io.redspace.ironsspellbooks.api.spells.SpellAnimations;
 import io.redspace.ironsspellbooks.api.spells.SpellRarity;
 import io.redspace.ironsspellbooks.api.util.AnimationHolder;
+import net.miauczel.legendary_monsters.Particle.custom.Circle;
+import net.miauczel.legendary_monsters.Particle.custom.LightningParticle;
+import net.miauczel.legendary_monsters.entity.AnimatedMonster.Effect.CameraShakeEntity;
 import net.miauczel.legendary_monsters.entity.AnimatedMonster.Projectile.AnnihilationFlameStrike;
+import net.miauczel.legendary_monsters.sound.ModSounds;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
@@ -43,6 +48,8 @@ public class AnnihilationShockwaveSpell extends BaseSpell {
 
         this.castStartAnimation = SpellAnimations.STOMP;
         this.castFinishAnimation = AnimationHolder.pass();
+
+        this.castFinishSound = ModSounds.HUGE_ENERGY_EXPLOSION;
     }
 
     @Override
@@ -55,6 +62,11 @@ public class AnnihilationShockwaveSpell extends BaseSpell {
 
     @Override
     public void onCast(Level level, int spellLevel, LivingEntity caster, CastSource source, MagicData magicData) {
+        if (level instanceof ServerLevel serverLevel) {
+            createLightning(serverLevel, caster);
+            serverLevel.sendParticles(new Circle.RingData(0.0f, (float) (Math.PI / 2.0f), 30, 0.0f, 1.0f, 0.0f, 1.0f, caster.getBbWidth() * 60.0f, false, Circle.EnumRingBehavior.GROW), caster.getX(), caster.getY(), caster.getZ(), 1, 0.0, 0.0, 0.0, 0.0);
+        }
+
         float damage = getSpellPower(spellLevel, caster);
         int waveCount = getWaveCount(spellLevel);
         float healthDamageMultiplier = getHealthDamageMultiplier(spellLevel);
@@ -77,8 +89,25 @@ public class AnnihilationShockwaveSpell extends BaseSpell {
                 level.addFreshEntity(flame);
             }
         }
+        CameraShakeEntity.cameraShake(level, caster.position(), 20.0f, 0.03f, 0, 20);
 
         super.onCast(level, spellLevel, caster, source, magicData);
+    }
+
+    private void createLightning(ServerLevel level, LivingEntity caster) {
+        double centerX = caster.getX();
+        double centerZ = caster.getZ();
+        double centerY = caster.getY();
+
+        for(int i = 0; i < 360; i += 10) {
+            double angle = Math.toRadians(i);
+            double vx = Math.cos(angle) * 2.0f;
+            double vz = Math.sin(angle) * 2.0f;
+
+            double vy = (caster.getRandom().nextDouble() - 0.5) * 0.5;
+
+            level.sendParticles(new LightningParticle.OrbData(0, 255, 0), centerX, centerY, centerZ, 1, vx, vy, vz, 1.0);
+        }
     }
 
     private int getWaveCount(int spellLevel) {
