@@ -8,7 +8,6 @@
     "LivingEntityMixin",
     "entities.AnnihilationPursuerEntityMixin",
     "entities.spell.AnnihilationBeamEntityMixin",
-    "entities.spell.AnnihilationBombEntityMixin",
     "entities.spell.AnnihilationExplosionEntityMixin",
     "entities.spell.AnnihilationFlameStrikeMixin",
     "entities.spell.AnnihilationPortalEntityMixin",
@@ -19,7 +18,9 @@
     "entities.spell.summoned.SkeloraptorEntityAccessor",
     "entities.spell.summoned.SkeloraptorEntityMixin"
   ],
-  "client": [],
+  "client": [
+    "AbstractSpellCastingMobRendererMixin"
+  ],
   "injectors": {
     "defaultRequire": 1
   },

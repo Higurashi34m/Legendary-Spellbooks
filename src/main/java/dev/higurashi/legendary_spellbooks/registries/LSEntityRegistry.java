@@ -9,6 +9,7 @@ import net.miauczel.legendary_monsters.entity.AnimatedMonster.Mobs.Pets.Skelorap
 import net.miauczel.legendary_monsters.entity.AnimatedMonster.Mobs.SpaceStation.Flameborn.AnnihilationPursuer.AnnihilationPursuerEntity;
 import net.miauczel.legendary_monsters.entity.AnimatedMonster.Mobs.SpaceStation.Flameborn.FlamebornGuardEntity;
 import net.miauczel.legendary_monsters.entity.AnimatedMonster.Mobs.SpaceStation.Flameborn.FlamebornWarriorEntity;
+import net.miauczel.legendary_monsters.entity.AnimatedMonster.Projectile.AnnihilationBombEntity;
 import net.miauczel.legendary_monsters.entity.AnimatedMonster.Projectile.CloudEntity;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EntityType;
@@ -75,4 +76,12 @@ public class LSEntityRegistry {
     public static final RegistryObject<EntityType<CumuloChargeEntity>> CUMULO_CHARGE_ENTITY = ENTITIES.register("cumulo_charge", () -> EntityType.Builder.of(CumuloChargeEntity::new, MobCategory.MISC)
             .sized(1.5f, 2.5f)
             .build(ResourceLocation.fromNamespaceAndPath(LegendarySpellbooks.MOD_ID, "cumulo_charge").toString()));
+
+
+    public static final RegistryObject<EntityType<AnnihilationBombEntity>> SPELL_ANNIHILATION_BOMB_ENTITY = ENTITIES.register("spell_annihilation_bomb", () -> EntityType.Builder.<AnnihilationBombEntity>of(SpellAnnihilationBombEntity::new, MobCategory.MISC)
+            .sized(2.0f, 2.0f)
+            .updateInterval(2)
+            .clientTrackingRange(6)
+            .fireImmune()
+            .build(ResourceLocation.fromNamespaceAndPath(LegendarySpellbooks.MOD_ID, "spell_annihilation_bomb").toString()));
 }
