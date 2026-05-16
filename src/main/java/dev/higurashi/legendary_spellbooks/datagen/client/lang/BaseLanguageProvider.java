@@ -5,6 +5,7 @@ import dev.higurashi.legendary_spellbooks.api.utils.ComponentUtils;
 import io.redspace.ironsspellbooks.api.spells.AbstractSpell;
 import io.redspace.ironsspellbooks.api.spells.SchoolType;
 import net.minecraft.data.PackOutput;
+import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.common.data.LanguageProvider;
 
@@ -18,6 +19,10 @@ public abstract class BaseLanguageProvider extends LanguageProvider {
     }
 
     @Override protected abstract void addTranslations();
+
+    protected void addAttribute(Supplier<? extends Attribute> key, String name) {
+        add(key.get().getDescriptionId(), name);
+    }
 
     protected void addSpell(Supplier<? extends AbstractSpell> spellKey, String name, String descriptionName) {
         add(spellKey.get().getComponentId(), name);
