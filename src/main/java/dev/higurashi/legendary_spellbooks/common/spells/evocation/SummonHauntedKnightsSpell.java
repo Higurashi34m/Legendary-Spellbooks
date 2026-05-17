@@ -33,9 +33,9 @@ public class SummonHauntedKnightsSpell extends BaseSummonSpell {
         super(spellResource, spellConfig);
         this.castTime = 45;
         this.baseManaCost = 180;
-        this.baseSpellPower = 6;
+        this.baseSpellPower = 8;
         this.manaCostPerLevel = 40;
-        this.spellPowerPerLevel = 3;
+        this.spellPowerPerLevel = 4;
 
         this.allowLooting = false;
     }
@@ -74,6 +74,6 @@ public class SummonHauntedKnightsSpell extends BaseSummonSpell {
         }
     }
 
-    public static int getHealth(int spellLevel) { return 30 + spellLevel * 10; }
+    public static int getHealth(int spellLevel) { return 50 + spellLevel * 15; }
     public static double getDamage(float spellPower) { return spellPower; }
 }
