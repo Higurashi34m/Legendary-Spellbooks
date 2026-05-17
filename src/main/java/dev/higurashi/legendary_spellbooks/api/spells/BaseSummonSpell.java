@@ -35,7 +35,7 @@ public abstract class BaseSummonSpell extends BaseSpell {
     protected abstract Entity[] getEntitiesToSummon(Level level, LivingEntity caster, int spellLevel);
 
     protected Vec3 getSpawnOffset(int index, int totalCount, float yaw, LivingEntity caster) {
-        return GeometryUtils.getPointInCircle(caster.position(), 1.5, totalCount, index, caster.getYRot());
+        return GeometryUtils.getPointInCircle(Vec3.ZERO, 1.5, totalCount, index, caster.getYRot());
     }
 
     protected int getSummonTime(int spellLevel, LivingEntity caster) {
@@ -65,6 +65,7 @@ public abstract class BaseSummonSpell extends BaseSpell {
 
                 entity.moveTo(spawnPos);
                 entity.setYRot(yaw);
+                settingSpawnMob(entity, spellLevel);
                 level.addFreshEntity(entity);
 
                 SummonManager.initSummon(caster, entity, summonTime, castData);
@@ -76,4 +77,6 @@ public abstract class BaseSummonSpell extends BaseSpell {
 
         super.onCast(level, spellLevel, caster, source, magicData);
     }
+
+    protected void settingSpawnMob(Entity spawnMob, int spellLevel) {}
 }
