@@ -34,6 +34,7 @@ public class ClientSetup {
         event.registerEntityRenderer(LSEntityRegistry.SUMMONED_HAUNTED_KNIGHT_ENTITY.get(), LivingArmorRenderer::new);
         event.registerEntityRenderer(LSEntityRegistry.SUMMONED_HAUNTED_GUARD_ENTITY.get(), HauntedGuardRenderer::new);
         event.registerEntityRenderer(LSEntityRegistry.SUMMONED_SKELORAPTOR_ENTITY.get(), SummonedSkeloraptorRenderer::new);
+        event.registerEntityRenderer(LSEntityRegistry.SUMMONED_FRACTURED_APOSTLE_ENTITY.get(), FracturedApostleRenderer::new);
 
         // Projectile
         event.registerEntityRenderer(LSEntityRegistry.SPELL_CLOUD_ENTITY.get(), SpellCloudRender::new);

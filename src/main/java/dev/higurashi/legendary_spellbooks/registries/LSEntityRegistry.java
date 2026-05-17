@@ -3,6 +3,7 @@ package dev.higurashi.legendary_spellbooks.registries;
 import dev.higurashi.legendary_spellbooks.LegendarySpellbooks;
 import dev.higurashi.legendary_spellbooks.common.entities.spell.projectile.*;
 import dev.higurashi.legendary_spellbooks.common.entities.spell.summoned.*;
+import net.miauczel.legendary_monsters.entity.AnimatedMonster.Mobs.CollapsedKingdom.Fractured.FracturedApostleEntity;
 import net.miauczel.legendary_monsters.entity.AnimatedMonster.Mobs.CollapsedKingdom.HauntedGuardEntity;
 import net.miauczel.legendary_monsters.entity.AnimatedMonster.Mobs.CollapsedKingdom.HauntedKnightEntity;
 import net.miauczel.legendary_monsters.entity.AnimatedMonster.Mobs.Pets.SkeloraptorEntity;
@@ -84,4 +85,8 @@ public class LSEntityRegistry {
             .clientTrackingRange(6)
             .fireImmune()
             .build(ResourceLocation.fromNamespaceAndPath(LegendarySpellbooks.MOD_ID, "spell_annihilation_bomb").toString()));
+
+    public static final RegistryObject<EntityType<FracturedApostleEntity>> SUMMONED_FRACTURED_APOSTLE_ENTITY = ENTITIES.register("summoned_fractured_apostle", () -> EntityType.Builder.<FracturedApostleEntity>of(SummonedFracturedApostleEntity::new, MobCategory.CREATURE)
+            .sized(1.25f, 2.0f)
+            .build(ResourceLocation.fromNamespaceAndPath(LegendarySpellbooks.MOD_ID, "summoned_fractured_apostle").toString()));
 }
