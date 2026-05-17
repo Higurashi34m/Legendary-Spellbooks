@@ -2,6 +2,7 @@ package dev.higurashi.legendary_spellbooks.registries;
 
 import dev.higurashi.legendary_spellbooks.LegendarySpellbooks;
 import dev.higurashi.legendary_spellbooks.common.spells.annihilation.*;
+import dev.higurashi.legendary_spellbooks.common.spells.blood.HematiteTrishulaSpell;
 import dev.higurashi.legendary_spellbooks.common.spells.blood.PossessedSoulBladeSpell;
 import dev.higurashi.legendary_spellbooks.common.spells.evocation.CollapsedKingdomsLegionSpell;
 import dev.higurashi.legendary_spellbooks.common.spells.fire.FlameEaterSpell;
@@ -35,6 +36,7 @@ public class LSSpellRegistry {
 
     // Blood
     public static final RegistryObject<AbstractSpell> POSSESSED_SOUL_BLADE_SPELL = register(new PossessedSoulBladeSpell());
+    public static final RegistryObject<AbstractSpell> HEMATITE_TRISHULA_SPELL = register(new HematiteTrishulaSpell());
 
     // Evocation
     public static final RegistryObject<AbstractSpell> COLLAPSED_KINGDOMS_LEGION_SPELL = register(new CollapsedKingdomsLegionSpell());

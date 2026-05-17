@@ -4,10 +4,12 @@ import dev.higurashi.legendary_spellbooks.client.renderer.entities.spell.project
 import dev.higurashi.legendary_spellbooks.client.renderer.entities.spell.projectile.SpellCloudRender;
 import dev.higurashi.legendary_spellbooks.client.renderer.entities.spell.summoned.SummonedSkeloraptorRenderer;
 import dev.higurashi.legendary_spellbooks.client.renderer.spell.animation.AnnihilationBombChargeLayer;
+import dev.higurashi.legendary_spellbooks.client.renderer.spell.animation.HematiteTrishulaChargeLayer;
 import dev.higurashi.legendary_spellbooks.registries.LSEntityRegistry;
 import dev.higurashi.legendary_spellbooks.registries.LSItemRegistry;
 import io.redspace.ironsspellbooks.render.SpellBookCurioRenderer;
 import net.miauczel.legendary_monsters.entity.ProjectileEntityRenderer.PowerBallBombRenderer;
+import net.miauczel.legendary_monsters.entity.ProjectileEntityRenderer.SoulTridentRenderer;
 import net.miauczel.legendary_monsters.entity.client.Render.*;
 import net.minecraft.client.renderer.entity.player.PlayerRenderer;
 import net.minecraftforge.api.distmarker.Dist;
@@ -43,6 +45,7 @@ public class ClientSetup {
         event.registerEntityRenderer(LSEntityRegistry.CUMULO_CHARGE_ENTITY.get(), CumuloChargeRenderer::new);
         event.registerEntityRenderer(LSEntityRegistry.SPELL_ICE_SPIKE_ENTITY.get(), IceSpikeRenderer::new);
         event.registerEntityRenderer(LSEntityRegistry.SPELL_ANNIHILATION_BOMB_ENTITY.get(), PowerBallBombRenderer::new);
+        event.registerEntityRenderer(LSEntityRegistry.SPELL_SOUL_TRIDENT_ENTITY.get(), SoulTridentRenderer::new);
     }
 
     @SubscribeEvent
@@ -51,6 +54,7 @@ public class ClientSetup {
             PlayerRenderer renderer = event.getPlayerSkin(skinName);
             if (renderer != null) {
                 renderer.addLayer(new AnnihilationBombChargeLayer<>(renderer));
+                renderer.addLayer(new HematiteTrishulaChargeLayer<>(renderer));
             }
         }
     }
