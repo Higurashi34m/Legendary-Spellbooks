@@ -8,13 +8,17 @@ import io.redspace.ironsspellbooks.capabilities.magic.SummonManager;
 import net.miauczel.legendary_monsters.entity.AnimatedMonster.Mobs.CollapsedKingdom.HauntedGuardEntity;
 import net.miauczel.legendary_monsters.entity.ai.goal.IAttackGoal;
 import net.miauczel.legendary_monsters.entity.ai.goal.IMoveGoal;
+import net.miauczel.legendary_monsters.util.MathUtils;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.Attributes;
+import net.minecraft.world.entity.item.ItemEntity;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
+import org.jetbrains.annotations.Nullable;
 
 public class SummonedHauntedGuardEntity extends HauntedGuardEntity implements ISummonedMob {
     public SummonedHauntedGuardEntity(EntityType<? extends HauntedGuardEntity> entity, Level level) {
@@ -37,13 +41,6 @@ public class SummonedHauntedGuardEntity extends HauntedGuardEntity implements IS
     }
 
     @Override
-    public void aiStep() {
-        super.aiStep();
-
-        this.getAttribute(Attributes.MOVEMENT_SPEED).setBaseValue(0.1);
-    }
-
-    @Override
     public Entity getSummoner() {
         return ISummonedMob.super.getSummoner();
     }
@@ -56,21 +53,9 @@ public class SummonedHauntedGuardEntity extends HauntedGuardEntity implements IS
 
     @Override
     public void registerGoals() {
-        this.goalSelector.addGoal(1, new IAttackGoal(this, 0, 6, 0, 33, 33, 4.0f) {
-            @Override
-            public boolean canUse() {
-                return super.canUse() && SummonedHauntedGuardEntity.this.getRandom().nextFloat() * 35 < 16 && SummonedHauntedGuardEntity.this.getTarget() != null && SummonedHauntedGuardEntity.this.slamCooldown <= 0;
-            }
-
-            @Override
-            public void stop() {
-                SummonedHauntedGuardEntity.this.slamCooldown = 20;
-                super.stop();
-            }
-        });
-        this.goalSelector.addGoal(1, createAttackGoal(2, 40, 16.0f));
-        this.goalSelector.addGoal(1, createAttackGoal(4, 40, 16.0f));
-        this.goalSelector.addGoal(1, createAttackGoal(5, 63, 53.0f));
+        this.goalSelector.addGoal(1, createAttackGoal(2, MathUtils.toTicks(2.67f), 15));
+        this.goalSelector.addGoal(1, createAttackGoal(3, 90, 55));
+        this.goalSelector.addGoal(0, new IAttackGoal(this, 4, 5, 0, 15, 15, 10.0f));
 
         this.goalSelector.addGoal(2, new IMoveGoal(this, false, 3.0f));
 
@@ -90,6 +75,11 @@ public class SummonedHauntedGuardEntity extends HauntedGuardEntity implements IS
         super.die(source);
     }
 
+    @Override @Nullable
+    public ItemEntity LGspawnatlocation(ItemStack stack) {
+        return null;
+    }
+
     @Override
     public void onUnSummon() {
         if (!this.level().isClientSide) {
@@ -104,14 +94,11 @@ public class SummonedHauntedGuardEntity extends HauntedGuardEntity implements IS
         super.onRemovedFromWorld();
     }
 
-    private IAttackGoal createAttackGoal(int attackState, int attackMaxTick,  float chancePercent) {
-        return new IAttackGoal(this, 0, attackState, 0, attackMaxTick, attackMaxTick, 4.0f) {
+    private IAttackGoal createAttackGoal(int attackState, int attackMaxTick, int attackSeeTicks) {
+        return new IAttackGoal(this, 0, attackState, 0, attackMaxTick, attackSeeTicks, 4.0f) {
             @Override
             public boolean canUse() {
-                boolean chance = SummonedHauntedGuardEntity.this.getRandom().nextFloat() * 35 < chancePercent;
-                boolean hasTarget = SummonedHauntedGuardEntity.this.getTarget() != null;
-
-                return super.canUse() && chance && hasTarget;
+                return super.canUse() && SummonedHauntedGuardEntity.this.getRandom().nextFloat() * 35.0f < 16.0f;
             }
         };
     }

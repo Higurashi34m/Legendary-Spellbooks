@@ -19,4 +19,13 @@ public class HauntedGuardEntityMixin {
 
         return originalDamage;
     }
+
+    @ModifyArg(method = "StraightLineAreaAttack", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/entity/LivingEntity;hurt(Lnet/minecraft/world/damagesource/DamageSource;F)Z", remap = true), index = 1)
+    private float modifyStraightLine(float originalDamage) {
+        HauntedGuardEntity self = (HauntedGuardEntity) (Object)this;
+        if (self instanceof ISummonedMob) {
+            return (float) self.getAttributeValue(Attributes.ATTACK_DAMAGE);
+        }
+        return originalDamage;
+    }
 }
