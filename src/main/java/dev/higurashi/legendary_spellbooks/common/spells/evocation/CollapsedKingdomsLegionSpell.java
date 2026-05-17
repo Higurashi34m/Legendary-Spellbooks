@@ -20,8 +20,8 @@ import net.minecraft.world.level.Level;
 
 import java.util.List;
 
-public class SummonHauntedKnightsSpell extends BaseSummonSpell {
-    private static final ResourceLocation spellResource = ResourceLocation.fromNamespaceAndPath(LegendarySpellbooks.MOD_ID, "summon_haunted_knights");
+public class CollapsedKingdomsLegionSpell extends BaseSummonSpell {
+    private static final ResourceLocation spellResource = ResourceLocation.fromNamespaceAndPath(LegendarySpellbooks.MOD_ID, "collapsed_kingdoms_legion");
     private static final DefaultConfig spellConfig = new DefaultConfig()
             .setSchoolResource(SchoolRegistry.EVOCATION_RESOURCE)
             .setMinRarity(SpellRarity.LEGENDARY)
@@ -29,7 +29,7 @@ public class SummonHauntedKnightsSpell extends BaseSummonSpell {
             .setCooldownSeconds(120)
             .setMaxLevel(3).build();
 
-    public SummonHauntedKnightsSpell() {
+    public CollapsedKingdomsLegionSpell() {
         super(spellResource, spellConfig);
         this.castTime = 45;
         this.baseManaCost = 180;

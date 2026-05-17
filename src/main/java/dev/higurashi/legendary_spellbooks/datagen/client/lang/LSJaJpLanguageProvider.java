@@ -69,8 +69,11 @@ public class LSJaJpLanguageProvider extends BaseLanguageProvider {
         addSpell(LSSpellRegistry.RELEASE_RIFTWALKER_PREDATOR_SPELL, "リフトウォーカー・プロトコル", "アナイアレイション・パーサーを現界させる。このハンターはターゲットを破壊するまで、どこまでも執拗に追い続ける。");
         addSpell(LSSpellRegistry.FLAMEBORN_DRIFT_SPELL, "フレイムボーンドリフト", "");
 
+        // Blood
+        addSpell(LSSpellRegistry.POSSESSED_SOUL_BLADE_SPELL, "憑依された魂の剣", "");
+
         // Evocation
-        addSpell(LSSpellRegistry.SUMMON_HAUNTED_KNIGHTS_SPELL, "召喚 ホーンテッド騎士", "唱えると、自身について来て敵を切り裂く、騎士の亡霊を呼び出す。");
+        addSpell(LSSpellRegistry.COLLAPSED_KINGDOMS_LEGION_SPELL, "崩壊せし王国の軍勢", "崩壊した王国の幻影の騎士たちを召喚する。彼らは古の義務に縛られ、灰の中から立ち上がり、汝の敵を打ち倒すだろう。");
 
         // Fire
         addSpell(LSSpellRegistry.FLAME_EATER_SPELL, "火炎喰らい", "複数の相手の足元から炎を噴出させる。相手の位置が高すぎると、炎を届かせることができない。");

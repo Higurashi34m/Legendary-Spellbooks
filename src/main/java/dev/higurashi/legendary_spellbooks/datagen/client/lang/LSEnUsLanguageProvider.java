@@ -72,8 +72,11 @@ public class LSEnUsLanguageProvider extends BaseLanguageProvider {
         addSpell(LSSpellRegistry.RELEASE_RIFTWALKER_PREDATOR_SPELL, "Release Riftwalker Protocol", "Manifest an Annihilation Pursuer, a relentless hunter that tracks its target through dimensional rifts until they are destroyed.");
         addSpell(LSSpellRegistry.FLAMEBORN_DRIFT_SPELL, "Flameborn Drift", "");
 
+        // Blood
+        addSpell(LSSpellRegistry.POSSESSED_SOUL_BLADE_SPELL, "Possessed Soul Blade", "");
+
         // Evocation
-        addSpell(LSSpellRegistry.SUMMON_HAUNTED_KNIGHTS_SPELL, "Summon Haunted Knights", "Cast to summon spectral knights that will follow you and strike at your foes.");
+        addSpell(LSSpellRegistry.COLLAPSED_KINGDOMS_LEGION_SPELL, "Collapsed Kingdom's Legion", "Summons the spectral knights of the Collapsed Kingdom, bound by ancient duty to arise from the ashes and strike down your foes.");
 
         // Fire
         addSpell(LSSpellRegistry.FLAME_EATER_SPELL, "Flame Eater", "Target multiple creatures to erupt bursts of fire at their feet. This spell fails if targets are too high above the ground.");

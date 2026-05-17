@@ -3,7 +3,7 @@ package dev.higurashi.legendary_spellbooks.registries;
 import dev.higurashi.legendary_spellbooks.LegendarySpellbooks;
 import dev.higurashi.legendary_spellbooks.common.spells.annihilation.*;
 import dev.higurashi.legendary_spellbooks.common.spells.blood.PossessedSoulBladeSpell;
-import dev.higurashi.legendary_spellbooks.common.spells.evocation.SummonHauntedKnightsSpell;
+import dev.higurashi.legendary_spellbooks.common.spells.evocation.CollapsedKingdomsLegionSpell;
 import dev.higurashi.legendary_spellbooks.common.spells.fire.FlameEaterSpell;
 import dev.higurashi.legendary_spellbooks.common.spells.fire.FlameSectorSpell;
 import dev.higurashi.legendary_spellbooks.common.spells.ice.GlacierEruptionSpell;
@@ -37,7 +37,7 @@ public class LSSpellRegistry {
     public static final RegistryObject<AbstractSpell> POSSESSED_SOUL_BLADE_SPELL = register(new PossessedSoulBladeSpell());
 
     // Evocation
-    public static final RegistryObject<AbstractSpell> SUMMON_HAUNTED_KNIGHTS_SPELL = register(new SummonHauntedKnightsSpell());
+    public static final RegistryObject<AbstractSpell> COLLAPSED_KINGDOMS_LEGION_SPELL = register(new CollapsedKingdomsLegionSpell());
 
     // Fire
     public static final RegistryObject<AbstractSpell> FLAME_EATER_SPELL = register(new FlameEaterSpell());

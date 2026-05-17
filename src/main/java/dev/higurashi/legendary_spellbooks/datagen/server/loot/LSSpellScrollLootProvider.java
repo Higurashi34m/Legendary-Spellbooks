@@ -86,7 +86,7 @@ public class LSSpellScrollLootProvider extends GlobalLootModifierProvider {
         add("possessed_paladin_scrolls", new SpellScrollLootModifier(
                 new LootItemCondition[]{ LootItemEntityPropertyCondition.hasProperties(LootContext.EntityTarget.THIS, EntityPredicate.Builder.entity().of(ModEntities.Posessed_Paladin.get())).build() },
                 List.of(
-                        new SpellEntry(LSSpellRegistry.SUMMON_HAUNTED_KNIGHTS_SPELL.getId(), 1, 3, 10)
+                        new SpellEntry(LSSpellRegistry.COLLAPSED_KINGDOMS_LEGION_SPELL.getId(), 1, 3, 10)
                 ),
                 0.5f,
                 1,

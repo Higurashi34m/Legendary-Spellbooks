@@ -1,7 +1,7 @@
 package dev.higurashi.legendary_spellbooks.common.entities.spell.summoned;
 
 import dev.higurashi.legendary_spellbooks.api.entities.helper.ISummonedMob;
-import dev.higurashi.legendary_spellbooks.common.spells.evocation.SummonHauntedKnightsSpell;
+import dev.higurashi.legendary_spellbooks.common.spells.evocation.CollapsedKingdomsLegionSpell;
 import dev.higurashi.legendary_spellbooks.registries.LSEntityRegistry;
 import io.redspace.ironsspellbooks.capabilities.magic.MagicManager;
 import io.redspace.ironsspellbooks.capabilities.magic.SummonManager;
@@ -33,10 +33,10 @@ public class SummonedHauntedGuardEntity extends HauntedGuardEntity implements IS
 
     @Override
     public void setupAttributes(int spellLevel, float spellPower) {
-        int hp = SummonHauntedKnightsSpell.getHealth(spellLevel);
+        int hp = CollapsedKingdomsLegionSpell.getHealth(spellLevel);
 
         this.getAttribute(Attributes.MAX_HEALTH).setBaseValue(hp);
-        this.getAttribute(Attributes.ATTACK_DAMAGE).setBaseValue(SummonHauntedKnightsSpell.getDamage(spellPower));
+        this.getAttribute(Attributes.ATTACK_DAMAGE).setBaseValue(CollapsedKingdomsLegionSpell.getDamage(spellPower));
         this.setHealth(hp);
     }
 
