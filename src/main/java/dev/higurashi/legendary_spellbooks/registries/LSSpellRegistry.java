@@ -2,6 +2,7 @@ package dev.higurashi.legendary_spellbooks.registries;
 
 import dev.higurashi.legendary_spellbooks.LegendarySpellbooks;
 import dev.higurashi.legendary_spellbooks.common.spells.annihilation.*;
+import dev.higurashi.legendary_spellbooks.common.spells.blood.PossessedSoulBladeSpell;
 import dev.higurashi.legendary_spellbooks.common.spells.evocation.SummonHauntedKnightsSpell;
 import dev.higurashi.legendary_spellbooks.common.spells.fire.FlameEaterSpell;
 import dev.higurashi.legendary_spellbooks.common.spells.fire.FlameSectorSpell;
@@ -9,8 +10,8 @@ import dev.higurashi.legendary_spellbooks.common.spells.ice.GlacierEruptionSpell
 import dev.higurashi.legendary_spellbooks.common.spells.ice.GlacierRingburstSpell;
 import dev.higurashi.legendary_spellbooks.common.spells.lightning.*;
 import dev.higurashi.legendary_spellbooks.common.spells.nature.AmbushThornsSpell;
-import dev.higurashi.legendary_spellbooks.common.spells.nature.OvergrownShockwaveSpell;
 import dev.higurashi.legendary_spellbooks.common.spells.nature.FossilizedFurySpell;
+import dev.higurashi.legendary_spellbooks.common.spells.nature.OvergrownShockwaveSpell;
 import io.redspace.ironsspellbooks.api.registry.SpellRegistry;
 import io.redspace.ironsspellbooks.api.spells.AbstractSpell;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -31,6 +32,9 @@ public class LSSpellRegistry {
     public static final RegistryObject<AbstractSpell> SUMMON_FLAMEBORN_KNIGHTS_SPELL = register(new SummonFlamebornKnightsSpell());
     public static final RegistryObject<AbstractSpell> RELEASE_RIFTWALKER_PREDATOR_SPELL = register(new ReleaseRiftwalkerPredatorSpell());
     public static final RegistryObject<AbstractSpell> FLAMEBORN_DRIFT_SPELL = register(new FlamebornDriftSpell());
+
+    // Blood
+    public static final RegistryObject<AbstractSpell> POSSESSED_SOUL_BLADE_SPELL = register(new PossessedSoulBladeSpell());
 
     // Evocation
     public static final RegistryObject<AbstractSpell> SUMMON_HAUNTED_KNIGHTS_SPELL = register(new SummonHauntedKnightsSpell());

@@ -16,13 +16,15 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
+import net.minecraftforge.fml.ModList;
+import net.raptorzizi.wind_spellbooks.registries.ModSchoolRegistry;
 
 import java.util.List;
 
 public class QuadTornadoSpell extends BaseSpell {
     private static final ResourceLocation spellResource = ResourceLocation.fromNamespaceAndPath(LegendarySpellbooks.MOD_ID, "quad_tornado");
     private static final DefaultConfig spellConfig = new DefaultConfig()
-            .setSchoolResource(SchoolRegistry.LIGHTNING_RESOURCE)
+            .setSchoolResource(ModList.get().isLoaded("wind_spellbooks") ?  ModSchoolRegistry.WIND_RESOURCE : SchoolRegistry.LIGHTNING_RESOURCE)
             .setMinRarity(SpellRarity.EPIC)
             .setCooldownSeconds(12)
             .setAllowCrafting(false)
