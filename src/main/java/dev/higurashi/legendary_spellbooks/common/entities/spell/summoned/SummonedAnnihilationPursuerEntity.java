@@ -67,14 +67,14 @@ public class SummonedAnnihilationPursuerEntity extends AnnihilationPursuerEntity
 
     @Override
     public void registerGoals() {
-        this.goalSelector.addGoal(1, new BuckshotGoal(this, 0, 21, 0, MathUtils.toSeconds(1.42F), MathUtils.toSeconds(1.42F), 15.0F) {
+        this.goalSelector.addGoal(1, new BuckshotGoal(this, 0, 21, 0, MathUtils.toTicks(1.42F), MathUtils.toTicks(1.42F), 15.0F) {
             @Override
             public boolean canUse() {
                 return super.canUse() && getRandom().nextFloat() < 0.32f && buckshot_cooldown <= 0;
             }
         });
 
-        this.goalSelector.addGoal(0, new IStateGoal(this, 22, 22, 0, MathUtils.toSeconds(1.08F), 10) {
+        this.goalSelector.addGoal(0, new IStateGoal(this, 22, 22, 0, MathUtils.toTicks(1.08F), 10) {
             @Override
             public void stop() {
                 buckshot_cooldown = 40;
@@ -82,7 +82,7 @@ public class SummonedAnnihilationPursuerEntity extends AnnihilationPursuerEntity
             }
         });
 
-        this.goalSelector.addGoal(0, new IStateGoal(this, 23, 23, 0, MathUtils.toSeconds(1.33F), MathUtils.toSeconds(1.33F)) {
+        this.goalSelector.addGoal(0, new IStateGoal(this, 23, 23, 0, MathUtils.toTicks(1.33F), MathUtils.toTicks(1.33F)) {
             @Override
             public void stop() {
                 buckshot_cooldown = 40;

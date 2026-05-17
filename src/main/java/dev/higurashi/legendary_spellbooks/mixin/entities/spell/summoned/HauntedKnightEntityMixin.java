@@ -1,7 +1,7 @@
 package dev.higurashi.legendary_spellbooks.mixin.entities.spell.summoned;
 
 import dev.higurashi.legendary_spellbooks.api.entities.helper.ISummonedMob;
-import net.miauczel.legendary_monsters.entity.AnimatedMonster.Mobs.AbandonedCrypt.HauntedKnightEntity;
+import net.miauczel.legendary_monsters.entity.AnimatedMonster.Mobs.CollapsedKingdom.HauntedKnightEntity;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Unique;

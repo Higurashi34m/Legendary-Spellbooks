@@ -5,7 +5,7 @@ import dev.higurashi.legendary_spellbooks.common.spells.evocation.SummonHauntedK
 import dev.higurashi.legendary_spellbooks.registries.LSEntityRegistry;
 import io.redspace.ironsspellbooks.capabilities.magic.MagicManager;
 import io.redspace.ironsspellbooks.capabilities.magic.SummonManager;
-import net.miauczel.legendary_monsters.entity.AnimatedMonster.Mobs.AbandonedCrypt.HauntedKnightEntity;
+import net.miauczel.legendary_monsters.entity.AnimatedMonster.Mobs.CollapsedKingdom.HauntedKnightEntity;
 import net.miauczel.legendary_monsters.entity.ai.goal.IAttackGoal;
 import net.miauczel.legendary_monsters.entity.ai.goal.IMoveGoal;
 import net.minecraft.core.particles.ParticleTypes;

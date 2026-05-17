@@ -1,7 +1,7 @@
 package dev.higurashi.legendary_spellbooks.mixin.entities.spell.summoned;
 
 import dev.higurashi.legendary_spellbooks.api.entities.helper.ISummonedMob;
-import net.miauczel.legendary_monsters.entity.AnimatedMonster.Mobs.AbandonedCrypt.HauntedGuardEntity;
+import net.miauczel.legendary_monsters.entity.AnimatedMonster.Mobs.CollapsedKingdom.HauntedGuardEntity;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;

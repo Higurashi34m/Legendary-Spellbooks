@@ -152,6 +152,9 @@ dependencies {
     // Legendary Monsters
     implementation fg.deobf("curse.maven:legendary-monsters-944035:${legendary_monsters_version}")
 
+    // Wind Spellbooks
+    implementation fg.deobf("curse.maven:winds-spellbooks-irons-spells-n-spellbooks-addon-1519158:8018045")
+
     // Runtime Only
     runtimeOnly fg.deobf("curse.maven:embeddium-908741:5681725")
     runtimeOnly fg.deobf("curse.maven:modernfix-790626:7515215")
