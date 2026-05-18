@@ -18,9 +18,7 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraft.world.phys.EntityHitResult;
-import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.Vec3;
 
 public class SpellSoulTridentEntity extends SoulTridentEntity {
@@ -54,27 +52,14 @@ public class SpellSoulTridentEntity extends SoulTridentEntity {
     protected void onHitEntity(EntityHitResult hitResult) {
         Entity target = hitResult.getEntity();
         Entity caster = this.getOwner();
-
-        float damage = getDamage();
+        float damage = this.getDamage();
 
         if (!(target instanceof LivingEntity livingTarget)) return;
+        if (this.isAlliedTo(livingTarget)) return;
 
-        if (!this.isAlliedTo(livingTarget) && this.tickCount % 5 == 0) {
-            this.playSound(SoundEvents.TRIDENT_HIT, 1.0f, 1.0f);
-
-            DamageSources.applyDamage(livingTarget, damage, LSSpellRegistry.HEMATITE_TRISHULA_SPELL.get().getDamageSource(caster));
-            this.setDeltaMovement(livingTarget.getDeltaMovement().scale(0.6));
-        }
-    }
-
-    @Override
-    protected void onHit(HitResult result) {
-        if (result.getType() == HitResult.Type.ENTITY) {
-            this.onHitEntity((EntityHitResult)result);
-            this.level().gameEvent(GameEvent.PROJECTILE_LAND, result.getLocation(), GameEvent.Context.of(this, null));
-            return;
-        }
-        super.onHit(result);
+        this.playSound(SoundEvents.TRIDENT_HIT, 1.0f, 1.0f);
+        DamageSources.applyDamage(livingTarget, damage, LSSpellRegistry.HEMATITE_TRISHULA_SPELL.get().getDamageSource(caster));
+        this.discard();
     }
 
     @Override
