@@ -23,16 +23,16 @@ public class SummonHauntedKnightsSpell extends BaseSummonSpell {
             .setSchoolResource(SchoolRegistry.EVOCATION_RESOURCE)
             .setMinRarity(SpellRarity.LEGENDARY)
             .setAllowCrafting(false)
-            .setCooldownSeconds(120)
+            .setCooldownSeconds(180)
             .setMaxLevel(3).build();
 
     public SummonHauntedKnightsSpell() {
         super(spellResource, spellConfig);
         this.castTime = 45;
-        this.baseManaCost = 180;
-        this.baseSpellPower = 6;
+        this.baseManaCost = 220;
+        this.baseSpellPower = 8;
         this.manaCostPerLevel = 40;
-        this.spellPowerPerLevel = 3;
+        this.spellPowerPerLevel = 4;
 
         this.allowLooting = false;
     }
@@ -52,6 +52,6 @@ public class SummonHauntedKnightsSpell extends BaseSummonSpell {
         };
     }
 
-    public static int getHealth(int spellLevel) { return 30 + spellLevel * 10; }
+    public static int getHealth(int spellLevel) { return 60 + spellLevel * 20; }
     public static double getDamage(float spellPower) { return spellPower; }
 }

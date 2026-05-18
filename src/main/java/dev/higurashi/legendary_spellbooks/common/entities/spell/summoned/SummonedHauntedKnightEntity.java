@@ -6,15 +6,21 @@ import dev.higurashi.legendary_spellbooks.registries.LSEntityRegistry;
 import io.redspace.ironsspellbooks.capabilities.magic.MagicManager;
 import io.redspace.ironsspellbooks.capabilities.magic.SummonManager;
 import net.miauczel.legendary_monsters.entity.AnimatedMonster.Mobs.CollapsedKingdom.HauntedKnightEntity;
+import net.miauczel.legendary_monsters.entity.AnimatedMonster.Mobs.CollapsedKingdom.KnightParryFrameGoal;
+import net.miauczel.legendary_monsters.entity.AnimatedMonster.Mobs.CollapsedKingdom.KnightParryGoal;
 import net.miauczel.legendary_monsters.entity.ai.goal.IAttackGoal;
 import net.miauczel.legendary_monsters.entity.ai.goal.IMoveGoal;
+import net.miauczel.legendary_monsters.entity.ai.goal.IStateGoal;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.Attributes;
+import net.minecraft.world.entity.item.ItemEntity;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
+import org.jetbrains.annotations.Nullable;
 
 public class SummonedHauntedKnightEntity extends HauntedKnightEntity implements ISummonedMob {
     public SummonedHauntedKnightEntity(EntityType<? extends HauntedKnightEntity> entity, Level level) {
@@ -37,13 +43,6 @@ public class SummonedHauntedKnightEntity extends HauntedKnightEntity implements 
     }
 
     @Override
-    public void aiStep() {
-        super.aiStep();
-
-        this.getAttribute(Attributes.MOVEMENT_SPEED).setBaseValue(0.1);
-    }
-
-    @Override
     public Entity getSummoner() {
         return ISummonedMob.super.getSummoner();
     }
@@ -56,20 +55,18 @@ public class SummonedHauntedKnightEntity extends HauntedKnightEntity implements 
 
     @Override
     public void registerGoals() {
-        this.goalSelector.addGoal(1, new IAttackGoal(this, 0, 2, 0, 28, 28, 3.0f) {
-            @Override
-            public boolean canUse() {
-                return super.canUse() && SummonedHauntedKnightEntity.this.getRandom().nextFloat() * 35 < 16 && SummonedHauntedKnightEntity.this.getTarget() != null && SummonedHauntedKnightEntity.this.parryCooldown <= 0;
-            }
+        this.goalSelector.addGoal(1, createAttackGoal(2, 39, 20));
+        this.goalSelector.addGoal(1, createAttackGoal(3, 65, 40));
 
-            @Override
-            public void stop() {
-                SummonedHauntedKnightEntity.this.parryCooldown = 20;
-                super.stop();
+        this.goalSelector.addGoal(1, new KnightParryGoal(this, 0, 4, 0, 8, 8, 3.0f) {
+            public boolean canUse() {
+                return super.canUse() && SummonedHauntedKnightEntity.this.getRandom().nextFloat() < 0.33f;
             }
         });
-        this.goalSelector.addGoal(1, createAttackGoal(4, 48));
-        this.goalSelector.addGoal(1, createAttackGoal(5, 44));
+        this.goalSelector.addGoal(1, new KnightParryFrameGoal(this, 5, 5, 0, 25, 25) {});
+
+        this.goalSelector.addGoal(0, new IStateGoal(this, 7, 7, 0, 11, 11) {});
+        this.goalSelector.addGoal(0, new IStateGoal(this, 8, 8, 0, 27, 27) {});
 
         this.goalSelector.addGoal(2, new IMoveGoal(this, false, 3.0f));
 
@@ -89,6 +86,11 @@ public class SummonedHauntedKnightEntity extends HauntedKnightEntity implements 
         super.die(source);
     }
 
+    @Override @Nullable
+    public ItemEntity LGspawnatlocation(ItemStack stack) {
+        return null;
+    }
+
     @Override
     public void onUnSummon() {
         if (!this.level().isClientSide) {
@@ -103,14 +105,11 @@ public class SummonedHauntedKnightEntity extends HauntedKnightEntity implements 
         super.onRemovedFromWorld();
     }
 
-    private IAttackGoal createAttackGoal(int attackState, int attackMaxTick) {
-        return new IAttackGoal(this, 0, attackState, 0, attackMaxTick, 48, 3.5f) {
+    private IAttackGoal createAttackGoal(int attackState, int attackMaxTick, int attackSeeTick) {
+        return new IAttackGoal(this, 0, attackState, 0, attackMaxTick, attackSeeTick, 3.0f) {
             @Override
             public boolean canUse() {
-                boolean chance = SummonedHauntedKnightEntity.this.getRandom().nextFloat() * 35 < 16;
-                boolean hasTarget = SummonedHauntedKnightEntity.this.getTarget() != null;
-
-                return super.canUse() && chance && hasTarget;
+                return super.canUse() && SummonedHauntedKnightEntity.this.getRandom().nextFloat() < 0.28f;
             }
         };
     }
