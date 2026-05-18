@@ -55,7 +55,10 @@ public abstract class BaseSpell extends AbstractSpell {
     @Override public DefaultConfig getDefaultConfig() { return spellConfig; }
 
     @Override public CastType getCastType() { return castType; }
-    @Override public boolean canBeInterrupted(Player player) { return interrupted; }
+    @Override public boolean canBeInterrupted(Player player) {
+        if (interrupted) return super.canBeInterrupted(player);
+        return false;
+    }
 
     @Override public Optional<SoundEvent> getCastStartSound() {
         if (this.castStartSound == null) return super.getCastStartSound();
