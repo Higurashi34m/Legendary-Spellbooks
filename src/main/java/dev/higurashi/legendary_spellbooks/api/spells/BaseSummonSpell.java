@@ -35,7 +35,7 @@ public abstract class BaseSummonSpell extends BaseSpell {
     protected abstract Entity[] getEntitiesToSummon(Level level, LivingEntity caster, int spellLevel);
 
     protected Vec3 getSpawnOffset(int index, int totalCount, float yaw, LivingEntity caster) {
-        return GeometryUtils.getPointInCircle(caster.position(), 1.5, totalCount, index, caster.getYRot());
+        return GeometryUtils.getPointInCircle(Vec3.ZERO, 1.5, totalCount, index, caster.getYRot());
     }
 
     protected int getSummonTime(int spellLevel, LivingEntity caster) {
