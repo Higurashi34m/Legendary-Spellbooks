@@ -24,7 +24,7 @@ import net.minecraft.world.phys.Vec3;
 import java.util.List;
 
 public class FlamebornDriftSpell extends BaseSpell {
-    public static final SpinAttackType FLAMEBORN = new SpinAttackType(ResourceLocation.withDefaultNamespace("textures/entity/trident_riptide.png"), false);
+    public static final SpinAttackType FLAMEBORN = new SpinAttackType(ResourceLocation.fromNamespaceAndPath(LegendarySpellbooks.MOD_ID, "textures/entity/flameborn_drift.png"), false);
 
     private static final ResourceLocation spellResource = ResourceLocation.fromNamespaceAndPath(LegendarySpellbooks.MOD_ID, "flameborn_drift");
     private static final DefaultConfig spellConfig = new DefaultConfig()
