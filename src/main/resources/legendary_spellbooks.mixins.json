@@ -6,6 +6,7 @@
   "refmap": "${mod_id}.refmap.json",
   "mixins": [
     "LivingEntityMixin",
+    "SpellDataMixin",
     "entities.AnnihilationPursuerEntityMixin",
     "entities.spell.AnnihilationBeamEntityMixin",
     "entities.spell.AnnihilationExplosionEntityMixin",

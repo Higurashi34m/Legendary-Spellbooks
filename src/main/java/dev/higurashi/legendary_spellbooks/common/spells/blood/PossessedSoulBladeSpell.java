@@ -1,7 +1,7 @@
 package dev.higurashi.legendary_spellbooks.common.spells.blood;
 
 import dev.higurashi.legendary_spellbooks.LegendarySpellbooks;
-import dev.higurashi.legendary_spellbooks.api.spells.BaseSpell;
+import dev.higurashi.legendary_spellbooks.api.spells.BaseDoubleSchoolSpell;
 import dev.higurashi.legendary_spellbooks.api.utils.ComponentUtils;
 import dev.higurashi.legendary_spellbooks.api.utils.GeometryUtils;
 import dev.higurashi.legendary_spellbooks.api.utils.RaycastUtils;
@@ -10,6 +10,7 @@ import io.redspace.ironsspellbooks.api.config.DefaultConfig;
 import io.redspace.ironsspellbooks.api.magic.MagicData;
 import io.redspace.ironsspellbooks.api.registry.SchoolRegistry;
 import io.redspace.ironsspellbooks.api.spells.CastSource;
+import io.redspace.ironsspellbooks.api.spells.CastType;
 import io.redspace.ironsspellbooks.api.spells.SpellAnimations;
 import io.redspace.ironsspellbooks.api.spells.SpellRarity;
 import net.miauczel.legendary_monsters.Particle.custom.Circle;
@@ -28,16 +29,18 @@ import net.minecraft.world.phys.Vec3;
 import java.util.List;
 import java.util.Optional;
 
-public class PossessedSoulBladeSpell extends BaseSpell {
+public class PossessedSoulBladeSpell extends BaseDoubleSchoolSpell {
     private static final ResourceLocation spellResource = ResourceLocation.fromNamespaceAndPath(LegendarySpellbooks.MOD_ID, "possessed_soul_blade");
     private static final DefaultConfig spellConfig = new DefaultConfig()
-            .setSchoolResource(SchoolRegistry.BLOOD_RESOURCE)
+            .setSchoolResource(SchoolRegistry.EVOCATION_RESOURCE)
             .setMinRarity(SpellRarity.EPIC)
             .setCooldownSeconds(20)
             .setMaxLevel(4).build();
 
-    public PossessedSoulBladeSpell() {
-        super(spellResource, spellConfig, true);
+    public PossessedSoulBladeSpell() { this(1); }
+
+    public PossessedSoulBladeSpell(int level) {
+        super(spellResource, spellConfig, CastType.LONG, level, SchoolRegistry.BLOOD);
         this.castTime = 35;
         this.baseManaCost = 125;
         this.baseSpellPower = 6;
@@ -48,6 +51,16 @@ public class PossessedSoulBladeSpell extends BaseSpell {
 
         this.castStartAnimation = SpellAnimations.CHARGE_SPIT_ANIMATION;
         this.castFinishAnimation = SpellAnimations.CAST_T_POSE;
+    }
+
+    @Override
+    public int getChangeSchoolLevel() {
+        return this.getMaxLevel() / 2 + 1;
+    }
+
+    @Override
+    public BaseDoubleSchoolSpell newDoubleSchoolSpell(int newLevel) {
+        return new PossessedSoulBladeSpell(newLevel);
     }
 
     @Override
@@ -65,7 +78,7 @@ public class PossessedSoulBladeSpell extends BaseSpell {
 
     @Override
     public void onCast(Level level, int spellLevel, LivingEntity caster, CastSource source, MagicData magicData) {
-        if (level instanceof ServerLevel serverLevel) serverLevel.sendParticles(new Circle.RingData(0.0f, (float) (Math.PI / 2.0f), 30, 1.0f, 0.0f, 0.0f, 1.0f, caster.getBbWidth() * 60.0f, false, Circle.EnumRingBehavior.GROW), caster.getX(), caster.getY(), caster.getZ(), 1, 0.0, 0.0, 0.0, 0.0);
+        if (level instanceof ServerLevel serverLevel) serverLevel.sendParticles(new Circle.RingData(0.0f, (float) (Math.PI / 2.0f), 30, isAnother(spellLevel) ? 1.0f : 0.0f, isAnother(spellLevel) ? 0.0f : 0.9f, isAnother(spellLevel) ? 0.0f : 0.8f, 1.0f, caster.getBbWidth() * 60.0f, false, Circle.EnumRingBehavior.GROW), caster.getX(), caster.getY(), caster.getZ(), 1, 0.0, 0.0, 0.0, 0.0);
         CameraShakeEntity.cameraShake(level, caster.position(), 20.0f, 0.1f, 0, 20);
 
         int damage = (int) getSpellPower(spellLevel, caster);
@@ -81,11 +94,11 @@ public class PossessedSoulBladeSpell extends BaseSpell {
                 if (spawnPos == null) continue;
 
                 float yaw = GeometryUtils.getYawBetween(caster.position(), spawnPos);
-                SoulBladeEntity blade = new SoulBladeEntity(level, spawnPos.x, spawnPos.y, spawnPos.z, yaw, i * 2, caster, damage, true);
+                SoulBladeEntity blade = new SoulBladeEntity(level, spawnPos.x, spawnPos.y, spawnPos.z, yaw, i * 2, caster, damage, isAnother(spellLevel));
 
                 level.addFreshEntity(blade);
 
-                if (level instanceof ServerLevel serverLevel) serverLevel.sendParticles(new Circle.RingData(0,  ((float)Math.PI / 2.0f), 35, 1.0f, 0.0f, 0.0f, 0.8f, 15.0f, false, Circle.EnumRingBehavior.GROW), spawnPos.x, spawnPos.y + 0.2f, spawnPos.z, 1, 0, 0, 0, 0);
+                if (level instanceof ServerLevel serverLevel) serverLevel.sendParticles(new Circle.RingData(0,  ((float)Math.PI / 2.0f), 35,  isAnother(spellLevel) ? 1.0f : 0.0f, isAnother(spellLevel) ? 0.0f : 0.9f, isAnother(spellLevel) ? 0.0f : 0.8f, 0.8f, 15.0f, false, Circle.EnumRingBehavior.GROW), spawnPos.x, spawnPos.y + 0.2f, spawnPos.z, 1, 0, 0, 0, 0);
             }
         }
 
