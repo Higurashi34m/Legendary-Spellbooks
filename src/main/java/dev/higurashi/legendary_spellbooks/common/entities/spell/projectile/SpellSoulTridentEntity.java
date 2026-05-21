@@ -36,6 +36,7 @@ public class SpellSoulTridentEntity extends SoulTridentEntity {
 
     @Override
     public boolean isAlliedTo(Entity target) {
+        if (getOwner() == null) return false;
         return target.isAlliedTo(getOwner()) || getOwner().isAlliedTo(target);
     }
 
