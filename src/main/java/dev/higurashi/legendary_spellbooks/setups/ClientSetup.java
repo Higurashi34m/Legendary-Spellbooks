@@ -5,6 +5,7 @@ import dev.higurashi.legendary_spellbooks.client.renderer.entities.spell.project
 import dev.higurashi.legendary_spellbooks.client.renderer.entities.spell.summoned.SummonedSkeloraptorRenderer;
 import dev.higurashi.legendary_spellbooks.client.renderer.spell.animation.AnnihilationBombChargeLayer;
 import dev.higurashi.legendary_spellbooks.client.renderer.spell.animation.HematiteTrishulaChargeLayer;
+import dev.higurashi.legendary_spellbooks.client.renderer.spell.animation.PaladinWingsLayer;
 import dev.higurashi.legendary_spellbooks.registries.LSEntityRegistry;
 import dev.higurashi.legendary_spellbooks.registries.LSItemRegistry;
 import io.redspace.ironsspellbooks.render.SpellBookCurioRenderer;
@@ -55,6 +56,7 @@ public class ClientSetup {
             if (renderer != null) {
                 renderer.addLayer(new AnnihilationBombChargeLayer<>(renderer));
                 renderer.addLayer(new HematiteTrishulaChargeLayer<>(renderer));
+                renderer.addLayer(new PaladinWingsLayer<>(renderer));
             }
         }
     }

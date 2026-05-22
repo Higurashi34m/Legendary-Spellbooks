@@ -1,10 +1,7 @@
 package dev.higurashi.legendary_spellbooks.registries;
 
 import dev.higurashi.legendary_spellbooks.LegendarySpellbooks;
-import dev.higurashi.legendary_spellbooks.common.effects.AmbushThornsEffect;
-import dev.higurashi.legendary_spellbooks.common.effects.AnnihilationResonanceEffect;
-import dev.higurashi.legendary_spellbooks.common.effects.BeamEffect;
-import dev.higurashi.legendary_spellbooks.common.effects.FlamebornDriftEffect;
+import dev.higurashi.legendary_spellbooks.common.effects.*;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -19,4 +16,5 @@ public class LSEffectRegistry {
     public static final RegistryObject<MobEffect> ANNIHILATION_RESONANCE_EFFECT = EFFECTS.register("annihilation_resonance", AnnihilationResonanceEffect::new);
     public static final RegistryObject<MobEffect> AMBUSH_THORNS_EFFECT = EFFECTS.register("ambush_thorns", AmbushThornsEffect::new);
     public static final RegistryObject<MobEffect> FLAMEBORN_DASH_EFFECT = EFFECTS.register("flameborn_dash", FlamebornDriftEffect::new);
+    public static final RegistryObject<MobEffect> POSSESSED_WING_EFFECT = EFFECTS.register("possessed_wing", PossessedWingEffect::new);
 }
