@@ -96,4 +96,14 @@ public class LSEntityRegistry {
             .updateInterval(20)
             .clientTrackingRange(4)
             .build(ResourceLocation.fromNamespaceAndPath(LegendarySpellbooks.MOD_ID, "spell_soul_trident_entity").toString()));
+
+    public static final RegistryObject<EntityType<DuneSentinelPhantomEntity>> DUNE_SENTINEL_PHANTOM_ENTITY = ENTITIES.register("dune_sentinel_phantom", () -> EntityType.Builder.<DuneSentinelPhantomEntity>of(DuneSentinelPhantomEntity::new, MobCategory.MISC)
+            .sized(1.25f, 4.0f)
+            .build(ResourceLocation.fromNamespaceAndPath(LegendarySpellbooks.MOD_ID, "dune_sentinel_phantom").toString()));
+
+    public static final RegistryObject<EntityType<SpellBombEntity>> SPELL_BOMB_ENTITY = ENTITIES.register("spell_bomb", () -> EntityType.Builder.<SpellBombEntity>of(SpellBombEntity::new, MobCategory.MISC)
+            .sized(0.5f, 0.5f)
+            .clientTrackingRange(6)
+            .updateInterval(20)
+            .build(ResourceLocation.fromNamespaceAndPath(LegendarySpellbooks.MOD_ID, "spell_bomb").toString()));
 }

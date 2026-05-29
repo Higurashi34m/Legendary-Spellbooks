@@ -1,6 +1,8 @@
 package dev.higurashi.legendary_spellbooks.setups;
 
 import dev.higurashi.legendary_spellbooks.client.renderer.entities.spell.projectile.CumuloChargeRenderer;
+import dev.higurashi.legendary_spellbooks.client.renderer.entities.spell.projectile.DuneSentinelPhantomRenderer;
+import dev.higurashi.legendary_spellbooks.client.renderer.entities.spell.projectile.SpellBombRenderer;
 import dev.higurashi.legendary_spellbooks.client.renderer.entities.spell.projectile.SpellCloudRender;
 import dev.higurashi.legendary_spellbooks.client.renderer.entities.spell.summoned.SummonedSkeloraptorRenderer;
 import dev.higurashi.legendary_spellbooks.client.renderer.spell.animation.AnnihilationBombChargeLayer;
@@ -47,6 +49,9 @@ public class ClientSetup {
         event.registerEntityRenderer(LSEntityRegistry.SPELL_ICE_SPIKE_ENTITY.get(), IceSpikeRenderer::new);
         event.registerEntityRenderer(LSEntityRegistry.SPELL_ANNIHILATION_BOMB_ENTITY.get(), PowerBallBombRenderer::new);
         event.registerEntityRenderer(LSEntityRegistry.SPELL_SOUL_TRIDENT_ENTITY.get(), SoulTridentRenderer::new);
+
+        event.registerEntityRenderer(LSEntityRegistry.DUNE_SENTINEL_PHANTOM_ENTITY.get(), DuneSentinelPhantomRenderer::new);
+        event.registerEntityRenderer(LSEntityRegistry.SPELL_BOMB_ENTITY.get(), SpellBombRenderer::new);
     }
 
     @SubscribeEvent

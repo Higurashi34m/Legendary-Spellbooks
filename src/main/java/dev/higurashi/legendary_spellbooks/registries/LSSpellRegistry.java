@@ -8,6 +8,7 @@ import dev.higurashi.legendary_spellbooks.common.spells.blood.PossessedWingSpell
 import dev.higurashi.legendary_spellbooks.common.spells.evocation.CollapsedKingdomsLegionSpell;
 import dev.higurashi.legendary_spellbooks.common.spells.fire.FlameEaterSpell;
 import dev.higurashi.legendary_spellbooks.common.spells.fire.FlameSectorSpell;
+import dev.higurashi.legendary_spellbooks.common.spells.fire.SentinelSaturationSpell;
 import dev.higurashi.legendary_spellbooks.common.spells.ice.GlacierEruptionSpell;
 import dev.higurashi.legendary_spellbooks.common.spells.ice.GlacierRingburstSpell;
 import dev.higurashi.legendary_spellbooks.common.spells.lightning.*;
@@ -46,6 +47,7 @@ public class LSSpellRegistry {
     // Fire
     public static final RegistryObject<AbstractSpell> FLAME_EATER_SPELL = register(new FlameEaterSpell());
     public static final RegistryObject<AbstractSpell> FLAME_SECTOR_SPELL = register(new FlameSectorSpell());
+    public static final RegistryObject<AbstractSpell> SENTINEL_SATURATION_SPELL = register(new SentinelSaturationSpell());
 
     // Ice
     public static final RegistryObject<AbstractSpell> GLACIER_ERUPTION_SPELL = register(new GlacierEruptionSpell());
