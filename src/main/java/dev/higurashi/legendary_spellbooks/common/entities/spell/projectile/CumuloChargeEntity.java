@@ -1,5 +1,7 @@
 package dev.higurashi.legendary_spellbooks.common.entities.spell.projectile;
 
+import io.redspace.ironsspellbooks.api.magic.MagicData;
+import io.redspace.ironsspellbooks.entity.mobs.AntiMagicSusceptible;
 import net.miauczel.legendary_monsters.Particle.custom.Circle;
 import net.miauczel.legendary_monsters.effect.ModEffects;
 import net.minecraft.core.particles.ParticleTypes;
@@ -19,7 +21,7 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 
-public class CumuloChargeEntity extends Mob {
+public class CumuloChargeEntity extends Mob implements AntiMagicSusceptible {
     private static final EntityDataAccessor<Boolean> DATA_HAS_HIT = SynchedEntityData.defineId(CumuloChargeEntity.class, EntityDataSerializers.BOOLEAN);
     private static final EntityDataAccessor<Integer> DATA_DURATION = SynchedEntityData.defineId(CumuloChargeEntity.class, EntityDataSerializers.INT);
 
@@ -228,5 +230,10 @@ public class CumuloChargeEntity extends Mob {
 
     public static AttributeSupplier.Builder createAttributes() {
         return Mob.createMobAttributes().add(Attributes.ATTACK_DAMAGE).add(Attributes.MAX_HEALTH, 1.0F);
+    }
+
+    @Override
+    public void onAntiMagic(MagicData magicData) {
+        this.discard();
     }
 }
