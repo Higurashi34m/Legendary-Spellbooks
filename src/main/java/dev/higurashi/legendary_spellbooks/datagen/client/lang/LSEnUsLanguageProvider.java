@@ -74,6 +74,7 @@ public class LSEnUsLanguageProvider extends BaseLanguageProvider {
 
         // Blood
         addSpell(LSSpellRegistry.POSSESSED_SOUL_BLADE_SPELL, "Possessed Soul Blade", "Conjure multiple expanding rings of spectral blades from the ground centered on your position. The color of the blades changes based on the spell level.");
+        addSpell(LSSpellRegistry.POSSESSED_FALLING_SOUL_BLADE_SPELL, "Possessed Falling Soul Blade", "Rain down multiple expanding rings of spectral blades centered on your position. The color of the blades changes based on the spell level.");
         addSpell(LSSpellRegistry.HEMATITE_TRISHULA_SPELL, "Hematite Trishula", "Hurls a large red trident that explodes and scatters multiple explosions around the impact area upon hitting the ground.");
         addSpell(LSSpellRegistry.POSSESSED_WING_SPELL, "Possessed Wings", "Manifest red wings for a short duration, allowing Elytra flight and increasing your movement speed, jump height, and step height. While active, your attacks inflict the Soul Fracture debuff on targets.");
 

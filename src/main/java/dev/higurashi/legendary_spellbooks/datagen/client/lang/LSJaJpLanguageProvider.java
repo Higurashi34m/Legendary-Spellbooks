@@ -71,6 +71,7 @@ public class LSJaJpLanguageProvider extends BaseLanguageProvider {
 
         // Blood
         addSpell(LSSpellRegistry.POSSESSED_SOUL_BLADE_SPELL, "憑依された魂の剣", "自分を中心に、地面から複数の円状に広がる幻影の剣を突き出させる。魔法のレベルによって剣の色が変化する。");
+        addSpell(LSSpellRegistry.POSSESSED_FALLING_SOUL_BLADE_SPELL, "憑依された落下する魂の剣", "自分を中心に、地面から複数の円状に広がる幻影の剣を落とす。魔法のレベルによって剣の色が変化する。");
         addSpell(LSSpellRegistry.HEMATITE_TRISHULA_SPELL, "ヘマタイト・トリシューラ", "大きな赤い三叉矛を前方に放つ。地面に当たるとすると消滅し、着弾地点の周囲に複数の爆発を巻き起こす。");
         addSpell(LSSpellRegistry.POSSESSED_WING_SPELL, "憑依された翼", "自身に赤い翼を一定時間つける。この翼がついている間、エリトラ飛行が可能になり、ジャンプ力、移動速度、段の高さが上昇する。また、攻撃時にソウルフラクチャーのデバフを与える。");
 
