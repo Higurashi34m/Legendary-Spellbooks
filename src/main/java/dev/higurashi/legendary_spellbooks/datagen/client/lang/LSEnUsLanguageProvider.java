@@ -73,8 +73,9 @@ public class LSEnUsLanguageProvider extends BaseLanguageProvider {
         addSpell(LSSpellRegistry.FLAMEBORN_DRIFT_SPELL, "Flameborn Drift", "Dash forward wrapped in green fire. Upon colliding with a creature, you stop and deal area damage.");
 
         // Blood
-        addSpell(LSSpellRegistry.POSSESSED_SOUL_BLADE_SPELL, "Possessed Soul Blade", "Conjure multiple expanding rings of red spectral blades from the ground centered on your position.");
+        addSpell(LSSpellRegistry.POSSESSED_SOUL_BLADE_SPELL, "Possessed Soul Blade", "Conjure multiple expanding rings of spectral blades from the ground centered on your position. The color of the blades changes based on the spell level.");
         addSpell(LSSpellRegistry.HEMATITE_TRISHULA_SPELL, "Hematite Trishula", "Hurls a large red trident that explodes and scatters multiple explosions around the impact area upon hitting the ground.");
+        addSpell(LSSpellRegistry.POSSESSED_WING_SPELL, "Possessed Wings", "Manifest red wings for a short duration, allowing Elytra flight and increasing your movement speed, jump height, and step height. While active, your attacks inflict the Soul Fracture debuff on targets.");
 
         // Evocation
         addSpell(LSSpellRegistry.COLLAPSED_KINGDOMS_LEGION_SPELL, "Collapsed Kingdom's Legion", "Summons the spectral knights of the Collapsed Kingdom, bound by ancient duty to arise from the ashes and strike down your foes.");
@@ -82,7 +83,7 @@ public class LSEnUsLanguageProvider extends BaseLanguageProvider {
         // Fire
         addSpell(LSSpellRegistry.FLAME_EATER_SPELL, "Flame Eater", "Target multiple creatures to erupt bursts of fire at their feet. This spell fails if targets are too high above the ground.");
         addSpell(LSSpellRegistry.FLAME_SECTOR_SPELL, "Flame Sector", "Emit a radial burst of fire in equally spaced directions. The flames travel along the ground.");
-
+        addSpell(LSSpellRegistry.SENTINEL_SATURATION_SPELL, "Sentinel Saturation", "Summon multiple spectral images of the Dune Sentinel behind you to unleash a massive barrage of bombs, carpet-bombing the target area.");
         // Ice
         addSpell(LSSpellRegistry.GLACIER_ERUPTION_SPELL, "Glacier Eruption", "Conjure a line of ice wedges in front of you, freezing any creatures they strike.");
         addSpell(LSSpellRegistry.GLACIER_RINGBURST_SPELL, "Glacier Ringburst", "Conjure multiple expanding rings of ice centered on your position, freezing nearby creatures.");

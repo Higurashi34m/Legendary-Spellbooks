@@ -70,8 +70,9 @@ public class LSJaJpLanguageProvider extends BaseLanguageProvider {
         addSpell(LSSpellRegistry.FLAMEBORN_DRIFT_SPELL, "フレイムボーンドリフト", "緑色の炎を纏って前方に高速で突進する。敵に衝突すると停止し、その周囲に範囲ダメージを与える。");
 
         // Blood
-        addSpell(LSSpellRegistry.POSSESSED_SOUL_BLADE_SPELL, "憑依された魂の剣", "自分を中心に、地面から複数の円状に広がる赤い幻影の剣を突き出させる。");
+        addSpell(LSSpellRegistry.POSSESSED_SOUL_BLADE_SPELL, "憑依された魂の剣", "自分を中心に、地面から複数の円状に広がる幻影の剣を突き出させる。魔法のレベルによって剣の色が変化する。");
         addSpell(LSSpellRegistry.HEMATITE_TRISHULA_SPELL, "ヘマタイト・トリシューラ", "大きな赤い三叉矛を前方に放つ。地面に当たるとすると消滅し、着弾地点の周囲に複数の爆発を巻き起こす。");
+        addSpell(LSSpellRegistry.POSSESSED_WING_SPELL, "憑依された翼", "自身に赤い翼を一定時間つける。この翼がついている間、エリトラ飛行が可能になり、ジャンプ力、移動速度、段の高さが上昇する。また、攻撃時にソウルフラクチャーのデバフを与える。");
 
         // Evocation
         addSpell(LSSpellRegistry.COLLAPSED_KINGDOMS_LEGION_SPELL, "崩壊せし王国の軍勢", "崩壊した王国の幻影の騎士たちを召喚する。彼らは古の義務に縛られ、灰の中から立ち上がり、汝の敵を打ち倒すだろう。");
@@ -79,6 +80,7 @@ public class LSJaJpLanguageProvider extends BaseLanguageProvider {
         // Fire
         addSpell(LSSpellRegistry.FLAME_EATER_SPELL, "火炎喰らい", "複数の相手の足元から炎を噴出させる。相手の位置が高すぎると、炎を届かせることができない。");
         addSpell(LSSpellRegistry.FLAME_SECTOR_SPELL, "フレイムセクター", "自分を中心に、放射状に広がる炎を噴出させる。炎は地面を伝って進む。");
+        addSpell(LSSpellRegistry.SENTINEL_SATURATION_SPELL, "センチネル・サチュレーション", "背後に複数のデューン・センチネルの幻影を召喚し、大量の爆弾を一斉に放って特定位置を絨毯爆撃する。");
 
         // Ice
         addSpell(LSSpellRegistry.GLACIER_ERUPTION_SPELL, "グレイシア・イラプション", "前方の直線上に巨大な氷の楔を次々と突き出させ、触れたものを凍らせる。");
