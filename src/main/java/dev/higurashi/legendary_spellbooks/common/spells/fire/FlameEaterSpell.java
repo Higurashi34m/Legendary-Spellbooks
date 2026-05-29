@@ -60,7 +60,7 @@ public class FlameEaterSpell extends BaseSpell {
 
     @Override
     public ICastDataSerializable getEmptyCastData() {
-        return new MultiTargetEntityCastData();
+        return new MultiTargetEntityCastData((Entity[]) null);
     }
 
     @Override
@@ -75,7 +75,7 @@ public class FlameEaterSpell extends BaseSpell {
             PlayerRecasts recasts = magicData.getPlayerRecasts();
 
             if (!recasts.hasRecastForSpell(getSpellId())) {
-                recasts.addRecast(new RecastInstance(getSpellId(), spellLevel, getRecastCount(spellLevel, caster), 40, source, new MultiTargetEntityCastData(targetEntityCastData.getTarget((ServerLevel) level))), magicData);
+                recasts.addRecast(new RecastInstance(getSpellId(), spellLevel, getRecastCount(spellLevel, caster), 40, source, new MultiTargetEntityCastData((Entity) targetEntityCastData.getTarget((ServerLevel) level))), magicData);
             } else {
                 RecastInstance recast = recasts.getRecastInstance(this.getSpellId());
 

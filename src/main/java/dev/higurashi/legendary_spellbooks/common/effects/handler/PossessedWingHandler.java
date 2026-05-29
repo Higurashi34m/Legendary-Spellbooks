@@ -20,8 +20,9 @@ public class PossessedWingHandler {
         MobEffect effect = LSEffectRegistry.POSSESSED_WING_EFFECT.get();
         if (target == null || caster == null) return;
         if (!(caster instanceof LivingEntity livingCaster) || !(livingCaster.hasEffect(effect))) return;
+        if (!(livingCaster.equals(event.getSource().getEntity()))) return;
 
-        EntityUtil.applyStackingEffect(target, ModEffects.SOUL_FRACTURE.get(), 1, livingCaster.getEffect(effect).getAmplifier(), 60);
+        EntityUtil.applyStackingEffect(target, ModEffects.SOUL_FRACTURE.get(), 1, 1, 60);
     }
 
     @SubscribeEvent
