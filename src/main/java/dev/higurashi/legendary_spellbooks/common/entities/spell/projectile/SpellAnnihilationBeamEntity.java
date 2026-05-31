@@ -3,8 +3,10 @@ package dev.higurashi.legendary_spellbooks.common.entities.spell.projectile;
 import dev.higurashi.legendary_spellbooks.api.entities.helper.IWarmupEntity;
 import dev.higurashi.legendary_spellbooks.registries.LSEntityRegistry;
 import dev.higurashi.legendary_spellbooks.registries.LSSpellRegistry;
+import io.redspace.ironsspellbooks.api.magic.MagicData;
 import io.redspace.ironsspellbooks.api.spells.AbstractSpell;
 import io.redspace.ironsspellbooks.damage.DamageSources;
+import io.redspace.ironsspellbooks.entity.mobs.AntiMagicSusceptible;
 import net.miauczel.legendary_monsters.Particle.ModParticles;
 import net.miauczel.legendary_monsters.Particle.custom.LightningParticle;
 import net.miauczel.legendary_monsters.effect.ModEffects;
@@ -28,12 +30,15 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.Vec3;
 import org.jetbrains.annotations.NotNull;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-public class SpellAnnihilationBeamEntity extends Entity implements IWarmupEntity {
+public class SpellAnnihilationBeamEntity extends Entity implements IWarmupEntity, AntiMagicSusceptible {
     private static final EntityDataAccessor<Integer> MAX_RANGE = SynchedEntityData.defineId(SpellAnnihilationBeamEntity.class, EntityDataSerializers.INT);
     private static final EntityDataAccessor<Integer> WARMUP    = SynchedEntityData.defineId(SpellAnnihilationBeamEntity.class, EntityDataSerializers.INT);
+    private final List<SpellAnnihilationExplosionEntity> spawnedExplosions = new ArrayList<>();
+    private final List<SpellSmallAnnihilationBombEntity> spawnedBullets = new ArrayList<>();
 
     public double collidePosX;
     public double collidePosY;
@@ -173,6 +178,10 @@ public class SpellAnnihilationBeamEntity extends Entity implements IWarmupEntity
         Vec3 direction = beamVector.normalize();
 
         if (Math.abs(direction.y) < 0.25) {
+            if (divisions <= 0) {
+                this.spawnExplosion(start.add(beamVector.scale(0.5)));
+                return;
+            }
             for (int i = 0; i <= divisions; i++) {
                 double pct = (double) i / divisions;
                 Vec3 checkPoint = start.add(beamVector.scale(pct));
@@ -192,7 +201,9 @@ public class SpellAnnihilationBeamEntity extends Entity implements IWarmupEntity
             SpellAnnihilationExplosionEntity explosion = new SpellAnnihilationExplosionEntity(this.level(), this.caster, this.damage, this.hpDamage, 2, (int) (this.lifeTick * 0.5));
             explosion.setPos(hitPos);
             explosion.setYRot(this.getYRot());
+            explosion.setParentBeam(this);
             this.level().addFreshEntity(explosion);
+            this.spawnedExplosions.add(explosion);
         }
     }
 
@@ -215,6 +226,25 @@ public class SpellAnnihilationBeamEntity extends Entity implements IWarmupEntity
     }
 
     @Override
+    public void onAntiMagic(MagicData magicData) {
+        for (SpellAnnihilationExplosionEntity explosion : this.spawnedExplosions) {
+            if (explosion != null && explosion.isAlive()) {
+                explosion.onAntiMagic(magicData);
+            }
+        }
+        this.spawnedExplosions.clear();
+
+        for (SpellSmallAnnihilationBombEntity bullet : this.spawnedBullets) {
+            if (bullet != null && bullet.isAlive()) {
+                bullet.discard();
+            }
+        }
+        this.spawnedBullets.clear();
+
+        this.discard();
+    }
+
+    @Override
     protected void defineSynchedData() {
         this.entityData.define(MAX_RANGE, 30);
         this.entityData.define(WARMUP, 0);
@@ -229,4 +259,10 @@ public class SpellAnnihilationBeamEntity extends Entity implements IWarmupEntity
 
     @Override public int getWarmup()           { return entityData.get(WARMUP); }
     @Override public void setWarmup(int ticks) { this.entityData.set(WARMUP, ticks); }
+
+    public void trackBullet(SpellSmallAnnihilationBombEntity bullet) {
+        if (!this.level().isClientSide()) {
+            this.spawnedBullets.add(bullet);
+        }
+    }
 }

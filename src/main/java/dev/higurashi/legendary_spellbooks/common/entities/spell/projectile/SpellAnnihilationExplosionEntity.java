@@ -23,11 +23,14 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
 import org.jetbrains.annotations.NotNull;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class SpellAnnihilationExplosionEntity extends Entity implements AntiMagicSusceptible, IWarmupEntity {
     private static final EntityDataAccessor<Integer> WARMUP    = SynchedEntityData.defineId(SpellAnnihilationExplosionEntity.class, EntityDataSerializers.INT);
     private static final EntityDataAccessor<Integer> LIFE_TICK = SynchedEntityData.defineId(SpellAnnihilationExplosionEntity.class, EntityDataSerializers.INT);
+    private final List<SpellSmallAnnihilationBombEntity> spawnedBullets = new ArrayList<>();
+    private SpellAnnihilationBeamEntity parentBeam;
 
     private LivingEntity caster;
     private float damage;
@@ -116,6 +119,10 @@ public class SpellAnnihilationExplosionEntity extends Entity implements AntiMagi
             SpellSmallAnnihilationBombEntity bullet = new SpellSmallAnnihilationBombEntity(this.level(), spawnPos, this.caster, damage, this.hpDamage);
             bullet.shoot(cos, 2.0 + (random.nextFloat() * 0.3), sin, 0.5f, 1.0f);
             this.level().addFreshEntity(bullet);
+            this.spawnedBullets.add(bullet);
+            if (this.parentBeam != null) {
+                this.parentBeam.trackBullet(bullet);
+            }
         }
     }
 
@@ -127,7 +134,17 @@ public class SpellAnnihilationExplosionEntity extends Entity implements AntiMagi
     @Override protected void readAdditionalSaveData(@NotNull CompoundTag tag) {}
     @Override protected void addAdditionalSaveData(@NotNull CompoundTag tag) {}
 
-    @Override public void onAntiMagic(MagicData magicData) { this.discard(); }
+    @Override
+    public void onAntiMagic(MagicData magicData) {
+        for (SpellSmallAnnihilationBombEntity bullet : this.spawnedBullets) {
+            if (bullet != null && bullet.isAlive()) {
+                bullet.discard();
+            }
+        }
+        this.spawnedBullets.clear();
+
+        this.discard();
+    }
     @Override public boolean alwaysAccepts() { return super.alwaysAccepts(); }
 
     @Override public int getWarmup()           { return this.entityData.get(WARMUP); }
@@ -135,4 +152,8 @@ public class SpellAnnihilationExplosionEntity extends Entity implements AntiMagi
 
     public int getLifeTick()           { return this.entityData.get(LIFE_TICK); }
     public void setLifeTick(int ticks) { this.entityData.set(LIFE_TICK, ticks); }
+
+    public void setParentBeam(SpellAnnihilationBeamEntity parentBeam) {
+        this.parentBeam = parentBeam;
+    }
 }
