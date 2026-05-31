@@ -12,6 +12,7 @@ import net.miauczel.legendary_monsters.entity.AnimatedMonster.Mobs.SpaceStation.
 import net.miauczel.legendary_monsters.entity.AnimatedMonster.Mobs.SpaceStation.Flameborn.FlamebornWarriorEntity;
 import net.miauczel.legendary_monsters.entity.AnimatedMonster.Projectile.AnnihilationBombEntity;
 import net.miauczel.legendary_monsters.entity.AnimatedMonster.Projectile.CloudEntity;
+import net.miauczel.legendary_monsters.entity.AnimatedMonster.Projectile.SmallAnnihilationBombEntity;
 import net.miauczel.legendary_monsters.entity.AnimatedMonster.Projectile.SoulTridentEntity;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EntityType;
@@ -106,4 +107,20 @@ public class LSEntityRegistry {
             .clientTrackingRange(6)
             .updateInterval(20)
             .build(ResourceLocation.fromNamespaceAndPath(LegendarySpellbooks.MOD_ID, "spell_bomb").toString()));
+
+    public static final RegistryObject<EntityType<SpellAnnihilationBeamEntity>> SPELL_ANNIHILATION_BEAM = ENTITIES.register("spell_annihilation_beam", () -> EntityType.Builder.<SpellAnnihilationBeamEntity>of(SpellAnnihilationBeamEntity::new, MobCategory.MISC)
+            .fireImmune()
+            .sized(1.0f, 1.0f)
+            .clientTrackingRange(6)
+            .build(ResourceLocation.fromNamespaceAndPath(LegendarySpellbooks.MOD_ID, "spell_annihilation_beam").toString()));
+
+    public static final RegistryObject<EntityType<?>> SPELL_ANNIHILATION_EXPLOSION = ENTITIES.register("spell_annihilation_explosion", () -> EntityType.Builder.of(SpellAnnihilationExplosionEntity::new, MobCategory.MISC)
+            .fireImmune()
+            .sized(2.0f, 2.5f)
+            .build(ResourceLocation.fromNamespaceAndPath(LegendarySpellbooks.MOD_ID, "spell_annihilation_explosion").toString()));
+
+    public static final RegistryObject<EntityType<SmallAnnihilationBombEntity>> SPELL_SMALL_ANNIHILATION_BOMB = ENTITIES.register("spell_small_annihilation_bomb", () -> EntityType.Builder.<SmallAnnihilationBombEntity>of(SpellSmallAnnihilationBombEntity::new, MobCategory.MISC)
+            .fireImmune()
+            .sized(0.5f, 0.5f)
+            .build(ResourceLocation.fromNamespaceAndPath(LegendarySpellbooks.MOD_ID, "spell_small_annihilation_bomb").toString()));
 }

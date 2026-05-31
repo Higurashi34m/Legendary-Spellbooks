@@ -1,9 +1,6 @@
 package dev.higurashi.legendary_spellbooks.setups;
 
-import dev.higurashi.legendary_spellbooks.client.renderer.entities.spell.projectile.CumuloChargeRenderer;
-import dev.higurashi.legendary_spellbooks.client.renderer.entities.spell.projectile.DuneSentinelPhantomRenderer;
-import dev.higurashi.legendary_spellbooks.client.renderer.entities.spell.projectile.SpellBombRenderer;
-import dev.higurashi.legendary_spellbooks.client.renderer.entities.spell.projectile.SpellCloudRender;
+import dev.higurashi.legendary_spellbooks.client.renderer.entities.spell.projectile.*;
 import dev.higurashi.legendary_spellbooks.client.renderer.entities.spell.summoned.SummonedSkeloraptorRenderer;
 import dev.higurashi.legendary_spellbooks.client.renderer.spell.animation.AnnihilationBombChargeLayer;
 import dev.higurashi.legendary_spellbooks.client.renderer.spell.animation.HematiteTrishulaChargeLayer;
@@ -12,8 +9,10 @@ import dev.higurashi.legendary_spellbooks.registries.LSEntityRegistry;
 import dev.higurashi.legendary_spellbooks.registries.LSItemRegistry;
 import io.redspace.ironsspellbooks.render.SpellBookCurioRenderer;
 import net.miauczel.legendary_monsters.entity.ProjectileEntityRenderer.PowerBallBombRenderer;
+import net.miauczel.legendary_monsters.entity.ProjectileEntityRenderer.SmallPowerBallBombRenderer;
 import net.miauczel.legendary_monsters.entity.ProjectileEntityRenderer.SoulTridentRenderer;
 import net.miauczel.legendary_monsters.entity.client.Render.*;
+import net.minecraft.client.renderer.entity.NoopRenderer;
 import net.minecraft.client.renderer.entity.player.PlayerRenderer;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.EntityRenderersEvent;
@@ -52,6 +51,10 @@ public class ClientSetup {
 
         event.registerEntityRenderer(LSEntityRegistry.DUNE_SENTINEL_PHANTOM_ENTITY.get(), DuneSentinelPhantomRenderer::new);
         event.registerEntityRenderer(LSEntityRegistry.SPELL_BOMB_ENTITY.get(), SpellBombRenderer::new);
+
+        event.registerEntityRenderer(LSEntityRegistry.SPELL_ANNIHILATION_BEAM.get(), SpellAnnihilationBeamEntityRenderer::new);
+        event.registerEntityRenderer(LSEntityRegistry.SPELL_SMALL_ANNIHILATION_BOMB.get(), SmallPowerBallBombRenderer::new);
+        event.registerEntityRenderer(LSEntityRegistry.SPELL_ANNIHILATION_EXPLOSION.get(), NoopRenderer::new);
     }
 
     @SubscribeEvent
