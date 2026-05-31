@@ -2,7 +2,9 @@ package dev.higurashi.legendary_spellbooks.common.entities.spell.projectile;
 
 import dev.higurashi.legendary_spellbooks.registries.LSEntityRegistry;
 import dev.higurashi.legendary_spellbooks.registries.LSSpellRegistry;
+import io.redspace.ironsspellbooks.api.magic.MagicData;
 import io.redspace.ironsspellbooks.damage.DamageSources;
+import io.redspace.ironsspellbooks.entity.mobs.AntiMagicSusceptible;
 import net.miauczel.legendary_monsters.Particle.ModParticles;
 import net.miauczel.legendary_monsters.entity.AnimatedMonster.Projectile.AnnihilationBombEntity;
 import net.miauczel.legendary_monsters.entity.AnimatedMonster.Projectile.SmallAnnihilationBombEntity;
@@ -21,9 +23,10 @@ import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.phys.HitResult;
+import net.minecraft.world.phys.Vec3;
 import org.jetbrains.annotations.NotNull;
 
-public class SpellAnnihilationBombEntity extends AnnihilationBombEntity {
+public class SpellAnnihilationBombEntity extends AnnihilationBombEntity implements AntiMagicSusceptible {
     private static final EntityDataAccessor<Float> HP_RATIO = SynchedEntityData.defineId(SpellAnnihilationBombEntity.class, EntityDataSerializers.FLOAT);
 
     public SpellAnnihilationBombEntity(EntityType<AnnihilationBombEntity> type, Level level) {
@@ -85,8 +88,13 @@ public class SpellAnnihilationBombEntity extends AnnihilationBombEntity {
 
             double horizontalLength = Math.sqrt(dirX * dirX + dirZ * dirZ);
 
-            SmallAnnihilationBombEntity projectile = new SmallAnnihilationBombEntity(ModEntities.SMALL_ANNIHILATION_BOMB_ENTITY.get(), level(), caster, getDamage() * damageMultiplier);
-
+            SpellSmallAnnihilationBombEntity projectile = new SpellSmallAnnihilationBombEntity(
+                    this.level(),
+                    new Vec3(spawnX, spawnY, spawnZ),
+                    caster,
+                    this.getDamage() * damageMultiplier,
+                    this.getHpRatio()
+            );
             projectile.moveTo(spawnX, spawnY, spawnZ, i * 11.25f, getXRot());
             projectile.shoot(dirX, dirY + horizontalLength * vyMultiplier, dirZ, speed, 1.0f);
             level().addFreshEntity(projectile);
@@ -111,6 +119,11 @@ public class SpellAnnihilationBombEntity extends AnnihilationBombEntity {
     protected void defineSynchedData() {
         super.defineSynchedData();
         entityData.define(HP_RATIO, 0.0f);
+    }
+
+    @Override
+    public void onAntiMagic(MagicData magicData) {
+        this.discard();
     }
 
     public float getHpRatio() { return this.entityData.get(HP_RATIO); }
