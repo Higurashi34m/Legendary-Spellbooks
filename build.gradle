@@ -1,0 +1,188 @@
+// Plugins
+plugins {
+    id 'java-library'
+    id 'net.neoforged.moddev' version '2.0.141'
+}
+
+// Project
+version = mod_version
+group = mod_group_id
+base.archivesName = mod_id
+
+java {
+    toolchain.languageVersion = JavaLanguageVersion.of(21)
+    withSourcesJar()
+    withJavadocJar()
+}
+
+// NeoForge
+neoForge {
+    version = project.neo_version
+
+    parchment {
+        mappingsVersion = project.mapping_version
+        minecraftVersion = project.mapping_mc_version
+    }
+
+    runs {
+        configureEach {
+            gameDirectory = project.file('run')
+
+            jvmArguments.addAll([
+                    '-Xmx4G', '-Xms2G',
+                    '-XX:+UseG1GC',
+                    '-XX:+ParallelRefProcEnabled',
+                    '-XX:MaxGCPauseMillis=80',
+                    '-XX:+UnlockExperimentalVMOptions',
+                    '-XX:+DisableExplicitGC',
+                    '-XX:G1NewSizePercent=20',
+                    '-XX:G1MaxNewSizePercent=40',
+                    '-XX:G1HeapRegionSize=8M',
+                    '-XX:G1ReservePercent=20',
+                    '-XX:InitiatingHeapOccupancyPercent=15',
+                    '-XX:+AlwaysPreTouch',
+                    '-XX:+UseStringDeduplication',
+                    '-Dfile.encoding=UTF-8'
+            ])
+
+            systemProperty 'forge.logging.markers'             , 'REGISTRIES'
+            systemProperty 'forge.logging.console.level'       , 'debug'
+            systemProperty 'neoforge.enabledGameTestNamespaces', project.mod_id
+        }
+
+        client {
+            client()
+            jvmArguments.addAll(["-XX:+AllowEnhancedClassRedefinition", "-XX:HotswapMode=9"])
+        }
+
+        server {
+            server()
+            gameDirectory = project.file('run/server')
+            programArgument '--nogui'
+        }
+
+        data {
+            data()
+            programArguments.addAll([
+                    '--mod', project.mod_id, '--all',
+                    '--output', file('src/generated/resources/').getAbsolutePath(),
+                    '--existing', file('src/main/resources/').getAbsolutePath()
+            ])
+        }
+
+        gameTestServer {
+            type = "gameTestServer"
+        }
+    }
+
+    mods { "${mod_id}" { sourceSet sourceSets.main } }
+}
+sourceSets.main.resources { srcDir 'src/generated/resources' }
+
+// Repositories
+repositories {
+    mavenLocal()
+    mavenCentral()
+
+    flatDir {
+        dir 'libs'
+    }
+
+    maven {
+        name = "CurseMaven"
+        url = "https://cursemaven.com"
+    }
+
+    maven {
+        name = "JEI"
+        url = "https://maven.blamejared.com/"
+    }
+
+    maven {
+        name = "Iron's Maven"
+        url = "https://code.redspace.io/releases"
+    }
+
+    maven {
+        name = "Curios"
+        url = "https://maven.theillusivec4.top/"
+    }
+
+    maven {
+        name = 'GeckoLib'
+        url = 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/'
+    }
+
+    maven {
+        name = "Player Animator"
+        url = 'https://maven.kosmx.dev/'
+    }
+}
+
+dependencies {
+    // JEI
+    compileOnly libs.jei.api
+    runtimeOnly libs.jei
+
+    // Jade
+    runtimeOnly libs.jade
+
+    // Iron's Spells'n Spellbooks
+    implementation libs.ironsSpellbooks
+
+    // Iron's Lib
+    runtimeOnly libs.ironsLib
+
+    // Curios
+    compileOnly libs.curios.get().toString() + ":api"
+    runtimeOnly libs.curios
+
+    // GeckoLib
+    implementation libs.geckoLib
+
+    // Player Animator
+    runtimeOnly libs.playerAnimator
+
+    // Optimizations
+    runtimeOnly libs.bundles.optimizations
+}
+
+tasks.withType(ProcessResources).configureEach {
+    var properties = [
+            // Minecraft
+            minecraft_version      : minecraft_version,
+            minecraft_version_range: minecraft_version_range,
+
+            // NeoForge
+            neo_version            : neo_version,
+            neo_version_range      : neo_version_range,
+            loader_version_range   : loader_version_range,
+
+            // Mod
+            mod_id                 : mod_id,
+            mod_name               : mod_name,
+            mod_version            : mod_version,
+            mod_authors            : mod_authors,
+            mod_credits            : mod_credits,
+            mod_license            : mod_license,
+            mod_description        : mod_description,
+            mod_url                : mod_url,
+            mod_issue              : mod_issue,
+
+            mod_group_id           : mod_group_id,
+    ]
+
+    inputs.properties properties
+    filesMatching(['META-INF/neoforge.mods.toml', '*.mixins.json']) {
+        expand(properties)
+    }
+
+    from ('LICENSE.txt')
+}
+
+tasks.withType(Jar).configureEach {
+    archiveBaseName.set("${mod_id}-${minecraft_version}+neo")
+    archiveVersion.set(mod_version)
+    preserveFileTimestamps = false
+    reproducibleFileOrder = true
+}
