@@ -60,14 +60,14 @@ public class CollapsedKingdomsLegionSpell extends BaseSummonSpell {
     protected void settingSpawnMob(Entity spawnMob, int spellLevel) {
         if (spawnMob instanceof HauntedGuardEntity guard) {
             switch (spellLevel) {
-                case 1 -> guard.setTextureVariant(3);
+                case 1 -> guard.setTextureVariant(0);
                 case 2 -> guard.setTextureVariant(1);
                 default -> guard.setTextureVariant(2);
             }
         }
         if (spawnMob instanceof HauntedKnightEntity knight) {
             switch (spellLevel) {
-                case 1 -> knight.setTextureVariant(3);
+                case 1 -> knight.setTextureVariant(0);
                 case 2 -> knight.setTextureVariant(1);
                 default -> knight.setTextureVariant(2);
             }

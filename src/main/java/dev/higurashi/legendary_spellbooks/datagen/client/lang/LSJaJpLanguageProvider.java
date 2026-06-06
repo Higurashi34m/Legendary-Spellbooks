@@ -30,6 +30,7 @@ public class LSJaJpLanguageProvider extends BaseLanguageProvider {
         addEntityType(LSEntityRegistry.SUMMONED_HAUNTED_KNIGHT_ENTITY, "召喚された騎士の亡霊");
         addEntityType(LSEntityRegistry.SUMMONED_HAUNTED_GUARD_ENTITY, "召喚された衛兵の亡霊");
         addEntityType(LSEntityRegistry.SUMMONED_SKELORAPTOR_ENTITY, "召喚されたスケロラプトル");
+        addEntityType(LSEntityRegistry.SUMMONED_FRACTURED_APOSTLE_ENTITY, "召喚された砕けた使徒");
 
         // --------------------
         // EFFECT
@@ -67,7 +68,7 @@ public class LSJaJpLanguageProvider extends BaseLanguageProvider {
         addSpell(LSSpellRegistry.ANNIHILATION_RESONANCE_SPELL, "アナイアレイション・レゾナンス", "自身に不安定な周波数を付与する。効果中、防御力と攻撃力が25%下がる代わりに、クリティカルヒットを与えると、相手の位置で強力な爆発を引き起こす。");
         addSpell(LSSpellRegistry.ANNIHILATION_GEYSER_SPELL, "終焉の噴火", "周囲の敵を吸い込む巨大な重力場を発生させる。詠唱が完了するとエネルギーの間欠泉が噴出し、致命的なダメージを与える。");
         addSpell(LSSpellRegistry.SUMMON_FLAMEBORN_KNIGHTS_SPELL, "召喚 フレイムボーン騎士", "永遠に燃え続ける火炎から作られた騎士を召喚し、共に戦わせる。");
-        addSpell(LSSpellRegistry.RELEASE_RIFTWALKER_PREDATOR_SPELL, "リフトウォーカー・プロトコル", "アナイアレイション・パーサーを現界させる。このハンターはターゲットを破壊するまで、どこまでも執拗に追い続ける。");
+        addSpell(LSSpellRegistry.RELEASE_RIFTWALKER_PREDATOR_SPELL, "リフトウォーカー・プレデター", "アナイアレイション・パーサーを現界させる。このハンターはターゲットを破壊するまで、どこまでも執拗に追い続ける。");
         addSpell(LSSpellRegistry.FLAMEBORN_DRIFT_SPELL, "フレイムボーンドリフト", "緑色の炎を纏って前方に高速で突進する。敵に衝突すると停止し、その周囲に範囲ダメージを与える。");
 
         // Blood
