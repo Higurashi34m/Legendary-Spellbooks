@@ -28,6 +28,7 @@ public class AnnihilationBeamSpell extends BaseSpell {
             .setSchoolResource(LSSchoolRegistry.ANNIHILATION_RESOURCE)
             .setMinRarity(SpellRarity.EPIC)
             .setCooldownSeconds(50)
+            .setAllowCrafting(false)
             .setMaxLevel(3).build();
 
     public AnnihilationBeamSpell() {

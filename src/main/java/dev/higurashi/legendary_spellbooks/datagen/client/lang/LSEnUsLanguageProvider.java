@@ -24,6 +24,11 @@ public class LSEnUsLanguageProvider extends BaseLanguageProvider {
         addCreativeTab("equipments", "Legendary Spellbooks Equipments");
         addCreativeTab("scrolls", "Legendary Spellbooks Scrolls");
 
+        // Damage Source
+        addSpellDamageSource(LSSpellRegistry.ANNIHILATION_ARROW_SPELL, "%1$s was pierced and obliterated by %2$s's annihilation arrow");
+        addSpellDamageSource(LSSpellRegistry.ANNIHILATION_BEAM_SPELL, "%1$s was turned to ash by %2$s's devastating beam");
+        addSpellDamageSource(LSSpellRegistry.ANNIHILATION_BOMB_SPELL, "%1$s was caught in the torrent of annihilation unleashed by %2$s and utterly perished");
+
         // --------------------
         // ENTITY
         // --------------------
@@ -63,8 +68,9 @@ public class LSEnUsLanguageProvider extends BaseLanguageProvider {
         // --------------------
 
         // Annihilation
-        addSpell(LSSpellRegistry.ANNIHILATION_BEAM_SPELL, "Annihilation Beam", "Channel a devastating beam of energy. While firing, you are locked in place. If aimed near the ground, the beam scatters small energy orbs on impact.");
-        addSpell(LSSpellRegistry.ANNIHILATION_BOMB_SPELL, "Annihilation Bomb", "Launch a concentrated bomb of destructive energy that explodes on impact, dealing damage and scattering small energy orbs around the area.");
+        addSpell(LSSpellRegistry.ANNIHILATION_ARROW_SPELL, "Annihilation Arrow", "Fire an arrow imbued with potent energy, triggering an explosion upon impact.");
+        addSpell(LSSpellRegistry.ANNIHILATION_BEAM_SPELL, "Annihilation Beam", "Channel a devastating beam of energy. While firing, you are locked in place. When fired nearly parallel to the ground, it releases energy orbs spaced at equal distances along its path.");
+        addSpell(LSSpellRegistry.ANNIHILATION_BOMB_SPELL, "Annihilation Bomb", "Launch a concentrated orb of destructive energy. Upon impact, it detonates violently to deal area damage and scatters multiple energy orbs into the surroundings.");
         addSpell(LSSpellRegistry.ANNIHILATION_SHOCKWAVE_SPELL, "Annihilation Shockwave", "Stomp the ground to release a fan-shaped shockwave of green fire. The waves deal damage based on the target's maximum health.");
         addSpell(LSSpellRegistry.ANNIHILATION_RESONANCE_SPELL, "Annihilation Resonance", "Imbue yourself with an unstable frequency, reducing your defense and attack by 25%. For the duration, landing a critical hit triggers a powerful explosion at the target's location.");
         addSpell(LSSpellRegistry.ANNIHILATION_GEYSER_SPELL, "Annihilation Geyser", "Create a gravitational well that pulls in nearby creatures. Upon completion, a colossal geyser of energy erupts, dealing massive damage.");
@@ -74,7 +80,7 @@ public class LSEnUsLanguageProvider extends BaseLanguageProvider {
 
         // Blood
         addSpell(LSSpellRegistry.POSSESSED_SOUL_BLADE_SPELL, "Possessed Soul Blade", "Conjure multiple expanding rings of spectral blades from the ground centered on your position. The color of the blades changes based on the spell level.");
-        addSpell(LSSpellRegistry.POSSESSED_FALLING_SOUL_BLADE_SPELL, "Possessed Falling Soul Blade", "Rain down multiple expanding rings of spectral blades centered on your position. The color of the blades changes based on the spell level.");
+//        addSpell(LSSpellRegistry.POSSESSED_FALLING_SOUL_BLADE_SPELL, "Possessed Falling Soul Blade", "Rain down multiple expanding rings of spectral blades centered on your position. The color of the blades changes based on the spell level.");
         addSpell(LSSpellRegistry.HEMATITE_TRISHULA_SPELL, "Hematite Trishula", "Hurls a large red trident that explodes and scatters multiple explosions around the impact area upon hitting the ground.");
         addSpell(LSSpellRegistry.POSSESSED_WING_SPELL, "Possessed Wings", "Manifest red wings for a short duration, allowing Elytra flight and increasing your movement speed, jump height, and step height. While active, your attacks inflict the Soul Fracture debuff on targets.");
 
@@ -85,6 +91,7 @@ public class LSEnUsLanguageProvider extends BaseLanguageProvider {
         addSpell(LSSpellRegistry.FLAME_EATER_SPELL, "Flame Eater", "Target multiple creatures to erupt bursts of fire at their feet. This spell fails if targets are too high above the ground.");
         addSpell(LSSpellRegistry.FLAME_SECTOR_SPELL, "Flame Sector", "Emit a radial burst of fire in equally spaced directions. The flames travel along the ground.");
         addSpell(LSSpellRegistry.SENTINEL_SATURATION_SPELL, "Sentinel Saturation", "Summon multiple spectral images of the Dune Sentinel behind you to unleash a massive barrage of bombs, carpet-bombing the target area.");
+
         // Ice
         addSpell(LSSpellRegistry.GLACIER_ERUPTION_SPELL, "Glacier Eruption", "Conjure a line of ice wedges in front of you, freezing any creatures they strike.");
         addSpell(LSSpellRegistry.GLACIER_RINGBURST_SPELL, "Glacier Ringburst", "Conjure multiple expanding rings of ice centered on your position, freezing nearby creatures.");
@@ -111,6 +118,7 @@ public class LSEnUsLanguageProvider extends BaseLanguageProvider {
         addSpellDamageSource(LSSpellRegistry.ANNIHILATION_RESONANCE_SPELL, "%1$s was obliterated by a resonant annihilation blast from %2$s");
 
         // UI
+        addUi("hp_damage", "%s%% of target's max HP damage");
         addUi("nimbus_count", "%d Nimbus");
         addUi("health_damage", "%s damage + %s%% of target's max HP");
         addUi("thorn_damage", "%d thorn damage + 20%% of damage received");

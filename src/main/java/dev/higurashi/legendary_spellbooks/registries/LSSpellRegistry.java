@@ -25,6 +25,7 @@ public class LSSpellRegistry {
     private static RegistryObject<AbstractSpell> register(AbstractSpell spell) { return SPELLS.register(spell.getSpellName(), () -> spell); }
 
     // Annihilation
+    public static final RegistryObject<AbstractSpell> ANNIHILATION_ARROW_SPELL = register(new AnnihilationArrowSpell());
     public static final RegistryObject<AbstractSpell> ANNIHILATION_BEAM_SPELL = register(new AnnihilationBeamSpell());
     public static final RegistryObject<AbstractSpell> ANNIHILATION_BOMB_SPELL = register(new AnnihilationBombSpell());
     public static final RegistryObject<AbstractSpell> ANNIHILATION_SHOCKWAVE_SPELL = register(new AnnihilationShockwaveSpell());
@@ -36,7 +37,7 @@ public class LSSpellRegistry {
 
     // Blood
     public static final RegistryObject<AbstractSpell> POSSESSED_SOUL_BLADE_SPELL = register(new PossessedSoulBladeSpell());
-    public static final RegistryObject<AbstractSpell> POSSESSED_FALLING_SOUL_BLADE_SPELL = register(new PossessedFallingSoulBladeSpell());
+//    public static final RegistryObject<AbstractSpell> POSSESSED_FALLING_SOUL_BLADE_SPELL = register(new PossessedFallingSoulBladeSpell());
     public static final RegistryObject<AbstractSpell> HEMATITE_TRISHULA_SPELL = register(new HematiteTrishulaSpell());
     public static final RegistryObject<AbstractSpell> POSSESSED_WING_SPELL = register(new PossessedWingSpell());
 

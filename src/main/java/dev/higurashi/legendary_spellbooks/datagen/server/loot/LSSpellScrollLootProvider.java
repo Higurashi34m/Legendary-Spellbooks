@@ -86,11 +86,14 @@ public class LSSpellScrollLootProvider extends GlobalLootModifierProvider {
         add("possessed_paladin_scrolls", new SpellScrollLootModifier(
                 new LootItemCondition[]{ LootItemEntityPropertyCondition.hasProperties(LootContext.EntityTarget.THIS, EntityPredicate.Builder.entity().of(ModEntities.Posessed_Paladin.get())).build() },
                 List.of(
-                        new SpellEntry(LSSpellRegistry.COLLAPSED_KINGDOMS_LEGION_SPELL.getId(), 1, 3, 10)
+                        new SpellEntry(LSSpellRegistry.COLLAPSED_KINGDOMS_LEGION_SPELL.getId(), 1, 3, 10),
+                        new SpellEntry(LSSpellRegistry.POSSESSED_SOUL_BLADE_SPELL.getId(), 1, 3, 10),
+                        new SpellEntry(LSSpellRegistry.POSSESSED_WING_SPELL.getId(), 1, 2, 10),
+                        new SpellEntry(LSSpellRegistry.HEMATITE_TRISHULA_SPELL.getId(), 1, 3, 10)
                 ),
-                0.5f,
+                1.0f,
                 1,
-                1,
+                3,
                 new DifficultyWeights(0.75f, 1.0f, 1.25f, 1.25f)
         ));
 
@@ -136,6 +139,17 @@ public class LSSpellScrollLootProvider extends GlobalLootModifierProvider {
                 1.0f,
                 1,
                 2,
+                new DifficultyWeights(0.75f, 1.0f, 1.25f, 1.25f)
+        ));
+
+        add("dune_sentinel_scrolls", new SpellScrollLootModifier(
+                new LootItemCondition[] { LootItemEntityPropertyCondition.hasProperties(LootContext.EntityTarget.THIS, EntityPredicate.Builder.entity().of(ModEntities.BlastCannon.get())).build() },
+                List.of(
+                        new SpellEntry(LSSpellRegistry.SENTINEL_SATURATION_SPELL.getId(), 1, 2, 10)
+                ),
+                0.5f,
+                1,
+                1,
                 new DifficultyWeights(0.75f, 1.0f, 1.25f, 1.25f)
         ));
 

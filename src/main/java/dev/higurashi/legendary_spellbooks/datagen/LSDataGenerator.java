@@ -3,6 +3,7 @@ package dev.higurashi.legendary_spellbooks.datagen;
 import dev.higurashi.legendary_spellbooks.datagen.client.LSItemModelProvider;
 import dev.higurashi.legendary_spellbooks.datagen.client.lang.LSEnUsLanguageProvider;
 import dev.higurashi.legendary_spellbooks.datagen.client.lang.LSJaJpLanguageProvider;
+import dev.higurashi.legendary_spellbooks.datagen.client.lang.LSZnChLanguageProvider;
 import dev.higurashi.legendary_spellbooks.datagen.server.LSAdvancementProvider;
 import dev.higurashi.legendary_spellbooks.datagen.server.LSBlockTagsProvider;
 import dev.higurashi.legendary_spellbooks.datagen.server.LSItemTagsProvider;
@@ -30,6 +31,7 @@ public class LSDataGenerator {
         // Client
         generator.addProvider(event.includeClient(), new LSEnUsLanguageProvider(output));
         generator.addProvider(event.includeClient(), new LSJaJpLanguageProvider(output));
+        generator.addProvider(event.includeClient(), new LSZnChLanguageProvider(output));
         generator.addProvider(event.includeClient(), new LSItemModelProvider(output, helper));
 
         // Server

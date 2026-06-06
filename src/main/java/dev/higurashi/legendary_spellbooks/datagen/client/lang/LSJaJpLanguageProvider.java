@@ -60,8 +60,9 @@ public class LSJaJpLanguageProvider extends BaseLanguageProvider {
         // --------------------
 
         // Annihilation
-        addSpell(LSSpellRegistry.ANNIHILATION_BEAM_SPELL, "アナイアレイション・ビーム", "破壊的なエネルギーのビームを放つ。撃っている間は動くことができない。地面の近く、活水平に近い角度で放つと小さなエネルギー弾をばら撒く。");
-        addSpell(LSSpellRegistry.ANNIHILATION_BOMB_SPELL, "アナイアレイション・ボム", "凝縮されたエネルギー弾を前方に放つ。命中すると爆発してダメージを与え、周囲に多数の小さな球をまき散らす。");
+        addSpell(LSSpellRegistry.ANNIHILATION_ARROW_SPELL, "殲滅の矢", "強力なエネルギーを持つ矢を発射する。着弾地点で爆発を引き起こす。");
+        addSpell(LSSpellRegistry.ANNIHILATION_BEAM_SPELL, "アナイアレイション・ビーム", "破壊的な火力のビームを発射する。発射中は動けず、地面とほぼ水平に放つと、等間隔にエネルギー弾を放出する。");
+        addSpell(LSSpellRegistry.ANNIHILATION_BOMB_SPELL, "アナイアレイション・ボム", "凝縮された破壊エネルギーの弾を放つ。着弾時に激しく爆発して範囲ダメージを与え、周囲に複数のエネルギー弾を飛散させる。");
         addSpell(LSSpellRegistry.ANNIHILATION_SHOCKWAVE_SPELL, "アナイアレイション・ショックウェーブ", "地面を叩きつけ、扇状に緑色の炎の衝撃波を発生させる。ダメージは相手の最大体力に応じて増加する。");
         addSpell(LSSpellRegistry.ANNIHILATION_RESONANCE_SPELL, "アナイアレイション・レゾナンス", "自身に不安定な周波数を付与する。効果中、防御力と攻撃力が25%下がる代わりに、クリティカルヒットを与えると、相手の位置で強力な爆発を引き起こす。");
         addSpell(LSSpellRegistry.ANNIHILATION_GEYSER_SPELL, "終焉の噴火", "周囲の敵を吸い込む巨大な重力場を発生させる。詠唱が完了するとエネルギーの間欠泉が噴出し、致命的なダメージを与える。");
@@ -71,7 +72,7 @@ public class LSJaJpLanguageProvider extends BaseLanguageProvider {
 
         // Blood
         addSpell(LSSpellRegistry.POSSESSED_SOUL_BLADE_SPELL, "憑依された魂の剣", "自分を中心に、地面から複数の円状に広がる幻影の剣を突き出させる。魔法のレベルによって剣の色が変化する。");
-        addSpell(LSSpellRegistry.POSSESSED_FALLING_SOUL_BLADE_SPELL, "憑依された落下する魂の剣", "自分を中心に、地面から複数の円状に広がる幻影の剣を落とす。魔法のレベルによって剣の色が変化する。");
+//        addSpell(LSSpellRegistry.POSSESSED_FALLING_SOUL_BLADE_SPELL, "憑依された落下する魂の剣", "自分を中心に、地面から複数の円状に広がる幻影の剣を落とす。魔法のレベルによって剣の色が変化する。");
         addSpell(LSSpellRegistry.HEMATITE_TRISHULA_SPELL, "ヘマタイト・トリシューラ", "大きな赤い三叉矛を前方に放つ。地面に当たるとすると消滅し、着弾地点の周囲に複数の爆発を巻き起こす。");
         addSpell(LSSpellRegistry.POSSESSED_WING_SPELL, "憑依された翼", "自身に赤い翼を一定時間つける。この翼がついている間、エリトラ飛行が可能になり、ジャンプ力、移動速度、段の高さが上昇する。また、攻撃時にソウルフラクチャーのデバフを与える。");
 
@@ -107,8 +108,12 @@ public class LSJaJpLanguageProvider extends BaseLanguageProvider {
         addSpellDamageSource(LSSpellRegistry.CLOUD_RAIL_SPELL, "%1$sは %2$sの雲に巻き込まれて押しつぶされた");
         addSpellDamageSource(LSSpellRegistry.FLAME_EATER_SPELL, "%1$sは %2$s が地から呼び出した業火に喰らわれた");
         addSpellDamageSource(LSSpellRegistry.ANNIHILATION_RESONANCE_SPELL, "%1$sは %2$sの共鳴による消滅の爆発に消し飛ばされた");
+        addSpellDamageSource(LSSpellRegistry.ANNIHILATION_ARROW_SPELL, "%1$sは %2$sの放った消滅の矢に射貫かれ、消し飛んだ");
+        addSpellDamageSource(LSSpellRegistry.ANNIHILATION_BEAM_SPELL, "%1$sは %2$sの破壊的なビームによって塵へと帰った");
+        addSpellDamageSource(LSSpellRegistry.ANNIHILATION_BOMB_SPELL, "%1$sは %2$sの放った消滅の奔流に巻き込まれ、跡形もなく滅んだ");
 
         // UI
+        addUi("hp_damage", "対象の最大体力%s%%のダメージ");
         addUi("nimbus_count", "雷雲の数: %d");
         addUi("health_damage", "ダメージ: %s + 相手の最大体力の%s%%");
         addUi("thorn_damage", "棘のダメージ: %d + 20%% の被ダメージ");

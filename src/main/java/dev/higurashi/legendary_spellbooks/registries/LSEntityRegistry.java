@@ -10,7 +10,6 @@ import net.miauczel.legendary_monsters.entity.AnimatedMonster.Mobs.Pets.Skelorap
 import net.miauczel.legendary_monsters.entity.AnimatedMonster.Mobs.SpaceStation.Flameborn.AnnihilationPursuer.AnnihilationPursuerEntity;
 import net.miauczel.legendary_monsters.entity.AnimatedMonster.Mobs.SpaceStation.Flameborn.FlamebornGuardEntity;
 import net.miauczel.legendary_monsters.entity.AnimatedMonster.Mobs.SpaceStation.Flameborn.FlamebornWarriorEntity;
-import net.miauczel.legendary_monsters.entity.AnimatedMonster.Projectile.AnnihilationBombEntity;
 import net.miauczel.legendary_monsters.entity.AnimatedMonster.Projectile.CloudEntity;
 import net.miauczel.legendary_monsters.entity.AnimatedMonster.Projectile.SmallAnnihilationBombEntity;
 import net.miauczel.legendary_monsters.entity.AnimatedMonster.Projectile.SoulTridentEntity;
@@ -81,7 +80,7 @@ public class LSEntityRegistry {
             .build(ResourceLocation.fromNamespaceAndPath(LegendarySpellbooks.MOD_ID, "cumulo_charge").toString()));
 
 
-    public static final RegistryObject<EntityType<AnnihilationBombEntity>> SPELL_ANNIHILATION_BOMB_ENTITY = ENTITIES.register("spell_annihilation_bomb", () -> EntityType.Builder.<AnnihilationBombEntity>of(SpellAnnihilationBombEntity::new, MobCategory.MISC)
+    public static final RegistryObject<EntityType<SpellAnnihilationBombEntity>> SPELL_ANNIHILATION_BOMB_ENTITY = ENTITIES.register("spell_annihilation_bomb", () -> EntityType.Builder.<SpellAnnihilationBombEntity>of(SpellAnnihilationBombEntity::new, MobCategory.MISC)
             .sized(2.0f, 2.0f)
             .updateInterval(2)
             .clientTrackingRange(6)
@@ -123,4 +122,9 @@ public class LSEntityRegistry {
             .fireImmune()
             .sized(0.5f, 0.5f)
             .build(ResourceLocation.fromNamespaceAndPath(LegendarySpellbooks.MOD_ID, "spell_small_annihilation_bomb").toString()));
+
+    public static final RegistryObject<EntityType<AnnihilationArrowEntity>> ANNIHILATION_ARROW = ENTITIES.register("annihilation_arrow", () -> EntityType.Builder.<AnnihilationArrowEntity>of(AnnihilationArrowEntity::new, MobCategory.MISC)
+            .sized(0.5f, 0.5f)
+            .clientTrackingRange(6)
+            .build(ResourceLocation.fromNamespaceAndPath(LegendarySpellbooks.MOD_ID, "annihilation_arrow").toString()));
 }

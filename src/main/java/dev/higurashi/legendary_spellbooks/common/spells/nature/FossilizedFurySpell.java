@@ -23,14 +23,14 @@ public class FossilizedFurySpell extends BaseSummonSpell {
     private static final DefaultConfig spellConfig = new DefaultConfig()
             .setSchoolResource(SchoolRegistry.NATURE_RESOURCE)
             .setMinRarity(SpellRarity.EPIC)
-            .setCooldownSeconds(240)
+            .setCooldownSeconds(180)
             .setAllowCrafting(false)
             .setMaxLevel(6).build();
 
     public FossilizedFurySpell() {
         super(spellResource, spellConfig);
         this.castTime = 80;
-        this.baseManaCost = 175;
+        this.baseManaCost = 100;
         this.baseSpellPower = 4;
         this.manaCostPerLevel = 35;
         this.spellPowerPerLevel = 1;

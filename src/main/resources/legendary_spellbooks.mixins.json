@@ -10,8 +10,6 @@
     "PlayerMixin",
     "SpellDataMixin",
     "entities.AnnihilationPursuerEntityMixin",
-    "entities.spell.AnnihilationBeamEntityMixin",
-    "entities.spell.AnnihilationExplosionEntityMixin",
     "entities.spell.AnnihilationFlameStrikeMixin",
     "entities.spell.AnnihilationPortalEntityMixin",
     "entities.spell.IceSpikeEntityMixin",
@@ -22,7 +20,6 @@
     "entities.spell.summoned.SkeloraptorEntityMixin"
   ],
   "client": [
-    "AbstractSpellCastingMobRendererMixin"
   ],
   "injectors": {
     "defaultRequire": 1
