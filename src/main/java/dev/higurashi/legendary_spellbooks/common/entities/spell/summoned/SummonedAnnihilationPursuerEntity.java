@@ -2,7 +2,7 @@ package dev.higurashi.legendary_spellbooks.common.entities.spell.summoned;
 
 import dev.higurashi.legendary_spellbooks.api.entities.helper.ISummonedMob;
 import dev.higurashi.legendary_spellbooks.api.utils.RaycastUtils;
-import dev.higurashi.legendary_spellbooks.common.mixin.helper.ISpellSourceFlag;
+import dev.higurashi.legendary_spellbooks.common.entities.spell.projectile.SpellAnnihilationExplosionEntity;
 import dev.higurashi.legendary_spellbooks.common.spells.annihilation.ReleaseRiftwalkerPredatorSpell;
 import dev.higurashi.legendary_spellbooks.registries.LSEntityRegistry;
 import io.redspace.ironsspellbooks.capabilities.magic.MagicManager;
@@ -11,7 +11,6 @@ import net.miauczel.legendary_monsters.damagetype.ModDamageTypes;
 import net.miauczel.legendary_monsters.effect.ModEffects;
 import net.miauczel.legendary_monsters.entity.AnimatedMonster.Mobs.SpaceStation.Flameborn.AnnihilationPursuer.AnnihilationPursuerEntity;
 import net.miauczel.legendary_monsters.entity.AnimatedMonster.Mobs.SpaceStation.Flameborn.AnnihilationPursuer.goals.*;
-import net.miauczel.legendary_monsters.entity.AnimatedMonster.Projectile.AnnihilationExplosionEntity;
 import net.miauczel.legendary_monsters.entity.AnimatedMonster.Projectile.SmallAnnihilationBombEntity;
 import net.miauczel.legendary_monsters.entity.ModEntities;
 import net.miauczel.legendary_monsters.entity.ai.goal.IAttackGoal;
@@ -394,10 +393,10 @@ public class SummonedAnnihilationPursuerEntity extends AnnihilationPursuerEntity
 
             Vec3 groundPos = RaycastUtils.findGround(this.level(), new Vec3(targetX, Math.floor(this.getY()), targetZ), 2, 2);
 
-            if (groundPos != null) {
-                AnnihilationExplosionEntity explosion = new AnnihilationExplosionEntity(this.level(), groundPos.x, groundPos.y, groundPos.z, yBodyRot, tickDelay, this, 20, damage, bulletAmount);
-                ((ISpellSourceFlag) explosion).legendarySpellbooks$setDamage(damage / 1.5f);
-                ((ISpellSourceFlag) explosion).legendarySpellbooks$markSpell();
+            if (groundPos != null && this.getSummoner() instanceof LivingEntity caster) {
+                SpellAnnihilationExplosionEntity explosion = new SpellAnnihilationExplosionEntity(this.level(), caster, damage, 0.0f, bulletAmount, tickDelay);
+                explosion.setPos(groundPos);
+                explosion.setYRot(this.yBodyRot);
                 this.level().addFreshEntity(explosion);
             }
         }
