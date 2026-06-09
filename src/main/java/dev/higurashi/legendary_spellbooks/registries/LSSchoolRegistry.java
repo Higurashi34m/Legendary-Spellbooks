@@ -26,7 +26,7 @@ public class LSSchoolRegistry {
     public static final RegistryObject<SchoolType> ANNIHILATION = registerSchool(new SchoolType(
             ANNIHILATION_RESOURCE,
             LSTags.ANNIHILATION_FOCUS,
-            Component.translatable("school.legendary_spellbooks.annihilation").withStyle(Style.EMPTY.withColor(0x3F9877)),
+            Component.translatable("school.legendary_spellbooks.annihilation").withStyle(Style.EMPTY.withColor(0x7FFF00)),
             LSAttributeRegistry.ANNIHILATION_SPELL_POWER,
             LSAttributeRegistry.ANNIHILATION_MAGIC_RESIST,
             SoundRegistry.ENDER_CAST,

@@ -136,6 +136,7 @@ public class LSJaJpLanguageProvider extends BaseLanguageProvider {
         // --------------------
         addAdvancement("stormbound_grimoire", "双極の空", "嵐に結ばれし魔導書を手に入れる");
         addAdvancement("annihilator_protocol", "深淵を覗くとき...", "アナイアレイター・プロトコルを手に入れる");
+        addAdvancement("stormmancer_armor", "灰白の嵐使い", "嵐術師の防具一式を手に入れる");
 
         addSchool(LSSchoolRegistry.ANNIHILATION, "殲滅");
 

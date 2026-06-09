@@ -1,0 +1,54 @@
+{
+  "parent": "legendary_spellbooks:main/root",
+  "criteria": {
+    "has_item": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "legendary_spellbooks:stormmancer_hood"
+            ]
+          },
+          {
+            "items": [
+              "legendary_spellbooks:stormmancer_robe"
+            ]
+          },
+          {
+            "items": [
+              "legendary_spellbooks:stormmancer_leggings"
+            ]
+          },
+          {
+            "items": [
+              "legendary_spellbooks:stormmancer_boots"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancement.legendary_spellbooks.stormmancer_armor_description"
+    },
+    "frame": "challenge",
+    "hidden": false,
+    "icon": {
+      "item": "legendary_spellbooks:stormmancer_hood",
+      "nbt": "{Damage:0}"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancement.legendary_spellbooks.stormmancer_armor.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_item"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

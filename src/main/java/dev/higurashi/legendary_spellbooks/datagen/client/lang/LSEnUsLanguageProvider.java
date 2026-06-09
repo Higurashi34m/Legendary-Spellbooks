@@ -141,6 +141,7 @@ public class LSEnUsLanguageProvider extends BaseLanguageProvider {
         // --------------------
         addAdvancement("stormbound_grimoire", "Binary Skies", "Acquire the Stormbound Grimoire");
         addAdvancement("annihilator_protocol", "If You Gaze Into the Abyss...", "Acquire the Annihilator's Protocol");
+        addAdvancement("stormmancer_armor", "The Pale Tempest", "Get a full suit of Stormmancer armor");
 
         add("advancement.legendary_spellbooks.title", "Legendary Spellbooks");
         add("advancement.legendary_spellbooks.description", "Legendary Spellbooks");
