@@ -1,6 +1,7 @@
 package dev.higurashi.legendary_spellbooks;
 
 import com.mojang.logging.LogUtils;
+import net.minecraft.resources.ResourceLocation;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
@@ -12,6 +13,10 @@ public class LegendarySpellbooks {
     public static final Logger LOGGER = LogUtils.getLogger();
 
     public LegendarySpellbooks(IEventBus eventBus, ModContainer container) {
-//        NeoForge.EVENT_BUS.register(this);
+
+    }
+
+    public static ResourceLocation id(String path) {
+        return ResourceLocation.fromNamespaceAndPath(MOD_ID, path);
     }
 }
