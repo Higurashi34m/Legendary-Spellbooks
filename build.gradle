@@ -143,6 +143,9 @@ dependencies {
     // Player Animator
     runtimeOnly libs.playerAnimator
 
+    // Legendary Monsters
+    runtimeOnly libs.legendaryMonsters
+
     // Optimizations
     runtimeOnly libs.bundles.optimizations
 }

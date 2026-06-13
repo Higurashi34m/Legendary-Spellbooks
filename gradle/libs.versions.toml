@@ -3,11 +3,12 @@ jei  = "19.27.0.340"
 jade = "7545219" # 15.10.5
 
 # dependencies
-ironsSpellbooks = "1.21.1-3.16.0"
-ironsLib        = "1.21.1-1.0.2"
-curios          = "9.5.1+1.21.1"
-geckoLib        = "4.8.4"
-playerAnimator  = "2.0.4+1.21.1"
+ironsSpellbooks   = "1.21.1-3.16.1"
+ironsLib          = "1.21.1-1.0.2"
+curios            = "9.5.1+1.21.1"
+geckoLib          = "4.8.4"
+playerAnimator    = "2.0.4+1.21.1"
+legendaryMonsters = "8241187" # 2.1.13
 
 # optimizations
 sodium      = "6382651" # 0.6.13
@@ -24,11 +25,12 @@ jei     = { module = "mezz.jei:jei-1.21.1-neoforge",     version.ref = "jei" }
 jade    = { module = "curse.maven:jade-324717",          version.ref = "jade" }
 
 # dependencies
-ironsSpellbooks = { module = "io.redspace:irons_spellbooks",                      version.ref = "ironsSpellbooks" }
-ironsLib        = { module = "io.redspace:irons_lib",                             version.ref = "ironsLib" }
-curios          = { module = "top.theillusivec4.curios:curios-neoforge",          version.ref = "curios" }
-geckoLib        = { module = "software.bernie.geckolib:geckolib-neoforge-1.21.1", version.ref = "geckoLib" }
-playerAnimator  = { module = "dev.kosmx.player-anim:player-animation-lib-forge",  version.ref = "playerAnimator" }
+ironsSpellbooks   = { module = "io.redspace:irons_spellbooks",                      version.ref = "ironsSpellbooks" }
+ironsLib          = { module = "io.redspace:irons_lib",                             version.ref = "ironsLib" }
+curios            = { module = "top.theillusivec4.curios:curios-neoforge",          version.ref = "curios" }
+geckoLib          = { module = "software.bernie.geckolib:geckolib-neoforge-1.21.1", version.ref = "geckoLib" }
+playerAnimator    = { module = "dev.kosmx.player-anim:player-animation-lib-forge",  version.ref = "playerAnimator" }
+legendaryMonsters = { module = "curse.maven:legendary-monsters-944035",             version.ref = "legendaryMonsters" }
 
 # optimizations
 sodium      = { module = "curse.maven:sodium-394468",       version.ref = "sodium" }
