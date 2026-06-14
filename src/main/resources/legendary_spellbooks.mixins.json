@@ -4,8 +4,21 @@
   "package": "dev.higurashi.legendary_spellbooks.mixin",
   "refmap": "${mod_id}.refmap.json",
   "compatibilityLevel": "JAVA_21",
-  "mixins": [],
-  "client": [],
+  "mixins": [
+    "IITemStackExtensionMixin",
+    "SpellDataMixin",
+    "entities.AnnihilationPursuerEntityMixin",
+    "entities.spell.AnnihilationFlameStrikeMixin",
+    "entities.spell.AnnihilationPortalEntityMixin",
+    "entities.spell.IceSpikeEntityMixin",
+    "entities.spell.SpellIceSpikeEntityMixin",
+    "entities.spell.summoned.HauntedGuardEntityMixin",
+    "entities.spell.summoned.HauntedKnightEntityMixin",
+    "entities.spell.summoned.SkeloraptorEntityAccessor",
+    "entities.spell.summoned.SkeloraptorEntityMixin"
+  ],
+  "client": [
+  ],
   "injectors": {
     "defaultRequire": 1
   },

@@ -1,0 +1,77 @@
+{
+  "type": "legendary_spellbooks:spell_scroll",
+  "conditions": [
+    {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "type": "legendary_monsters:cloud_golem"
+      }
+    }
+  ],
+  "count_max": 3,
+  "count_min": 1,
+  "difficulty_weight_multiplier": {
+    "easy": 0.75,
+    "hard": 1.25,
+    "hardcore": 1.25,
+    "normal": 1.0
+  },
+  "drop_chance": 1.0,
+  "spells": [
+    {
+      "max_level": 10,
+      "min_level": 4,
+      "spell": "legendary_spellbooks:cloud_rail",
+      "weight": 10
+    },
+    {
+      "max_level": 4,
+      "min_level": 1,
+      "spell": "legendary_spellbooks:cloud_ring",
+      "weight": 10
+    },
+    {
+      "max_level": 6,
+      "min_level": 1,
+      "spell": "legendary_spellbooks:nimbus_array",
+      "weight": 10
+    },
+    {
+      "max_level": 4,
+      "min_level": 1,
+      "spell": "legendary_spellbooks:triple_nimbus_array",
+      "weight": 12
+    },
+    {
+      "max_level": 10,
+      "min_level": 3,
+      "spell": "legendary_spellbooks:tornado",
+      "weight": 6
+    },
+    {
+      "max_level": 4,
+      "min_level": 1,
+      "spell": "legendary_spellbooks:quad_tornado",
+      "weight": 11
+    },
+    {
+      "max_level": 3,
+      "min_level": 1,
+      "spell": "legendary_spellbooks:energy_beam",
+      "weight": 8
+    },
+    {
+      "max_level": 10,
+      "min_level": 3,
+      "spell": "legendary_spellbooks:thunder_fanburst",
+      "weight": 10
+    },
+    {
+      "max_level": 3,
+      "min_level": 1,
+      "spell": "legendary_spellbooks:cumulo_charge",
+      "weight": 12
+    }
+  ]
+}

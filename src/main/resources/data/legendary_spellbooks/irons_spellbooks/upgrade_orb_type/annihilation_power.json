@@ -1,0 +1,9 @@
+{
+  "amount": 0.05,
+  "attribute": "legendary_spellbooks:annihilation_spell_power",
+  "containerItem": {
+    "count": 1,
+    "id": "legendary_spellbooks:upgrade_orb_annihilation"
+  },
+  "operation": "add_multiplied_base"
+}

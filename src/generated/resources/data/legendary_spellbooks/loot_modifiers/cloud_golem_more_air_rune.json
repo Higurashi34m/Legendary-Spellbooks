@@ -1,0 +1,17 @@
+{
+  "type": "legendary_spellbooks:item_drop",
+  "chance": 2.0,
+  "conditions": [
+    {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "type": "legendary_monsters:cloud_golem"
+      }
+    }
+  ],
+  "item": {
+    "count": 1,
+    "id": "legendary_monsters:air_rune"
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "type": "legendary_spellbooks:spell_scroll",
+  "conditions": [
+    {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "type": "legendary_monsters:the_obliterator"
+      }
+    }
+  ],
+  "count_max": 2,
+  "count_min": 1,
+  "difficulty_weight_multiplier": {
+    "easy": 0.75,
+    "hard": 1.25,
+    "hardcore": 1.25,
+    "normal": 1.0
+  },
+  "drop_chance": 1.0,
+  "spells": [
+    {
+      "max_level": 3,
+      "min_level": 1,
+      "spell": "legendary_spellbooks:annihilation_beam",
+      "weight": 10
+    },
+    {
+      "max_level": 4,
+      "min_level": 1,
+      "spell": "legendary_spellbooks:annihilation_bomb",
+      "weight": 14
+    },
+    {
+      "max_level": 5,
+      "min_level": 1,
+      "spell": "legendary_spellbooks:annihilation_shockwave",
+      "weight": 18
+    },
+    {
+      "max_level": 4,
+      "min_level": 1,
+      "spell": "legendary_spellbooks:summon_flameborn_knights",
+      "weight": 18
+    },
+    {
+      "max_level": 4,
+      "min_level": 1,
+      "spell": "legendary_spellbooks:annihilation_resonance",
+      "weight": 14
+    }
+  ]
+}

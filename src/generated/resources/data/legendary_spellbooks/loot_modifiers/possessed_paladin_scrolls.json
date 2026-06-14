@@ -1,0 +1,47 @@
+{
+  "type": "legendary_spellbooks:spell_scroll",
+  "conditions": [
+    {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "type": "legendary_monsters:posessed_paladin"
+      }
+    }
+  ],
+  "count_max": 3,
+  "count_min": 1,
+  "difficulty_weight_multiplier": {
+    "easy": 0.75,
+    "hard": 1.25,
+    "hardcore": 1.25,
+    "normal": 1.0
+  },
+  "drop_chance": 1.0,
+  "spells": [
+    {
+      "max_level": 3,
+      "min_level": 1,
+      "spell": "legendary_spellbooks:collapsed_kingdoms_legion",
+      "weight": 10
+    },
+    {
+      "max_level": 3,
+      "min_level": 1,
+      "spell": "legendary_spellbooks:possessed_soul_blade",
+      "weight": 10
+    },
+    {
+      "max_level": 2,
+      "min_level": 1,
+      "spell": "legendary_spellbooks:possessed_wing",
+      "weight": 10
+    },
+    {
+      "max_level": 3,
+      "min_level": 1,
+      "spell": "legendary_spellbooks:hematite_trishula",
+      "weight": 10
+    }
+  ]
+}

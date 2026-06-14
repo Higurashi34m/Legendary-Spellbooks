@@ -1,0 +1,29 @@
+{
+  "type": "legendary_spellbooks:spell_scroll",
+  "conditions": [
+    {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "type": "legendary_monsters:overgrown_colossus"
+      }
+    }
+  ],
+  "count_max": 2,
+  "count_min": 1,
+  "difficulty_weight_multiplier": {
+    "easy": 0.75,
+    "hard": 1.25,
+    "hardcore": 1.25,
+    "normal": 1.0
+  },
+  "drop_chance": 1.0,
+  "spells": [
+    {
+      "max_level": 4,
+      "min_level": 1,
+      "spell": "legendary_spellbooks:overgrown_shockwave",
+      "weight": 10
+    }
+  ]
+}

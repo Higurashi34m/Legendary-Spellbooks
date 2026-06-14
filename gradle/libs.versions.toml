@@ -8,7 +8,7 @@ ironsLib          = "1.21.1-1.0.2"
 curios            = "9.5.1+1.21.1"
 geckoLib          = "4.8.4"
 playerAnimator    = "2.0.4+1.21.1"
-legendaryMonsters = "8241187" # 2.1.13
+legendaryMonsters = "8241908" # 2.1.14
 
 # optimizations
 sodium      = "6382651" # 0.6.13
