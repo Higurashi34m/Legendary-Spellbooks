@@ -3,13 +3,14 @@ package dev.higurashi.legendary_spellbooks.client.event;
 import dev.higurashi.legendary_spellbooks.client.renderer.spell.animation.AnnihilationArrowLayer;
 import dev.higurashi.legendary_spellbooks.client.renderer.spell.animation.AnnihilationBombLayer;
 import io.redspace.ironsspellbooks.entity.mobs.abstract_spell_casting_mob.AbstractSpellCastingMob;
+import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import software.bernie.geckolib.event.GeoRenderEvent;
 import software.bernie.geckolib.renderer.GeoEntityRenderer;
 import software.bernie.geckolib.renderer.layer.GeoRenderLayer;
 
-@EventBusSubscriber
+@EventBusSubscriber(value = Dist.CLIENT)
 public class AddGeoLayerEvent {
     @SubscribeEvent
     @SuppressWarnings({"rawtypes", "unchecked"})

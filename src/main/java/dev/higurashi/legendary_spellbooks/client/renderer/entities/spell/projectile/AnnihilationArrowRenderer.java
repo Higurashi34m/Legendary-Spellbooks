@@ -59,9 +59,7 @@ public class AnnihilationArrowRenderer extends EntityRenderer<AnnihilationArrowE
         }
     }
 
-    // 【1.21.1 修正】引数の Matrix3f を PoseStack.Pose に変更し、packedLight を追加
     private static void vertex(Matrix4f matrix, PoseStack.Pose pose, VertexConsumer consumer, float x, float y, float u, float v, int packedLight) {
-        // 1.21.1メソッドチェーン順序: addVertex -> setUv -> setUv2 -> setOverlay -> setNormal -> setColor
         consumer.addVertex(matrix, x, y, 0.0f)
                 .setUv(u, v)
                 .setUv2(LightTexture.block(packedLight), LightTexture.sky(packedLight))

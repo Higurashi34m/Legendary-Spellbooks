@@ -13,7 +13,6 @@ import io.redspace.ironsspellbooks.item.UniqueSpellBook;
 import io.redspace.ironsspellbooks.item.weapons.AttributeContainer;
 import io.redspace.ironsspellbooks.util.TooltipsUtils;
 import net.minecraft.ChatFormatting;
-import net.minecraft.client.Minecraft;
 import net.minecraft.core.Holder;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
@@ -32,12 +31,8 @@ import top.theillusivec4.curios.api.SlotContext;
 
 import java.util.List;
 import java.util.Map;
-import java.util.UUID;
 
 public class StormboundSpellbookItem extends UniqueSpellBook {
-    private static final UUID BASE_POWER_UUID = UUID.fromString("c28be49c-157e-4530-9267-6504b92a7f49");
-    private static final UUID THUNDER_POWER_UUID = UUID.fromString("3e4cb26d-b7b1-483a-9f66-1f994f3bb367");
-
     private static final AttributeModifier BASE_POWER = new AttributeModifier(LegendarySpellbooks.id("base_power"), 0.15, AttributeModifier.Operation.ADD_MULTIPLIED_BASE);
     private static final AttributeModifier THUNDER_POWER = new AttributeModifier(LegendarySpellbooks.id("thunder_power"), 0.3, AttributeModifier.Operation.ADD_MULTIPLIED_BASE);
 
@@ -109,7 +104,7 @@ public class StormboundSpellbookItem extends UniqueSpellBook {
     public void appendHoverText(@NotNull ItemStack stack, @NotNull TooltipContext context, @NotNull List<Component> lines, @NotNull TooltipFlag flag) {
         super.appendHoverText(stack, context, lines, flag);
 
-        Level level = Minecraft.getInstance().level;
+        Level level = context.level();
         if (level == null) return;
 
         boolean isThundering = level.isThundering();

@@ -4,11 +4,12 @@ import dev.higurashi.legendary_spellbooks.registries.LSEffectRegistry;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.player.Input;
 import net.minecraft.world.entity.player.Player;
+import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.client.event.MovementInputUpdateEvent;
 
-@EventBusSubscriber
+@EventBusSubscriber(value = Dist.CLIENT)
 public class BeamEffectClientHandler {
     @SubscribeEvent
     public static void onInput(MovementInputUpdateEvent event) {
