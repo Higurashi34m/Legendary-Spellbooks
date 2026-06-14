@@ -7,6 +7,7 @@ import io.redspace.ironsspellbooks.api.spells.AbstractSpell;
 import io.redspace.ironsspellbooks.damage.DamageSources;
 import net.miauczel.legendary_monsters.entity.AnimatedMonster.Projectile.PoisonousShockwave;
 import net.miauczel.legendary_monsters.sound.ModSounds;
+import net.minecraft.core.particles.ColorParticleOption;
 import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.nbt.CompoundTag;
@@ -53,10 +54,11 @@ public class SpellPoisonousShockwaveEntity extends PoisonousShockwave implements
                 double y = this.getY() + 0.5;
                 double z = this.getZ() + this.random.nextFloat() * this.getBbWidth() * 2.0 - this.getBbWidth();
                 int k = this.getColor();
-                double d5 = (k >> 16 & 255) / 255.0;
-                double d6 = (k >> 8 & 255) / 255.0;
-                double d7 = (k & 255) / 255.0;
-                this.level().addParticle((ParticleOptions) ParticleTypes.ENTITY_EFFECT, x, y, z, d5, d6, d7);
+                float r = (k >> 16 & 255) / 255.0f;
+                float g = (k >> 8 & 255) / 255.0f;
+                float b = (k & 255) / 255.0f;
+                ParticleOptions particle = ColorParticleOption.create(ParticleTypes.ENTITY_EFFECT, r, g, b);
+                this.level().addParticle(particle, x, y, z, 0.0, 0.0, 0.0);
             }
         }
 
@@ -109,7 +111,7 @@ public class SpellPoisonousShockwaveEntity extends PoisonousShockwave implements
     // Client Sync
     @Override
     protected void defineSynchedData(SynchedEntityData.Builder builder) {
-        super.defineSynchedData();
+        super.defineSynchedData(builder);
         builder.define(WARMUP, 0);
         builder.define(LIFE_TICKS, 100);
     }
