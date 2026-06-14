@@ -228,7 +228,7 @@ public class CumuloChargeEntity extends Mob implements AntiMagicSusceptible {
     @Override public boolean canBeSeenAsEnemy() { return false; }
 
     public static AttributeSupplier.Builder createAttributes() {
-        return Mob.createMobAttributes().add(Attributes.ATTACK_DAMAGE).add(Attributes.MAX_HEALTH, 1.0F);
+        return Mob.createMobAttributes().add(Attributes.ATTACK_DAMAGE).add(Attributes.MAX_HEALTH, 1.0F).add(Attributes.STEP_HEIGHT, 1.0f);
     }
 
     @Override
