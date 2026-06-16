@@ -22,7 +22,6 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
@@ -39,8 +38,8 @@ public class StormboundSpellbookItem extends UniqueSpellBook {
     private static AffinityData SUNNY, THUNDER;
     private boolean forcedThunder = false;
 
-    public StormboundSpellbookItem(Item.Properties properties) {
-        super(SpellDataRegistryHolder.of(), 12, properties);
+    public StormboundSpellbookItem() {
+        super(SpellDataRegistryHolder.of(), 12);
         withSpellbookAttributes(new AttributeContainer(AttributeRegistry.MAX_MANA, 200, AttributeModifier.Operation.ADD_VALUE));
     }
 

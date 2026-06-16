@@ -24,8 +24,8 @@ public class LSItemRegistry {
         ITEMS.register(bus);
     }
 
-    public static final Supplier<Item> ANNIHILATORS_PROTOCOL_SPELLBOOK_ITEM = ITEMS.register("annihilators_protocol", () -> new AnnihilatorsProtocolSpellbookItem(new Item.Properties().stacksTo(1).fireResistant().rarity(Rarity.UNCOMMON)));
-    public static final Supplier<Item> STORMBOUND_GRIMOIRE_SPELLBOOK_ITEM = ITEMS.register("stormbound_grimoire", () -> new StormboundSpellbookItem(new Item.Properties().stacksTo(1).fireResistant().rarity(Rarity.UNCOMMON)));
+    public static final Supplier<Item> ANNIHILATORS_PROTOCOL_SPELLBOOK_ITEM = ITEMS.register("annihilators_protocol", AnnihilatorsProtocolSpellbookItem::new);
+    public static final Supplier<Item> STORMBOUND_GRIMOIRE_SPELLBOOK_ITEM = ITEMS.register("stormbound_grimoire", StormboundSpellbookItem::new);
     public static final Supplier<Item> ANNIHILATION_UPGRADE_ORB = ITEMS.register("upgrade_orb_annihilation", () -> new UpgradeOrbItem(new Item.Properties().rarity(Rarity.UNCOMMON).fireResistant().component(ComponentRegistry.UPGRADE_ORB_TYPE, LSUpgradeOrbTypeRegistry.ANNIHILATION_SPELL_POWER)));
     public static final Supplier<Item> ANNIHILATION_RUNE = ITEMS.register("annihilation_rune", () -> new Item(new Item.Properties()));
 
