@@ -50,7 +50,7 @@ public class LSAdvancementProvider extends ForgeAdvancementProvider {
 
             Advancement oblivionmancerArmorAdvancement = Advancement.Builder.advancement()
                     .parent(root)
-                    .display(LSItemRegistry.STORMMANCER_HOOD.get(), Component.translatable("advancement.legendary_spellbooks.stormmancer_armor.title"), Component.translatable("advancement.legendary_spellbooks.stormmancer_armor_description"), null, FrameType.CHALLENGE, true, true, false)
+                    .display(LSItemRegistry.STORMMANCER_HOOD.get(), Component.translatable("advancement.legendary_spellbooks.stormmancer_armor.title"), Component.translatable("advancement.legendary_spellbooks.stormmancer_armor.description"), null, FrameType.CHALLENGE, true, true, false)
                     .addCriterion("has_item", InventoryChangeTrigger.TriggerInstance.hasItems(LSItemRegistry.STORMMANCER_HOOD.get(), LSItemRegistry.STORMMANCER_ROBE.get(), LSItemRegistry.STORMMANCER_LEGGINGS.get(), LSItemRegistry.STORMMANCER_BOOTS.get()))
                     .save(saver, ResourceLocation.fromNamespaceAndPath(LegendarySpellbooks.MOD_ID, "main/get_stormmancer_armor"), helper);
         }
