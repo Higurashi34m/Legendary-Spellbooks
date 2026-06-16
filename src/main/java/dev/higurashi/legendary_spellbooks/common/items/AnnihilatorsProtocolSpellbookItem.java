@@ -20,11 +20,11 @@ import org.jetbrains.annotations.NotNull;
 import java.util.List;
 
 public class AnnihilatorsProtocolSpellbookItem extends UniqueSpellBook {
-    public AnnihilatorsProtocolSpellbookItem(Item.Properties properties) {
+    public AnnihilatorsProtocolSpellbookItem() {
         super(new SpellDataRegistryHolder[]{
                 new SpellDataRegistryHolder(LSSpellRegistry.ANNIHILATION_GEYSER_SPELL, 1),
                 new SpellDataRegistryHolder(LSSpellRegistry.ANNIHILATION_BEAM_SPELL, 3),
-        }, 10, properties);
+        }, 10);
 
         withSpellbookAttributes(
                 new AttributeContainer(LSAttributeRegistry.ANNIHILATION_SPELL_POWER, 0.1, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
