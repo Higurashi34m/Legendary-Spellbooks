@@ -32,7 +32,7 @@
   "display": {
     "announce_to_chat": true,
     "description": {
-      "translate": "advancement.legendary_spellbooks.stormmancer_armor_description"
+      "translate": "advancement.legendary_spellbooks.stormmancer_armor.description"
     },
     "frame": "challenge",
     "hidden": false,
