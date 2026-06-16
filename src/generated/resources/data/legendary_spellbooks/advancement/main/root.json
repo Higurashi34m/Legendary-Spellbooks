@@ -13,20 +13,7 @@
     "icon": {
       "components": {
         "irons_spellbooks:spell_container": {
-          "data": [
-            {
-              "id": "legendary_spellbooks:annihilation_geyser",
-              "index": 0,
-              "level": 1,
-              "locked": true
-            },
-            {
-              "id": "legendary_spellbooks:annihilation_beam",
-              "index": 1,
-              "level": 3,
-              "locked": true
-            }
-          ],
+          "data": [],
           "maxSpells": 12,
           "mustEquip": true,
           "spellWheel": true
