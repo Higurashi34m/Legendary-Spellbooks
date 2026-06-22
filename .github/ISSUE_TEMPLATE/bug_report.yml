@@ -8,7 +8,7 @@ body:
     attributes:
       label: Description
       description: "A clear and concise description of what the bug is"
-      value: "example: The game freezes when I open the menu with XX item in hand."
+      placeholder: "example: The game freezes when I open the menu with XX item in hand."
     validations:
       required: true
 
