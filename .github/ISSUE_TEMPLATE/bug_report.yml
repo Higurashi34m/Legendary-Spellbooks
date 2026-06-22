@@ -31,7 +31,7 @@ body:
       description: "Please paste your crash report or latest.log. We highly recommend using services like mclo.gs or gist."
       placeholder: "Paste your provide a mclo.gs/gist link."
     validations:
-      required: false
+      required: true
 
   - type: textarea
     id: minimal-mods
