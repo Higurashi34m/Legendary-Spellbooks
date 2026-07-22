@@ -1,5 +1,7 @@
 package dev.higurashi.legendary_spellbooks.datagen.server.tag;
 
+import dev.higurashi.daybreaklib.api.annotation.AutoDatagen;
+import dev.higurashi.daybreaklib.api.datagen.DatagenContext;
 import dev.higurashi.daybreaklib.api.datagen.provider.server.tag.BaseItemTagsProvider;
 import dev.higurashi.legendary_spellbooks.LegendarySpellbooks;
 import dev.higurashi.legendary_spellbooks.common.tag.LSTags;
@@ -7,15 +9,13 @@ import dev.higurashi.legendary_spellbooks.registry.LSItemRegistry;
 import io.redspace.ironsspellbooks.util.ModTags;
 import net.miauczel.legendary_monsters.item.ModItems;
 import net.minecraft.core.HolderLookup;
-import net.minecraft.data.PackOutput;
-import net.minecraftforge.common.data.ExistingFileHelper;
+import net.minecraftforge.api.distmarker.Dist;
 import org.jetbrains.annotations.NotNull;
 
-import java.util.concurrent.CompletableFuture;
-
+@AutoDatagen(dist = Dist.DEDICATED_SERVER)
 public class LSItemTagsProvider extends BaseItemTagsProvider {
-    public LSItemTagsProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> provider, ExistingFileHelper helper) {
-        super(output, provider, LegendarySpellbooks.MOD_ID, helper);
+    public LSItemTagsProvider(DatagenContext context) {
+        super(context.output(), context.provider(), LegendarySpellbooks.MOD_ID, context.helper());
     }
 
     @Override

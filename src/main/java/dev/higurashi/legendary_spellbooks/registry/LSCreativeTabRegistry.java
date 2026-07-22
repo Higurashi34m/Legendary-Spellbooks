@@ -3,12 +3,12 @@ package dev.higurashi.legendary_spellbooks.registry;
 import dev.higurashi.daybreaklib.api.annotation.AutoRegister;
 import dev.higurashi.daybreaklib.api.registry.CreativeTabRegistryManager;
 import dev.higurashi.daybreaklib.api.registry.reference.CreativeTabReference;
+import dev.higurashi.daybreaklib.api.util.TextUtils;
 import dev.higurashi.legendary_spellbooks.LegendarySpellbooks;
 import io.redspace.ironsspellbooks.IronsSpellbooks;
 import io.redspace.ironsspellbooks.api.spells.AbstractSpell;
 import io.redspace.ironsspellbooks.api.spells.ISpellContainer;
 import io.redspace.ironsspellbooks.registries.ItemRegistry;
-import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.registries.RegistryObject;
@@ -23,8 +23,8 @@ public class LSCreativeTabRegistry {
             .addItems(LSItemRegistry.getEntries())
             .build();
 
-    public static final RegistryObject<CreativeModeTab> LS_SCROLLS_TAB = CREATIVE_TABS.register("ls_scrolls", () -> CreativeModeTab.builder()
-            .title(Component.translatable("tab." + LegendarySpellbooks.MOD_ID + ".scrolls"))
+    public static final RegistryObject<CreativeModeTab> LS_SCROLLS = CREATIVE_TABS.register("ls_scrolls", () -> CreativeModeTab.builder()
+            .title(TextUtils.creativeTabKey(LegendarySpellbooks.id("scrolls")).translate())
             .icon(() -> new ItemStack(ItemRegistry.SCROLL.get()))
             .displayItems((features, entries) -> LSSpellRegistry.SPELLS.getEntries().forEach(registry -> {
                 AbstractSpell spell = registry.get();

@@ -1,13 +1,16 @@
 package dev.higurashi.legendary_spellbooks.datagen.client.lang;
 
+import dev.higurashi.daybreaklib.api.annotation.AutoDatagen;
+import dev.higurashi.daybreaklib.api.datagen.DatagenContext;
 import dev.higurashi.legendary_spellbooks.registry.*;
-import net.minecraft.data.PackOutput;
+import net.minecraftforge.api.distmarker.Dist;
 
 import java.util.Locale;
 
+@AutoDatagen(dist = Dist.CLIENT)
 public class LSJaJpLanguageProvider extends BaseLanguageProvider {
-    public LSJaJpLanguageProvider(PackOutput output) {
-        super(output, Locale.JAPAN.toString().toLowerCase());
+    public LSJaJpLanguageProvider(DatagenContext context) {
+        super(context.output(), Locale.JAPAN.toString().toLowerCase());
     }
 
     @Override

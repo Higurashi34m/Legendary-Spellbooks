@@ -1,18 +1,21 @@
 package dev.higurashi.legendary_spellbooks.datagen.server;
 
+import dev.higurashi.daybreaklib.api.annotation.AutoDatagen;
+import dev.higurashi.daybreaklib.api.datagen.DatagenContext;
 import dev.higurashi.legendary_spellbooks.registry.LSItemRegistry;
 import io.redspace.ironsspellbooks.registries.ItemRegistry;
 import net.miauczel.legendary_monsters.item.ModItems;
-import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraftforge.api.distmarker.Dist;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.function.Consumer;
 
+@AutoDatagen(dist = Dist.DEDICATED_SERVER)
 public class LSRecipeProvider extends RecipeProvider {
-    public LSRecipeProvider(PackOutput output) {
-        super(output);
+    public LSRecipeProvider(DatagenContext context) {
+        super(context.output());
     }
 
     @Override

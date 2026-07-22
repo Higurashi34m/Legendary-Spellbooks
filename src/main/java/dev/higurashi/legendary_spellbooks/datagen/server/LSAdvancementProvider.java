@@ -1,5 +1,7 @@
 package dev.higurashi.legendary_spellbooks.datagen.server;
 
+import dev.higurashi.daybreaklib.api.annotation.AutoDatagen;
+import dev.higurashi.daybreaklib.api.datagen.DatagenContext;
 import dev.higurashi.legendary_spellbooks.LegendarySpellbooks;
 import dev.higurashi.legendary_spellbooks.registry.LSItemRegistry;
 import net.minecraft.advancements.Advancement;
@@ -7,20 +9,20 @@ import net.minecraft.advancements.FrameType;
 import net.minecraft.advancements.critereon.InventoryChangeTrigger;
 import net.minecraft.advancements.critereon.PlayerTrigger;
 import net.minecraft.core.HolderLookup;
-import net.minecraft.data.PackOutput;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.common.data.ForgeAdvancementProvider;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
-import java.util.concurrent.CompletableFuture;
 import java.util.function.Consumer;
 
+@AutoDatagen(dist = Dist.DEDICATED_SERVER)
 public class LSAdvancementProvider extends ForgeAdvancementProvider {
-    public LSAdvancementProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> provider, ExistingFileHelper helper) {
-        super(output, provider, helper, List.of(new Generator()));
+    public LSAdvancementProvider(DatagenContext context) {
+        super(context.output(), context.provider(), context.helper(), List.of(new Generator()));
     }
 
     public static class Generator implements AdvancementGenerator {
