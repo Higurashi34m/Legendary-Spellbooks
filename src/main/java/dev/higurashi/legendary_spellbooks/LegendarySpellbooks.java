@@ -13,8 +13,8 @@ public class LegendarySpellbooks {
     public static final String MOD_ID = "legendary_spellbooks";
     public static final Logger LOGGER = LogUtils.getLogger();
 
-    public LegendarySpellbooks() {
-        IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+    public LegendarySpellbooks(FMLJavaModLoadingContext context) {
+        IEventBus modEventBus = context.getModEventBus();
 
         LSAttributeRegistry.register(modEventBus);
         LSCreativeTabRegistry.register(modEventBus);
