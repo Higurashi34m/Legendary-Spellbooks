@@ -1,67 +1,100 @@
 package dev.higurashi.legendary_spellbooks.common.spell.ice;
 
-import dev.higurashi.legendary_spellbooks.LegendarySpellbooks;
-import dev.higurashi.legendary_spellbooks.api.spells.BaseSpell;
-import dev.higurashi.legendary_spellbooks.api.utils.ComponentUtils;
-import dev.higurashi.legendary_spellbooks.api.utils.GeometryUtils;
-import dev.higurashi.legendary_spellbooks.api.utils.RaycastUtils;
+import dev.higurashi.daybreaklib.api.util.GeometryUtils;
+import dev.higurashi.daybreaklib.api.util.TextUtils;
+import dev.higurashi.daybreaklib.api.util.position.PositionSearch;
+import dev.higurashi.daybreaklib_iss.api.common.spell.BaseLockOnSpell;
+import dev.higurashi.daybreaklib_iss.api.common.spell.SpellConfigBuilder;
 import dev.higurashi.legendary_spellbooks.common.entity.spell.projectile.SpellIceSpikeEntity;
+import io.redspace.ironsspellbooks.IronsSpellbooks;
 import io.redspace.ironsspellbooks.api.config.DefaultConfig;
 import io.redspace.ironsspellbooks.api.magic.MagicData;
 import io.redspace.ironsspellbooks.api.registry.SchoolRegistry;
 import io.redspace.ironsspellbooks.api.spells.CastSource;
-import io.redspace.ironsspellbooks.api.spells.SpellRarity;
-import net.minecraft.network.chat.Component;
+import net.miauczel.legendary_monsters.entity.ModEntities;
 import net.minecraft.network.chat.MutableComponent;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
+import java.util.ArrayList;
 import java.util.List;
 
-public class GlacierEruptionSpell extends BaseSpell {
-    private static final ResourceLocation spellResource = ResourceLocation.fromNamespaceAndPath(LegendarySpellbooks.MOD_ID, "glacier_eruption");
-    private static final DefaultConfig spellConfig = new DefaultConfig()
-            .setSchoolResource(SchoolRegistry.ICE_RESOURCE)
-            .setMinRarity(SpellRarity.RARE)
-            .setCooldownSeconds(6)
-            .setMaxLevel(7).build();
+public class GlacierEruptionSpell extends BaseLockOnSpell {
+    private static final DefaultConfig CONFIG = new SpellConfigBuilder(SchoolRegistry.ICE_RESOURCE)
+            .setCooldownSec(2)
+            .build();
 
     public GlacierEruptionSpell() {
-        super(spellResource, spellConfig);
+        super(CONFIG, false);
         this.baseManaCost = 30;
-        this.baseSpellPower = 3;
+        this.baseSpellPower = 2;
         this.manaCostPerLevel = 5;
         this.spellPowerPerLevel = 1;
     }
 
     @Override
     public List<MutableComponent> getUniqueInfo(int spellLevel, LivingEntity caster) {
+        String damage = TextUtils.truncate(this.getDamage(spellLevel, caster), 1);
+
         return List.of(
-                Component.translatable("ui.irons_spellbooks.damage", ComponentUtils.format1f(getSpellPower(spellLevel, caster))),
-                Component.translatable("ui.irons_spellbooks.spike_count", getSpikesCount(spellLevel))
+                TextUtils.uiKey(IronsSpellbooks.id("damage")).translate(damage),
+                TextUtils.uiKey(IronsSpellbooks.id("spike_count")).translate(this.getSpikeCount(spellLevel))
         );
     }
 
     @Override
-    public void onCast(Level level, int spellLevel, LivingEntity caster, CastSource source, MagicData magicData) {
-        int damage = (int) getSpellPower(spellLevel, caster);
-        int spikeCount = getSpikesCount(spellLevel);
+    public boolean checkPreCastConditions(Level level, int spellLevel, LivingEntity caster, MagicData magicData) {
+        this.lockOnRange = (int) this.getRange(spellLevel) + 1;
+        return super.checkPreCastConditions(level, spellLevel, caster, magicData);
+    }
 
-        Vec3 center = caster.position();
-        List<Vec3> spawnPoints = GeometryUtils.getLinePoints(center, caster.getYRot(), spikeCount, 1.5, 1.5);
+    @Override
+    public void cast(Level level, int spellLevel, LivingEntity caster, CastSource source, MagicData magicData, @Nullable LivingEntity target) {
+        float damage = this.getDamage(spellLevel, caster);
+        double range = this.getRange(spellLevel);
+        int spikeCount = this.getSpikeCount(spellLevel);
 
-        for (int i = 0; i < spawnPoints.size(); i++) {
-            Vec3 spawnPos = RaycastUtils.findGround(level, spawnPoints.get(i), 6, 3);
-            if (spawnPos == null) continue;
+        // Line
+        List<Vec3> lineSpawnPoints = PositionSearch.builder(level)
+                .positions(dev.higurashi.daybreaklib.api.util.GeometryUtils.pointsOnHorizontalLine(caster.position().add(caster.getForward().scale(1.0)), caster.getForward(), range, spikeCount))
+                .requireSpace(ModEntities.ICE_SPIKE_ENTITY.get().getDimensions())
+                .ground(2, 5).build().findAll();
 
-            SpellIceSpikeEntity spike = new SpellIceSpikeEntity(level, spawnPos, (float) Math.toRadians(caster.getYRot()), i + 1, caster, damage);
+        for (int i = 0; i < lineSpawnPoints.size(); i++) {
+            Vec3 spawnPos = lineSpawnPoints.get(i);
+            float yaw = dev.higurashi.daybreaklib.api.util.GeometryUtils.getYawFromVec(dev.higurashi.daybreaklib.api.util.GeometryUtils.getDirection(caster.position(), spawnPos));
+
+            SpellIceSpikeEntity spike = new SpellIceSpikeEntity(level, spawnPos, yaw, caster, damage, i);
             level.addFreshEntity(spike);
         }
 
-        super.onCast(level, spellLevel, caster, source, magicData);
+        // LockOn Ring
+        if (target == null) return;
+        this.spawnLockOnRing(level, caster, target, lineSpawnPoints.size(), damage / 2.0f);
     }
 
-    private int getSpikesCount(int spellLevel) { return Math.min(3 + spellLevel, 15); }
+    private void spawnLockOnRing(Level level, LivingEntity caster, @NotNull LivingEntity target, int warmup, float damage) {
+        List<Vec3> ringPos = new ArrayList<>();
+        ringPos.addAll(GeometryUtils.pointsOnCircle(target.position(), 1.5, 5));
+        ringPos.addAll(GeometryUtils.pointsOnCircle(target.position(), 3.0, 8));
+
+        List<Vec3> ringSpawnPoints = PositionSearch.builder(level)
+                .positions(ringPos)
+                .requireSpace(ModEntities.ICE_SPIKE_ENTITY.get().getDimensions())
+                .ground(2, 5).build().findAll();
+
+        for (Vec3 spawnPos : ringSpawnPoints) {
+            float yaw = GeometryUtils.getYawFromVec(GeometryUtils.getDirection(target.position(), spawnPos));
+
+            SpellIceSpikeEntity spike = new SpellIceSpikeEntity(level, spawnPos, yaw, caster, damage, warmup);
+            level.addFreshEntity(spike);
+        }
+    }
+
+    private float getDamage(int spellLevel, LivingEntity caster) { return this.getSpellPower(spellLevel, caster); }
+    private double getRange(int spellLevel) { return 6.0 + spellLevel; }
+    private int getSpikeCount(int spellLevel) { return 4 + spellLevel; }
 }

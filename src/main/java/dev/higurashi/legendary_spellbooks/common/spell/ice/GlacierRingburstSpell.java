@@ -66,7 +66,7 @@ public class GlacierRingburstSpell extends BaseSpell {
                 Vec3 spawn = RaycastUtils.findGround(level, point, 6, 3);
                 if (spawn == null) break;
 
-                SpellIceSpikeEntity spike = new SpellIceSpikeEntity(level, spawn, (float) Math.toRadians(caster.getYRot()), warmup, caster, damage);
+                SpellIceSpikeEntity spike = new SpellIceSpikeEntity(level, spawn, (float) Math.toRadians(caster.getYRot()), caster, damage, warmup);
                 level.addFreshEntity(spike);
             }
         }

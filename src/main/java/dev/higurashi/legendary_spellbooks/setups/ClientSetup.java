@@ -35,7 +35,7 @@ public class ClientSetup {
         event.registerEntityRenderer(LSEntityRegistry.SPELL_FIRE_COLUMN_ENTITY.getAs(), NoRendererEntityRenderer::new);
         event.registerEntityRenderer(LSEntityRegistry.SPELL_POISONOUS_SHOCKWAVE_ENTITY.getAs(), NoRendererEntityRenderer::new);
         event.registerEntityRenderer(LSEntityRegistry.CUMULO_CHARGE_ENTITY.getAs(), CumuloChargeRenderer::new);
-        event.registerEntityRenderer(LSEntityRegistry.SPELL_ICE_SPIKE_ENTITY.getAs(), IceSpikeRenderer::new);
+        event.registerEntityRenderer(LSEntityRegistry.SPELL_ICE_SPIKE_ENTITY.getAs(), SpellIceSpikeEntityRenderer::new);
         event.registerEntityRenderer(LSEntityRegistry.SPELL_ANNIHILATION_BOMB_ENTITY.getAs(), SpellAnnihilationBombRenderer::new);
         event.registerEntityRenderer(LSEntityRegistry.SPELL_SOUL_TRIDENT_ENTITY.getAs(), SoulTridentRenderer::new);
 
