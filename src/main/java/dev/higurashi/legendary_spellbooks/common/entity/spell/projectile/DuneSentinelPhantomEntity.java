@@ -1,6 +1,6 @@
 package dev.higurashi.legendary_spellbooks.common.entity.spell.projectile;
 
-import dev.higurashi.legendary_spellbooks.registries.LSEntityRegistry;
+import dev.higurashi.legendary_spellbooks.registry.LSEntityRegistry;
 import io.redspace.ironsspellbooks.api.magic.MagicData;
 import io.redspace.ironsspellbooks.capabilities.magic.MagicManager;
 import io.redspace.ironsspellbooks.entity.mobs.AntiMagicSusceptible;
@@ -31,7 +31,7 @@ public class DuneSentinelPhantomEntity extends Entity implements AntiMagicSuscep
     }
 
     public DuneSentinelPhantomEntity(Level level, LivingEntity caster, float damage) {
-        this(LSEntityRegistry.DUNE_SENTINEL_PHANTOM_ENTITY.get(), level);
+        this(LSEntityRegistry.DUNE_SENTINEL_PHANTOM_ENTITY.getAs(), level);
         this.caster = caster;
         this.damage = damage;
     }

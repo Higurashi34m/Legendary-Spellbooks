@@ -1,7 +1,7 @@
 package dev.higurashi.legendary_spellbooks.common.entity.spell.projectile;
 
-import dev.higurashi.legendary_spellbooks.registries.LSEntityRegistry;
-import dev.higurashi.legendary_spellbooks.registries.LSSpellRegistry;
+import dev.higurashi.legendary_spellbooks.registry.LSEntityRegistry;
+import dev.higurashi.legendary_spellbooks.registry.LSSpellRegistry;
 import io.redspace.ironsspellbooks.api.spells.AbstractSpell;
 import io.redspace.ironsspellbooks.api.util.Utils;
 import io.redspace.ironsspellbooks.capabilities.magic.MagicManager;
@@ -38,7 +38,7 @@ public class AnnihilationArrowEntity extends AbstractMagicProjectile {
     }
 
     public AnnihilationArrowEntity(Level level, LivingEntity caster, Vec3 spawnPos, float damage, float hpDamage) {
-        this(LSEntityRegistry.ANNIHILATION_ARROW.get(), level);
+        this(LSEntityRegistry.ANNIHILATION_ARROW.getAs(), level);
         this.setPos(spawnPos);
         this.setOwner(caster);
         this.setDamage(damage);

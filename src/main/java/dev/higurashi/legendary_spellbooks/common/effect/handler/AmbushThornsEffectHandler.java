@@ -1,7 +1,7 @@
 package dev.higurashi.legendary_spellbooks.common.effect.handler;
 
-import dev.higurashi.legendary_spellbooks.registries.LSEffectRegistry;
-import dev.higurashi.legendary_spellbooks.registries.LSSpellRegistry;
+import dev.higurashi.legendary_spellbooks.registry.LSEffectRegistry;
+import dev.higurashi.legendary_spellbooks.registry.LSSpellRegistry;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;

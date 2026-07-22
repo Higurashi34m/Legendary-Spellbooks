@@ -1,8 +1,8 @@
 package dev.higurashi.legendary_spellbooks;
 
 import com.mojang.logging.LogUtils;
-import dev.higurashi.legendary_spellbooks.registries.*;
-import net.minecraftforge.common.MinecraftForge;
+import dev.higurashi.daybreaklib.DaybreakLib;
+import dev.higurashi.legendary_spellbooks.registry.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -16,15 +16,10 @@ public class LegendarySpellbooks {
     public LegendarySpellbooks(FMLJavaModLoadingContext context) {
         IEventBus modEventBus = context.getModEventBus();
 
-        LSAttributeRegistry.register(modEventBus);
-        LSCreativeTabRegistry.register(modEventBus);
+        DaybreakLib.init(MOD_ID, modEventBus);
+
         LSEffectRegistry.register(modEventBus);
-        LSEntityRegistry.register(modEventBus);
-        LSItemRegistry.register(modEventBus);
-        LSSchoolRegistry.register(modEventBus);
         LSSpellRegistry.register(modEventBus);
         LSLootModifierRegistry.register(modEventBus);
-
-        MinecraftForge.EVENT_BUS.register(this);
     }
 }

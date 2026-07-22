@@ -3,8 +3,8 @@ package dev.higurashi.legendary_spellbooks.common.spell.annihilation;
 import dev.higurashi.legendary_spellbooks.LegendarySpellbooks;
 import dev.higurashi.legendary_spellbooks.api.spells.BaseSpell;
 import dev.higurashi.legendary_spellbooks.api.utils.ComponentUtils;
-import dev.higurashi.legendary_spellbooks.registries.LSEffectRegistry;
-import dev.higurashi.legendary_spellbooks.registries.LSSchoolRegistry;
+import dev.higurashi.legendary_spellbooks.registry.LSEffectRegistry;
+import dev.higurashi.legendary_spellbooks.registry.LSSchoolRegistry;
 import io.redspace.ironsspellbooks.api.config.DefaultConfig;
 import io.redspace.ironsspellbooks.api.magic.MagicData;
 import io.redspace.ironsspellbooks.api.spells.CastSource;
@@ -24,7 +24,7 @@ import net.minecraft.world.phys.Vec3;
 import java.util.List;
 
 public class FlamebornDriftSpell extends BaseSpell {
-    public static final SpinAttackType FLAMEBORN = new SpinAttackType(ResourceLocation.fromNamespaceAndPath(LegendarySpellbooks.MOD_ID, "textures/entity/flameborn_drift.png"), false);
+//    public static final SpinAttackType FLAMEBORN = new SpinAttackType(ResourceLocation.fromNamespaceAndPath(LegendarySpellbooks.MOD_ID, "textures/entity/flameborn_drift.png"), false);
 
     private static final ResourceLocation spellResource = ResourceLocation.fromNamespaceAndPath(LegendarySpellbooks.MOD_ID, "flameborn_drift");
     private static final DefaultConfig spellConfig = new DefaultConfig()
@@ -76,7 +76,7 @@ public class FlamebornDriftSpell extends BaseSpell {
 
         caster.addEffect(new MobEffectInstance(LSEffectRegistry.FLAMEBORN_DASH_EFFECT.get(), 12, spellLevel, false, false));
         caster.invulnerableTime = 15;
-        magicData.getSyncedData().setSpinAttackType(FLAMEBORN);
+        magicData.getSyncedData().setSpinAttackType(SpinAttackType.FIRE);
 
         super.onCast(world, spellLevel, caster, source, magicData);
     }

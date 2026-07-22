@@ -1,6 +1,6 @@
 package dev.higurashi.legendary_spellbooks.common.effect.handler;
 
-import dev.higurashi.legendary_spellbooks.registries.LSEffectRegistry;
+import dev.higurashi.legendary_spellbooks.registry.LSEffectRegistry;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.player.Input;
 import net.minecraft.world.entity.player.Player;

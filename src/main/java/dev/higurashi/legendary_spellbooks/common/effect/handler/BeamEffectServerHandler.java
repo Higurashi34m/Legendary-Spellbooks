@@ -1,6 +1,6 @@
 package dev.higurashi.legendary_spellbooks.common.effect.handler;
 
-import dev.higurashi.legendary_spellbooks.registries.LSEffectRegistry;
+import dev.higurashi.legendary_spellbooks.registry.LSEffectRegistry;
 import io.redspace.ironsspellbooks.api.events.SpellPreCastEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;

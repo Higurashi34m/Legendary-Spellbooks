@@ -6,7 +6,7 @@ import dev.higurashi.legendary_spellbooks.api.utils.ComponentUtils;
 import dev.higurashi.legendary_spellbooks.api.utils.GeometryUtils;
 import dev.higurashi.legendary_spellbooks.api.utils.RaycastUtils;
 import dev.higurashi.legendary_spellbooks.common.mixin.helper.ISpellSourceFlag;
-import dev.higurashi.legendary_spellbooks.registries.LSSchoolRegistry;
+import dev.higurashi.legendary_spellbooks.registry.LSSchoolRegistry;
 import io.redspace.ironsspellbooks.IronsSpellbooks;
 import io.redspace.ironsspellbooks.api.config.DefaultConfig;
 import io.redspace.ironsspellbooks.api.magic.MagicData;

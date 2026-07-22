@@ -4,7 +4,7 @@ import dev.higurashi.legendary_spellbooks.api.entities.helper.ISummonedMob;
 import dev.higurashi.legendary_spellbooks.api.utils.RaycastUtils;
 import dev.higurashi.legendary_spellbooks.common.entity.spell.projectile.SpellAnnihilationExplosionEntity;
 import dev.higurashi.legendary_spellbooks.common.spell.annihilation.ReleaseRiftwalkerPredatorSpell;
-import dev.higurashi.legendary_spellbooks.registries.LSEntityRegistry;
+import dev.higurashi.legendary_spellbooks.registry.LSEntityRegistry;
 import io.redspace.ironsspellbooks.capabilities.magic.MagicManager;
 import io.redspace.ironsspellbooks.capabilities.magic.SummonManager;
 import net.miauczel.legendary_monsters.damagetype.ModDamageTypes;

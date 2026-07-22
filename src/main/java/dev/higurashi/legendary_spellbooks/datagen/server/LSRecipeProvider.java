@@ -1,6 +1,6 @@
 package dev.higurashi.legendary_spellbooks.datagen.server;
 
-import dev.higurashi.legendary_spellbooks.registries.LSItemRegistry;
+import dev.higurashi.legendary_spellbooks.registry.LSItemRegistry;
 import io.redspace.ironsspellbooks.registries.ItemRegistry;
 import net.miauczel.legendary_monsters.item.ModItems;
 import net.minecraft.data.PackOutput;

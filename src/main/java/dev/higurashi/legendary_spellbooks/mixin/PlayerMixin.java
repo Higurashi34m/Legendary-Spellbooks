@@ -1,6 +1,6 @@
 package dev.higurashi.legendary_spellbooks.mixin;
 
-import dev.higurashi.legendary_spellbooks.registries.LSEffectRegistry;
+import dev.higurashi.legendary_spellbooks.registry.LSEffectRegistry;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;

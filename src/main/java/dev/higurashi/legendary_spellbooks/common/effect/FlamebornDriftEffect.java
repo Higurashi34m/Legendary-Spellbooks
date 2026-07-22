@@ -1,7 +1,7 @@
 package dev.higurashi.legendary_spellbooks.common.effect;
 
 import dev.higurashi.legendary_spellbooks.common.spell.annihilation.FlamebornDriftSpell;
-import dev.higurashi.legendary_spellbooks.registries.LSSpellRegistry;
+import dev.higurashi.legendary_spellbooks.registry.LSSpellRegistry;
 import io.redspace.ironsspellbooks.api.spells.AbstractSpell;
 import io.redspace.ironsspellbooks.damage.DamageSources;
 import io.redspace.ironsspellbooks.effect.MagicMobEffect;

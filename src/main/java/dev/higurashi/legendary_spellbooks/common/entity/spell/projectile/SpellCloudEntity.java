@@ -1,8 +1,8 @@
 package dev.higurashi.legendary_spellbooks.common.entity.spell.projectile;
 
 import dev.higurashi.legendary_spellbooks.api.entities.helper.IWarmupEntity;
-import dev.higurashi.legendary_spellbooks.registries.LSEntityRegistry;
-import dev.higurashi.legendary_spellbooks.registries.LSSpellRegistry;
+import dev.higurashi.legendary_spellbooks.registry.LSEntityRegistry;
+import dev.higurashi.legendary_spellbooks.registry.LSSpellRegistry;
 import io.redspace.ironsspellbooks.api.spells.AbstractSpell;
 import io.redspace.ironsspellbooks.damage.DamageSources;
 import net.miauczel.legendary_monsters.entity.AnimatedMonster.Projectile.CloudEntity;
@@ -31,7 +31,7 @@ public class SpellCloudEntity extends CloudEntity implements IWarmupEntity {
     }
 
     public SpellCloudEntity(Level level, LivingEntity caster) {
-        this(LSEntityRegistry.SPELL_CLOUD_ENTITY.get(), level);
+        this(LSEntityRegistry.SPELL_CLOUD_ENTITY.getAs(), level);
         this.setOwner(caster);
     }
 

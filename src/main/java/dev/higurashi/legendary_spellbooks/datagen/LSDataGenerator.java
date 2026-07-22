@@ -1,11 +1,9 @@
 package dev.higurashi.legendary_spellbooks.datagen;
 
-import dev.higurashi.legendary_spellbooks.datagen.client.LSItemModelProvider;
 import dev.higurashi.legendary_spellbooks.datagen.client.lang.LSEnUsLanguageProvider;
 import dev.higurashi.legendary_spellbooks.datagen.client.lang.LSJaJpLanguageProvider;
 import dev.higurashi.legendary_spellbooks.datagen.server.LSAdvancementProvider;
-import dev.higurashi.legendary_spellbooks.datagen.server.LSBlockTagsProvider;
-import dev.higurashi.legendary_spellbooks.datagen.server.LSItemTagsProvider;
+import dev.higurashi.legendary_spellbooks.datagen.server.tag.LSItemTagsProvider;
 import dev.higurashi.legendary_spellbooks.datagen.server.LSRecipeProvider;
 import dev.higurashi.legendary_spellbooks.datagen.server.loot.LSSpellScrollLootProvider;
 import net.minecraft.core.HolderLookup;
@@ -30,12 +28,9 @@ public class LSDataGenerator {
         // Client
         generator.addProvider(event.includeClient(), new LSEnUsLanguageProvider(output));
         generator.addProvider(event.includeClient(), new LSJaJpLanguageProvider(output));
-        generator.addProvider(event.includeClient(), new LSItemModelProvider(output, helper));
 
         // Server
-        LSBlockTagsProvider blockTagsProvider = new LSBlockTagsProvider(output, provider, helper);
-        generator.addProvider(event.includeServer(), blockTagsProvider);
-        generator.addProvider(event.includeServer(), new LSItemTagsProvider(output, provider, blockTagsProvider.contentsGetter(), helper));
+        generator.addProvider(event.includeServer(), new LSItemTagsProvider(output, provider, helper));
         generator.addProvider(event.includeServer(), new LSAdvancementProvider(output, provider, helper));
         generator.addProvider(event.includeServer(), new LSSpellScrollLootProvider(output));
         generator.addProvider(event.includeServer(), new LSRecipeProvider(output));

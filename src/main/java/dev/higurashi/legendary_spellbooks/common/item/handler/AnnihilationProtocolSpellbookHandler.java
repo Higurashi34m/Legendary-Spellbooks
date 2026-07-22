@@ -1,6 +1,6 @@
 package dev.higurashi.legendary_spellbooks.common.item.handler;
 
-import dev.higurashi.legendary_spellbooks.registries.LSItemRegistry;
+import dev.higurashi.legendary_spellbooks.registry.LSItemRegistry;
 import io.redspace.ironsspellbooks.registries.MobEffectRegistry;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.LivingEntity;

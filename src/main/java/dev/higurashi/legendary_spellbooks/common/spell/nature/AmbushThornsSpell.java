@@ -4,7 +4,7 @@ import dev.higurashi.legendary_spellbooks.LegendarySpellbooks;
 import dev.higurashi.legendary_spellbooks.api.spells.BaseSpell;
 import dev.higurashi.legendary_spellbooks.api.utils.ComponentUtils;
 import dev.higurashi.legendary_spellbooks.common.effect.handler.AmbushThornsEffectHandler;
-import dev.higurashi.legendary_spellbooks.registries.LSEffectRegistry;
+import dev.higurashi.legendary_spellbooks.registry.LSEffectRegistry;
 import io.redspace.ironsspellbooks.IronsSpellbooks;
 import io.redspace.ironsspellbooks.api.config.DefaultConfig;
 import io.redspace.ironsspellbooks.api.magic.MagicData;

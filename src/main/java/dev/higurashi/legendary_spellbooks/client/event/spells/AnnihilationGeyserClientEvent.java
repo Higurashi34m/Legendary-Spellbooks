@@ -3,7 +3,7 @@ package dev.higurashi.legendary_spellbooks.client.event.spells;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import dev.higurashi.legendary_spellbooks.api.utils.GeometryUtils;
-import dev.higurashi.legendary_spellbooks.registries.LSSpellRegistry;
+import dev.higurashi.legendary_spellbooks.registry.LSSpellRegistry;
 import io.redspace.ironsspellbooks.player.ClientMagicData;
 import net.miauczel.legendary_monsters.LegendaryMonsters;
 import net.miauczel.legendary_monsters.client.RenderUtils;

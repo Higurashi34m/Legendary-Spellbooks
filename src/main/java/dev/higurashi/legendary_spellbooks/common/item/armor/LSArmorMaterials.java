@@ -1,7 +1,7 @@
 package dev.higurashi.legendary_spellbooks.common.item.armor;
 
 import com.google.common.base.Suppliers;
-import dev.higurashi.legendary_spellbooks.registries.LSAttributeRegistry;
+import dev.higurashi.legendary_spellbooks.registry.LSAttributeRegistry;
 import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
 import io.redspace.ironsspellbooks.item.armor.IronsExtendedArmorMaterial;
 import io.redspace.ironsspellbooks.registries.ItemRegistry;

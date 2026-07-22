@@ -1,6 +1,6 @@
 package dev.higurashi.legendary_spellbooks.datagen.client.lang;
 
-import dev.higurashi.legendary_spellbooks.registries.*;
+import dev.higurashi.legendary_spellbooks.registry.*;
 import net.minecraft.data.PackOutput;
 
 import java.util.Locale;

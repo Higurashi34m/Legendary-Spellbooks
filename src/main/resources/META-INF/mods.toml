@@ -1,6 +1,6 @@
 # Loader Settings
 modLoader     = "javafml"
-loaderVersion = "${loader_version_range}"
+loaderVersion = "${forge_version_range}"
 
 # Mod Settings
 license         = "${mod_license}"

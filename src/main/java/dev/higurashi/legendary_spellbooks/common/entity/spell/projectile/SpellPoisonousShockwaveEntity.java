@@ -1,8 +1,8 @@
 package dev.higurashi.legendary_spellbooks.common.entity.spell.projectile;
 
 import dev.higurashi.legendary_spellbooks.api.entities.helper.IWarmupEntity;
-import dev.higurashi.legendary_spellbooks.registries.LSEntityRegistry;
-import dev.higurashi.legendary_spellbooks.registries.LSSpellRegistry;
+import dev.higurashi.legendary_spellbooks.registry.LSEntityRegistry;
+import dev.higurashi.legendary_spellbooks.registry.LSSpellRegistry;
 import io.redspace.ironsspellbooks.api.spells.AbstractSpell;
 import io.redspace.ironsspellbooks.damage.DamageSources;
 import net.miauczel.legendary_monsters.entity.AnimatedMonster.Projectile.PoisonousShockwave;
@@ -30,7 +30,7 @@ public class SpellPoisonousShockwaveEntity extends PoisonousShockwave implements
     }
 
     public SpellPoisonousShockwaveEntity(Level level, double x, double y, double z, float yaw, int warmup, LivingEntity caster, int lifeTicks, float radius, float damage) {
-        this(LSEntityRegistry.SPELL_POISONOUS_SHOCKWAVE_ENTITY.get(), level);
+        this(LSEntityRegistry.SPELL_POISONOUS_SHOCKWAVE_ENTITY.getAs(), level);
         this.setWarmup(warmup);
         this.setCaster(caster);
         this.setYRot(yaw * (180 / (float) Math.PI));

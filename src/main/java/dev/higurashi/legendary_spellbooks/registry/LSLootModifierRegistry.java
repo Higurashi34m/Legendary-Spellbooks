@@ -1,4 +1,4 @@
-package dev.higurashi.legendary_spellbooks.registries;
+package dev.higurashi.legendary_spellbooks.registry;
 
 import com.mojang.serialization.Codec;
 import dev.higurashi.legendary_spellbooks.LegendarySpellbooks;

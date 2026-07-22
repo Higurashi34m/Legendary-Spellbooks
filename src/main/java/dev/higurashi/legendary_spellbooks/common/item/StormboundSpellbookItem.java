@@ -3,7 +3,7 @@ package dev.higurashi.legendary_spellbooks.common.item;
 import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Multimap;
 import dev.higurashi.legendary_spellbooks.api.utils.ComponentUtils;
-import dev.higurashi.legendary_spellbooks.registries.LSSpellRegistry;
+import dev.higurashi.legendary_spellbooks.registry.LSSpellRegistry;
 import io.redspace.ironsspellbooks.api.item.curios.AffinityData;
 import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
 import io.redspace.ironsspellbooks.api.registry.SpellDataRegistryHolder;

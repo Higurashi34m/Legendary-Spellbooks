@@ -1,7 +1,7 @@
 package dev.higurashi.legendary_spellbooks.datagen.server;
 
 import dev.higurashi.legendary_spellbooks.LegendarySpellbooks;
-import dev.higurashi.legendary_spellbooks.registries.LSItemRegistry;
+import dev.higurashi.legendary_spellbooks.registry.LSItemRegistry;
 import net.minecraft.advancements.Advancement;
 import net.minecraft.advancements.FrameType;
 import net.minecraft.advancements.critereon.InventoryChangeTrigger;

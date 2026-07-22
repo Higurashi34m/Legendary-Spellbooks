@@ -1,7 +1,7 @@
 package dev.higurashi.legendary_spellbooks.client.renderer.spell.animation;
 
 import com.mojang.blaze3d.vertex.PoseStack;
-import dev.higurashi.legendary_spellbooks.registries.LSSpellRegistry;
+import dev.higurashi.legendary_spellbooks.registry.LSSpellRegistry;
 import io.redspace.ironsspellbooks.capabilities.magic.SyncedSpellData;
 import io.redspace.ironsspellbooks.player.ClientMagicData;
 import net.miauczel.legendary_monsters.entity.AnimatedMonster.Projectile.SoulTridentEntity;

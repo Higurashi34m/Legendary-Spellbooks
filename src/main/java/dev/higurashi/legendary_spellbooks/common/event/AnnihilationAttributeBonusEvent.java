@@ -1,6 +1,6 @@
 package dev.higurashi.legendary_spellbooks.common.event;
 
-import dev.higurashi.legendary_spellbooks.registries.LSAttributeRegistry;
+import dev.higurashi.legendary_spellbooks.registry.LSAttributeRegistry;
 import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.AttributeInstance;

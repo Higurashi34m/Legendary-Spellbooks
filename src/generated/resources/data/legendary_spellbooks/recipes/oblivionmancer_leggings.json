@@ -3,7 +3,7 @@
   "category": "misc",
   "ingredients": [
     {
-      "tag": "irons_spellbooks:wizard_base_leggings"
+      "item": "irons_spellbooks:wizard_leggings"
     },
     {
       "item": "irons_spellbooks:arcane_essence"

@@ -2,7 +2,7 @@ package dev.higurashi.legendary_spellbooks.client.renderer.spell.animation;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
-import dev.higurashi.legendary_spellbooks.registries.LSEffectRegistry;
+import dev.higurashi.legendary_spellbooks.registry.LSEffectRegistry;
 import net.miauczel.legendary_monsters.entity.client.ModModelLayers;
 import net.miauczel.legendary_monsters.entity.client.Model.NewPossessedPaladinModel;
 import net.miauczel.legendary_monsters.entity.client.Render.LMRenderTypes;

@@ -1,6 +1,6 @@
 package dev.higurashi.legendary_spellbooks.common.effect.handler;
 
-import dev.higurashi.legendary_spellbooks.registries.LSEffectRegistry;
+import dev.higurashi.legendary_spellbooks.registry.LSEffectRegistry;
 import net.miauczel.legendary_monsters.effect.ModEffects;
 import net.miauczel.legendary_monsters.util.EntityUtil;
 import net.minecraft.world.effect.MobEffect;

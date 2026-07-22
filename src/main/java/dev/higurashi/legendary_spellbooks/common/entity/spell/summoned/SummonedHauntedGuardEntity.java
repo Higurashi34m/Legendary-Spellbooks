@@ -2,7 +2,7 @@ package dev.higurashi.legendary_spellbooks.common.entity.spell.summoned;
 
 import dev.higurashi.legendary_spellbooks.api.entities.helper.ISummonedMob;
 import dev.higurashi.legendary_spellbooks.common.spell.evocation.CollapsedKingdomsLegionSpell;
-import dev.higurashi.legendary_spellbooks.registries.LSEntityRegistry;
+import dev.higurashi.legendary_spellbooks.registry.LSEntityRegistry;
 import io.redspace.ironsspellbooks.capabilities.magic.MagicManager;
 import io.redspace.ironsspellbooks.capabilities.magic.SummonManager;
 import net.miauczel.legendary_monsters.entity.AnimatedMonster.Mobs.CollapsedKingdom.HauntedGuardEntity;
@@ -27,7 +27,7 @@ public class SummonedHauntedGuardEntity extends HauntedGuardEntity implements IS
     }
 
     public SummonedHauntedGuardEntity(Level level, LivingEntity owner) {
-        this(LSEntityRegistry.SUMMONED_HAUNTED_GUARD_ENTITY.get(), level);
+        this(LSEntityRegistry.SUMMONED_HAUNTED_GUARD_ENTITY.getAs(), level);
         SummonManager.setOwner(this, owner);
     }
 

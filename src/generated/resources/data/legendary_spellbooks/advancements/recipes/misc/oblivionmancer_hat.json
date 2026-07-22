@@ -11,7 +11,9 @@
       "conditions": {
         "items": [
           {
-            "tag": "irons_spellbooks:wizard_base_helmet"
+            "items": [
+              "irons_spellbooks:wizard_helmet"
+            ]
           }
         ]
       },

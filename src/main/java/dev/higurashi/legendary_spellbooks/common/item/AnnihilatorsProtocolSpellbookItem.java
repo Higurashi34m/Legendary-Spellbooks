@@ -1,9 +1,9 @@
 package dev.higurashi.legendary_spellbooks.common.item;
 
 import dev.higurashi.legendary_spellbooks.api.utils.ComponentUtils;
-import dev.higurashi.legendary_spellbooks.registries.LSAttributeRegistry;
-import dev.higurashi.legendary_spellbooks.registries.LSItemRegistry;
-import dev.higurashi.legendary_spellbooks.registries.LSSpellRegistry;
+import dev.higurashi.legendary_spellbooks.registry.LSAttributeRegistry;
+import dev.higurashi.legendary_spellbooks.registry.LSItemRegistry;
+import dev.higurashi.legendary_spellbooks.registry.LSSpellRegistry;
 import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
 import io.redspace.ironsspellbooks.api.registry.SpellDataRegistryHolder;
 import io.redspace.ironsspellbooks.item.UniqueSpellBook;

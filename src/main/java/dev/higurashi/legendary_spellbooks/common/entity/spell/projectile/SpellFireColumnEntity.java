@@ -1,8 +1,8 @@
 package dev.higurashi.legendary_spellbooks.common.entity.spell.projectile;
 
 import dev.higurashi.legendary_spellbooks.api.entities.helper.IWarmupEntity;
-import dev.higurashi.legendary_spellbooks.registries.LSEntityRegistry;
-import dev.higurashi.legendary_spellbooks.registries.LSSpellRegistry;
+import dev.higurashi.legendary_spellbooks.registry.LSEntityRegistry;
+import dev.higurashi.legendary_spellbooks.registry.LSSpellRegistry;
 import io.redspace.ironsspellbooks.api.spells.AbstractSpell;
 import io.redspace.ironsspellbooks.damage.DamageSources;
 import net.miauczel.legendary_monsters.Particle.ModParticles;
@@ -27,7 +27,7 @@ public class SpellFireColumnEntity extends FireColumnEntity implements IWarmupEn
     }
 
     public SpellFireColumnEntity(Level level, double x, double y, double z, float yaw, float damage, int warmupTick, int lifeTicks, LivingEntity caster) {
-        this(LSEntityRegistry.SPELL_FIRE_COLUMN_ENTITY.get(), level);
+        this(LSEntityRegistry.SPELL_FIRE_COLUMN_ENTITY.getAs(), level);
         this.setLifeTicks(lifeTicks);
         this.setWarmup(warmupTick);
         this.setCaster(caster);

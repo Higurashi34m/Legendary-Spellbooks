@@ -4,7 +4,7 @@ import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import dev.higurashi.legendary_spellbooks.common.loot.entry.DifficultyWeights;
 import dev.higurashi.legendary_spellbooks.common.loot.entry.SpellEntry;
-import dev.higurashi.legendary_spellbooks.registries.LSLootModifierRegistry;
+import dev.higurashi.legendary_spellbooks.registry.LSLootModifierRegistry;
 import io.redspace.ironsspellbooks.api.registry.SpellRegistry;
 import io.redspace.ironsspellbooks.api.spells.ISpellContainer;
 import io.redspace.ironsspellbooks.registries.ItemRegistry;

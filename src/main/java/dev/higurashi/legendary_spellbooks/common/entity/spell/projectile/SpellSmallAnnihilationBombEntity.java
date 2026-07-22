@@ -1,6 +1,6 @@
 package dev.higurashi.legendary_spellbooks.common.entity.spell.projectile;
 
-import dev.higurashi.legendary_spellbooks.registries.LSEntityRegistry;
+import dev.higurashi.legendary_spellbooks.registry.LSEntityRegistry;
 import io.redspace.ironsspellbooks.api.magic.MagicData;
 import io.redspace.ironsspellbooks.damage.DamageSources;
 import io.redspace.ironsspellbooks.entity.mobs.AntiMagicSusceptible;
@@ -21,7 +21,7 @@ public class SpellSmallAnnihilationBombEntity extends SmallAnnihilationBombEntit
     }
 
     public SpellSmallAnnihilationBombEntity(Level level, Vec3 spawnPos, LivingEntity caster, float damage, float hpDamage) {
-        this(LSEntityRegistry.SPELL_SMALL_ANNIHILATION_BOMB.get(), level);
+        this(LSEntityRegistry.SPELL_SMALL_ANNIHILATION_BOMB.getAs(), level);
         this.setPos(spawnPos);
         this.setOwner(caster);
         this.setDamage(damage);

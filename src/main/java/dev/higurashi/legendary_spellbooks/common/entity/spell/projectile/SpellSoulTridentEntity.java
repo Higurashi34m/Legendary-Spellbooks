@@ -2,8 +2,8 @@ package dev.higurashi.legendary_spellbooks.common.entity.spell.projectile;
 
 import dev.higurashi.legendary_spellbooks.api.utils.GeometryUtils;
 import dev.higurashi.legendary_spellbooks.api.utils.RaycastUtils;
-import dev.higurashi.legendary_spellbooks.registries.LSEntityRegistry;
-import dev.higurashi.legendary_spellbooks.registries.LSSpellRegistry;
+import dev.higurashi.legendary_spellbooks.registry.LSEntityRegistry;
+import dev.higurashi.legendary_spellbooks.registry.LSSpellRegistry;
 import io.redspace.ironsspellbooks.damage.DamageSources;
 import net.miauczel.legendary_monsters.entity.AnimatedMonster.Projectile.SoulPillarExplosionEntity;
 import net.miauczel.legendary_monsters.entity.AnimatedMonster.Projectile.SoulTridentEntity;
@@ -29,7 +29,7 @@ public class SpellSoulTridentEntity extends SoulTridentEntity {
     }
 
     public SpellSoulTridentEntity(Level level, LivingEntity caster, float damage) {
-        super(LSEntityRegistry.SPELL_SOUL_TRIDENT_ENTITY.get(), level);
+        this(LSEntityRegistry.SPELL_SOUL_TRIDENT_ENTITY.getAs(), level);
         this.setOwner(caster);
         this.setDamage(damage);
     }

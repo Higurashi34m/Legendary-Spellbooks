@@ -1,8 +1,8 @@
 package dev.higurashi.legendary_spellbooks.api.spells;
 
 import io.redspace.ironsspellbooks.api.config.DefaultConfig;
+import io.redspace.ironsspellbooks.api.config.IronConfigParameters;
 import io.redspace.ironsspellbooks.api.config.SpellConfigManager;
-import io.redspace.ironsspellbooks.api.config.SpellConfigParameter;
 import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
 import io.redspace.ironsspellbooks.api.spells.CastType;
 import io.redspace.ironsspellbooks.api.spells.SchoolType;
@@ -34,12 +34,12 @@ public abstract class BaseDoubleSchoolSpell extends BaseSpell {
 
         double spellPowerModifier = 1.0;
         double schoolPowerModifier = 1.0;
-        float configModifier = SpellConfigManager.getSpellConfigValue(this, SpellConfigParameter.POWER_MULTIPLIER).floatValue();
+        float configModifier = SpellConfigManager.getSpellConfigValue(this, IronConfigParameters.POWER_MULTIPLIER).floatValue();
 
         if (caster instanceof LivingEntity livingCaster) {
             spellPowerModifier = livingCaster.getAttributeValue(AttributeRegistry.SPELL_POWER.get());
 
-            SchoolType normalSchool = SpellConfigManager.getSpellConfigValue(this, SpellConfigParameter.SCHOOL);
+            SchoolType normalSchool = SpellConfigManager.getSpellConfigValue(this, IronConfigParameters.SCHOOL);
             if (isAnother(spellLevel)) schoolPowerModifier = this.anotherSchool.get().getPowerFor(livingCaster);
             else schoolPowerModifier = normalSchool.getPowerFor(livingCaster);
         }

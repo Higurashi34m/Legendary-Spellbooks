@@ -4,7 +4,7 @@ import dev.higurashi.legendary_spellbooks.LegendarySpellbooks;
 import dev.higurashi.legendary_spellbooks.api.spells.BaseSummonSpell;
 import dev.higurashi.legendary_spellbooks.api.utils.ComponentUtils;
 import dev.higurashi.legendary_spellbooks.common.entity.spell.summoned.SummonedAnnihilationPursuerEntity;
-import dev.higurashi.legendary_spellbooks.registries.LSSchoolRegistry;
+import dev.higurashi.legendary_spellbooks.registry.LSSchoolRegistry;
 import io.redspace.ironsspellbooks.api.config.DefaultConfig;
 import io.redspace.ironsspellbooks.api.spells.SpellRarity;
 import net.minecraft.network.chat.Component;

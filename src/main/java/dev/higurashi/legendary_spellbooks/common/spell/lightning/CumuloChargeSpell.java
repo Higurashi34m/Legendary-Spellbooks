@@ -5,7 +5,7 @@ import dev.higurashi.legendary_spellbooks.api.spells.BaseSpell;
 import dev.higurashi.legendary_spellbooks.api.utils.ComponentUtils;
 import dev.higurashi.legendary_spellbooks.api.utils.GeometryUtils;
 import dev.higurashi.legendary_spellbooks.common.entity.spell.projectile.CumuloChargeEntity;
-import dev.higurashi.legendary_spellbooks.registries.LSEntityRegistry;
+import dev.higurashi.legendary_spellbooks.registry.LSEntityRegistry;
 import io.redspace.ironsspellbooks.api.config.DefaultConfig;
 import io.redspace.ironsspellbooks.api.magic.MagicData;
 import io.redspace.ironsspellbooks.api.registry.SchoolRegistry;
@@ -72,7 +72,7 @@ public class CumuloChargeSpell extends BaseSpell {
         float damage = getSpellPower(spellLevel, caster);
         int duration = getDuration(spellLevel);
 
-        CumuloChargeEntity charge = new CumuloChargeEntity(LSEntityRegistry.CUMULO_CHARGE_ENTITY.get(), level);
+        CumuloChargeEntity charge = new CumuloChargeEntity(LSEntityRegistry.CUMULO_CHARGE_ENTITY.getAs(), level);
         charge.setSummoner(caster);
         charge.setYRot(yaw);
         charge.setPos(spawn);

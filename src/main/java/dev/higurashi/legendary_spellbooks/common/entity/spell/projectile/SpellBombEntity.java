@@ -1,7 +1,7 @@
 package dev.higurashi.legendary_spellbooks.common.entity.spell.projectile;
 
-import dev.higurashi.legendary_spellbooks.registries.LSEntityRegistry;
-import dev.higurashi.legendary_spellbooks.registries.LSSpellRegistry;
+import dev.higurashi.legendary_spellbooks.registry.LSEntityRegistry;
+import dev.higurashi.legendary_spellbooks.registry.LSSpellRegistry;
 import io.redspace.ironsspellbooks.damage.DamageSources;
 import io.redspace.ironsspellbooks.entity.spells.AbstractMagicProjectile;
 import net.miauczel.legendary_monsters.effect.ModEffects;
@@ -35,7 +35,7 @@ public class SpellBombEntity extends AbstractMagicProjectile {
     }
 
     public SpellBombEntity(Level level, LivingEntity thrower, float damage) {
-        super(LSEntityRegistry.SPELL_BOMB_ENTITY.get(), level);
+        super(LSEntityRegistry.SPELL_BOMB_ENTITY.getAs(), level);
         this.setOwner(thrower);
         this.damage = damage;
         this.explosionRadius = 4;

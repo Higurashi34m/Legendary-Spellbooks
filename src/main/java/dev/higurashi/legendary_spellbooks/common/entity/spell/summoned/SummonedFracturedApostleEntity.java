@@ -2,7 +2,7 @@ package dev.higurashi.legendary_spellbooks.common.entity.spell.summoned;
 
 import dev.higurashi.legendary_spellbooks.api.entities.helper.ISummonedMob;
 import dev.higurashi.legendary_spellbooks.common.spell.evocation.CollapsedKingdomsLegionSpell;
-import dev.higurashi.legendary_spellbooks.registries.LSEntityRegistry;
+import dev.higurashi.legendary_spellbooks.registry.LSEntityRegistry;
 import io.redspace.ironsspellbooks.capabilities.magic.MagicManager;
 import io.redspace.ironsspellbooks.capabilities.magic.SummonManager;
 import net.miauczel.legendary_monsters.Particle.ModParticles;
@@ -30,7 +30,7 @@ public class SummonedFracturedApostleEntity extends FracturedApostleEntity imple
     }
 
     public SummonedFracturedApostleEntity(Level level, LivingEntity owner) {
-        this(LSEntityRegistry.SUMMONED_FRACTURED_APOSTLE_ENTITY.get(), level);
+        this(LSEntityRegistry.SUMMONED_FRACTURED_APOSTLE_ENTITY.getAs(), level);
         SummonManager.setOwner(this, owner);
     }
 

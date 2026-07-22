@@ -2,7 +2,7 @@ package dev.higurashi.legendary_spellbooks.common.loot.modifier;
 
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
-import dev.higurashi.legendary_spellbooks.registries.LSLootModifierRegistry;
+import dev.higurashi.legendary_spellbooks.registry.LSLootModifierRegistry;
 import it.unimi.dsi.fastutil.objects.ObjectArrayList;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.storage.loot.LootContext;

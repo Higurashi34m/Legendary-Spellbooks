@@ -1,7 +1,7 @@
 package dev.higurashi.legendary_spellbooks.common.effect.handler;
 
-import dev.higurashi.legendary_spellbooks.common.spell.annihilation.FlamebornDriftSpell;
 import io.redspace.ironsspellbooks.player.ClientMagicData;
+import io.redspace.ironsspellbooks.player.SpinAttackType;
 import net.miauczel.legendary_monsters.Particle.custom.AnnihilationBombTrail;
 import net.miauczel.legendary_monsters.Particle.custom.Circle;
 import net.miauczel.legendary_monsters.Particle.custom.LightningParticle;
@@ -36,7 +36,7 @@ public class FlamebornDriftSpellHandler {
         for (Entity caster : casters) {
             LivingEntity entity = (LivingEntity) caster;
 
-            if (entity.isAutoSpinAttack() && ClientMagicData.getSyncedSpellData(entity).getSpinAttackType().equals(FlamebornDriftSpell.FLAMEBORN)) {
+            if (entity.isAutoSpinAttack() && ClientMagicData.getSyncedSpellData(entity).getSpinAttackType().equals(SpinAttackType.FIRE)) {
                 float yRot = (float) Math.toRadians(entity.yBodyRot);
                 float cos = Mth.cos(yRot);
                 float sin = Mth.sin(yRot);

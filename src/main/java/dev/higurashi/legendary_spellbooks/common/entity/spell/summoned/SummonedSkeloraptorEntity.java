@@ -4,7 +4,7 @@ import dev.higurashi.legendary_spellbooks.api.entities.helper.ISummonedMob;
 import dev.higurashi.legendary_spellbooks.common.entity.ai.goal.SkeloraptorMoveGoal;
 import dev.higurashi.legendary_spellbooks.common.spell.nature.FossilizedFurySpell;
 import dev.higurashi.legendary_spellbooks.mixin.entities.spell.summoned.SkeloraptorEntityAccessor;
-import dev.higurashi.legendary_spellbooks.registries.LSEntityRegistry;
+import dev.higurashi.legendary_spellbooks.registry.LSEntityRegistry;
 import io.redspace.ironsspellbooks.capabilities.magic.MagicManager;
 import io.redspace.ironsspellbooks.capabilities.magic.SummonManager;
 import net.miauczel.legendary_monsters.entity.AnimatedMonster.Mobs.Pets.SkeloraptorEntity;
@@ -31,7 +31,7 @@ public class SummonedSkeloraptorEntity extends SkeloraptorEntity implements ISum
     }
 
     public SummonedSkeloraptorEntity(Level level, LivingEntity owner) {
-        super(LSEntityRegistry.SUMMONED_SKELORAPTOR_ENTITY.get(), level);
+        super(LSEntityRegistry.SUMMONED_SKELORAPTOR_ENTITY.getAs(), level);
         SummonManager.setOwner(this, owner);
     }
 
@@ -43,16 +43,6 @@ public class SummonedSkeloraptorEntity extends SkeloraptorEntity implements ISum
         this.getAttribute(Attributes.ATTACK_DAMAGE).setBaseValue(FossilizedFurySpell.getDamage(spellPower));
         this.getAttribute(Attributes.MOVEMENT_SPEED).setBaseValue(0.1);
         this.setHealth(hp);
-    }
-
-    @Override public void updateAttributes() {}
-
-    @Override
-    public double damageMult() {
-        return switch (this.getAttackState()) {
-            case 4 -> this.summonedDamage / 7.0;
-            default -> this.summonedDamage / 10.0;
-        };
     }
 
     @Override

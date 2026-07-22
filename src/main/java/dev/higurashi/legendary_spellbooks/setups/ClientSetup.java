@@ -6,9 +6,7 @@ import dev.higurashi.legendary_spellbooks.client.renderer.spell.animation.Annihi
 import dev.higurashi.legendary_spellbooks.client.renderer.spell.animation.AnnihilationBombLayer;
 import dev.higurashi.legendary_spellbooks.client.renderer.spell.animation.HematiteTrishulaChargeLayer;
 import dev.higurashi.legendary_spellbooks.client.renderer.spell.animation.PaladinWingsLayer;
-import dev.higurashi.legendary_spellbooks.registries.LSEntityRegistry;
-import dev.higurashi.legendary_spellbooks.registries.LSItemRegistry;
-import io.redspace.ironsspellbooks.render.SpellBookCurioRenderer;
+import dev.higurashi.legendary_spellbooks.registry.LSEntityRegistry;
 import net.miauczel.legendary_monsters.entity.ProjectileEntityRenderer.SmallPowerBallBombRenderer;
 import net.miauczel.legendary_monsters.entity.ProjectileEntityRenderer.SoulTridentRenderer;
 import net.miauczel.legendary_monsters.entity.client.Render.*;
@@ -18,44 +16,36 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
-import top.theillusivec4.curios.api.client.CuriosRendererRegistry;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class ClientSetup {
     @SubscribeEvent
-    public static void onClientSetup(final FMLClientSetupEvent event) {
-        CuriosRendererRegistry.register(LSItemRegistry.ANNIHILATORS_PROTOCOL_SPELLBOOK_ITEM.get(), SpellBookCurioRenderer::new);
-        CuriosRendererRegistry.register(LSItemRegistry.STORMBOUND_GRIMOIRE_SPELLBOOK_ITEM.get(), SpellBookCurioRenderer::new);
-    }
-
-    @SubscribeEvent
     public static void onRegisterRenderers(EntityRenderersEvent.RegisterRenderers event) {
         // Summoned
-        event.registerEntityRenderer(LSEntityRegistry.SUMMONED_ANNIHILATION_PURSUER_ENTITY.get(), AnnihilationPursuerRenderer::new);
-        event.registerEntityRenderer(LSEntityRegistry.SUMMONED_FLAMEBORN_GUARD_ENTITY.get(), FlamebornGuardRenderer::new);
-        event.registerEntityRenderer(LSEntityRegistry.SUMMONED_FLAMEBORN_WARRIOR_ENTITY.get(), FlamebornWarriorRenderer::new);
-        event.registerEntityRenderer(LSEntityRegistry.SUMMONED_HAUNTED_KNIGHT_ENTITY.get(), LivingArmorRenderer::new);
-        event.registerEntityRenderer(LSEntityRegistry.SUMMONED_HAUNTED_GUARD_ENTITY.get(), HauntedGuardRenderer::new);
-        event.registerEntityRenderer(LSEntityRegistry.SUMMONED_SKELORAPTOR_ENTITY.get(), SummonedSkeloraptorRenderer::new);
-        event.registerEntityRenderer(LSEntityRegistry.SUMMONED_FRACTURED_APOSTLE_ENTITY.get(), FracturedApostleRenderer::new);
+        event.registerEntityRenderer(LSEntityRegistry.SUMMONED_ANNIHILATION_PURSUER_ENTITY.getAs(), AnnihilationPursuerRenderer::new);
+        event.registerEntityRenderer(LSEntityRegistry.SUMMONED_FLAMEBORN_GUARD_ENTITY.getAs(), FlamebornGuardRenderer::new);
+        event.registerEntityRenderer(LSEntityRegistry.SUMMONED_FLAMEBORN_WARRIOR_ENTITY.getAs(), FlamebornWarriorRenderer::new);
+        event.registerEntityRenderer(LSEntityRegistry.SUMMONED_HAUNTED_KNIGHT_ENTITY.getAs(), LivingArmorRenderer::new);
+        event.registerEntityRenderer(LSEntityRegistry.SUMMONED_HAUNTED_GUARD_ENTITY.getAs(), HauntedGuardRenderer::new);
+        event.registerEntityRenderer(LSEntityRegistry.SUMMONED_SKELORAPTOR_ENTITY.getAs(), SummonedSkeloraptorRenderer::new);
+        event.registerEntityRenderer(LSEntityRegistry.SUMMONED_FRACTURED_APOSTLE_ENTITY.getAs(), FracturedApostleRenderer::new);
 
         // Projectile
-        event.registerEntityRenderer(LSEntityRegistry.SPELL_CLOUD_ENTITY.get(), SpellCloudRender::new);
-        event.registerEntityRenderer(LSEntityRegistry.SPELL_FIRE_COLUMN_ENTITY.get(), NoRendererEntityRenderer::new);
-        event.registerEntityRenderer(LSEntityRegistry.SPELL_POISONOUS_SHOCKWAVE_ENTITY.get(), NoRendererEntityRenderer::new);
-        event.registerEntityRenderer(LSEntityRegistry.CUMULO_CHARGE_ENTITY.get(), CumuloChargeRenderer::new);
-        event.registerEntityRenderer(LSEntityRegistry.SPELL_ICE_SPIKE_ENTITY.get(), IceSpikeRenderer::new);
-        event.registerEntityRenderer(LSEntityRegistry.SPELL_ANNIHILATION_BOMB_ENTITY.get(), SpellAnnihilationBombRenderer::new);
-        event.registerEntityRenderer(LSEntityRegistry.SPELL_SOUL_TRIDENT_ENTITY.get(), SoulTridentRenderer::new);
+        event.registerEntityRenderer(LSEntityRegistry.SPELL_CLOUD_ENTITY.getAs(), SpellCloudRender::new);
+        event.registerEntityRenderer(LSEntityRegistry.SPELL_FIRE_COLUMN_ENTITY.getAs(), NoRendererEntityRenderer::new);
+        event.registerEntityRenderer(LSEntityRegistry.SPELL_POISONOUS_SHOCKWAVE_ENTITY.getAs(), NoRendererEntityRenderer::new);
+        event.registerEntityRenderer(LSEntityRegistry.CUMULO_CHARGE_ENTITY.getAs(), CumuloChargeRenderer::new);
+        event.registerEntityRenderer(LSEntityRegistry.SPELL_ICE_SPIKE_ENTITY.getAs(), IceSpikeRenderer::new);
+        event.registerEntityRenderer(LSEntityRegistry.SPELL_ANNIHILATION_BOMB_ENTITY.getAs(), SpellAnnihilationBombRenderer::new);
+        event.registerEntityRenderer(LSEntityRegistry.SPELL_SOUL_TRIDENT_ENTITY.getAs(), SoulTridentRenderer::new);
 
-        event.registerEntityRenderer(LSEntityRegistry.DUNE_SENTINEL_PHANTOM_ENTITY.get(), DuneSentinelPhantomRenderer::new);
-        event.registerEntityRenderer(LSEntityRegistry.SPELL_BOMB_ENTITY.get(), SpellBombRenderer::new);
+        event.registerEntityRenderer(LSEntityRegistry.DUNE_SENTINEL_PHANTOM_ENTITY.getAs(), DuneSentinelPhantomRenderer::new);
+        event.registerEntityRenderer(LSEntityRegistry.SPELL_BOMB_ENTITY.getAs(), SpellBombRenderer::new);
 
-        event.registerEntityRenderer(LSEntityRegistry.SPELL_ANNIHILATION_BEAM.get(), SpellAnnihilationBeamEntityRenderer::new);
-        event.registerEntityRenderer(LSEntityRegistry.SPELL_SMALL_ANNIHILATION_BOMB.get(), SmallPowerBallBombRenderer::new);
-        event.registerEntityRenderer(LSEntityRegistry.SPELL_ANNIHILATION_EXPLOSION.get(), NoopRenderer::new);
-        event.registerEntityRenderer(LSEntityRegistry.ANNIHILATION_ARROW.get(), AnnihilationArrowRenderer::new);
+        event.registerEntityRenderer(LSEntityRegistry.SPELL_ANNIHILATION_BEAM.getAs(), SpellAnnihilationBeamEntityRenderer::new);
+        event.registerEntityRenderer(LSEntityRegistry.SPELL_SMALL_ANNIHILATION_BOMB.getAs(), SmallPowerBallBombRenderer::new);
+        event.registerEntityRenderer(LSEntityRegistry.SPELL_ANNIHILATION_EXPLOSION.getAs(), NoopRenderer::new);
+        event.registerEntityRenderer(LSEntityRegistry.ANNIHILATION_ARROW.getAs(), AnnihilationArrowRenderer::new);
     }
 
     @SubscribeEvent

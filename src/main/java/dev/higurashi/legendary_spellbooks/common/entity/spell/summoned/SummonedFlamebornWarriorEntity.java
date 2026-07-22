@@ -2,7 +2,7 @@ package dev.higurashi.legendary_spellbooks.common.entity.spell.summoned;
 
 import dev.higurashi.legendary_spellbooks.api.entities.helper.ISummonedMob;
 import dev.higurashi.legendary_spellbooks.common.spell.annihilation.SummonFlamebornKnightsSpell;
-import dev.higurashi.legendary_spellbooks.registries.LSEntityRegistry;
+import dev.higurashi.legendary_spellbooks.registry.LSEntityRegistry;
 import io.redspace.ironsspellbooks.capabilities.magic.MagicManager;
 import io.redspace.ironsspellbooks.capabilities.magic.SummonManager;
 import net.miauczel.legendary_monsters.entity.AnimatedMonster.Mobs.SpaceStation.Flameborn.FlamebornWarriorEntity;
@@ -25,7 +25,7 @@ public class SummonedFlamebornWarriorEntity extends FlamebornWarriorEntity imple
     }
 
     public SummonedFlamebornWarriorEntity(Level level, LivingEntity owner) {
-        this(LSEntityRegistry.SUMMONED_FLAMEBORN_WARRIOR_ENTITY.get(), level);
+        this(LSEntityRegistry.SUMMONED_FLAMEBORN_WARRIOR_ENTITY.getAs(), level);
         SummonManager.setOwner(this, owner);
     }
 

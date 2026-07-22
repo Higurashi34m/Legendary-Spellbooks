@@ -1,4 +1,4 @@
-package dev.higurashi.legendary_spellbooks.registries;
+package dev.higurashi.legendary_spellbooks.registry;
 
 import dev.higurashi.legendary_spellbooks.LegendarySpellbooks;
 import dev.higurashi.legendary_spellbooks.common.spell.annihilation.*;
