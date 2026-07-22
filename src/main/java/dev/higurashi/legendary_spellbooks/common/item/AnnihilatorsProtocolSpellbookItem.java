@@ -20,6 +20,8 @@ import org.jetbrains.annotations.NotNull;
 import java.util.List;
 
 public class AnnihilatorsProtocolSpellbookItem extends UniqueSpellBook {
+    private static float dodgePercent = 0.1f;
+
     public AnnihilatorsProtocolSpellbookItem() {
         super(new SpellDataRegistryHolder[]{
                 new SpellDataRegistryHolder(LSSpellRegistry.ANNIHILATION_GEYSER_SPELL, 1),
@@ -41,5 +43,9 @@ public class AnnihilatorsProtocolSpellbookItem extends UniqueSpellBook {
 
         lines.add(pos++, Component.empty());
         lines.add(pos, Component.translatable(ComponentUtils.itemTooltip(LSItemRegistry.ANNIHILATORS_PROTOCOL_SPELLBOOK_ITEM.get())).withStyle(ChatFormatting.GRAY, ChatFormatting.ITALIC));
+    }
+
+    public static float getDodgePercent() {
+        return dodgePercent;
     }
 }
