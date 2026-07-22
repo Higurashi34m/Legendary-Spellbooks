@@ -1,7 +1,7 @@
 package dev.higurashi.legendary_spellbooks.mixin.entities.spell;
 
 
-import dev.higurashi.legendary_spellbooks.common.entities.spell.projectile.SpellIceSpikeEntity;
+import dev.higurashi.legendary_spellbooks.common.entity.spell.projectile.SpellIceSpikeEntity;
 import net.miauczel.legendary_monsters.effect.ModEffects;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.damagesource.DamageSource;

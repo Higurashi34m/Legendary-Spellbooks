@@ -2,8 +2,8 @@ package dev.higurashi.legendary_spellbooks.registries;
 
 import com.mojang.serialization.Codec;
 import dev.higurashi.legendary_spellbooks.LegendarySpellbooks;
-import dev.higurashi.legendary_spellbooks.common.loots.modifier.ItemLootModifier;
-import dev.higurashi.legendary_spellbooks.common.loots.modifier.SpellScrollLootModifier;
+import dev.higurashi.legendary_spellbooks.common.loot.modifier.ItemLootModifier;
+import dev.higurashi.legendary_spellbooks.common.loot.modifier.SpellScrollLootModifier;
 import net.minecraftforge.common.loot.IGlobalLootModifier;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;

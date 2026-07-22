@@ -1,7 +1,7 @@
 package dev.higurashi.legendary_spellbooks.registries;
 
 import dev.higurashi.legendary_spellbooks.LegendarySpellbooks;
-import dev.higurashi.legendary_spellbooks.common.tags.LSTags;
+import dev.higurashi.legendary_spellbooks.common.tag.LSTags;
 import io.redspace.ironsspellbooks.api.registry.SchoolRegistry;
 import io.redspace.ironsspellbooks.api.spells.SchoolType;
 import io.redspace.ironsspellbooks.registries.SoundRegistry;

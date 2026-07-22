@@ -1,8 +1,8 @@
 package dev.higurashi.legendary_spellbooks.registries;
 
 import dev.higurashi.legendary_spellbooks.LegendarySpellbooks;
-import dev.higurashi.legendary_spellbooks.common.entities.spell.projectile.*;
-import dev.higurashi.legendary_spellbooks.common.entities.spell.summoned.*;
+import dev.higurashi.legendary_spellbooks.common.entity.spell.projectile.*;
+import dev.higurashi.legendary_spellbooks.common.entity.spell.summoned.*;
 import net.miauczel.legendary_monsters.entity.AnimatedMonster.Mobs.CollapsedKingdom.Fractured.FracturedApostleEntity;
 import net.miauczel.legendary_monsters.entity.AnimatedMonster.Mobs.CollapsedKingdom.HauntedGuardEntity;
 import net.miauczel.legendary_monsters.entity.AnimatedMonster.Mobs.CollapsedKingdom.HauntedKnightEntity;

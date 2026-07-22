@@ -2,7 +2,6 @@ package dev.higurashi.legendary_spellbooks.datagen.server;
 
 import dev.higurashi.legendary_spellbooks.registries.LSItemRegistry;
 import io.redspace.ironsspellbooks.registries.ItemRegistry;
-import io.redspace.ironsspellbooks.util.ModTags;
 import net.miauczel.legendary_monsters.item.ModItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
@@ -19,31 +18,31 @@ public class LSRecipeProvider extends RecipeProvider {
     @Override
     protected void buildRecipes(@NotNull Consumer<FinishedRecipe> writer) {
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, LSItemRegistry.OBLIVIONMANCER_HAT.get())
-                .requires(ModTags.BASE_WIZARD_HELMET)
+                .requires(ItemRegistry.WIZARD_HELMET.get())
                 .requires(ItemRegistry.ARCANE_ESSENCE.get())
                 .requires(LSItemRegistry.ANNIHILATION_RUNE.get())
-                .unlockedBy("has_wizard_helmet", has(ModTags.BASE_WIZARD_HELMET))
+                .unlockedBy("has_wizard_helmet", has(ItemRegistry.WIZARD_HELMET.get()))
                 .save(writer);
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, LSItemRegistry.OBLIVIONMANCER_ROBE.get())
-                .requires(ModTags.BASE_WIZARD_CHESTPLATE)
+                .requires(ItemRegistry.WIZARD_CHESTPLATE.get())
                 .requires(ItemRegistry.ARCANE_ESSENCE.get())
                 .requires(LSItemRegistry.ANNIHILATION_RUNE.get())
-                .unlockedBy("has_wizard_chestplate", has(ModTags.BASE_WIZARD_CHESTPLATE))
+                .unlockedBy("has_wizard_chestplate", has(ItemRegistry.WIZARD_CHESTPLATE.get()))
                 .save(writer);
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, LSItemRegistry.OBLIVIONMANCER_LEGGINGS.get())
-                .requires(ModTags.BASE_WIZARD_LEGGINGS)
+                .requires(ItemRegistry.WIZARD_LEGGINGS.get())
                 .requires(ItemRegistry.ARCANE_ESSENCE.get())
                 .requires(LSItemRegistry.ANNIHILATION_RUNE.get())
-                .unlockedBy("has_wizard_leggings", has(ModTags.BASE_WIZARD_LEGGINGS))
+                .unlockedBy("has_wizard_leggings", has(ItemRegistry.WIZARD_LEGGINGS.get()))
                 .save(writer);
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, LSItemRegistry.OBLIVIONMANCER_BOOTS.get())
-                .requires(ModTags.BASE_WIZARD_BOOTS)
+                .requires(ItemRegistry.WIZARD_BOOTS.get())
                 .requires(ItemRegistry.ARCANE_ESSENCE.get())
                 .requires(LSItemRegistry.ANNIHILATION_RUNE.get())
-                .unlockedBy("has_wizard_boots", has(ModTags.BASE_WIZARD_BOOTS))
+                .unlockedBy("has_wizard_boots", has(ItemRegistry.WIZARD_BOOTS.get()))
                 .save(writer);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, LSItemRegistry.ANNIHILATION_RUNE.get())

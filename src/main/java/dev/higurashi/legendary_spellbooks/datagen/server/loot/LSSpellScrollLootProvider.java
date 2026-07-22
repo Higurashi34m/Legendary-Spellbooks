@@ -1,10 +1,10 @@
 package dev.higurashi.legendary_spellbooks.datagen.server.loot;
 
 import dev.higurashi.legendary_spellbooks.LegendarySpellbooks;
-import dev.higurashi.legendary_spellbooks.common.loots.entry.DifficultyWeights;
-import dev.higurashi.legendary_spellbooks.common.loots.entry.SpellEntry;
-import dev.higurashi.legendary_spellbooks.common.loots.modifier.ItemLootModifier;
-import dev.higurashi.legendary_spellbooks.common.loots.modifier.SpellScrollLootModifier;
+import dev.higurashi.legendary_spellbooks.common.loot.entry.DifficultyWeights;
+import dev.higurashi.legendary_spellbooks.common.loot.entry.SpellEntry;
+import dev.higurashi.legendary_spellbooks.common.loot.modifier.ItemLootModifier;
+import dev.higurashi.legendary_spellbooks.common.loot.modifier.SpellScrollLootModifier;
 import dev.higurashi.legendary_spellbooks.registries.LSItemRegistry;
 import dev.higurashi.legendary_spellbooks.registries.LSSpellRegistry;
 import net.miauczel.legendary_monsters.entity.ModEntities;

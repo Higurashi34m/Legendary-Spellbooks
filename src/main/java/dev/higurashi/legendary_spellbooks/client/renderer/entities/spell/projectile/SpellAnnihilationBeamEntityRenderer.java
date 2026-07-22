@@ -2,7 +2,7 @@ package dev.higurashi.legendary_spellbooks.client.renderer.entities.spell.projec
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
-import dev.higurashi.legendary_spellbooks.common.entities.spell.projectile.SpellAnnihilationBeamEntity;
+import dev.higurashi.legendary_spellbooks.common.entity.spell.projectile.SpellAnnihilationBeamEntity;
 import net.miauczel.legendary_monsters.LegendaryMonsters;
 import net.miauczel.legendary_monsters.entity.client.Render.LMRenderTypes;
 import net.minecraft.client.renderer.MultiBufferSource;

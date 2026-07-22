@@ -1,7 +1,7 @@
 package dev.higurashi.legendary_spellbooks.datagen.server;
 
 import dev.higurashi.legendary_spellbooks.LegendarySpellbooks;
-import dev.higurashi.legendary_spellbooks.common.tags.LSTags;
+import dev.higurashi.legendary_spellbooks.common.tag.LSTags;
 import dev.higurashi.legendary_spellbooks.registries.LSItemRegistry;
 import io.redspace.ironsspellbooks.util.ModTags;
 import net.miauczel.legendary_monsters.item.ModItems;

@@ -1,6 +1,6 @@
 package dev.higurashi.legendary_spellbooks.mixin.entities.spell.summoned;
 
-import dev.higurashi.legendary_spellbooks.common.entities.spell.summoned.SummonedSkeloraptorEntity;
+import dev.higurashi.legendary_spellbooks.common.entity.spell.summoned.SummonedSkeloraptorEntity;
 import net.miauczel.legendary_monsters.entity.AnimatedMonster.Mobs.Pets.SkeloraptorEntity;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import org.spongepowered.asm.mixin.Mixin;

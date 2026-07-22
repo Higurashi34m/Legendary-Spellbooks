@@ -4,7 +4,7 @@ import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.math.Axis;
 import dev.higurashi.legendary_spellbooks.LegendarySpellbooks;
-import dev.higurashi.legendary_spellbooks.common.entities.spell.projectile.AnnihilationArrowEntity;
+import dev.higurashi.legendary_spellbooks.common.entity.spell.projectile.AnnihilationArrowEntity;
 import io.redspace.ironsspellbooks.render.RenderHelper;
 import net.minecraft.client.renderer.LightTexture;
 import net.minecraft.client.renderer.MultiBufferSource;

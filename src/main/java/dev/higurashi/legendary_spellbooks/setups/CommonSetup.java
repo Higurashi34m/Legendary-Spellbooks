@@ -1,7 +1,7 @@
 package dev.higurashi.legendary_spellbooks.setups;
 
-import dev.higurashi.legendary_spellbooks.common.entities.spell.projectile.CumuloChargeEntity;
-import dev.higurashi.legendary_spellbooks.common.entities.spell.summoned.*;
+import dev.higurashi.legendary_spellbooks.common.entity.spell.projectile.CumuloChargeEntity;
+import dev.higurashi.legendary_spellbooks.common.entity.spell.summoned.*;
 import dev.higurashi.legendary_spellbooks.registries.LSEntityRegistry;
 import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;

@@ -6,7 +6,6 @@
   "refmap": "${mod_id}.refmap.json",
   "mixins": [
     "LivingEntityMixin",
-    "LocalPlayerMixin",
     "PlayerMixin",
     "SpellDataMixin",
     "entities.AnnihilationPursuerEntityMixin",
@@ -20,6 +19,7 @@
     "entities.spell.summoned.SkeloraptorEntityMixin"
   ],
   "client": [
+    "LocalPlayerMixin"
   ],
   "injectors": {
     "defaultRequire": 1

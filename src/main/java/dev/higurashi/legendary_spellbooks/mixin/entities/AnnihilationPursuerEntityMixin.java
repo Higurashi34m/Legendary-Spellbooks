@@ -1,7 +1,7 @@
 package dev.higurashi.legendary_spellbooks.mixin.entities;
 
 import dev.higurashi.legendary_spellbooks.api.entities.helper.ISummonedMob;
-import dev.higurashi.legendary_spellbooks.common.entities.spell.summoned.SummonedAnnihilationPursuerEntity;
+import dev.higurashi.legendary_spellbooks.common.entity.spell.summoned.SummonedAnnihilationPursuerEntity;
 import net.miauczel.legendary_monsters.config.ModConfig;
 import net.miauczel.legendary_monsters.damagetype.ModDamageTypes;
 import net.miauczel.legendary_monsters.effect.ModEffects;

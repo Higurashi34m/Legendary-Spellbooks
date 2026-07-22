@@ -1,7 +1,7 @@
 package dev.higurashi.legendary_spellbooks.client.model.item.armor;
 
 import dev.higurashi.legendary_spellbooks.LegendarySpellbooks;
-import dev.higurashi.legendary_spellbooks.common.items.armor.StormmancerArmorItem;
+import dev.higurashi.legendary_spellbooks.common.item.armor.StormmancerArmorItem;
 import io.redspace.ironsspellbooks.IronsSpellbooks;
 import net.minecraft.resources.ResourceLocation;
 import software.bernie.geckolib.model.GeoModel;

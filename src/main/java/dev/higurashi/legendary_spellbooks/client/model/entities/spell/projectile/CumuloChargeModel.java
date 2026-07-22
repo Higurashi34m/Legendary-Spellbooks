@@ -1,6 +1,6 @@
 package dev.higurashi.legendary_spellbooks.client.model.entities.spell.projectile;
 
-import dev.higurashi.legendary_spellbooks.common.entities.spell.projectile.CumuloChargeEntity;
+import dev.higurashi.legendary_spellbooks.common.entity.spell.projectile.CumuloChargeEntity;
 import net.miauczel.legendary_monsters.entity.animations.replacer.CGAnims;
 import net.minecraft.client.model.HierarchicalModel;
 import net.minecraft.client.model.geom.ModelPart;

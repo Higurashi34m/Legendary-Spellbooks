@@ -1,7 +1,7 @@
 package dev.higurashi.legendary_spellbooks.registries;
 
 import dev.higurashi.legendary_spellbooks.LegendarySpellbooks;
-import dev.higurashi.legendary_spellbooks.common.effects.*;
+import dev.higurashi.legendary_spellbooks.common.effect.*;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;

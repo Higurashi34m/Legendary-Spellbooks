@@ -3,7 +3,7 @@ package dev.higurashi.legendary_spellbooks.client.renderer.entities.spell.projec
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.math.Axis;
-import dev.higurashi.legendary_spellbooks.common.entities.spell.projectile.DuneSentinelPhantomEntity;
+import dev.higurashi.legendary_spellbooks.common.entity.spell.projectile.DuneSentinelPhantomEntity;
 import net.miauczel.legendary_monsters.LegendaryMonsters;
 import net.miauczel.legendary_monsters.entity.AnimatedMonster.Mobs.RuinedPyramid.DuneSentinelEntity;
 import net.miauczel.legendary_monsters.entity.ModEntities;
