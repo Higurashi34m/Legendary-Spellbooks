@@ -1,16 +1,16 @@
 package dev.higurashi.legendary_spellbooks.common.item;
 
-import dev.higurashi.legendary_spellbooks.api.utils.ComponentUtils;
+import dev.higurashi.daybreaklib.api.util.TextUtils;
 import dev.higurashi.legendary_spellbooks.registry.LSAttributeRegistry;
 import dev.higurashi.legendary_spellbooks.registry.LSItemRegistry;
 import dev.higurashi.legendary_spellbooks.registry.LSSpellRegistry;
+import io.redspace.ironsspellbooks.IronsSpellbooks;
 import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
 import io.redspace.ironsspellbooks.api.registry.SpellDataRegistryHolder;
 import io.redspace.ironsspellbooks.item.UniqueSpellBook;
 import io.redspace.ironsspellbooks.item.weapons.AttributeContainer;
-import io.redspace.ironsspellbooks.util.TooltipsUtils;
-import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
@@ -38,11 +38,10 @@ public class AnnihilatorsProtocolSpellbookItem extends UniqueSpellBook {
     public void appendHoverText(@NotNull ItemStack stack, Level level, @NotNull List<Component> lines, @NotNull TooltipFlag flag) {
         super.appendHoverText(stack, level, lines, flag);
 
-        int insertIndex = TooltipsUtils.indexOfComponent(lines, "tooltip.irons_spellbooks.spellbook_spell_count");
-        int pos = insertIndex < 0 ? lines.size() : insertIndex + 1;
+        String spellCount = TextUtils.tooltipKey(IronsSpellbooks.id("spellbook_spell_count")).text();
+        MutableComponent thisTooltip = TextUtils.tooltipKey(LSItemRegistry.ANNIHILATORS_PROTOCOL_SPELLBOOK_ITEM.getId()).translate(TextUtils.truncate(dodgePercent * 100, 0));
 
-        lines.add(pos++, Component.empty());
-        lines.add(pos, Component.translatable(ComponentUtils.itemTooltip(LSItemRegistry.ANNIHILATORS_PROTOCOL_SPELLBOOK_ITEM.get())).withStyle(ChatFormatting.GRAY, ChatFormatting.ITALIC));
+        TextUtils.addAfterComponent(lines, spellCount, thisTooltip);
     }
 
     public static float getDodgePercent() {

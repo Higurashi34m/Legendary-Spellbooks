@@ -103,7 +103,7 @@
   "spell.legendary_spellbooks.triple_nimbus_array.guide": "Summon three rows of thunderclouds in a fan shape that continuously strike lightning beneath them.",
   "tab.legendary_spellbooks.equipments": "Legendary Spellbooks Equipments",
   "tab.legendary_spellbooks.scrolls": "Legendary Spellbooks Scrolls",
-  "tooltip.legendary_spellbooks.annihilators_protocol": "Grants a 10% chance to teleport away upon taking damage, effectively neutralizing the threat.",
+  "tooltip.legendary_spellbooks.annihilators_protocol": "§6Special Ability: §7Can dodge attack %s%%",
   "tooltip.legendary_spellbooks.on_sunny": "In sunny weather:",
   "tooltip.legendary_spellbooks.on_thunder": "During thunderstorms:",
   "tooltip.legendary_spellbooks.stormbound_grimoire": "This spellbook calls forth thunder, causing rain to swell into storms.",

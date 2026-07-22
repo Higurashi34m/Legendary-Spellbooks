@@ -136,7 +136,7 @@ public class LSEnUsLanguageProvider extends BaseLanguageProvider {
         addTooltip("on_sunny", "In sunny weather:");
         addTooltip("on_thunder", "During thunderstorms:");
 
-        addTooltip(LSItemRegistry.ANNIHILATORS_PROTOCOL_SPELLBOOK_ITEM.get(), "Grants a 10% chance to teleport away upon taking damage, effectively neutralizing the threat.");
+        addTooltip(LSItemRegistry.ANNIHILATORS_PROTOCOL_SPELLBOOK_ITEM.get(), "§6Special Ability: §7Can dodge attack %s%%");
         addTooltip(LSItemRegistry.STORMBOUND_GRIMOIRE_SPELLBOOK_ITEM.get(), "This spellbook calls forth thunder, causing rain to swell into storms.");
 
         // --------------------

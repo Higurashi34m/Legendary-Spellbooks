@@ -131,7 +131,7 @@ public class LSJaJpLanguageProvider extends BaseLanguageProvider {
         addTooltip("on_sunny", "晴れの時:");
         addTooltip("on_thunder", "雷雨の時:");
 
-        addTooltip(LSItemRegistry.ANNIHILATORS_PROTOCOL_SPELLBOOK_ITEM.get(), "§6特殊能力: §7ダメージを受けた際、10%の確率でテレポートを実行し攻撃を回避する。");
+        addTooltip(LSItemRegistry.ANNIHILATORS_PROTOCOL_SPELLBOOK_ITEM.get(), "§6[装備時] §7%s%%の確率で攻撃を回避する");
         addTooltip(LSItemRegistry.STORMBOUND_GRIMOIRE_SPELLBOOK_ITEM.get(), "この魔導書は雷を呼び、降りしきる雨を嵐へと育て上げる");
 
         // --------------------
