@@ -6,7 +6,6 @@ import dev.higurashi.daybreaklib.api.registry.reference.EntityReference;
 import dev.higurashi.legendary_spellbooks.LegendarySpellbooks;
 import dev.higurashi.legendary_spellbooks.common.entity.spell.projectile.*;
 import dev.higurashi.legendary_spellbooks.common.entity.spell.summoned.*;
-import net.miauczel.legendary_monsters.entity.AnimatedMonster.Projectile.AnnihilationBombEntity;
 import net.minecraft.world.entity.MobCategory;
 
 @AutoRegister
@@ -68,7 +67,7 @@ public class LSEntityRegistry {
             .setSize(1.5f, 2.5f).build();
 
 
-    public static final EntityReference SPELL_ANNIHILATION_BOMB_ENTITY = ENTITIES.create("spell_annihilation_bomb", AnnihilationBombEntity.class)
+    public static final EntityReference SPELL_ANNIHILATION_BOMB_ENTITY = ENTITIES.create("spell_annihilation_bomb", SpellAnnihilationBombEntity.class)
             .setCategory(MobCategory.MISC)
             .setSize(2.0f, 2.0f)
             .setUpdateInterval(2)
@@ -88,7 +87,7 @@ public class LSEntityRegistry {
             .setUpdateInterval(20)
             .setTrackingRange(6).build();
 
-    public static final EntityReference SPELL_ANNIHILATION_BEAM = ENTITIES.create("spell_annihilation_beam", AnnihilationBombEntity.class)
+    public static final EntityReference SPELL_ANNIHILATION_BEAM = ENTITIES.create("spell_annihilation_beam", SpellAnnihilationBeamEntity.class)
             .setCategory(MobCategory.MISC)
             .setTrackingRange(6).build();
 
