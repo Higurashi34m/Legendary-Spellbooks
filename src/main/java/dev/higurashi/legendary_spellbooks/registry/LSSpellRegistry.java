@@ -2,7 +2,9 @@ package dev.higurashi.legendary_spellbooks.registry;
 
 import dev.higurashi.legendary_spellbooks.LegendarySpellbooks;
 import dev.higurashi.legendary_spellbooks.common.spell.annihilation.*;
-import dev.higurashi.legendary_spellbooks.common.spell.blood.*;
+import dev.higurashi.legendary_spellbooks.common.spell.blood.HematiteTrishulaSpell;
+import dev.higurashi.legendary_spellbooks.common.spell.blood.PossessedSoulBladeSpell;
+import dev.higurashi.legendary_spellbooks.common.spell.blood.PossessedWingSpell;
 import dev.higurashi.legendary_spellbooks.common.spell.evocation.CollapsedKingdomsLegionSpell;
 import dev.higurashi.legendary_spellbooks.common.spell.fire.FlameEaterSpell;
 import dev.higurashi.legendary_spellbooks.common.spell.fire.FlameSectorSpell;

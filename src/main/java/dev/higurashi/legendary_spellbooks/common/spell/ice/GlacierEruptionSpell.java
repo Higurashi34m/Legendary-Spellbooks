@@ -33,6 +33,8 @@ public class GlacierEruptionSpell extends BaseLockOnSpell {
         this.baseSpellPower = 2;
         this.manaCostPerLevel = 5;
         this.spellPowerPerLevel = 1;
+
+        this.setSpellId(IronsSpellbooks.id("glacier_eruption"));
     }
 
     @Override
