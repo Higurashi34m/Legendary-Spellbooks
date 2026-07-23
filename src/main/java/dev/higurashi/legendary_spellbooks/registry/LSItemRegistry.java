@@ -7,12 +7,13 @@ import dev.higurashi.daybreaklib.api.registry.reference.ItemReference;
 import dev.higurashi.daybreaklib_iss.api.client.model.item.ISSItemModelFactories;
 import dev.higurashi.legendary_spellbooks.LegendarySpellbooks;
 import dev.higurashi.legendary_spellbooks.common.item.AnnihilatorsProtocolSpellbookItem;
+import dev.higurashi.legendary_spellbooks.common.item.LSStaffTier;
 import dev.higurashi.legendary_spellbooks.common.item.StormboundSpellbookItem;
 import dev.higurashi.legendary_spellbooks.common.item.TempestUpgradeSmithingTemplateItem;
 import dev.higurashi.legendary_spellbooks.common.item.armor.OblivionmancerArmorItem;
 import dev.higurashi.legendary_spellbooks.common.item.armor.StormmancerArmorItem;
 import io.redspace.ironsspellbooks.item.UpgradeOrbItem;
-import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
+import io.redspace.ironsspellbooks.item.weapons.StaffItem;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
@@ -39,10 +40,7 @@ public class LSItemRegistry {
     public static final ItemReference STORMMANCER_LEGGINGS = ITEMS.create("stormmancer_leggings", props -> new StormmancerArmorItem(ArmorItem.Type.LEGGINGS, props)).setStacks(1).setModel(ItemModelFactories.GENERATED).build();
     public static final ItemReference STORMMANCER_BOOTS = ITEMS.create("stormmancer_boots", props -> new StormmancerArmorItem(ArmorItem.Type.BOOTS, props)).setStacks(1).setModel(ItemModelFactories.GENERATED).build();
 
-    public static final RegistryObject<Item> STORMMANCER_HOOD = ITEMS.register("stormmancer_hood", () -> new StormmancerArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper.equipment(1)));
-    public static final RegistryObject<Item> STORMMANCER_ROBE = ITEMS.register("stormmancer_robe", () -> new StormmancerArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper.equipment(1)));
-    public static final RegistryObject<Item> STORMMANCER_LEGGINGS = ITEMS.register("stormmancer_leggings", () -> new StormmancerArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper.equipment(1)));
-    public static final RegistryObject<Item> STORMMANCER_BOOTS = ITEMS.register("stormmancer_boots", () -> new StormmancerArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper.equipment(1)));
+    public static final ItemReference OBLIVIONMANCER_STAFF = ITEMS.create("oblivionmancer_staff", props -> new StaffItem(props, LSStaffTier.OBLIVIONMANCER)).setStacks(1).setRarity(Rarity.EPIC).build();
 
     public static final ItemReference TEMPEST_UPGRADE_SMITHING_TEMPLATE = ITEMS.create("tempest_upgrade_template", props -> new TempestUpgradeSmithingTemplateItem()).setModel(ItemModelFactories.GENERATED).build();
 

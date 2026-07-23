@@ -21,7 +21,7 @@ public class LSJaJpLanguageProvider extends BaseLanguageProvider {
         // --------------------
         // CREATIVE TAB
         // --------------------
-        addCreativeTab("equipments", "Legendary Spellbooksの装備品");
+        addCreativeTab("ls_items", "Legendary Spellbooksのアイテム");
         addCreativeTab("scrolls", "Legendary Spellbooksのスクロール");
 
         // --------------------
@@ -58,6 +58,7 @@ public class LSJaJpLanguageProvider extends BaseLanguageProvider {
         addItem(LSItemRegistry.STORMMANCER_ROBE, "嵐術師のローブ");
         addItem(LSItemRegistry.STORMMANCER_LEGGINGS, "嵐術師のレギンス");
         addItem(LSItemRegistry.STORMMANCER_BOOTS, "嵐術師のブーツ");
+        addItem(LSItemRegistry.OBLIVIONMANCER_STAFF, "無に帰す殲滅の杖");
 
         // --------------------
         // SPELL

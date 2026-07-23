@@ -24,7 +24,7 @@ public class LSEnUsLanguageProvider extends BaseLanguageProvider {
         // --------------------
         // CREATIVE TAB
         // --------------------
-        addCreativeTab("equipments", "Legendary Spellbooks Equipments");
+        addCreativeTab("ls_items", "Legendary Spellbooks: Items");
         addCreativeTab("scrolls", "Legendary Spellbooks Scrolls");
 
         // Damage Source
@@ -66,6 +66,7 @@ public class LSEnUsLanguageProvider extends BaseLanguageProvider {
         addItem(LSItemRegistry.STORMMANCER_ROBE, "Stormmancer Robe");
         addItem(LSItemRegistry.STORMMANCER_LEGGINGS, "Stormmancer Leggings");
         addItem(LSItemRegistry.STORMMANCER_BOOTS, "Stormmancer Boots");
+        addItem(LSItemRegistry.OBLIVIONMANCER_STAFF, "Oblivionmancer Staff");
 
         // --------------------
         // SPELL
