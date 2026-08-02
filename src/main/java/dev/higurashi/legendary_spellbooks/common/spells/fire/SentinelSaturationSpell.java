@@ -11,12 +11,14 @@ import io.redspace.ironsspellbooks.api.registry.SchoolRegistry;
 import io.redspace.ironsspellbooks.api.spells.CastSource;
 import io.redspace.ironsspellbooks.api.spells.SpellAnimations;
 import io.redspace.ironsspellbooks.api.spells.SpellRarity;
+import io.redspace.ironsspellbooks.damage.SpellDamageSource;
 import net.miauczel.legendary_monsters.sound.ModSounds;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvents;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
@@ -48,6 +50,11 @@ public class SentinelSaturationSpell extends BaseSpell {
         return List.of(
                 Component.translatable("ui.irons_spellbooks.aoe_damage", this.getSpellPower(spellLevel, caster))
         );
+    }
+
+    @Override
+    public SpellDamageSource getDamageSource(Entity projectile, Entity attacker) {
+        return SpellDamageSource.source(projectile, attacker, this).setIFrames(0);
     }
 
     @Override
