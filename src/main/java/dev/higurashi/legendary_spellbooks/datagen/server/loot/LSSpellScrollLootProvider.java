@@ -157,7 +157,7 @@ public class LSSpellScrollLootProvider extends GlobalLootModifierProvider {
         add("cloud_golem_spellbook", new ItemLootModifier(
                 new LootItemCondition[]{ LootItemEntityPropertyCondition.hasProperties(LootContext.EntityTarget.THIS, EntityPredicate.Builder.entity().of(ModEntities.Cloud_golem.get())).build() },
                 new ItemStack(LSItemRegistry.STORMBOUND_GRIMOIRE_SPELLBOOK_ITEM.get()),
-                0.5f
+                1.0f
         ));
 
         add("cloud_golem_more_air_rune", new ItemLootModifier(

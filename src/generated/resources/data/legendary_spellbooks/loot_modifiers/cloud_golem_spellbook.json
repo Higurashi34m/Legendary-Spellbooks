@@ -1,6 +1,6 @@
 {
   "type": "legendary_spellbooks:item_drop",
-  "chance": 0.5,
+  "chance": 1.0,
   "conditions": [
     {
       "condition": "minecraft:entity_properties",
