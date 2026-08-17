@@ -1,8 +1,8 @@
 package dev.higurashi.legendary_spellbooks.common.items.handler;
 
+import dev.higurashi.legendary_spellbooks.config.CommonConfig;
 import dev.higurashi.legendary_spellbooks.registries.LSItemRegistry;
-import io.redspace.ironsspellbooks.registries.MobEffectRegistry;
-import net.minecraft.world.effect.MobEffectInstance;
+import io.redspace.ironsspellbooks.effect.EvasionEffect;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraftforge.event.entity.living.LivingAttackEvent;
 import net.minecraftforge.eventbus.api.EventPriority;
@@ -18,7 +18,9 @@ public class AnnihilationProtocolSpellbookHandler {
         if (target.level().isClientSide) return;
 
         CuriosApi.getCuriosInventory(target).ifPresent(handler -> handler.findFirstCurio(LSItemRegistry.ANNIHILATORS_PROTOCOL_SPELLBOOK_ITEM.get()).ifPresent(result -> {
-            if (target.getRandom().nextFloat() < 0.1f) target.addEffect(new MobEffectInstance(MobEffectRegistry.EVASION.get(), 10, 0, false, false));
+            if (target.getRandom().nextDouble() <= CommonConfig.ANNIHILATORS_PROTOCOL_DODGE_CHANCE.get()) {
+                EvasionEffect.doEffect(target, event.getSource());
+            }
         }));
     }
 }

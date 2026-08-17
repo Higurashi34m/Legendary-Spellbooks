@@ -4,6 +4,7 @@ import dev.higurashi.legendary_spellbooks.LegendarySpellbooks;
 import dev.higurashi.legendary_spellbooks.api.spells.BaseSpell;
 import dev.higurashi.legendary_spellbooks.api.utils.ComponentUtils;
 import dev.higurashi.legendary_spellbooks.common.entities.spell.projectile.SpellAnnihilationBombEntity;
+import dev.higurashi.legendary_spellbooks.config.CommonConfig;
 import dev.higurashi.legendary_spellbooks.registries.LSSchoolRegistry;
 import io.redspace.ironsspellbooks.IronsSpellbooks;
 import io.redspace.ironsspellbooks.api.config.DefaultConfig;
@@ -22,6 +23,7 @@ import net.minecraft.world.entity.Mob;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class AnnihilationBombSpell extends BaseSpell {
@@ -50,11 +52,16 @@ public class AnnihilationBombSpell extends BaseSpell {
 
     @Override
     public List<MutableComponent> getUniqueInfo(int spellLevel, LivingEntity caster) {
-        return List.of(
-                ComponentUtils.getUIComponent(LegendarySpellbooks.MOD_ID, "hp_damage", ComponentUtils.format1f(this.getHpDamage(spellLevel) * 100)),
-                ComponentUtils.getUIComponent(IronsSpellbooks.MODID,      "damage",    ComponentUtils.format1f(this.getDamage(spellLevel, caster))),
-                ComponentUtils.getUIComponent(IronsSpellbooks.MODID,      "projectile_count", this.getBulletAmount(spellLevel))
-        );
+        List<MutableComponent> components = new ArrayList<>();
+
+        if (CommonConfig.ANNIHILATION_BOMB_HP_DAMAGE.get()) {
+            components.add(ComponentUtils.getUIComponent(LegendarySpellbooks.MOD_ID, "hp_damage", ComponentUtils.format1f(this.getHpDamage(spellLevel) * 100)));
+        }
+
+        components.add(ComponentUtils.getUIComponent(IronsSpellbooks.MODID,      "damage",    ComponentUtils.format1f(this.getDamage(spellLevel, caster))));
+        components.add(ComponentUtils.getUIComponent(IronsSpellbooks.MODID,      "projectile_count", this.getBulletAmount(spellLevel)));
+
+        return components;
     }
 
     @Override
@@ -68,7 +75,7 @@ public class AnnihilationBombSpell extends BaseSpell {
     @Override
     public void onCast(Level level, int spellLevel, LivingEntity caster, CastSource source, MagicData magicData) {
         float damage = this.getDamage(spellLevel, caster);
-        float hpDamage = this.getHpDamage(spellLevel);
+        float hpDamage = CommonConfig.ANNIHILATION_BOMB_HP_DAMAGE.get() ? this.getHpDamage(spellLevel) : 0.0f;
         int bulletAmount = this.getBulletAmount(spellLevel);
 
         Vec3 spawnPos = caster.getEyePosition().add(caster.getLookAngle().scale(1.0));

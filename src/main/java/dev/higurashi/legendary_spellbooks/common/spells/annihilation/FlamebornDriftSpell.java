@@ -3,8 +3,10 @@ package dev.higurashi.legendary_spellbooks.common.spells.annihilation;
 import dev.higurashi.legendary_spellbooks.LegendarySpellbooks;
 import dev.higurashi.legendary_spellbooks.api.spells.BaseSpell;
 import dev.higurashi.legendary_spellbooks.api.utils.ComponentUtils;
+import dev.higurashi.legendary_spellbooks.config.CommonConfig;
 import dev.higurashi.legendary_spellbooks.registries.LSEffectRegistry;
 import dev.higurashi.legendary_spellbooks.registries.LSSchoolRegistry;
+import io.redspace.ironsspellbooks.IronsSpellbooks;
 import io.redspace.ironsspellbooks.api.config.DefaultConfig;
 import io.redspace.ironsspellbooks.api.magic.MagicData;
 import io.redspace.ironsspellbooks.api.spells.CastSource;
@@ -21,6 +23,7 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class FlamebornDriftSpell extends BaseSpell {
@@ -45,9 +48,14 @@ public class FlamebornDriftSpell extends BaseSpell {
 
     @Override
     public List<MutableComponent> getUniqueInfo(int spellLevel, LivingEntity caster) {
-        return List.of(
-                ComponentUtils.getUIComponent(LegendarySpellbooks.MOD_ID, "health_damage", ComponentUtils.format2f(getSpellPower(spellLevel, caster)), ComponentUtils.format1f(getHPDamage(spellLevel)))
-        );
+        List<MutableComponent> components = new ArrayList<>();
+
+        if (CommonConfig.FLAMEBORN_DRIFT_HP_DAMAGE.get()) {
+            components.add(ComponentUtils.getUIComponent(LegendarySpellbooks.MOD_ID, "hp_damage", ComponentUtils.format2f(getHPDamage(spellLevel))));
+        }
+        components.add(ComponentUtils.getUIComponent(IronsSpellbooks.MODID,      "damage",    ComponentUtils.format1f(this.getSpellPower(spellLevel, caster))));
+
+        return components;
     }
 
     @Override

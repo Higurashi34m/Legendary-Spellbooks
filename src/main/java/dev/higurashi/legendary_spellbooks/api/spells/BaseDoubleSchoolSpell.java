@@ -10,21 +10,18 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 
-import java.util.function.Supplier;
-
 public abstract class BaseDoubleSchoolSpell extends BaseSpell {
-    protected final Supplier<SchoolType> anotherSchool;
+    public static SchoolType anotherSchool;
     protected final int level;
 
-    public BaseDoubleSchoolSpell(ResourceLocation spellResource, DefaultConfig spellConfig, CastType castType, int level, Supplier<SchoolType> anotherSchool) {
+    public BaseDoubleSchoolSpell(ResourceLocation spellResource, DefaultConfig spellConfig, CastType castType, int level) {
         super(spellResource, spellConfig, castType);
         this.level = level;
-        this.anotherSchool = anotherSchool;
     }
 
     @Override
     public SchoolType getSchoolType() {
-        if (isAnother(this.level)) return this.anotherSchool.get();
+        if (isAnother(this.level)) return anotherSchool;
         else return super.getSchoolType();
     }
 
@@ -40,7 +37,7 @@ public abstract class BaseDoubleSchoolSpell extends BaseSpell {
             spellPowerModifier = livingCaster.getAttributeValue(AttributeRegistry.SPELL_POWER.get());
 
             SchoolType normalSchool = SpellConfigManager.getSpellConfigValue(this, SpellConfigParameter.SCHOOL);
-            if (isAnother(spellLevel)) schoolPowerModifier = this.anotherSchool.get().getPowerFor(livingCaster);
+            if (isAnother(spellLevel)) schoolPowerModifier = anotherSchool.getPowerFor(livingCaster);
             else schoolPowerModifier = normalSchool.getPowerFor(livingCaster);
         }
 

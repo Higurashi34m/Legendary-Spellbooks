@@ -40,7 +40,7 @@ public class PossessedFallingSoulBladeSpell extends BaseDoubleSchoolSpell {
     public PossessedFallingSoulBladeSpell() { this(1); }
 
     public PossessedFallingSoulBladeSpell(int level) {
-        super(spellResource, spellConfig, CastType.LONG, level, SchoolRegistry.BLOOD);
+        super(spellResource, spellConfig, CastType.LONG, level);
         this.castTime = 35;
         this.baseManaCost = 125;
         this.baseSpellPower = 6;

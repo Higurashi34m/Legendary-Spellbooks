@@ -4,6 +4,7 @@ import dev.higurashi.legendary_spellbooks.LegendarySpellbooks;
 import dev.higurashi.legendary_spellbooks.api.spells.BaseSpell;
 import dev.higurashi.legendary_spellbooks.api.utils.ComponentUtils;
 import dev.higurashi.legendary_spellbooks.common.entities.spell.projectile.SpellAnnihilationBeamEntity;
+import dev.higurashi.legendary_spellbooks.config.CommonConfig;
 import dev.higurashi.legendary_spellbooks.registries.LSEffectRegistry;
 import dev.higurashi.legendary_spellbooks.registries.LSSchoolRegistry;
 import io.redspace.ironsspellbooks.IronsSpellbooks;
@@ -23,6 +24,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class AnnihilationBeamSpell extends BaseSpell {
@@ -50,12 +52,17 @@ public class AnnihilationBeamSpell extends BaseSpell {
 
     @Override
     public List<MutableComponent> getUniqueInfo(int spellLevel, LivingEntity caster) {
-        return List.of(
-                ComponentUtils.getUIComponent(LegendarySpellbooks.MOD_ID, "hp_damage", ComponentUtils.format1f(getHpDamage(spellLevel) * 100)),
-                ComponentUtils.getUIComponent(IronsSpellbooks.MODID, "damage", ComponentUtils.format1f(getSpellPower(spellLevel, caster))),
-                ComponentUtils.getUIComponent(IronsSpellbooks.MODID, "duration", ComponentUtils.ticksToSecondsString(getDuration(spellLevel))),
-                ComponentUtils.getUIComponent(IronsSpellbooks.MODID, "distance", getLength(spellLevel))
-        );
+        List<MutableComponent> components = new ArrayList<>();
+
+        if (CommonConfig.ANNIHILATION_BEAM_HP_DAMAGE.get()) {
+            components.add(ComponentUtils.getUIComponent(LegendarySpellbooks.MOD_ID, "hp_damage", ComponentUtils.format1f(getHpDamage(spellLevel) * 100)));
+        }
+
+        components.add(ComponentUtils.getUIComponent(IronsSpellbooks.MODID, "damage", ComponentUtils.format1f(getSpellPower(spellLevel, caster))));
+        components.add(ComponentUtils.getUIComponent(IronsSpellbooks.MODID, "duration", ComponentUtils.ticksToSecondsString(getDuration(spellLevel))));
+        components.add(ComponentUtils.getUIComponent(IronsSpellbooks.MODID, "distance", getLength(spellLevel)));
+
+        return components;
     }
 
     @Override
@@ -70,7 +77,7 @@ public class AnnihilationBeamSpell extends BaseSpell {
     @Override
     public void onCast(Level level, int spellLevel, LivingEntity caster, CastSource source, MagicData magicData) {
         float damage = this.getDamage(spellLevel, caster);
-        float hpDamage = this.getHpDamage(spellLevel);
+        float hpDamage = CommonConfig.ANNIHILATION_BEAM_HP_DAMAGE.get() ? this.getHpDamage(spellLevel) : 0.0f;
         int duration = this.getDuration(spellLevel);
         int length = this.getLength(spellLevel);
 

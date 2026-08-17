@@ -2,7 +2,11 @@ package dev.higurashi.legendary_spellbooks.setups;
 
 import dev.higurashi.legendary_spellbooks.common.entities.spell.projectile.CumuloChargeEntity;
 import dev.higurashi.legendary_spellbooks.common.entities.spell.summoned.*;
+import dev.higurashi.legendary_spellbooks.common.spells.blood.PossessedSoulBladeSpell;
+import dev.higurashi.legendary_spellbooks.config.CommonConfig;
 import dev.higurashi.legendary_spellbooks.registries.LSEntityRegistry;
+import io.redspace.ironsspellbooks.api.registry.SchoolRegistry;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -12,7 +16,9 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 public class CommonSetup {
     @SubscribeEvent
     public static void onCommonSetup(FMLCommonSetupEvent event) {
-
+        event.enqueueWork(() -> {
+            PossessedSoulBladeSpell.anotherSchool = SchoolRegistry.getSchool(ResourceLocation.parse(CommonConfig.POSSESSED_SOUL_BLADE_SECOND_SCHOOL.get()));
+        });
     }
 
     @SubscribeEvent

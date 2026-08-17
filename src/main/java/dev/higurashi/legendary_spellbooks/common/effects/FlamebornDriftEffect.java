@@ -1,6 +1,7 @@
 package dev.higurashi.legendary_spellbooks.common.effects;
 
 import dev.higurashi.legendary_spellbooks.common.spells.annihilation.FlamebornDriftSpell;
+import dev.higurashi.legendary_spellbooks.config.CommonConfig;
 import dev.higurashi.legendary_spellbooks.registries.LSSpellRegistry;
 import io.redspace.ironsspellbooks.api.spells.AbstractSpell;
 import io.redspace.ironsspellbooks.damage.DamageSources;
@@ -24,7 +25,8 @@ public class FlamebornDriftEffect extends MagicMobEffect {
         for (LivingEntity target : level.getEntitiesOfClass(LivingEntity.class, caster.getBoundingBox().inflate(1.0))) {
             AbstractSpell spell = LSSpellRegistry.FLAMEBORN_DRIFT_SPELL.get();
             if (target != caster && !caster.isAlliedTo(target)) {
-                float damage = spell.getSpellPower(amplifier, caster) + target.getMaxHealth() * (FlamebornDriftSpell.getHPDamage(amplifier) * 0.01f);
+                float hpDamage = CommonConfig.FLAMEBORN_DRIFT_HP_DAMAGE.get() ? FlamebornDriftSpell.getHPDamage(amplifier) * 0.01f : 0.0f;
+                float damage = spell.getSpellPower(amplifier, caster) + target.getMaxHealth() * hpDamage;
                 DamageSources.applyDamage(target, damage, spell.getDamageSource(caster).setFireTicks(60));
                 hit = true;
             }

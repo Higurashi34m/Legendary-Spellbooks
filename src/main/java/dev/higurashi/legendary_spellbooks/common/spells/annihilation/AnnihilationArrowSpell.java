@@ -4,6 +4,7 @@ import dev.higurashi.legendary_spellbooks.LegendarySpellbooks;
 import dev.higurashi.legendary_spellbooks.api.spells.BaseSpell;
 import dev.higurashi.legendary_spellbooks.api.utils.ComponentUtils;
 import dev.higurashi.legendary_spellbooks.common.entities.spell.projectile.AnnihilationArrowEntity;
+import dev.higurashi.legendary_spellbooks.config.CommonConfig;
 import dev.higurashi.legendary_spellbooks.registries.LSSchoolRegistry;
 import io.redspace.ironsspellbooks.IronsSpellbooks;
 import io.redspace.ironsspellbooks.api.config.DefaultConfig;
@@ -19,6 +20,7 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class AnnihilationArrowSpell extends BaseSpell {
@@ -45,16 +47,20 @@ public class AnnihilationArrowSpell extends BaseSpell {
 
     @Override
     public List<MutableComponent> getUniqueInfo(int spellLevel, LivingEntity caster) {
-        return List.of(
-                ComponentUtils.getUIComponent(LegendarySpellbooks.MOD_ID, "hp_damage", ComponentUtils.format2f(this.getHpDamage(spellLevel) * 100)),
-                ComponentUtils.getUIComponent(IronsSpellbooks.MODID,      "damage",    ComponentUtils.format1f(this.getDamage(spellLevel, caster)))
-        );
+        List<MutableComponent> components = new ArrayList<>();
+
+        if (CommonConfig.ANNIHILATION_ARROW_HP_DAMAGE.get()) {
+            components.add(ComponentUtils.getUIComponent(LegendarySpellbooks.MOD_ID, "hp_damage", ComponentUtils.format2f(this.getHpDamage(spellLevel) * 100)));
+        }
+        components.add(ComponentUtils.getUIComponent(IronsSpellbooks.MODID,      "damage",    ComponentUtils.format1f(this.getDamage(spellLevel, caster))));
+
+        return components;
     }
 
     @Override
     public void onCast(Level level, int spellLevel, LivingEntity caster, CastSource source, MagicData magicData) {
         float damage = this.getDamage(spellLevel, caster);
-        float hpDamage = this.getHpDamage(spellLevel);
+        float hpDamage = CommonConfig.ANNIHILATION_ARROW_HP_DAMAGE.get() ? this.getHpDamage(spellLevel) : 0.0f;
 
         Vec3 spawnPos = caster.getEyePosition().add(caster.getForward());
         AnnihilationArrowEntity arrow = new AnnihilationArrowEntity(level, caster, spawnPos, damage, hpDamage);

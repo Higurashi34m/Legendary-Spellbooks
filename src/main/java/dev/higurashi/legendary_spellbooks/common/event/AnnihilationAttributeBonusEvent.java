@@ -1,5 +1,6 @@
 package dev.higurashi.legendary_spellbooks.common.event;
 
+import dev.higurashi.legendary_spellbooks.config.CommonConfig;
 import dev.higurashi.legendary_spellbooks.registries.LSAttributeRegistry;
 import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
 import net.minecraft.world.entity.LivingEntity;
@@ -26,10 +27,10 @@ public class AnnihilationAttributeBonusEvent {
 
         if (annihilation == null) return;
 
-        double fireBonus = fire == null ? 0.0 : Math.max(0.0, fire.getValue() - fire.getBaseValue());
-        double enderBonus = ender == null ? 0.0 : Math.max(0.0, ender.getValue() - ender.getBaseValue());
+        double fireBonus = fire == null ? 0.0 : fire.getValue() - 1.0;
+        double enderBonus = ender == null ? 0.0 : ender.getValue() - 1.0;
 
-        double finalValue = (fireBonus + enderBonus) / 2.0;
+        double finalValue = fireBonus * CommonConfig.ANNIHILATION_FIRE_BONUS.get() + enderBonus * CommonConfig.ANNIHILATION_ENDER_BONUS.get();
 
         AttributeModifier beforeModifier = annihilation.getModifier(BONUS_UUID);
         if (beforeModifier == null || beforeModifier.getAmount() != finalValue) {

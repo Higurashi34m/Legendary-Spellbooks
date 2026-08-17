@@ -6,6 +6,7 @@ import dev.higurashi.legendary_spellbooks.api.utils.ComponentUtils;
 import dev.higurashi.legendary_spellbooks.api.utils.GeometryUtils;
 import dev.higurashi.legendary_spellbooks.api.utils.RaycastUtils;
 import dev.higurashi.legendary_spellbooks.common.mixin.helper.ISpellSourceFlag;
+import dev.higurashi.legendary_spellbooks.config.CommonConfig;
 import dev.higurashi.legendary_spellbooks.registries.LSSchoolRegistry;
 import io.redspace.ironsspellbooks.IronsSpellbooks;
 import io.redspace.ironsspellbooks.api.config.DefaultConfig;
@@ -26,6 +27,7 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class AnnihilationShockwaveSpell extends BaseSpell {
@@ -54,10 +56,15 @@ public class AnnihilationShockwaveSpell extends BaseSpell {
 
     @Override
     public List<MutableComponent> getUniqueInfo(int spellLevel, LivingEntity caster) {
-        return List.of(
-                ComponentUtils.getUIComponent(LegendarySpellbooks.MOD_ID, "health_damage", ComponentUtils.format1f(getSpellPower(spellLevel, caster)), ComponentUtils.format1f(getHealthDamageMultiplier(spellLevel) * 100)),
-                ComponentUtils.getUIComponent(IronsSpellbooks.MODID, "distance", getBlockDistance(getWaveCount(spellLevel)))
-        );
+        List<MutableComponent> components = new ArrayList<>();
+
+        if (CommonConfig.ANNIHILATION_SHOCKWAVE_HP_DAMAGE.get()) {
+            components.add(ComponentUtils.getUIComponent(LegendarySpellbooks.MOD_ID, "hp_damage", ComponentUtils.format2f(this.getHealthDamageMultiplier(spellLevel) * 100)));
+        }
+        components.add(ComponentUtils.getUIComponent(IronsSpellbooks.MODID,      "damage",    ComponentUtils.format1f(this.getSpellPower(spellLevel, caster))));
+        components.add(ComponentUtils.getUIComponent(IronsSpellbooks.MODID, "distance", getBlockDistance(getWaveCount(spellLevel))));
+
+        return components;
     }
 
     @Override
@@ -84,7 +91,11 @@ public class AnnihilationShockwaveSpell extends BaseSpell {
                 float yaw = GeometryUtils.getYawBetween(caster.position(), spawnPos);
                 AnnihilationFlameStrike flame = new AnnihilationFlameStrike(level, spawnPos.x, spawnPos.y, spawnPos.z, yaw, i * 2, caster, 20, damage);
                 ((ISpellSourceFlag) flame).legendarySpellbooks$markSpell();
-                ((ISpellSourceFlag) flame).legendarySpellbooks$setDamage(healthDamageMultiplier);
+                if (CommonConfig.ANNIHILATION_SHOCKWAVE_HP_DAMAGE.get()) {
+                    ((ISpellSourceFlag) flame).legendarySpellbooks$setDamage(healthDamageMultiplier);
+                } else {
+                    ((ISpellSourceFlag) flame).legendarySpellbooks$setDamage(0.0f);
+                }
 
                 level.addFreshEntity(flame);
             }
