@@ -5,7 +5,6 @@ import dev.higurashi.legendary_spellbooks.common.tags.LSTags;
 import io.redspace.ironsspellbooks.api.registry.SchoolRegistry;
 import io.redspace.ironsspellbooks.api.spells.SchoolType;
 import io.redspace.ironsspellbooks.registries.SoundRegistry;
-import net.miauczel.legendary_monsters.damagetype.ModDamageTypes;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.Style;
 import net.minecraft.resources.ResourceLocation;
@@ -30,6 +29,6 @@ public class LSSchoolRegistry {
             LSAttributeRegistry.ANNIHILATION_SPELL_POWER,
             LSAttributeRegistry.ANNIHILATION_MAGIC_RESIST,
             SoundRegistry.ENDER_CAST,
-            ModDamageTypes.ANNIHILATION
+            LSDamageTypeRegistry.ANNIHILATION_MAGIC
     ));
 }
